@@ -1,0 +1,128 @@
+from seleniumwire import webdriver  
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+import json
+import re
+import time
+
+chrome_options = webdriver.ChromeOptions()
+
+service = Service(
+    ChromeDriverManager().install()
+)
+
+# driver = webdriver.Chrome(
+#    service=service, options = chrome_options
+# )
+driver = webdriver.Chrome(service=Service(r"E:\Student\New folder\chromedriver-win32\chromedriver.exe"))
+
+try:
+    keyword = "coffee"
+
+    driver.get(f'https://www.google.com/maps/search/{keyword}/')
+
+    try:
+        WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "form:nth-child(2)"))).click()
+    except Exception:
+        pass
+
+    scrollable_div = driver.find_element(By.CSS_SELECTOR, 'div[role="feed"]')
+    # scrollable_div = WebDriverWait(driver, 10).until(
+    # EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="feed"]')))
+    driver.execute_script("""
+    var scrollableDiv = arguments[0];
+
+    function scrollWithinElement(scrollableDiv) {
+        return new Promise((resolve, reject) => {
+            var totalHeight = 0;
+            var distance = 1000;
+            var scrollDelay = 3000;
+
+            var timer = setInterval(() => {
+                var scrollHeightBefore = scrollableDiv.scrollHeight;
+                scrollableDiv.scrollBy(0, distance);
+            
+                totalHeight += distance;
+                if (totalHeight >= scrollHeightBefore) {
+                    totalHeight = 0;
+                    setTimeout(() => {
+                        var scrollHeightAfter = scrollableDiv.scrollHeight;
+                        if (scrollHeightAfter > scrollHeightBefore) {
+                            return;
+                        } else {
+                            clearInterval(timer);
+                            resolve();
+                        }
+                    }, scrollDelay);
+                }
+            }, 200);
+        });
+        }
+        return scrollWithinElement(scrollableDiv);
+    """, scrollable_div)
+
+    items = driver.find_elements(By.CSS_SELECTOR, 'div[role="feed"] > div > div[jsaction]')
+
+    results = []
+    for item in items:
+        data = {}
+
+        try:
+            data['title'] = item.find_element(By.CSS_SELECTOR, ".fontHeadlineSmall").text
+        except Exception:
+            pass
+
+        try:
+            data['link'] = item.find_element(By.CSS_SELECTOR, "a").get_attribute('href')
+        except Exception:
+            pass
+
+        try:
+            data['website'] = item.find_element(By.CSS_SELECTOR, 'div a').get_attribute('href')
+        except Exception:
+            pass
+
+        try:
+            rating_element = item.find_element(By.CSS_SELECTOR, 'div.fontBodyMedium span[role="img"]')
+            rating_text = rating_element.get_attribute('aria-label')
+            
+            rating_number = [float(piece) for piece in rating_text.split(" ") if piece.replace(".", "", 1).isdigit()]
+
+            if len(rating_number) > 1:
+                data['star'] = rating_number[0]
+                data['review'] = int(rating_number[1])
+            else:
+                data['star'] = rating_number[0]
+                data['review'] = 0
+
+        except Exception:
+            pass
+        
+        import re
+
+        # try:
+        #     text_content = item.text
+        #     phone_pattern = r' ((\+?\d{1,2}[-]?)?(\(?\d{3}\)?[-]?\d{3,4}[-]?\d{4}|\(?\d{2,3}\)?[-]?\d{2,3}[-]?\d{2,3}[-]?\d{2,3}))'
+        #     matches = re.findall(phone_pattern, text_content)
+
+        #     phone_numbers = [match[0] for match in matches]
+        #     unique_phone_numbers = list(set(phone_numbers))
+
+        #     data['phone'] = unique_phone_numbers[0] if unique_phone_numbers else None
+        # except Exception:
+        #     pass 
+
+        if data.get('title'):
+            results.append(data)
+
+    with open('results.json', 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2)
+    # with open('results.txt', 'w', encoding='utf-8') as f:
+    #      f.write(json.dumps(results, indent=2, ensure_ascii=False))
+
+finally:
+    time.sleep(30)
+    driver.quit()
