@@ -1,0 +1,10 @@
+composer create-project --prefer-dist laravel/laravel myproject "8.*"
+
+docker run -d -p 8886:7800 -p 22:21 -p 443:443 -p 80:80 -p 889:888 -v D:/thuctap/website_data:/www/wwwroot -v D:/thuctap/mysql_data:/www/server/data -v D:/thuctap/vhost:/www/server/panel/vhost aapanel/aapanel:
+
+.htaccess
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
