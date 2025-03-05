@@ -1,0 +1,6 @@
+LangChain Load Documents
+Tải và xử lý dữ liệu từ nhiều nguồn khác nhau để sử dụng với LLM. Một số loaders phổ biến:
+TextLoader (tải tệp .txt)
+CSVLoader (tải dữ liệu từ CSV)
+PyPDFLoader (đọc PDF)
+WebBaseLoader (tải dữ liệu từ URL)

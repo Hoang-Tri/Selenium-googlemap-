@@ -1,0 +1,62 @@
+Giới thiệu chung
+Hiện nay, ngành công nghệ thông tin là một trong những ngành học được chú trọng trong hệ thống đào tạo của trường Đại học Công nghệ thông tin cũng như các trường Đại học khác có đào tạo ngành học này.
+Nó được xem là ngành đào tạo mũi nhọn hướng đến sự phát triển của công nghệ và khoa học kỹ thuật trong thời đại số hóa ngày nay.
+Công nghệ thông tin là một ngành học được đào tạo để sử dụng máy tính và các phần mềm máy tính để phân phối và xử lý các dữ liệu thông tin,
+đồng thời dùng để trao đổi, lưu trữ và chuyển đổi các dữ liệu thông tin dưới nhiều hình thức khác nhau.
+Ngành công nghệ thông tin đào tạo những gì ?
+Sau khi được đào tạo, sinh viên học ngành này sẽ được trang bị kiến thức nền tảng và chuyên sâu về lĩnh vực công nghệ thông tin để nâng cao tay nghề nhằm phát triển khả năng sửa chữa, xây dựng, cài đặt, bảo trì các phần cứng của máy tính cũng như nghiên cứu và phát triển các ứng dụng phần mềm.
+Ngoài ra cũng được trang bị kiến thức về an toàn và bảo mật thông tin mạng, một trong những lĩnh vực quan trọng được quan tâm hàng đầu trên thế giới hiện nay.
+Định hướng đào tạo của ngành công nghệ thông tin
+Sau khi được đào tạo khối kiến thức cơ sở, các sinh viên sẽ được chọn một trong những hướng sau:
+- Ứng dụng công nghệ thông tin vào phân tích định lượng doanh nghiệp.
+- Ứng dụng công nghệ thông tin vào quản lý, giám sát hoạt động doanh nghiệp.
+- Ứng dụng truyền thông xã hội và công nghệ web.
+- Ứng dụng công nghệ thông tin vào tài nguyên, môi trường và địa lý
+
+Trong đó có 2 hướng đào tạo chủ lực là ứng dụng truyền thông xã hội và công nghệ web và ứng dụng công nghệ thông tin quản lý, giám sát hoạt động doanh nghiệp. Đây là hai lĩnh vực được chú trọng trong việc phát triển xã hội hiện nay.
+
+Cơ hội việc làm ngành Công nghệ thông tin
+Sinh viên sau khi tốt nghiệp có thể phụ trách các công việc sau:
+
+Kỹ sư thiết kế, xây dựng và quản lý các dự án nghiên cứu và ứng dụng CNTT, chủ yếu trong lĩnh vực dữ liệu không gian-thời gian (địa lý, tài nguyên, môi trường, viễn thám. . .). Tập trung vào những ứng dụng về GIS trên thiết bị di động và trao đổi dữ liệu với máy chủ.
+
+Các công ty điển hình: Esri, ArcGIS, FPT, TMA và các công ty phần mềm chuyên dụng khác. . .
+Công nghệ thông tin (CNTT) là ngành học và lĩnh vực nghiên cứu liên quan đến máy tính, phần mềm, mạng và hệ thống thông tin. Nó đóng vai trò quan trọng trong mọi lĩnh vực từ kinh doanh, giáo dục, y tế đến giải trí.
+
+# Các lĩnh vực chính trong CNTT
+1. Khoa học máy tính (Computer Science): Nghiên cứu thuật toán, trí tuệ nhân tạo, lập trình phần mềm.
+2. Kỹ thuật phần mềm (Software Engineering): Thiết kế, phát triển và kiểm thử phần mềm.
+3. Hệ thống thông tin (Information Systems): Quản lý dữ liệu và phát triển hệ thống thông tin doanh nghiệp.
+4. Mạng máy tính và an toàn thông tin (Networking & Cybersecurity): Bảo mật dữ liệu và bảo vệ hệ thống trước các cuộc tấn công mạng.
+5. Trí tuệ nhân tạo (AI) và Học máy (Machine Learning): Ứng dụng AI vào nhận diện giọng nói, xử lý ngôn ngữ tự nhiên, xe tự hành.
+6. Dữ liệu lớn (Big Data) và Khoa học dữ liệu (Data Science): Xử lý, phân tích dữ liệu khổng lồ để đưa ra quyết định.
+
+# Ngôn ngữ lập trình phổ biến
+- Python: Được sử dụng rộng rãi trong AI, khoa học dữ liệu, web development.
+- Java: Ngôn ngữ mạnh cho ứng dụng di động, hệ thống doanh nghiệp.
+- C++: Tối ưu hóa hiệu suất, phù hợp cho phát triển game và ứng dụng nhúng.
+- JavaScript: Quan trọng cho phát triển web.
+- SQL: Ngôn ngữ truy vấn cơ sở dữ liệu quan trọng.
+
+# Xu hướng Công nghệ mới
+- Trí tuệ nhân tạo (AI) và Học sâu (Deep Learning) đang bùng nổ.
+- Điện toán đám mây (Cloud Computing) giúp lưu trữ và xử lý dữ liệu hiệu quả hơn.
+- Blockchain không chỉ ứng dụng trong tiền điện tử mà còn trong bảo mật và hợp đồng thông minh.
+- Internet vạn vật (IoT) kết nối thiết bị thông minh trong nhà và thành phố thông minh.
+
+# Vai trò của CNTT trong đời sống
+- Giúp doanh nghiệp quản lý dữ liệu, tự động hóa quy trình.
+- Hỗ trợ giáo dục với học tập trực tuyến và nền tảng số.
+- Cải thiện y tế với AI chẩn đoán bệnh và hồ sơ bệnh án điện tử.
+- Tạo ra nhiều cơ hội việc làm với mức lương cao.
+
+# Các công ty công nghệ lớn
+- Google: Hệ điều hành Android, công cụ tìm kiếm, AI, điện toán đám mây.
+- Microsoft: Windows, Azure Cloud, Office 365.
+- Apple: iOS, MacOS, thiết bị thông minh.
+- Amazon: AWS Cloud, thương mại điện tử, AI.
+- Facebook (Meta): Mạng xã hội, thực tế ảo VR, Metaverse.
+
+# Học CNTT ở đâu?
+- Các trường đại học uy tín tại Việt Nam như: Đại học Bách Khoa Hà Nội, Đại học Công nghệ (ĐHQGHN), Đại học FPT, Học viện Công nghệ Bưu chính Viễn thông.
+- Các khóa học online: Coursera, Udemy, edX, Codecademy.

@@ -2,12 +2,11 @@ import google.generativeai as genai
 import tkinter as tk
 from tkinter import scrolledtext
 
-# Thay API Key từ Google AI Studio
 genai.configure(api_key="AIzaSyAEpdaCoy8k8zJ4NA0jQp8TitPDZIpWMf4")
 
 def chat_with_gemini(prompt):
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = genai.GenerativeModel("gemini-1.5-pro")
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:

@@ -1,0 +1,6 @@
+LangChain Embedding
+Embedding là cách chuyển đổi văn bản thành vector số để LLM có thể hiểu và xử lý dữ liệu tốt hơn. 
+LangChain hỗ trợ nhiều bộ embedding như:
+OpenAI Embeddings (openai)
+Hugging Face Embeddings (sentence-transformers)
+Google Vertex AI Embeddings
