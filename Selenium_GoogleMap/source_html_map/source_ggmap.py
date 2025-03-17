@@ -6,6 +6,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
 
 # Đường dẫn tới ChromeDriver
 chrome_driver_path = r"E:\Student\New folder\chromedriver-win32\chromedriver.exe"
@@ -40,11 +42,19 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 driver = webdriver.Chrome(service=Service(chrome_driver_path), options=chrome_options)
 
 try:
-    url = "https://www.google.com/maps/place/B%E1%BA%BFn+Ninh+Ki%E1%BB%81u/@10.0323927,105.7874438,17.5z/data=!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D"
-    driver.get(url)
+    driver.get("https://www.google.com/maps")
 
+    # Chờ cho thanh tìm kiếm xuất hiện
     wait = WebDriverWait(driver, 30)
-    element = driver.find_element(By.XPATH, "/html/body")
+    search_box = wait.until(EC.presence_of_element_located((By.ID, "searchboxinput")))
+
+    # Nhập tên địa điểm cần tìm
+    search_box.clear()
+    search_term = ("Bến Ninh Kiều")
+    for char in search_term:
+        search_box.send_keys(char)
+        time.sleep(random.uniform(0.2, 0.4))
+    search_box.send_keys(Keys.ENTER)
 
     time.sleep(random.uniform(10, 15))
 

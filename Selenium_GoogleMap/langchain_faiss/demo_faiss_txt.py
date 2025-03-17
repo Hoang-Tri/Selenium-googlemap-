@@ -19,7 +19,7 @@ new_vectorstore = FAISS.load_local("index_faiss", embedding, allow_dangerous_des
 
 #search
 query = "what is langchain faiss?"
-results = new_vectorstore.similarity_search(query, k = 1)
+results = new_vectorstore.similarity_search(query, k = 3)
 
 for i, res in enumerate(results):
     print(f"Results {i+1}: {res.page_content}\n")
