@@ -5,7 +5,7 @@ from fastapi.security import APIKeyHeader  # noqa: E402
 from app.config import settings
 
 # Định nghĩa header cho API key
-api_key_header = APIKeyHeader(name="API_Key", auto_error=False)
+api_key_header = APIKeyHeader(name="API-Key", auto_error=False)
 
 
 async def get_api_key(api_key_header: str = Security(api_key_header)):
