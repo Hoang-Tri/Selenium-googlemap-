@@ -1,11 +1,12 @@
 import os
+from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.schema.runnable import RunnableSequence
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAa3fQtInjmMv_M9qj2MUhcKlMaizv0QvM"
+load_dotenv()
 
-llm = GoogleGenerativeAI(model="gemini-1.5-flash")
+llm = GoogleGenerativeAI(model="gemini-1.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
 template = PromptTemplate(
     input_variables=["question"],

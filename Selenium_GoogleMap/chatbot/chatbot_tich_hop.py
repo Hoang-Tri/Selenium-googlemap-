@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain.prompts import PromptTemplate
 from langchain.schema.runnable import RunnableSequence
@@ -6,10 +7,10 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-# Cấu hình api
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAa3fQtInjmMv_M9qj2MUhcKlMaizv0QvM"
+load_dotenv()
 
-llm = GoogleGenerativeAI(model="gemini-1.5-flash")
+# Cấu hình api
+llm = GoogleGenerativeAI(model="gemini-1.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
 faiss_path = "faiss_index"
 
@@ -20,7 +21,7 @@ if os.path.exists(faiss_path):
     vectorstore = FAISS.load_local(faiss_path, embedding, allow_dangerous_deserialization=True)
     print("FAISS đã được tải thành công!")
 else:
-    documents = TextLoader("data.txt", encoding="utf-8").load()
+    documents = TextLoader("chatbot/data.txt", encoding="utf-8").load()
     texts = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50).split_documents(documents)
 
     vectorstore = FAISS.from_documents(texts, embedding)

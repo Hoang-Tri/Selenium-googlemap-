@@ -1,8 +1,12 @@
 import google.generativeai as genai
 import tkinter as tk
 from tkinter import scrolledtext
+from dotenv import load_dotenv
+import os
 
-genai.configure(api_key="AIzaSyAEpdaCoy8k8zJ4NA0jQp8TitPDZIpWMf4")
+load_dotenv() 
+
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def chat_with_gemini(prompt):
     try:
