@@ -1,90 +1,424 @@
 [
   {
-    "title": "Ninh Kieu Wharf",
-    "address": "106 Đường Hai Bà Trưng, Tân An, Ninh Kiều, Cần Thơ",
-    "link": "https://www.google.com/maps/place/Ninh+Kieu+Wharf/@10.0322715,105.7882308,17z/data=!3m1!4b1!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D",
-    "star": 4.4,
-    "review": 0,
+    "title": "NHÀ PHẠM TRONG RỪNG",
+    "address": "40/8 Đ. Nguyễn Văn Cừ, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/NH%C3%80+PH%E1%BA%A0M+TRONG+R%E1%BB%AANG/@10.0273152,105.7471086,17z/data=!3m1!4b1!4m6!3m5!1s0x31a0897fc3530207:0xbdc6317173b83336!8m2!3d10.0273152!4d105.7471086!16s%2Fg%2F11wr97mx93?entry=ttu&g_ep=EgoyMDI1MDMxOC4wIKXMDSoASAFQAw%3D%3D",
+    "star": 4.5,
     "reviews": [
       {
-        "name": "Hong Nguyen",
-        "review": "Coming to the Mekong Delta without stopping at Ninh Kieu wharf would probably be a mistake.\nThe feeling of sailing on the vast river really makes us satisfied.  Beautiful …"
+        "name": "Duy Nguyễn",
+        "review": "The restaurant's decor is quite nice, with many shooting angles, suitable for a few photo shoots. The shop is located in front of the coffee roasting factory, so sometimes the smell of coffee from the factory is very unpleasant, and the shop plays music quite loudly",
+        "star": 4.0
       },
       {
-        "name": "Arun Jayaprakash",
-        "review": "Visited the marina to take a boat on our way to the Cai Rang Floating Market. The place is neat and well maintained, with beautiful gardens, plants and trees, and is a nice place to spend time with a view of the river."
+        "name": "Hoang Loi",
+        "review": "- Beautiful restaurant, many views, close, comfortable and reasonably arranged space\n- The only thing is that next to the coffee mill, there's so much smoke, it's so stuffy!",
+        "star": 5.0
       },
       {
-        "name": "Hà Việt Thắng",
-        "review": "It’s new year so there are so much lights. Very cool, very demure"
+        "name": "Thiên Huy",
+        "review": "1. Advantages\na) The restaurant space is large and airy.\nb) There are many beautiful angles to take pictures.\n2. Limitations\nThere are a lot of mosquitoes so apply Soffell before going.",
+        "star": 5.0
       },
       {
-        "name": "Ko Koo",
-        "review": "The floating market tour was okay... not really impressive.\nIf you don't have time in Cần Thơ, you can easily pass on this tour. Typical tourist trap. …"
+        "name": "Ngọc Đỗ",
+        "review": "Spacious restaurant, cool view. Decor ok. There are also mirrors and multiple shooting angles. Quiet space.\nI went in the evening to sit outside and there were a bit of mosquitoes during this season, but the shop had mosquito coils so that helped.\n\nAs for the menu, I think the price is okay, not expensive or cheap. The drink is not very sharp, the peach tea is a bit sweet. The shop should check the more trendy way of mixing water. Water is also very important, not just having a beautiful view is ok.\n\nSpacious parking lot. I think the staff is also ok.\n\nOverall quite good. Everyone should go try it.",
+        "star": 5.0
       },
       {
-        "name": "Tomas Hendrych",
-        "review": "Be sure what you expect. There is almost no floating market any more, there are tourist floating souvenir market. We paid for private boat, had to wait 30 minutes abd finaly ended with 10 other tourist."
+        "name": "Honi Decal Dán Tường Cho Bé",
+        "review": "The restaurant costs 10 VND, the atmosphere is so close to Christmas that the restaurant is reasonable. Entering the shop, there is a delicious aroma of coffee. The space is large, airy, the staff is cute with cheese sticks, I asked my 6 year old son to ask for filtered water, asked him to bring the water himself and the cute staff brought it to him. 5 stars",
+        "star": 5.0
       },
       {
-        "name": "Natalia T",
-        "review": "We rented a small boat for two people at 400,000 VND, which I found to be a reasonable price. Larger boats cost 100,000 VND per person and carry up to 20 people, but I don’t think they’re worth it. To get a good deal, arrive at the port by …"
+        "name": "Thơ Annh",
+        "review": "Follow the shop to 3 branches\nWhich branch is ok hett\nWorth the 10 VND hg yes butg😍",
+        "star": 5.0
       },
       {
-        "name": "David Henderson",
-        "review": "A nice area to walk through, but kind of a bummer being constantly accosted by people trying to sell you boat tickets. …"
+        "name": "HỒ THANH NGUYÊN",
+        "review": "The restaurant and staff get 1000 points, the restaurant is beautiful, with many shooting angles, the staff is enthusiastic and cheerful, the drinks are fast and delicious.",
+        "star": 5.0
       },
       {
-        "name": "J C",
-        "review": "The highlight of this warfare was supposed to be the boat dining experience. Sadly, the ride was short of good, and the food was mediocre at best. …"
+        "name": "Abadfn Bbzatbm",
+        "review": "When it's raining, it's crowded but the staff... doesn't guide customers to the table or just a place to stay in the rain. Customers have to wait until they get a seat, but they still wish they could.\nThe shop needs to pay more attention to this part.",
+        "star": 5.0
       },
       {
-        "name": "C CLARENCE",
-        "review": "Fun place to visit lot's of nice restaurant's and Bar's around. The floating market isn't much existing as I expected. Looks like it doesn't active as it used to be. But anyway you can experience what it's looks like Vietnamese culture"
+        "name": "ZERDALI",
+        "review": "I experienced it and found the restaurant to be ok, the atmosphere is airy and comfortable. I went on a rainy day so it was cool, but on a sunny day, I don't know. The restaurant is clean. When I went, the wait staff was ok and didn't see anything annoying. There are also quite a few corners for us to take pictures, the water is ok, I think the price is reasonable compared to the level in Can Tho, which is also normal. Everyone should come and experience it 💌💌",
+        "star": 5.0
       },
       {
-        "name": "Nguyen Thanh Tam",
-        "review": "Touristic site with lots of restaurants, buildings and shops, so not spacious enough for those who like walking.\nThis is also a boat dock to visit the floating markets and the island so many …"
+        "name": "MR. QUANG",
+        "review": "Coffee shop with beautiful scenery, delicious drinks, many scenes to check in and take Christmas photos",
+        "star": 5.0
       },
       {
-        "name": "Eric Christophe",
-        "review": "Great place with garden, as a ship docking there local authorities are not very complaisant or helpful, for our guests to embark the Sampan. Can tho is a busy town with its floating market CAI RANG therefore it can be very noisy for the guests sleeping and karaoke going on late at night."
+        "name": "trúc phương",
+        "review": "The price of water is quite high and a bit sweet, the space is temporary, some children throw stones into the lake and wet us all, so put up a ban sign 🙏🏻",
+        "star": 4.0
       },
       {
-        "name": "Dr. Stephen Bui",
-        "review": "Really nice place to walk by the pier with lots of restaurants and coffee shops. The place is beautiful and made to accommodate pedestrians. Lots of restaurants on the river as well. You would have a wonderful time there for dinner and after."
+        "name": "Tuyết Nhi Lê",
+        "review": "Personally, I'm someone who often goes to Pham's coffee shop. Every time the service is quite good, especially today at the Pham branch in the forest, I met a staff member ordering water with a bad attitude. Even though we joked around with each other a few times when ordering, but it wasn't related to her, she still showed an unpleasant attitude (we still ordered drinks for her, very bth). The guy refused to give us the bill with an expression like she didn't like the customer. Only when another staff member reminded us that she was ordering water for the customer did he start to press the bill. I hope Pham's team will try to fix your attitude so that the staff can be friendly with customers to bring a better experience in the future.",
+        "star": 5.0
       },
       {
-        "name": "Darren Bird",
-        "review": "I truly love this place. Day or night it is spectacular. A wonderful open place for walking. All sorts of food for sale. And a bridge for lovers. Young or old you will be enamored by this place. 5 stars."
+        "name": "Hoang Oanh Nguyen",
+        "review": "Water is slightly below average\nAiry space",
+        "star": 4.0
       },
       {
-        "name": "Thu Lưu",
-        "review": "I went on Saturday, the led lights are turned off, so, I can not see many things in there.\nI came in October during flood season, so the streets are drowned. …"
+        "name": "Trí Nguyễn minh",
+        "review": "Delicious water and cool, comfortable atmosphere. Enthusiastic staff",
+        "star": 5.0
       },
       {
-        "name": "Olivine Thuy Phan",
-        "review": "So nice, the atmosphere so nice in the morning, location veru friendly"
+        "name": "Kỳ Duyên",
+        "review": "Good experience, the car keeper named Thuong is very gallant, can the owner give me his phone number?",
+        "star": 5.0
       },
       {
-        "name": "Jeff Byron",
-        "review": "Quick little ferry to get across the river. Costs  4000 per person for a return trip."
+        "name": "Như Lê",
+        "review": "The shop is beautiful, the staff is enthusiastic, cute, and super fun to talk to. I will come back again and again 🥰",
+        "star": 5.0
       },
       {
-        "name": "Tu Nguyen",
-        "review": "Pure Air with view, you can see Can Tho River, Hau River. You also can see Can Tho Bridge. Clean and many people visit there in the evening. But sometimes Some people ask you want to go Cai Rang Floating Market by their boats, I thought …"
+        "name": "An",
+        "review": "The shop is beautiful, the water is bad, the shop doesn't know what to think, but after staying in the shop for several hours there is still a very unpleasant smell of coffee smoke. The staff's attitude is unpleasant when we sit for a long time even though we order more than a dozen glasses of water. Overall it's bad!",
+        "star": 2.0
       },
       {
-        "name": "Hoàng Yến Phùng",
-        "review": "\"Ninh Kieu Wharf\" is one of the most famous symbols of Can Tho City and is also a cultural symbol of the Southwest region. The  floated market usually begins at dawn, which is very bustling and crowded. They mainly sell fruits for the …"
+        "name": "Hải FB",
+        "review": "The drinks are a bit too sweet, the space is spacious, many check-in corners, spacious parking lot, too many trees and a lot of mirrors, but the mirror is dirty and scratches - VND",
+        "star": 4.0
       },
       {
-        "name": "Dan Nguyen",
-        "review": "The city improved this place quite a bit.  I love how you take a long walk along the river.  It is dimly lit in some area,  but brighly lit in the tourist area.  There are several boats serving dinner cruise at night.  You can order food, …"
+        "name": "Long Cao956",
+        "review": "10 VND no but",
+        "star": 5.0
       },
       {
-        "name": "To Nhu Tran",
-        "review": "Welcome to Can Tho (my hometown) 🥰\nProud of was born and grown up at here!\nWish you have a great vacation/business trip! …"
+        "name": "Như Quỳnh nguyễn",
+        "review": "The shop is okay. After the opening day, there wasn't much water to drink. The restaurant is crowded at night",
+        "star": 4.0
+      },
+      {
+        "name": "Khang",
+        "review": "The staff's attitude is too bad, they glance at the customers, our group of 11 people go from 8am to 2pm, I know our group stays for a long time but each person in my group buys 2 glasses of water with an average price of 34 to 39, we stay until 12pm and then we start. The first time you see an LGBT friend, don't look away, then look away. Last time our group went, we saw bth, but this time it was too bad.",
+        "star": 1.0
+      },
+      {
+        "name": "Hồng vy Nguyễn ngọc",
+        "review": "The water is delicious + with enthusiastic staff, will come back many times",
+        "star": 5.0
+      },
+      {
+        "name": "Tuyết Nga Lê Thị",
+        "review": "Today I stopped by Pham3, my friend ordered and went with Pham3 and I was at Pham2. I also missed the order before I could drink it, then my friend said it was Pham3. I just finished ordering, so I dropped the bich and took it to Pham3 immediately and then went to Pham3. You asked me to order, I said my friend had ordered Pham3 and I said it was strange but he said I had to order more or else I would have to pay a surcharge of 30k but Pham, the country of Pham's order is the same as any other side as long as you don't buy water. Another place is fine, but why do you guys say that? I don't know if you're joking or serious, but in my opinion, I'm not happy or satisfied. And the room is cold, so I said why isn't it cold? Then you change too many guests in and out. The door was closed so it wasn't cold and I couldn't understand the conversation. I drank at Pham1's house from the time it opened until the branch opened, all the staff were always happy and cute, but as for Pham 3, I was disappointed in the way Pham3 staff talked.\nMy friends and I will never visit Pham3 again.\nThanks for listening.",
+        "star": 1.0
+      },
+      {
+        "name": "Quỳnh Thúy",
+        "review": "Great experience, enthusiastic staff, delicious hong water...",
+        "star": 5.0
+      },
+      {
+        "name": "Đạt Huỳnh",
+        "review": "The shop is so beautiful and the staff is also enthusiastic",
+        "star": 5.0
+      },
+      {
+        "name": "Hưng Dayy",
+        "review": "The water is so delicious and the place is so beautiful",
+        "star": 5.0
+      },
+      {
+        "name": "Bối Bối",
+        "review": "Chill morning shop, friendly staff will stop by again",
+        "star": 5.0
+      },
+      {
+        "name": "Thi Anh",
+        "review": "Beautifully decorated space",
+        "star": 5.0
+      },
+      {
+        "name": "Thien Minh Nguyen",
+        "review": "The restaurant is very nice, I will visit again next time",
+        "star": 5.0
+      },
+      {
+        "name": "Linh Huỳnh Khánh",
+        "review": "The staff's attitude should be retrained, it's horrible",
+        "star": 1.0
+      },
+      {
+        "name": "Phước Toàn Lâm",
+        "review": "The staff is the cutest in the world🫰",
+        "star": 5.0
+      },
+      {
+        "name": "Tính Huy Ngô",
+        "review": "Need to add outdoor fans. It's too hot in the shop",
+        "star": 5.0
+      },
+      {
+        "name": "Giang Bùi",
+        "review": "Lovely and enthusiastic staff🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Thư Lê",
+        "review": "Only drinks, no food",
+        "star": 4.0
+      },
+      {
+        "name": "Anh Phuong",
+        "review": "Cute and enthusiastic staff",
+        "star": 5.0
+      },
+      {
+        "name": "Anh Thu",
+        "review": "Well ok",
+        "star": 5.0
+      },
+      {
+        "name": "Thuan Minh",
+        "review": "Too crowded",
+        "star": 5.0
+      },
+      {
+        "name": "Khang Lưu",
+        "review": "Don't visit the shop anymore",
+        "star": 1.0
+      },
+      {
+        "name": "Khuyên Nguyễn",
+        "review": "Mail staff",
+        "star": 5.0
+      },
+      {
+        "name": "Anh Quỳnh",
+        "review": "Water is more expensive and worse, thanks",
+        "star": 1.0
+      },
+      {
+        "name": "Ngân PTT",
+        "review": "Nurture the body",
+        "star": 5.0
+      },
+      {
+        "name": "Hảo Hoàng",
+        "review": "so pretty",
+        "star": 5.0
+      },
+      {
+        "name": "Truong Hong Cam",
+        "review": "The toilet is so dirty.",
+        "star": 1.0
+      },
+      {
+        "name": "Thương Lý Thanh",
+        "review": "so wonderful 🥰🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Poly Khô Gà (Càng Ăn Càng Mê Ly)",
+        "review": "Cool and comfortable space, good service. Beautiful scenery, very chill",
+        "star": 5.0
+      },
+      {
+        "name": "Mình Thư Nguyễn Thị",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Bọ Cạp Cô nàng",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Đạt Trường",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Quỳnh My Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "10.Mỹ Hiền",
+        "review": "cute staff",
+        "star": 5.0
+      },
+      {
+        "name": "Tuyết Ngọc",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Không Người Đảo",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hun Hun",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hieu Nguyen",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Vicky MyLinh",
+        "review": "",
+        "star": 4.0
+      },
+      {
+        "name": "Thong TP",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Can Huynh",
+        "review": "",
+        "star": 3.0
+      },
+      {
+        "name": "Louis Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "陳珍珍",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Bao Vy",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Lan Vo",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Ha Binh Land",
+        "review": "",
+        "star": 4.0
+      },
+      {
+        "name": "Duy Trần",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "14_ Phạm Quang Long",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Quyên Ngọc",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Lâm Huỳnh Bảo",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Linh Dương",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Thành Hoài Dương",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nguyễn Minh Tân 09-03-03",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Savanna",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Tuấn Huỳnh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Trọng nguyễn đẹp trai",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Vinh Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Đỗ Thảo Nguyên",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nghiệp Phạm (Anh béo)",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hoàng Luân Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Ngọc Tuyền",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Tiểu Băng Lý",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Như Quỳnh Huỳnh ngọc",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Lý Hoàng Pha",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Soma Nhím",
+        "review": "",
+        "star": 1.0
+      },
+      {
+        "name": "Hồ Như Anh",
+        "review": "",
+        "star": 1.0
+      },
+      {
+        "name": "Bao Quoc",
+        "review": "",
+        "star": 5.0
       }
     ]
   }
