@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time, json
+import time, json, re, os
 
 def is_single_place_page(driver):
     try:
@@ -42,7 +42,7 @@ def open_reviews_tab(driver):
 
 def scroll_reviews(driver, max_scrolls=20):
     try:
-        scrollable_div = WebDriverWait(driver, 10).until(
+        scrollable_div = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located(
                 (By.XPATH, '//div[contains(@class, "m6QErb") and contains(@class, "DxyBCb") and contains(@class, "kA9KIf") and contains(@class, "dS8AEf")]')
             )
@@ -58,7 +58,7 @@ def scroll_reviews(driver, max_scrolls=20):
 
             if current_count == previous_count:
                 retries += 1
-                if retries >= 2:
+                if retries >= 1:
                     print(f"Không còn review mới sau {i+1} lần cuộn.")
                     break
             else:
@@ -67,6 +67,9 @@ def scroll_reviews(driver, max_scrolls=20):
 
             driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable_div)
             time.sleep(2)
+
+        if current_count == 0:
+            print("Không có review nào.")
 
     except Exception as e:
         print("Lỗi khi cuộn review:", e)
@@ -101,60 +104,124 @@ def get_reviews(driver):
             except:
                 star = None
 
-            if star is not None:
-                reviews.append({
-                    "name": name,
-                    "review": comment,
-                    "star": star
-                })
-
+            reviews.append({
+                "name": name,
+                "review": comment,
+                "star": star
+            })
+            
     except Exception as e:
         print("Không thể lấy review:", e)
 
     return reviews
 
 def process_single_place(driver):
+    data = {}
     try:
         title = driver.find_element(By.CLASS_NAME, "DUwDvf").text.strip()
         print(f"Đang xử lý địa điểm: {title}")
+        data['title'] = title
+        data['address'] = driver.find_element(By.CLASS_NAME, 'Io6YTe').text.strip()
+        data['link'] = driver.current_url
     except:
-        pass
-    data = {
-        'title': driver.find_element(By.CLASS_NAME, 'DUwDvf').text,
-        'address': driver.find_element(By.CLASS_NAME, 'Io6YTe').text.strip(),
-        'link': driver.current_url
-    }
-    try:
-        rating_element = driver.find_element(By.CSS_SELECTOR, 'div.fontBodyMedium span[role="img"]')
-        rating_text = rating_element.get_attribute('aria-label')
-        rating_number = [float(piece) for piece in rating_text.split(" ") if piece.replace(".", "", 1).isdigit()]
-        data['star'] = rating_number[0] if rating_number else 0
-
-        # Lấy số bài đánh giá (review)
-        # try:
-        #     # Tìm span có aria-label chứa "bài đánh giá"
-        #     review_element = driver.find_element(By.XPATH, '//span[contains(@aria-label, "bài đánh giá")]')
-        #     review_text = review_element.get_attribute('aria-label')  # "215 bài đánh giá"
-        #     review_number = int("".join(filter(str.isdigit, review_text)))  # lấy 215
-        #     data['review'] = review_number
-        # except:
-        #      data['review'] = 0
-    except:
-        pass
+        pass  # Nếu không load được địa điểm
 
     try:
-        open_reviews_tab(driver)  # Mở tab Review
-        # Cuộn để tải tất cả review
+        rating_element = driver.find_element(By.CSS_SELECTOR, 'span[role="img"]')
+        rating_text = rating_element.get_attribute('aria-label')  # Ví dụ: "4.4 stars"
+        rating_number = float(re.search(r"[\d.]+", rating_text).group())
+        data['star'] = rating_number
+    except:
+        data['star'] = 0
+
+    try:
+        time.sleep(2)
+        open_reviews_tab(driver)
         scroll_reviews(driver)
         data['reviews'] = get_reviews(driver)
-
     except:
-        pass
+        data['reviews'] = []
 
-    with open('results.json', 'w', encoding='utf-8') as f:
-        json.dump([data], f , indent=2, ensure_ascii=False)
+    return data
 
-    driver.quit()
-    exit()  #
+def collect_place_urls_from_keywords(driver, keywords, keyword_name="default"):
+    all_place_urls = []
 
+    for keyword in keywords:
+        print(f"Tìm kiếm với từ khóa: {keyword}")
+        driver.get(f'https://www.google.com/maps/search/{keyword}/')
+        time.sleep(5)
+
+        # Kiểm tra có phải trang địa điểm cụ thể không
+        if is_single_place_page(driver):
+            print(f"→ '{keyword}' là địa điểm cụ thể.")
+            all_place_urls.append(driver.current_url)
+            continue
+
+        # Nếu không phải thì xử lý như danh sách
+        try:
+            first_result = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'a.hfpxzc'))
+            )
+            driver.execute_script("arguments[0].click();", first_result)
+            time.sleep(3)
+        except Exception as e:
+            print(f"Không thể chọn kết quả đầu tiên cho '{keyword}':", e)
+            continue
+
+        collected_urls = set()
+        scroll_to_load_all(driver, max_items=20)
+
+        items = WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'div[role="feed"] > div > div[jsaction]'))
+        )
+
+        for item in items:
+            try:
+                link_element = item.find_element(By.CSS_SELECTOR, "a")
+                place_url = link_element.get_attribute('href')
+                if place_url and place_url not in collected_urls:
+                    collected_urls.add(place_url)
+            except:
+                continue
+
+        all_place_urls.extend(collected_urls)
+
+    # Lưu URL vào file
+    os.makedirs("data/data_url", exist_ok=True)
+
+    with open(f"data/data_url/{keyword_name}_urls.json", "w", encoding="utf-8") as f:
+        json.dump(list(set(all_place_urls)), f, indent=2, ensure_ascii=False)
+
+    print(f"Đã thu thập {len(all_place_urls)} URL cho từ khóa {keyword_name}.")
+
+def process_places_from_urls(driver,keyword_name="default"):
+    os.makedirs("data/data_result", exist_ok=True)
+
+    try:
+        with open(f"data/data_url/{keyword_name}_urls.json", "r", encoding="utf-8") as f:
+            urls = json.load(f)
+    except FileNotFoundError:
+        print(f"Không tìm thấy file URL cho '{keyword_name}'")
+        return
+
+    all_data = []
+
+    for url in urls:
+        print(f"Đang xử lý: {url}")
+        driver.get(url)
+        time.sleep(5)
+
+        try:
+            data = process_single_place(driver)
+            if data:
+                all_data.append(data)
+        except Exception as e:
+            print("Lỗi khi xử lý:", e)
+            continue
+
+    with open(f"data/data_result/{keyword_name}.json", "w", encoding="utf-8") as f:
+        json.dump(all_data, f, indent=2, ensure_ascii=False)
+
+    print(f"Đã lưu kết quả vào data/data_result/{keyword_name}.json")
 

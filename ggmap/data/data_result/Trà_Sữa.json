@@ -1,0 +1,878 @@
+[
+  {
+    "title": "Trà sữa Tre",
+    "address": "291 Nguyễn Văn Trường, An Bình, Bình Thủy, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+Tre/@10.014826,105.728971,17z/data=!4m6!3m5!1s0x31a089b181e12573:0xd0f3836a3d5362fa!8m2!3d10.014826!4d105.728971!16s%2Fg%2F11rp8md_fz?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Nguyễn Thanh Ngọc Tiến",
+        "review": "delicious milk tea",
+        "star": 5.0
+      },
+      {
+        "name": "Song Nguyễn Lâm",
+        "review": "Thank you !",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà Sữa Trà Anh Hồng Phát",
+    "address": "84 Nguyễn Văn Cừ Nối Dài, An Bình, Ninh Kiều, Cần Thơ 94000",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+S%E1%BB%AFa+Tr%C3%A0+Anh+H%E1%BB%93ng+Ph%C3%A1t/@10.0243083,105.7450768,17z/data=!4m6!3m5!1s0x31a089f5d92eb391:0x9bf14c1c5513b7ee!8m2!3d10.0243083!4d105.7450768!16s%2Fg%2F11wg7b1mz7?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 4.2,
+    "reviews": [
+      {
+        "name": "Kite Team",
+        "review": "There was an order and the order was received and refused to be processed until the driver came to report the order before accepting the order, then the customer's order was delayed by more than 20 minutes. Employees sit around and give opinions, but the black-shirted manager has an unpleasant response attitude",
+        "star": 1.0
+      },
+      {
+        "name": "Ngọc trân Lê thị",
+        "review": "Delicious water, cheerful and enthusiastic staff",
+        "star": 5.0
+      },
+      {
+        "name": "Tri Nguyen Minh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Minh Trí",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Minh Trí",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa SanThai - Đậm vị chuẩn Thái - Nguyễn Văn Cừ ND2",
+    "address": "2PFV+7V7, Nguyễn Văn Cừ Nối Dài, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+SanThai+-+%C4%90%E1%BA%ADm+v%E1%BB%8B+chu%E1%BA%A9n+Th%C3%A1i+-+Nguy%E1%BB%85n+V%C4%83n+C%E1%BB%AB+ND2/@10.0231664,105.744682,17z/data=!4m6!3m5!1s0x31a0890074e71397:0x60517cd91caef0fa!8m2!3d10.0231664!4d105.744682!16s%2Fg%2F11lv8hhwxq?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 3.3,
+    "reviews": [
+      {
+        "name": "JoonKi Kim",
+        "review": "It's absolutely amazing 🥹 I've been following SanThai all the way from Mau Than to here 🙌",
+        "star": 5.0
+      },
+      {
+        "name": "6-26-D-Nguyễn Thị Phương Thảo",
+        "review": "Oh my gosh, the restaurant makes drinks quickly and deliciously, and the staff is also cute. The staff greets you and makes you want to buy the entire menu.",
+        "star": 5.0
+      },
+      {
+        "name": "Trường Vũ",
+        "review": "The price of water is ok but you have to wait 45 minutes to get kumquat tea :))))???",
+        "star": 1.0
+      },
+      {
+        "name": "Tiên Nguyễn",
+        "review": "It takes a long time to make water even though it's not crowded :)))",
+        "star": 3.0
+      },
+      {
+        "name": "Mai Ngọc",
+        "review": "Repeat again and again not to leave the last topping 🙏",
+        "star": 2.0
+      },
+      {
+        "name": "Ngân Ngô Thị kim",
+        "review": "Ordered golden green and received red",
+        "star": 3.0
+      },
+      {
+        "name": "Khánh Ngọc Trần",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Châu Lê",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "quynh pham",
+        "review": "",
+        "star": 1.0
+      }
+    ]
+  },
+  {
+    "title": "Trà Sữa KU BEER",
+    "address": "452 Nguyễn Trãi, Lê Bình, Cái Răng, Cần Thơ 900000",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+S%E1%BB%AFa+KU+BEER/@10.0030743,105.7509151,17z/data=!4m6!3m5!1s0x31a0897ecc4d5fd7:0x72a6e9ead1024a71!8m2!3d10.0030743!4d105.7509151!16s%2Fg%2F11v_2d8ttz?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "N.Hảo 12A1 Trần",
+        "review": "I must say the drinks here are so delicious +💯",
+        "star": 5.0
+      },
+      {
+        "name": "Công Hiệu Trương",
+        "review": "Thanks!",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa Trạm O/oLong Tea&Milk - Phạm Hùng",
+    "address": "290 Đ. Phạm Hùng, Lê Bình, Cái Răng, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+Tr%E1%BA%A1m+O%2FoLong+Tea%26Milk+-+Ph%E1%BA%A1m+H%C3%B9ng/@9.99483,105.749317,17z/data=!4m6!3m5!1s0x31a08900291b95df:0x527a6e0d97797ebd!8m2!3d9.99483!4d105.749317!16s%2Fg%2F11yb64phnm?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Ái Tiên",
+        "review": "The milk tea is always delicious, the staff is cute and enthusiastic\nWill definitely come back🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Lợi Nguyễn",
+        "review": "The milk tea is delicious, full of flavor, rich in tea flavor, and has a very strong roof top🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Trinh Nguyễn",
+        "review": "The milk tea is fragrant and sweet, just to my taste. I like the giant peach tea at the shop the most, with whole peaches",
+        "star": 5.0
+      },
+      {
+        "name": "Mỹ Tiên",
+        "review": "Delicious milk tea that hits the ceiling 🫰🏻",
+        "star": 5.0
+      },
+      {
+        "name": "Kiều",
+        "review": "The fruit tea here is super delicious. When I bought a peach cup, I got a whole peach that was so big kkkk",
+        "star": 5.0
+      },
+      {
+        "name": "TQA A",
+        "review": "Enthusiastic staff. Delicious drinks, drink 3 times a day without getting bored.",
+        "star": 5.0
+      },
+      {
+        "name": "D24I_39 Lê Thị Yến Nhị",
+        "review": "Fragrant milk tea is fine, I love drinking it at this shop 🥰🥰 …",
+        "star": 5.0
+      },
+      {
+        "name": "Phạm Trung Hậu",
+        "review": "The milk tea here is extremely delicious, everyone",
+        "star": 5.0
+      },
+      {
+        "name": "Tuấn Trần Khánh",
+        "review": "The milk tea is fragrant, rich and delicious, so mouth-watering🥰🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Thông Huỳnh",
+        "review": "According to my taste is very suitable. Tasty.\nIf you don't believe it, please come and try it‼️‼️‼️‼️",
+        "star": 5.0
+      },
+      {
+        "name": "Diệu Hân",
+        "review": "Delicious tea, not too sweet, nice",
+        "star": 5.0
+      },
+      {
+        "name": "Trúc Thanh",
+        "review": "I've only tried about 5 dishes and they're all delicious",
+        "star": 5.0
+      },
+      {
+        "name": "La Duy",
+        "review": "The milk tea is delicious and fragrant, very rich in tea 😍",
+        "star": 5.0
+      },
+      {
+        "name": "35-D24D Nguyễn Thị Phương Quyên",
+        "review": "Delicious milk tea is worth experiencing",
+        "star": 5.0
+      },
+      {
+        "name": "Nguyễn Thị Mỹ Thơ",
+        "review": "Enthusiastic staff, clean counter, worth experiencing ✨️🫰",
+        "star": 5.0
+      },
+      {
+        "name": "Hân Ngoc",
+        "review": "The drink is delicious and worth experiencing.",
+        "star": 5.0
+      },
+      {
+        "name": "Hưng Phạm",
+        "review": "Delicious water and enthusiastic staff 🥰",
+        "star": 5.0
+      },
+      {
+        "name": "Mộng Quỳnh Trần",
+        "review": "Milk tea is rich in flavor, you should try it🫶 …",
+        "star": 5.0
+      },
+      {
+        "name": "Lê Mỹ Thanh",
+        "review": "Enthusiastic staff, delicious water.",
+        "star": 5.0
+      },
+      {
+        "name": "Than Minh",
+        "review": "cute",
+        "star": 5.0
+      },
+      {
+        "name": "Ngoc Dieu Nguyen",
+        "review": "Ts delicious",
+        "star": 5.0
+      },
+      {
+        "name": "Khắc Ri",
+        "review": "Very cool",
+        "star": 5.0
+      },
+      {
+        "name": "Quắn",
+        "review": "Great is great",
+        "star": 5.0
+      },
+      {
+        "name": "22. Huỳnh Trung Nghĩa",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Bi Nguyen",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Jzannn",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa sukem nvc nối dài",
+    "address": "141 Nguyễn Văn Cừ Nối Dài, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+sukem+nvc+n%E1%BB%91i+d%C3%A0i/@10.0249637,105.7466128,17z/data=!4m6!3m5!1s0x31a089c7f410f2b7:0x18cd2aeaf029f209!8m2!3d10.0249637!4d105.7466128!16s%2Fg%2F11syy_wdmt?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 2.1,
+    "reviews": [
+      {
+        "name": "Trinh Nguyen Truong Tu",
+        "review": "A glass of fresh milk with brown sugar has a fly mixed in with a buffalo's leg :))",
+        "star": 1.0
+      },
+      {
+        "name": "Kim Cương Phạm",
+        "review": "Around 7:00 p.m. on September 14, my lover and I bought 2 cups of milk tea. Mine was large size black sugar pearl fresh milk + 2 cheese balls + 1 flant + 1 sweet potato but when I got home to eat, there wasn't even 1 cheese ball 😃😃😃 Before that, the staff said they were out of coconut (the cup my lover ordered) so they would change to black tapioca pearls, what about cheese balls????? But they didn't let me in but still charged???? The staff did such a strange job, even though when I bought it, there were very few customers, only my car and a car that just came in. If you want to visit this branch, please visit the branch near cmt8 street. Looking at the bill on the glass, are there only 2 cheese balls in 2 servings? Much more expensive than other branches but where do they get any pills????",
+        "star": 1.0
+      },
+      {
+        "name": "Lê Thu Hoa",
+        "review": "The staff's attitude is not good. When you buy and pay in full, you think you're asking for nothing. I hope the restaurant will review the staff's attitude. Otherwise, there would still be those one-star reviews.",
+        "star": 1.0
+      },
+      {
+        "name": "Duy Khoa Đặng",
+        "review": "The staff took the order but threw the tray away. If you don't take the order, just tell me to go to another restaurant\nThe experience on the evening of October 22 scared me to death",
+        "star": 1.0
+      },
+      {
+        "name": "Hồ Toàn",
+        "review": "Selling too expensive. THOSE WHO WANT TO EXPERIENCE SHOULD CONSIDER IT CAREFULLY.\nAround 4:20 p.m. on December 2, 2023. Bought a special cup of ice cream sundae for 35k, recommended about 10 toppings, and brought out the following in the evening: 1 flan, 1 Bach Bach ball, 1 energy ball, and 2 white tapioca balls, and finally 1 large size glass with lots of water.\nWill never visit again.",
+        "star": 1.0
+      },
+      {
+        "name": "Hoang Vuong",
+        "review": "Khuc Bach is eaten like normal jelly, the service is not attentive",
+        "star": 1.0
+      },
+      {
+        "name": "Thảo Vy Trương",
+        "review": "In the menu, it says 700ml per liter but it's not enough to measure the amount of water in the nemu hanging goat's head and selling dog meat.\nBuy it and bring it home so you can ice it separately\ntrs to collect the toping song Bach.",
+        "star": 1.0
+      },
+      {
+        "name": "Hoàng Ninh Nguyễn",
+        "review": "Delicious cakes, ok milk tea, worth a try!",
+        "star": 5.0
+      },
+      {
+        "name": "Vỹ Hào Phùng",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "16-05-03 Nguyễn Tấn Kiệt",
+        "review": "",
+        "star": 1.0
+      },
+      {
+        "name": "Dương Ngọc Huỳnh Như",
+        "review": "",
+        "star": 2.0
+      },
+      {
+        "name": "Trường Khang",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa Chan Cha - 寶珍茶坊",
+    "address": "103 Đ. 3 Tháng 2, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+Chan+Cha+-+%E5%AF%B6%E7%8F%8D%E8%8C%B6%E5%9D%8A/@10.0114468,105.7527098,17z/data=!4m6!3m5!1s0x31a089005c062a07:0x4ea7b54e5f9eb72b!8m2!3d10.0114468!4d105.7527098!16s%2Fg%2F11w1k6rfv4?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Anh Thy",
+        "review": "The milk tea is really delicious, and the staff is also cute",
+        "star": 5.0
+      },
+      {
+        "name": "tran nguyen",
+        "review": "Delicious milk tea. Student prices, menu suitable for many audiences. The tapioca pearls are so delicious",
+        "star": 5.0
+      },
+      {
+        "name": "Danh KT",
+        "review": "Super topping. I like the taro milk tea at this shop, it suits my taste very well",
+        "star": 5.0
+      },
+      {
+        "name": "Thu Thảo Nguyễn Lê",
+        "review": "Delicious milk tea with lots of toppings and lovely staffgg",
+        "star": 5.0
+      },
+      {
+        "name": "Hào Lê",
+        "review": "Delicious, cheap milk tea",
+        "star": 5.0
+      },
+      {
+        "name": "Hakken Vợ",
+        "review": "Delicious drinks, cheerful staff",
+        "star": 5.0
+      },
+      {
+        "name": "Danh Nguyễn",
+        "review": "I like chan cha milk tea",
+        "star": 5.0
+      },
+      {
+        "name": "Ngọc Trâm",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Ngọc Trâm",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Ngọc Trâm",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Ngoan Truong",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hằng Bích",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "hoa luu",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Yen Nhii",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa ACE",
+    "address": "Hẻm 51 Đ. 3-2, Phường An Khánh, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+ACE/@10.0284927,105.7628979,17z/data=!4m6!3m5!1s0x31a0890a4108db7b:0x2af5573e72a61011!8m2!3d10.0284927!4d105.7628979!16s%2Fg%2F11q1wq521q?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 4.5,
+    "reviews": [
+      {
+        "name": "Michelle Dinh",
+        "review": "Ordered 2 cups of milk tea through the app. One is traditional milk tea and the other is chia seeds. Because there is a promotion, you should try it. The shop is quite thoughtful in dividing water and ice separately. Add a lot of toppings including sticky potatoes and tapioca pearls. Milk tea tastes quite popular, about 20k for a cup and is generally a reasonable price for students to drink",
+        "star": 4.0
+      },
+      {
+        "name": "Hải Đăng",
+        "review": "bad employee",
+        "star": 1.0
+      },
+      {
+        "name": "Nguyễn Hoàng Nhật Hào",
+        "review": "Milk tea is delicious and cheaper than many other shops.",
+        "star": 5.0
+      },
+      {
+        "name": "nha truong",
+        "review": "Bought 1 cup but thought I was buying 10 cups, it took a long time",
+        "star": 2.0
+      },
+      {
+        "name": "kim hoàng trần",
+        "review": "Milk tea + service is quite delicious, very ok. Will continue to support",
+        "star": 5.0
+      },
+      {
+        "name": "Bảo Châu",
+        "review": "Great, but the shop closes too early",
+        "star": 5.0
+      },
+      {
+        "name": "Trang Nguyễn",
+        "review": "Delicious milk tea, lots of toppings. Tasty",
+        "star": 5.0
+      },
+      {
+        "name": "Luân Lý",
+        "review": "Cheap but a bit sweet",
+        "star": 5.0
+      },
+      {
+        "name": "My Do",
+        "review": "Milk Tea is delicious!!!😍 …",
+        "star": 5.0
+      },
+      {
+        "name": "Pascal De groof",
+        "review": "It's for young people...",
+        "star": 4.0
+      },
+      {
+        "name": "HẢI ĐĂNG HỒ",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nguyễn Thanh Ngọc Tiến",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "dieu pham",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "sofia lê",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hào Lương Minh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nguyễn Lê Phong",
+        "review": "",
+        "star": 4.0
+      },
+      {
+        "name": "dat truong",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Toàn Thanh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Jackson Mr",
+        "review": "",
+        "star": 4.0
+      },
+      {
+        "name": "Anh Tran",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa trạm O/oLong Tea & Milk Cái Răng",
+    "address": "164/3A Đ. Phạm Hùng, Kv Yên Hoà, P, Cái Răng, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+tr%E1%BA%A1m+O%2FoLong+Tea+%26+Milk+C%C3%A1i+R%C4%83ng/@9.9999157,105.7500869,17z/data=!4m6!3m5!1s0x31a089003a147761:0xfc181d6cfdfb911e!8m2!3d9.9999157!4d105.7500869!16s%2Fg%2F11w4t_64dd?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 4.7,
+    "reviews": [
+      {
+        "name": "quang nhat hoang",
+        "review": "Peach tea 🍑 is super delicious and only has whole peaches for 30k",
+        "star": 5.0
+      },
+      {
+        "name": "Thành Phú Trần Dương",
+        "review": "I went to the station there to buy it and the staff acted like I didn't have any money",
+        "star": 1.0
+      },
+      {
+        "name": "khánh nguyên trần huỳnh",
+        "review": "The milk tea is so delicious, so many toppings",
+        "star": 5.0
+      },
+      {
+        "name": "Nhi Thị",
+        "review": "Fragrant and fatty milk tea\nTopping is very deliciousnnnn 🫶",
+        "star": 5.0
+      },
+      {
+        "name": "Loan Ngoc",
+        "review": "Tasty! Lots of toppings",
+        "star": 5.0
+      },
+      {
+        "name": "Thịnh Nguyễn",
+        "review": "Good water, reasonable price",
+        "star": 5.0
+      },
+      {
+        "name": "๛mạռɦ 亗Ĥổ⳻᷼⳺",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "950 Black",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Duyên Ngọc",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Lê Minh giàu",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Phú Lê Minh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Kat Nguyen",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà Sữa IKIGAI",
+    "address": "404 Đ. Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ 94000",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+S%E1%BB%AFa+IKIGAI/@10.0256133,105.7590952,17z/data=!4m6!3m5!1s0x31a089aea1cb3f31:0x905b4fb47d54691b!8m2!3d10.0256133!4d105.7590952!16s%2Fg%2F11p6wq90fq?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 4.1,
+    "reviews": [
+      {
+        "name": "Lý Minh Thuận",
+        "review": "Goodd",
+        "star": 5.0
+      },
+      {
+        "name": "Xe tải chở thuê 79 Ninh Kiều Cần Thơ",
+        "review": "OK !",
+        "star": 5.0
+      },
+      {
+        "name": "Nhi Uyển",
+        "review": "To be honest, this milk tea shop is so bad, I've never been to any shop where the milk tea tastes so bad, I ordered two cups, one traditional glass and one roasted rice glass, the traditional drink was bitter. ts roasted rice is too bland.",
+        "star": 2.0
+      },
+      {
+        "name": "Thiên Tâm",
+        "review": "Milk tea does not taste like tea, only tastes like milk. Sweet, fragrant milk with full topping. Reasonable price ~22~30k cups.",
+        "star": 5.0
+      },
+      {
+        "name": "Thanh Ngân Trần",
+        "review": "Should change the name of \"green jasmine\" milk tea to \"jasmine ginseng\" :) that's a mistake :) milk tea but it only smells like tea, no milk at all, it's terribly bitter to drink",
+        "star": 1.0
+      },
+      {
+        "name": "Zailia Itna",
+        "review": "Say it's 15k a second drink but buy 4 drinks, it's still 22k a drink?",
+        "star": 1.0
+      },
+      {
+        "name": "Minh Thư Võ (Cô giáo Thư)",
+        "review": "Delicious milk tea and very enthusiastic service staff. 10 points",
+        "star": 5.0
+      },
+      {
+        "name": "Tuyền Nguyễn Ngọc",
+        "review": "The shop is beautifully decorated, exactly to my taste, and the milk tea is super delicious and the fruit tea is refreshingttttttt",
+        "star": 5.0
+      },
+      {
+        "name": "ha vy lam",
+        "review": "The milk tea is very delicious, I like the shop's topping, soft and fatty, not hard like other shops. The paper cups are so cute, the waiters are cute too. I give the restaurant 5 stars",
+        "star": 5.0
+      },
+      {
+        "name": "Thắng Nguyễn",
+        "review": "The milk tea at the shop is very delicious, I am very satisfied with the service staff here",
+        "star": 5.0
+      },
+      {
+        "name": "Cuong To",
+        "review": "The staff are very welcoming, it's 10 VND, as for the milk tea, I think the taste is normal and sweet, if you have a choice of sugar % it would be better.",
+        "star": 5.0
+      },
+      {
+        "name": "Sa Ro",
+        "review": "At 9:00 a.m. the shop opens, I buy food again at 9:30 a.m. and at this time there are 2 employees in the shop. I don't know if I'm invisible or not, but the NV guys don't even look at me. Really disappointed!\nIf the shop still doesn't want to sell after 9:30, please change the information on GG, it's not professional at all!",
+        "star": 1.0
+      },
+      {
+        "name": "Trần Thanh phong",
+        "review": "What do you mean there are insects in the water?",
+        "star": 1.0
+      },
+      {
+        "name": "Ánh Ngọc",
+        "review": "Milk tea is suitable for taste, attentive and polite staff, good service!!!👍",
+        "star": 5.0
+      },
+      {
+        "name": "Anh Quan Nguyen",
+        "review": "Delicious milk tea, good service attitude.",
+        "star": 5.0
+      },
+      {
+        "name": "ne nguyen",
+        "review": "strong milk tea, ok",
+        "star": 5.0
+      },
+      {
+        "name": "Suong Sa",
+        "review": "To be honest, the price is cheap but not delicious :( sorry owner.",
+        "star": 3.0
+      },
+      {
+        "name": "Lâm Cường",
+        "review": "Drink well! Fragrant, fatty, sweet and addictive",
+        "star": 5.0
+      },
+      {
+        "name": "Duong Pham",
+        "review": "Delicious, cheap drinks",
+        "star": 4.0
+      },
+      {
+        "name": "Tú Nguyễn",
+        "review": "Bad",
+        "star": 1.0
+      },
+      {
+        "name": "Võ Viễn Đông",
+        "review": "Polite and courteous service",
+        "star": 5.0
+      },
+      {
+        "name": "lover cat",
+        "review": "Great",
+        "star": 5.0
+      },
+      {
+        "name": "Trương Như Phượng",
+        "review": "Too bad",
+        "star": 1.0
+      },
+      {
+        "name": "Yến nhi Lê",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "trân lê",
+        "review": "Tasty",
+        "star": 5.0
+      },
+      {
+        "name": "Pin Racing",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nhân Trọng",
+        "review": "They",
+        "star": 5.0
+      },
+      {
+        "name": "Trọng Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Chí Thiện Nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Tho Can",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Tài",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nguyễn Ngọc Tuyền",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Phi Hoàng",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "thuy diem",
+        "review": "Hello IKIGAI\nI wonder if you have any comments or need any support, so we can listen and support.",
+        "star": 3.0
+      },
+      {
+        "name": "Tài Văn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "hoàng tỷ nguyễn",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Quang Đạo",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hoang Loi",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Nhân Nguyễn",
+        "review": "Hello IKIGAI, thank you for your interest in the store. I don't know if your experience at the store was not good or what caused you to rate it 3 stars. Please leave a comment for IKIGAI. Can you fix it ❤️",
+        "star": 3.0
+      },
+      {
+        "name": "tan khanh",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "Hải Lê",
+        "review": "",
+        "star": 1.0
+      },
+      {
+        "name": "nghi Hong",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà Sữa QING CHUN - Chi nhánh An Bình",
+    "address": "",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+S%E1%BB%AFa+QING+CHUN+-+Chi+nh%C3%A1nh+An+B%C3%ACnh/@10.0104558,105.7510824,17z/data=!4m6!3m5!1s0x31a08940351b0b7d:0xedd2175014489cc7!8m2!3d10.0104558!4d105.7510824!16s%2Fg%2F11t9wkb4vv?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Công Bùi",
+        "review": "Can I have 4 female friends working the noon shift on Thursday, February 15? When you stop by to buy milk tea at noon, you bring an umbrella so cute.",
+        "star": 5.0
+      },
+      {
+        "name": "宜玟",
+        "review": "The drinks are delicious~ There is also a Chinese menu!",
+        "star": 5.0
+      },
+      {
+        "name": "Châu Thành tài",
+        "review": "Taiwanese standard milk tea",
+        "star": 5.0
+      },
+      {
+        "name": "Phan Thi Cam Nhung",
+        "review": "You should try the delicious milk tea, everyone",
+        "star": 5.0
+      },
+      {
+        "name": "Huynh To",
+        "review": "Golden lotus tea",
+        "star": 5.0
+      },
+      {
+        "name": "Lê Thành Công",
+        "review": "",
+        "star": 5.0
+      },
+      {
+        "name": "29. Trần Nữ Diệu Thùy",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa Keju",
+    "address": "206 tổ 4 ấp mỹ phước, Phong Điền, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+Keju/@9.9968529,105.7218357,17z/data=!4m6!3m5!1s0x31a089d1fafcd783:0x967ba3a886660d13!8m2!3d9.9968529!4d105.7218357!16s%2Fg%2F11mvlszwlx?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 0,
+    "reviews": []
+  },
+  {
+    "title": "Trà sữa Cato",
+    "address": "Hẻm 1/120e/3 Đ. Trần Vĩnh Kiết, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+Cato/@10.0100036,105.7496262,17z/data=!4m6!3m5!1s0x31a0890003dd9f2d:0xc55fa3635bba884d!8m2!3d10.0100036!4d105.7496262!16s%2Fg%2F11wftkzp7x?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Nú Nú",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  },
+  {
+    "title": "Trà sữa RUM",
+    "address": "85 ĐH5, Mỹ Khánh, Phong Điền, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Tr%C3%A0+s%E1%BB%AFa+RUM/@9.9968139,105.7148108,17z/data=!4m6!3m5!1s0x31a0891fc424f31d:0x2183afebda03aac1!8m2!3d9.9968139!4d105.7148108!16s%2Fg%2F11nxb_h9bc?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "star": 5.0,
+    "reviews": [
+      {
+        "name": "Giang Nguyen",
+        "review": "",
+        "star": 5.0
+      }
+    ]
+  }
+]
