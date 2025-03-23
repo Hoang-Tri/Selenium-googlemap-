@@ -12,7 +12,7 @@ class NoAnswerHandler:
 
         prompt = ChatPromptTemplate.from_messages(
             [
-                ("system", CustomPrompt.HANDLE_NO_ANSWER),
+                ("system", CustomPrompt.HANDLE_FEEDBACK_NO_ANSWER),
                 ("human", " User question: {question}"),
             ]
         )

@@ -21,8 +21,8 @@ class AnswerGenerator:
         # Xây dựng prompt cho chatbot với ngữ cảnh và câu hỏi của người dùng
         prompt = ChatPromptTemplate.from_messages(
             [
-                ("system", CustomPrompt.GENERATE_ANSWER_PROMPT),
-                ("human", " User question: {question} \n\n Context: {context}"),
+                ("system", CustomPrompt.GENERATE_FEEDBACK_ANSWER_PROMPT),
+                ("human", "Đoạn van noi ve thuong hieu: {question}"),
             ]
         )
 

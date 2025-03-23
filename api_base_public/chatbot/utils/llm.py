@@ -71,3 +71,4 @@ class LLM:
             return self.gemini()
         else:
             return self.open_ai()  # Mặc định sử dụng OpenAI nếu không có tên hợp lệ
+
