@@ -5,6 +5,7 @@ from app.models.base import Base
 from chatbot.services.chatbot_api_agent import FilesChatAgent
 from ingestion.ingestion  import Ingestion
 import json, re
+from app.config import settings
 # Tạo router cho người dùng
 router = APIRouter(prefix="/base", tags=["base"])
 
@@ -45,44 +46,17 @@ async def chat_ingestion(
     api_key: str = get_api_key,
     Place: str = Form(...)
 ):
+    Ingestion(settings.LLM_NAME).ingestion_folder(
+        path_input_folder="demo\data_in",
+        path_vector_store="demo\data_vector",
+    )
     try:
-        ingestion = Ingestion("all-MiniLM-L6-v2")
+        chat = FilesChatAgent("demo\data_vector").get_workflow().compile().invoke(
+            input={"question": Place}
+        )
+        response = chat["generation"]
 
-        # Đọc file comment
-        with open("demo/data_in/data_feedback.txt", "r", encoding="utf-8") as f:
-            all_lines = f.readlines()
-
-        filtered_lines = [line.strip() for line in all_lines if Place.lower() in line.lower()]
-
-        results = []
-
-        for i, line in enumerate(filtered_lines):
-            prompt = f"{Place}\n\n{line}"
-
-            chat = FilesChatAgent().get_workflow().compile().invoke(
-                input={"question": prompt}
-            )
-            response = chat["generation"]
-
-            # results.append({
-            #     "index": i,
-            #     "prompt": prompt,
-            #     "response": response
-            # })
-
-        # Tổng hợp phản hồi
-        # response_text = "\n\n".join([f"[{r['index']}] {r['response']}" for r in results])
-        # cleaned_data = response_text.replace('[0] ', '', 1)
-
-            json_match = re.search(r"```json\n(.*?)```", response, re.DOTALL)
-            if json_match:
-                response_data = json.loads(json_match.group(1))
-
-            results.append(response_data)
-        print(json.dumps(results, indent=2, ensure_ascii=False)) 
-        return Base(id="chatbot-response", data=json.dumps(results, ensure_ascii=False))
-
-        # return Base(id="chatbot-response", data=final_result)
+        return Base(id="chatbot-response", data=response)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")

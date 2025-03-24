@@ -50,45 +50,78 @@ class CustomPrompt:
         Lưu ý: Không thêm bất kỳ nội dung gì khác.
     """
     GENERATE_FEEDBACK_ANSWER_PROMPT = """
-        Bạn là người đánh giá mức độ liên quan của một tài liệu được truy xuất đối với một câu hỏi cụ thể từ người dùng.
-        Mục tiêu là xác định xem tài liệu có thực sự hỗ trợ việc trả lời câu hỏi hay không.
+        Bạn là người đánh giá mức độ liên quan và chất lượng giữa các địa điểm dựa trên các phản hồi của người dùng.
+        Mục tiêu là phân tích từng địa điểm, sau đó nếu có, so sánh và kết luận đâu là địa điểm tốt hơn dựa trên các tiêu chí đánh giá.
 
-        Các bước hướng dẫn cụ thể:
+        Thông tin người dùng cung cấp:
+        - Tên người dùng : {{user}}
+        - Nhận xét : {{comment}}
 
-        1. Đọc kỹ nội dung văn bản.
-            - Đọc nội dung và xác định tên thương hiệu hoặc địa điểm được nhắc đến trong văn bản.
+        - Tên người dùng : {{user}}
+        - Nhận xét : {{comment}}
 
-        2. Xác định và liệt kê:
-            - Positive-feedback: Liệt kê các từ hoặc cụm từ mang tính tích cực như: "tốt", "tuyệt vời", "hài lòng", "sạch sẽ", "chuyên nghiệp", "thân thiện", v.v.
-            - Negative-feedback: Liệt kê các từ hoặc cụm từ mang tính tiêu cực như: "tệ", "chậm", "không hài lòng", "dơ bẩn", "thiếu chuyên nghiệp", "thái độ kém", v.v.
+        (Có thể có thêm người dùng và nhận xét...)
 
-        3. Kết luận tổng thể:
-            - Đưa ra đánh giá:
-                + "Tốt" nếu điểm tích cực chiếm ưu thế và thương hiệu để lại ấn tượng tốt.
-                + "Không tốt" nếu điểm tiêu cực chiếm ưu thế hoặc nghiêm trọng.
-            - Kèm theo một câu lý do ngắn gọn để giải thích cho kết luận đó.
+        ### Hướng dẫn thực hiện:
 
-        4. Trả về kết quả theo định dạng sau (kiểu JSON):
+        1. Đọc kỹ toàn bộ văn bản phản hồi.
 
-        {{
-            "Place": "<tên địa điểm hoặc thương hiệu>",
-            "Data": {{
-                "Positive": "<liệt kê các từ/cụm từ tích cực>",
-                "Negative": "<liệt kê các từ/cụm từ tiêu cực>",
-                "Kết luận": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn đi kèm.>"
+        2. Phân tích từng địa điểm:
+            a. Xác định tên địa điểm (Place).
+            b. Liệt kê feedback tích cực (Positive): từ/cụm từ như "tốt", "sạch sẽ", "thân thiện", "tuyệt vời", "đa dạng",...
+            c. Liệt kê feedback tiêu cực (Negative): từ/cụm từ như "dơ", "chậm", "thái độ không tốt", "không chuyên nghiệp",...
+            d. Đưa ra "Kết luận":
+                - Ghi là "Tốt" nếu phản hồi tích cực chiếm ưu thế.
+                - Ghi là "Không tốt" nếu phản hồi tiêu cực nhiều hơn hoặc nghiêm trọng.
+
+        3. Nếu có **nhiều hơn một địa điểm** và **có sự so sánh giữa các địa điểm** trong phản hồi:
+            - So sánh giữa các địa điểm dựa trên số lượng và mức độ của feedback tích cực và tiêu cực.
+            - Đưa ra nhận xét tổng quan, đánh giá địa điểm nào **tốt hơn** và **vì sao**.
+
+        4. Nếu **chỉ có một địa điểm** hoặc **không có so sánh giữa các địa điểm**, chỉ cần phân tích và đưa ra `"Kết luận"` cho từng địa điểm là đủ.
+
+        5. Nếu **không tìm thấy địa điểm nào** trong văn bản:
+            Trả về phản hồi:
+            {{
+                "message": "Xin lỗi, tôi không tìm thấy địa điểm hoặc thương hiệu nào trong dữ liệu để có thể đánh giá.\nCảm ơn bạn đã sử dụng hệ thống! "
             }}
-        }}                      
+        6. Nếu có địa điểm, trả về phản hồi dưới định dạng sau:
+            {{
+                "Place": "Tên địa điểm ",{{
+                    "User": "Tên người dùng",
+                    "Comment": "Nhận xét",
+                    ...
+                }}
+                "Data": {{
+                    "Place": "Tên địa điểm ",
+                    "Positive": "<liệt kê các cụm tích cực>",
+                    "Negative": "<liệt kê các cụm tiêu cực>",
+                    "Kết luận": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn.>"
+                }},
+                 "Place": "Tên địa điểm ",{{
+                    "User": "Tên người dùng",
+                    "Comment": "Nhận xét",
+                    ...
+                }}
+                "Data": {{
+                    ...
+                }},
+                "SoSanhChung": {{
+                    "Tôi khuyên bạn nên chọn": "Tên địa điểm tốt hơn",
+                    "Vì": "Địa điểm này có nhiều phản hồi tích cực hơn hoặc ít phản hồi tiêu cực hơn, dịch vụ tốt hơn, hoặc trải nghiệm khách hàng vượt trội hơn."
+                }}
+            }}
+            *Lưu ý: Chỉ bao gồm mục "SoSanhChung" nếu có sự so sánh rõ ràng giữa các địa điểm.*
     """
 
     HANDLE_FEEDBACK_NO_ANSWER = """
         Hiện tại, hệ thống không thể tạo ra câu trả lời phù hợp cho câu hỏi của bạn. 
         Điều này có thể do ngữ cảnh không chứa thông tin đủ rõ ràng hoặc câu hỏi vượt ngoài phạm vi hiểu biết hiện tại.
 
-        Để giúp bạn tốt hơn, vui lòng tạo một câu hỏi mới theo hướng dẫn sau:
+        - Trả về phản hồi theo định dạng sau:
 
-        - Câu hỏi nên cụ thể, rõ ràng và tập trung vào một chủ đề chính.
-        - Tránh đặt câu hỏi quá chung chung hoặc mang tính giả định không rõ nguồn.
-        - Nếu có thể, hãy cung cấp thêm thông tin hoặc bối cảnh liên quan đến câu hỏi của bạn.
-
+        {{
+            "message": "Xin lỗi, tôi không tìm thấy địa điểm hoặc thương hiệu nào trong dữ liệu để có thể đánh giá."
+        }}
         Cảm ơn bạn đã sử dụng hệ thống!
     """

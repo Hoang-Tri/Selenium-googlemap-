@@ -1,3 +1,4 @@
+from chatbot.utils.retriever import Retriever
 from chatbot.utils.llm import LLM  # noqa: I001
 from chatbot.utils.answer_generator import AnswerGenerator
 from chatbot.utils.no_answer_handler import NoAnswerHandler
@@ -10,44 +11,47 @@ from app.config import settings
 
 
 class FilesChatAgent:
-    def __init__(self) -> None:
+    def __init__(self,path_vector_store) -> None:
+        self.retriever = Retriever(settings.LLM_NAME).set_retriever(path_vector_store)  # Khởi tạo trình tìm kiếm tài liệu
         self.llm = LLM().get_llm(settings.LLM_NAME)  # Khởi tạo mô hình ngôn ngữ
         self.answer_generator = AnswerGenerator(self.llm)  # Bộ tạo câu trả lời
-        self.no_answer_handler = NoAnswerHandler(self.llm)  # Xử lý trường hợp không có câu trả lời
 
+    def retrieve(self, state: GraphState) -> Dict[str, Any]:
+        """
+        Tìm kiếm các tài liệu liên quan đến câu hỏi.
+
+        Args:
+            state (GraphState): Trạng thái hiện tại chứa câu hỏi.
+
+        Returns:
+            dict: Chứa danh sách tài liệu và câu hỏi.
+        """
+        question = state["question"]
+        documents = self.retriever.get_documents(question, int(settings.NUM_DOC))
+        return {"documents": documents, "question": question}
     def generate(self, state: GraphState) -> Dict[str, Any]:
         question = state["question"]
-        generation = self.answer_generator.get_chain().invoke({"question": question})
-        return {"generation": generation}
-
-    def decide_to_generate(self, state: GraphState) -> Dict[str, Any]:
-        filtered_documents = state["question"]
-
-        if not filtered_documents:
-            return "no_document"
-        else:
-            return "generate"
-
-    def handle_no_answer(self, state: GraphState) -> Dict[str, Any]:
-        question = state["question"]
-        generation = self.no_answer_handler.get_chain().invoke({"question": question})
+        documents = state["documents"]
+        context = "\n\n".join(doc.page_content for doc in documents)  # Ghép nội dung các tài liệu thành một đoạn văn
+        generation = self.answer_generator.get_chain().invoke({"question": question, "context": context})
         return {"generation": generation}
 
     def get_workflow(self):
+        """
+        Thiết lập luồng xử lý của chatbot, bao gồm các bước tìm kiếm, đánh giá và tạo câu trả lời.
+
+        Returns:
+            StateGraph: Đồ thị trạng thái của quy trình chatbot.
+        """
         workflow = StateGraph(GraphState)
 
-        workflow.add_node("generate", self.generate)
-        workflow.add_node("handle_no_answer", self.handle_no_answer)
+        workflow.add_node("retrieve", self.retrieve)  # Bước tìm kiếm tài liệu
+        workflow.add_node("generate", self.generate)  # Bước tạo câu trả lời
 
-        workflow.add_edge(START, "generate")
-        # workflow.add_conditional_edges(
-        #     "generate",
-        #     self.decide_to_generate,  
-        #     {
-        #         "no_document": "handle_no_answer",
-        #         "generate": "generate",  
-        #     },
-        # )
+        workflow.add_edge(START, "retrieve")
+        workflow.add_edge("retrieve", "generate")
+
+
         workflow.add_edge("generate", END)
 
         return workflow

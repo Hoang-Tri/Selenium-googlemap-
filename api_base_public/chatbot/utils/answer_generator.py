@@ -19,12 +19,10 @@ class AnswerGenerator:
         """
 
         # Xây dựng prompt cho chatbot với ngữ cảnh và câu hỏi của người dùng
-        prompt = ChatPromptTemplate.from_messages(
-            [
-                ("system", CustomPrompt.GENERATE_FEEDBACK_ANSWER_PROMPT),
-                ("human", "Đoạn van noi ve thuong hieu: {question}"),
-            ]
-        )
+        prompt = ChatPromptTemplate.from_messages([
+        ("system", CustomPrompt.GENERATE_FEEDBACK_ANSWER_PROMPT),
+        ("human", "Dựa vào câu hỏi hãy đánh giá : {context}\n\nQuestion: {question}")
+         ])
 
         # Xây dựng pipeline xử lý: nhận prompt -> xử lý với LLM -> trích xuất kết quả dạng chuỗi
         self.chain = prompt | llm | StrOutputParser()
