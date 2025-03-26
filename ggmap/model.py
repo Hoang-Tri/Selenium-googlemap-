@@ -36,13 +36,14 @@ def open_reviews_tab(driver):
             )
         )
         review_tab.click()
-        time.sleep(3)
+        time.sleep(10)
     except:
         print("Không tìm thấy nút mở review – có thể đã hiện sẵn.")
 
 def scroll_reviews(driver, max_scrolls=20):
     try:
-        scrollable_div = WebDriverWait(driver, 5).until(
+        # Chờ tối đa 10s để phần div scroll chứa review hiển thị
+        scrollable_div = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located(
                 (By.XPATH, '//div[contains(@class, "m6QErb") and contains(@class, "DxyBCb") and contains(@class, "kA9KIf") and contains(@class, "dS8AEf")]')
             )
@@ -52,6 +53,7 @@ def scroll_reviews(driver, max_scrolls=20):
         retries = 0
 
         for i in range(max_scrolls):
+            # Lấy số lượng review hiện tại
             reviews = driver.find_elements(By.CLASS_NAME, 'jftiEf')
             current_count = len(reviews)
             print(f"Scroll {i+1}: đã có {current_count} review")
@@ -65,7 +67,10 @@ def scroll_reviews(driver, max_scrolls=20):
                 retries = 0
                 previous_count = current_count
 
+            # Cuộn xuống để load thêm review
             driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable_div)
+
+            # Chờ để review mới load xong (tùy mạng, để 2.5s ~ 3s là ổn)
             time.sleep(2)
 
         if current_count == 0:

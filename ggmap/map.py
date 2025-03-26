@@ -9,7 +9,7 @@ driver = webdriver.Chrome(service=Service(r"E:\Student\New folder\chromedriver-w
 
 if __name__ == "__main__":
     try:
-        keywords = ["Coffee", "Bến NInh Kiều", "Trà Sữa"]
+        keywords = ["Bến Ninh Kiều"]
         for keyword in keywords:
             collect_place_urls_from_keywords(driver, [keyword], keyword_name=keyword.replace(" ", "_"))
             process_places_from_urls(driver, keyword_name=keyword.replace(" ", "_"))

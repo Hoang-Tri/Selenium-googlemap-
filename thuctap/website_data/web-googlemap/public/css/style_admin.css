@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f5f6fa;
+}
+
+/* Sidebar Admin */
+.sidebar {
+    width: 250px;
+    background-color: #2f3640;
+    color: #f5f6fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+}
+
+.sidebar ul li a, .sidebar ul li form button {
+    text-decoration: none;
+    color: #f5f6fa;
+    font-size: 18px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover, .sidebar ul li form button:hover {
+    background-color: #353b48;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/* Hình nền admin - fix full luôn */
+.image-dashboard {
+    position: relative;
+    width: 99%;
+    height: 100vh; /* Chiều cao bằng cả màn hình */
+    overflow: hidden;
+}
+
+.dashboard-img {
+    width: 110%;
+    height: 105vh; /* Đảm bảo ảnh che hết nền */
+    object-fit: cover; /* Cắt ảnh để vừa với khung, không bị méo */
+    display: block;
+}
+/* Overlay chữ Welcome */
+.welcome-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 18px;
+}

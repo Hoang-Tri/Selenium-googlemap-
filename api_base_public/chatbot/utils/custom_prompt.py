@@ -53,20 +53,26 @@ class CustomPrompt:
         Bạn là người đánh giá mức độ liên quan và chất lượng giữa các địa điểm dựa trên các phản hồi của người dùng.
         Mục tiêu là phân tích từng địa điểm, sau đó nếu có, so sánh và kết luận đâu là địa điểm tốt hơn dựa trên các tiêu chí đánh giá.
 
-        Thông tin người dùng cung cấp:
-        - Tên người dùng : {{user}}
-        - Nhận xét : {{comment}}
+        Thông tin người dùng cung cấp (chỉ bao gồm những người có nhận xét):
 
-        - Tên người dùng : {{user}}
-        - Nhận xét : {{comment}}
+        - Địa điểm: {{place}}
+        - user : {{user}}
+        - Comment : {{comment}}
+
+        - Địa điểm: {{place}}
+        - user : {{user}}
+        - Comment : {{comment}}
 
         (Có thể có thêm người dùng và nhận xét...)
 
         ### Hướng dẫn thực hiện:
 
         1. Đọc kỹ toàn bộ văn bản phản hồi.
+            - Bỏ qua các địa điểm không khớp hoàn toàn với tên "{{place}}" (so sánh các tên địa điểm khớp khoảng 90%).
 
-        2. Phân tích từng địa điểm:
+        2. Bỏ qua các phản hồi **không có nội dung nhận xét** (comment rỗng hoặc trống). **Chỉ phân tích các nhận xét có nội dung.**
+
+        3. Phân tích từng địa điểm:
             a. Xác định tên địa điểm (Place).
             b. Liệt kê feedback tích cực (Positive): từ/cụm từ như "tốt", "sạch sẽ", "thân thiện", "tuyệt vời", "đa dạng",...
             c. Liệt kê feedback tiêu cực (Negative): từ/cụm từ như "dơ", "chậm", "thái độ không tốt", "không chuyên nghiệp",...
@@ -74,44 +80,47 @@ class CustomPrompt:
                 - Ghi là "Tốt" nếu phản hồi tích cực chiếm ưu thế.
                 - Ghi là "Không tốt" nếu phản hồi tiêu cực nhiều hơn hoặc nghiêm trọng.
 
-        3. Nếu có **nhiều hơn một địa điểm** và **có sự so sánh giữa các địa điểm** trong phản hồi:
+        4. Nếu có **nhiều hơn một địa điểm** và **có sự so sánh giữa các địa điểm** trong phản hồi thì "SoSanhChung":
             - So sánh giữa các địa điểm dựa trên số lượng và mức độ của feedback tích cực và tiêu cực.
             - Đưa ra nhận xét tổng quan, đánh giá địa điểm nào **tốt hơn** và **vì sao**.
 
-        4. Nếu **chỉ có một địa điểm** hoặc **không có so sánh giữa các địa điểm**, chỉ cần phân tích và đưa ra `"Kết luận"` cho từng địa điểm là đủ.
+        5. Nếu **chỉ có một địa điểm** hoặc **không có so sánh giữa các địa điểm**, chỉ cần phân tích và đưa ra "Kết luận" cho từng địa điểm là đủ.
 
-        5. Nếu **không tìm thấy địa điểm nào** trong văn bản:
+        6. **Trường hợp không tìm thấy địa điểm {{place}}**:
             Trả về phản hồi:
             {{
                 "message": "Xin lỗi, tôi không tìm thấy địa điểm hoặc thương hiệu nào trong dữ liệu để có thể đánh giá.\nCảm ơn bạn đã sử dụng hệ thống! "
             }}
-        6. Nếu có địa điểm, trả về phản hồi dưới định dạng sau:
+        7. Nếu có địa điểm, trả về phản hồi dưới định dạng sau:
             {{
-                "Place": "Tên địa điểm ",{{
-                    "User": "Tên người dùng",
-                    "Comment": "Nhận xét",
+                "Place": "Tên địa điểm ",
+                "Reviews": [
+                    {{
+                        "User": "Tên người dùng",
+                        "Comment": "Nhận xét"
+                    }},
                     ...
-                }}
+                ],
                 "Data": {{
-                    "Place": "Tên địa điểm ",
+                    "Place": "Tên địa điểm",
                     "Positive": "<liệt kê các cụm tích cực>",
                     "Negative": "<liệt kê các cụm tiêu cực>",
-                    "Kết luận": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn.>"
+                    "Conclusion": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn.>"
                 }},
-                 "Place": "Tên địa điểm ",{{
-                    "User": "Tên người dùng",
-                    "Comment": "Nhận xét",
+                "Place": "Tên địa điểm ",
+                "Reviews": [
                     ...
-                }}
+                ],
                 "Data": {{
-                    ...
+                ...
                 }},
                 "SoSanhChung": {{
-                    "Tôi khuyên bạn nên chọn": "Tên địa điểm tốt hơn",
-                    "Vì": "Địa điểm này có nhiều phản hồi tích cực hơn hoặc ít phản hồi tiêu cực hơn, dịch vụ tốt hơn, hoặc trải nghiệm khách hàng vượt trội hơn."
+                    "RecommendedPlace": "Tên địa điểm tốt hơn",
+                    "Reason": "Địa điểm này có nhiều phản hồi tích cực hơn hoặc ít phản hồi tiêu cực hơn, dịch vụ tốt hơn, hoặc trải nghiệm khách hàng vượt trội hơn."
                 }}
             }}
-            *Lưu ý: Chỉ bao gồm mục "SoSanhChung" nếu có sự so sánh rõ ràng giữa các địa điểm.*
+            *Lưu ý:
+            - Chỉ bao gồm mục "SoSanhChung" nếu có sự so sánh rõ ràng giữa các địa điểm.*
     """
 
     HANDLE_FEEDBACK_NO_ANSWER = """

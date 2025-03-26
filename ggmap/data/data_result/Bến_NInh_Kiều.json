@@ -2,12 +2,12 @@
   {
     "title": "Ninh Kieu Wharf",
     "address": "",
-    "link": "https://www.google.com/maps/place/Ninh+Kieu+Wharf/@10.0322715,105.7882308,17z/data=!3m1!4b1!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D",
+    "link": "https://www.google.com/maps/place/Ninh+Kieu+Wharf/@10.0322715,105.7882308,17z/data=!3m1!4b1!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D",
     "star": 4.4,
     "reviews": [
       {
         "name": "Hong Nguyen",
-        "review": "Coming to the Mekong Delta without stopping at Ninh Kieu wharf would probably be a mistake.\nThe feeling of sailing on the vast river really makes us satisfied.  Beautiful scenery, delicious food, and many convenient services available at reasonable prices.  Come here and feel it your way.\nHighly recommended!",
+        "review": "Coming to the Mekong Delta without stopping at Ninh Kieu wharf would probably be a mistake.\nThe feeling of sailing on the vast river really makes us satisfied.  Beautiful …",
         "star": 5.0
       },
       {
@@ -261,11 +261,6 @@
         "star": 4.0
       },
       {
-        "name": "Trần",
-        "review": "Cool atmosphere, except for the rat, it tries to eat my bottom, but everything else is fine.",
-        "star": 5.0
-      },
-      {
         "name": "Benny T W Wong",
         "review": "Peaceful and clean park with lots of park benches. Good river view to watch boats go by.",
         "star": 3.0
@@ -279,6 +274,11 @@
         "name": "Rob Deleurme",
         "review": "It's the main tourist area of cantho, boat rides and plenty of shopping and during the holiday time a beautiful collection of of flowers and culture type displays and activities.",
         "star": 4.0
+      },
+      {
+        "name": "Trần",
+        "review": "Cool atmosphere, except for the rat, it tries to eat my bottom, but everything else is fine.",
+        "star": 5.0
       },
       {
         "name": "Ho Ngoc Tin",
@@ -301,14 +301,14 @@
         "star": 3.0
       },
       {
-        "name": "lê đình thiện",
-        "review": "Ok",
-        "star": 5.0
-      },
-      {
         "name": "Khairul Hazrin Hashim",
         "review": "Nice scenary at dawn and dusk.. nice place to chill out",
         "star": 4.0
+      },
+      {
+        "name": "lê đình thiện",
+        "review": "Ok",
+        "star": 5.0
       },
       {
         "name": "Vuong Nguyen An",
@@ -401,11 +401,6 @@
         "star": 3.0
       },
       {
-        "name": "Ngoc Quang Dang",
-        "review": "Joyous promenade in Mekong delta",
-        "star": 4.0
-      },
-      {
         "name": "Khang Thanh Dương",
         "review": "Such a nice place to walk and enjoy peaceful landscape of Can Tho province.",
         "star": 5.0
@@ -426,6 +421,11 @@
         "star": 4.0
       },
       {
+        "name": "Ngoc Quang Dang",
+        "review": "Joyous promenade in Mekong delta",
+        "star": 4.0
+      },
+      {
         "name": "Marcel Cybon",
         "review": "It is not relaxing for a stroll as you are bothered constantly by very pushy touts. Not worth to come to stroll around. Other areas of town with less tourists and touts are much better.",
         "star": 2.0
@@ -436,11 +436,6 @@
         "star": 5.0
       },
       {
-        "name": "vinh tran",
-        "review": "Nothing special.",
-        "star": 4.0
-      },
-      {
         "name": "Ngocminh Doan",
         "review": "Beautiful scenery. They ban vehicle traffic every Saturday night and holds event there, highly recommend visiting on Saturday nights.",
         "star": 5.0
@@ -448,6 +443,11 @@
       {
         "name": "Henrik Snellman",
         "review": "Pretty nice riverside park",
+        "star": 4.0
+      },
+      {
+        "name": "vinh tran",
+        "review": "Nothing special.",
         "star": 4.0
       },
       {
@@ -531,13 +531,13 @@
         "star": 4.0
       },
       {
-        "name": "Riki Hiagari",
-        "review": "Love it",
+        "name": "C S",
+        "review": "Very busy vietnamese market street. The food is amazing. If you are in Cần Thơ you should definitely go there in the evening.",
         "star": 5.0
       },
       {
-        "name": "C S",
-        "review": "Very busy vietnamese market street. The food is amazing. If you are in Cần Thơ you should definitely go there in the evening.",
+        "name": "Riki Hiagari",
+        "review": "Love it",
         "star": 5.0
       },
       {
@@ -931,11 +931,6 @@
         "star": 4.0
       },
       {
-        "name": "An Long Nguyen",
-        "review": "A place name in a song that I often hear about from time to time, but nothing stands out",
-        "star": 3.0
-      },
-      {
         "name": "Mẹ San-Đan-Di- DSD",
         "review": "I went on weekdays and saw only the night market, with quite a few activities. There is jaggery juice for sale, everyone should try it!",
         "star": 5.0
@@ -956,54 +951,9 @@
         "star": 5.0
       },
       {
-        "name": "Linh Nguyễn",
-        "review": "Coming to Ninh Kieu, you cannot miss this place to take pictures! During the day you see a gentle simplicity with rivers, sailboats and natural scenery, but at night, shimmering colors. With diverse food with regional characteristics. The people are friendly and easy to approach, and their way of speaking is very attractive... We hope you have a wonderful experience when you come here!",
-        "star": 5.0
-      },
-      {
-        "name": "Poly Khô Gà (Càng Ăn Càng Mê Ly)",
-        "review": "The scene is very chill, suitable for walking, going in groups, security is very good, there are many parking spaces at reasonable prices.",
-        "star": 5.0
-      },
-      {
-        "name": "THỦY NGUYỄN",
-        "review": "Having a famous name, he likes to go by boat to Con to eat at death anniversary feasts filled with fruit.",
-        "star": 4.0
-      },
-      {
-        "name": "Chi Anh",
-        "review": "The first destination and also the ending point before returning to SG, stop at Ninh Kieu wharf to enjoy the cool air",
-        "star": 5.0
-      },
-      {
-        "name": "Đức Nguyễn",
-        "review": "It's a walking street with beautiful scenery but I don't think there are many places to play",
-        "star": 4.0
-      },
-      {
-        "name": "MAI CHI LUONG",
-        "review": "Ninh Kieu Wharf in Can Tho is a famous tourist destination in the South, where there are walking streets, night market shopping streets, going to the island to eat seafood...",
-        "star": 4.0
-      },
-      {
-        "name": "Alice Nguyen",
-        "review": "East is bustling and bustling, right in the center so walking around is very convenient. Need to keep general hygiene cleaner, add public trash bins.",
-        "star": 4.0
-      },
-      {
-        "name": "PHƯƠNG UYÊN BẢN ĐỒ",
-        "review": "Ninh Kieu Wharf is famous for domestic and foreign tourists when they set foot in TAY DO (Can Tho), the capital of the famous Western river region....",
-        "star": 5.0
-      },
-      {
-        "name": "Hùng Phan Minh",
-        "review": "Ninh Kieu Can Tho Wharf has a beauty that is both peaceful and poetic, while also having a youthful and modern look that will definitely bring you unforgettable memories when you set foot in this Western capital. The photos were taken in 2016 and retain beautiful memories.",
-        "star": 5.0
-      },
-      {
-        "name": "Trâm Nguyễn",
-        "review": "If you go quite a few times, you can ask the receptionist of the hotel you are staying at to book a tour in advance. I asked if there are 5am and 7am tours. You can even rent a private boat to visit the island. In general, the experience is worth a try. When I return to Can Tho, I have breakfast of vermicelli noodles at the floating market, buy some gifts, the noodles here are also delicious, people make them in many colors and like them, I buy them and cook them quite delicious, I'm afraid they'll be tough.",
-        "star": 5.0
+        "name": "An Long Nguyen",
+        "review": "A place name in a song that I often hear about from time to time, but nothing stands out",
+        "star": 3.0
       }
     ]
   }
