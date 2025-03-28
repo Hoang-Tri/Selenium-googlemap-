@@ -1,5 +1,7 @@
-<h2>Sửa người dùng</h2>
-<form method="post" action="#">
-    <input type="text" name="email" value="admin@example.com">
-    <button type="submit">Cập nhật</button>
+<form action="{{ route('users.update', $user->id) }}" method="POST">
+    @csrf
+    @method('PUT')
+    <input type="text" name="name" value="{{ $user->name }}" required>
+    <input type="email" name="email" value="{{ $user->email }}" required>
+    <button type="submit">Update</button>
 </form>

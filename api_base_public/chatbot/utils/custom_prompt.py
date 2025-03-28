@@ -96,8 +96,7 @@ class CustomPrompt:
                 "Place": "Tên địa điểm ",
                 "Reviews": [
                     {{
-                        "User": "Tên người dùng",
-                        "Comment": "Nhận xét"
+                        "Tên người dùng": "Nhận xét"
                     }},
                     ...
                 ],
@@ -107,18 +106,12 @@ class CustomPrompt:
                     "Negative": "<liệt kê các cụm tiêu cực>",
                     "Conclusion": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn.>"
                 }},
-                "Place": "Tên địa điểm ",
-                "Reviews": [
-                    ...
-                ],
-                "Data": {{
-                ...
-                }},
                 "SoSanhChung": {{
                     "RecommendedPlace": "Tên địa điểm tốt hơn",
                     "Reason": "Địa điểm này có nhiều phản hồi tích cực hơn hoặc ít phản hồi tiêu cực hơn, dịch vụ tốt hơn, hoặc trải nghiệm khách hàng vượt trội hơn."
                 }}
             }}
+            (Có thể có thêm địa điểm thì cũng phân tích như vậy)
             *Lưu ý:
             - Chỉ bao gồm mục "SoSanhChung" nếu có sự so sánh rõ ràng giữa các địa điểm.*
     """

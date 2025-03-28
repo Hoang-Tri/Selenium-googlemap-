@@ -259,3 +259,52 @@ Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distributio
 2025-03-26T04:32:26.463574Z 0 [Note] Event Scheduler: Loaded 0 events
 2025-03-26T04:32:26.465382Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
 Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-27T01:09:50.652903Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-27T01:09:50.752109Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-27T01:09:50.752146Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-27T01:09:50.752718Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-27T01:09:50.753892Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 1622 ...
+2025-03-27T01:09:51.121426Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-27T01:09:51.167843Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-27T01:09:51.583795Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-27T01:09:51.586332Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-27T01:09:51.588133Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-27T01:09:51.589378Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-27T01:09:51.594535Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-27T01:09:51.598353Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-27T01:09:51.713191Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-27T01:09:51.769437Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-27T01:09:51.949902Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-27T01:09:52.409238Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-27T01:09:52.553048Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-27T01:09:53.547025Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-27T01:09:53.826940Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 2769112
+2025-03-27T01:09:53.827506Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 2769121
+2025-03-27T01:09:53.829314Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-27T01:09:53.829876Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-27T01:09:55.094335Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-27T01:09:55.095014Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-27T01:09:55.099867Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-27T01:09:55.611815Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-27T01:09:55.675762Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-27T01:09:55.676342Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-27T01:09:55.680660Z 0 [Note] InnoDB: Waiting for purge to start
+2025-03-27T01:09:55.745454Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 2769121
+2025-03-27T01:09:55.773206Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-27T01:09:55.784301Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-27T01:09:56.274871Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-27T01:09:56.275184Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-27T01:09:56.275697Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-27T01:09:56.276132Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-27T01:09:56.299644Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250327  1:09:56
+2025-03-27T01:09:56.412598Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-27T01:09:56.439847Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-27T01:09:56.507532Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-27T01:09:56.507998Z 0 [Note] IPv6 is available.
+2025-03-27T01:09:56.508870Z 0 [Note]   - '::' resolves to '::';
+2025-03-27T01:09:56.509307Z 0 [Note] Server socket created on IP: '::'.
+2025-03-27T01:09:56.620341Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-27T01:09:57.895110Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-27T01:10:04.356581Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-27T01:10:04.358423Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
