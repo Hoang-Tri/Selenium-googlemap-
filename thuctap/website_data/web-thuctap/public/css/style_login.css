@@ -1,0 +1,147 @@
+/* Toàn bộ màn hình */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('/images/maps.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Đảm bảo mọi phần tử không bị vỡ */
+* {
+    box-sizing: border-box;
+}
+
+/* Container của form login */
+.login-container {
+    background: rgba(0, 0, 0, 0.5); /* màu nền tối mờ hơn một chút */
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px; /* Giới hạn chiều ngang */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    /* backdrop-filter: blur(15px); Làm mờ nền */
+}
+
+/* Input box */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hiệu ứng input */
+.input-box input:focus {
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+/* Icon trong input */
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Checkbox và link */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.options a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+/* Nút login */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+}
+
+/* Link dưới cùng */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+/* Popup thông báo lỗi */
+.popup-error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(8, 8, 8, 0.9);
+    color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeOut 2s forwards;
+}
+
+/* Animation ẩn popup */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 30px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .options {
+        font-size: 12px;
+    }
+}
