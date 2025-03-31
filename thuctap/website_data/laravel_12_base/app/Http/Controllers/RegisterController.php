@@ -21,6 +21,7 @@ class RegisterController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'username' => 'required|string|max:50|unique:users,username',
+            'fullname' => 'required|string|max:50',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6|confirmed',
         ]);
@@ -31,6 +32,7 @@ class RegisterController extends Controller
 
         $user = User::create([
             'username' => $request->username,
+            'fullname' => $request->fullname,
             'email' => $request->email,
             'password' => Hash::make($request->password), // Hash password
             'status' => 1, // Mặc định kích hoạt tài khoản

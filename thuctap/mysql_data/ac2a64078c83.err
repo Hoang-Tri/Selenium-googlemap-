@@ -1004,3 +1004,372 @@ Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distributio
 2025-03-29T10:06:08.793449Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
 Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
 2025-03-29T10:06:14.669020Z 3 [Note] Access denied for user 'root'@'localhost' (using password: NO)
+2025-03-29T10:06:18.425391Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-29T10:06:18.425523Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-29T10:06:18.425530Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-29T10:06:18.426227Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-29T10:06:18.426351Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 5776 ...
+2025-03-29T10:06:18.449083Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-29T10:06:18.453818Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-29T10:06:18.463532Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-29T10:06:18.465604Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-29T10:06:18.470708Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-29T10:06:18.471372Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-29T10:06:18.471872Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-29T10:06:18.472274Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-29T10:06:18.473675Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-29T10:06:18.474427Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-29T10:06:18.477951Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-29T10:06:18.507723Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-29T10:06:18.519065Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-29T10:06:18.592293Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-29T10:06:18.630980Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 2968270
+2025-03-29T10:06:18.631795Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 2968279
+2025-03-29T10:06:18.632385Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-29T10:06:18.633417Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-29T10:06:19.065147Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-29T10:06:19.065546Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-29T10:06:19.068865Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-29T10:06:19.340878Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-29T10:06:19.373042Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-29T10:06:19.373653Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-29T10:06:19.377695Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 2968279
+2025-03-29T10:06:19.379072Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-29T10:06:19.385958Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-29T10:06:19.484024Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-29T10:06:19.484341Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-29T10:06:19.484667Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-29T10:06:19.485069Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-29T10:06:19.501259Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-29T10:06:19.506315Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-29T10:06:19.513262Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-29T10:06:19.513662Z 0 [Note] IPv6 is available.
+2025-03-29T10:06:19.513984Z 0 [Note]   - '::' resolves to '::';
+2025-03-29T10:06:19.514317Z 0 [Note] Server socket created on IP: '::'.
+2025-03-29T10:06:19.540015Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250329 10:06:19
+2025-03-29T10:06:19.559784Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-29T10:06:19.799289Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-29T10:06:20.933807Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-29T10:06:20.934716Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-29T10:06:45.615601Z 2 [Note] Aborted connection 2 to db: 'unconnected' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T10:06:45.816680Z 5 [Note] Aborted connection 5 to db: 'unconnected' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T10:06:46.307155Z 6 [Note] Aborted connection 6 to db: 'unconnected' user: 'root' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T10:13:37.565336Z 31 [Note] Aborted connection 31 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T11:23:42.229447Z 145 [Note] Aborted connection 145 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T11:25:40.400554Z 162 [Note] Aborted connection 162 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T12:00:24.473748Z 203 [Note] Aborted connection 203 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T12:51:31.525329Z 266 [Note] Aborted connection 266 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T12:53:29.730801Z 267 [Note] Aborted connection 267 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T12:55:20.667766Z 269 [Note] Aborted connection 269 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T13:00:58.091643Z 287 [Note] Aborted connection 287 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T13:08:36.356064Z 288 [Note] Aborted connection 288 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T13:15:10.498951Z 289 [Note] Aborted connection 289 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T13:20:59.277801Z 292 [Note] Aborted connection 292 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T13:30:15.741227Z 337 [Note] Aborted connection 337 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-29T14:16:09.755767Z 338 [Note] Aborted connection 338 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T01:52:10.610360Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-30T01:52:10.755119Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-30T01:52:10.755159Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-30T01:52:10.757395Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-30T01:52:10.783527Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 1618 ...
+2025-03-30T01:52:11.126011Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-30T01:52:11.225868Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-30T01:52:11.275625Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-30T01:52:11.276069Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-30T01:52:11.276422Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-30T01:52:11.276753Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-30T01:52:11.307410Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-30T01:52:11.307873Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-30T01:52:11.507417Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-30T01:52:11.642141Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-30T01:52:12.398810Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-30T01:52:13.240660Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-30T01:52:13.547346Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-30T01:52:17.022982Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-30T01:52:17.418616Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 3329643
+2025-03-30T01:52:17.419160Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 3329652
+2025-03-30T01:52:17.419648Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-30T01:52:17.420155Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-30T01:52:21.194257Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-30T01:52:21.194758Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-30T01:52:21.202811Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-30T01:52:21.596207Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-30T01:52:21.654382Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-30T01:52:21.655853Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-30T01:52:21.660142Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5388ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-03-30T01:52:21.667283Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 3329652
+2025-03-30T01:52:21.710966Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-30T01:52:21.873193Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-30T01:52:22.624271Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-30T01:52:22.629439Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-30T01:52:22.630804Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T01:52:22.636053Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T01:52:22.671442Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250330  1:52:22
+2025-03-30T01:52:22.838839Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-30T01:52:22.841684Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-30T01:52:22.992808Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-30T01:52:22.993510Z 0 [Note] IPv6 is available.
+2025-03-30T01:52:22.995051Z 0 [Note]   - '::' resolves to '::';
+2025-03-30T01:52:22.995759Z 0 [Note] Server socket created on IP: '::'.
+2025-03-30T01:52:23.055002Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-30T01:52:24.682313Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-30T01:52:28.765195Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-30T01:52:28.766477Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-30T01:52:28.776898Z 2 [Note] Access denied for user 'googlemap-laravel12.com'@'localhost' (using password: YES)
+2025-03-30T01:52:43.855714Z 3 [Note] Access denied for user 'web-googlemap'@'localhost' (using password: YES)
+2025-03-30T01:52:50.877925Z 4 [Note] Access denied for user 'web-googlemap'@'localhost' (using password: YES)
+2025-03-30T01:52:55.981009Z 5 [Note] Access denied for user 'web-googlemap.com'@'localhost' (using password: YES)
+2025-03-30T02:37:48.290096Z 164 [Note] Aborted connection 164 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T02:44:20.922458Z 166 [Note] Aborted connection 166 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T04:40:04.462099Z 262 [Note] Aborted connection 262 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T04:42:15.261530Z 263 [Note] Aborted connection 263 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T05:30:58.615099Z 269 [Note] Aborted connection 269 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T06:54:30.555820Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-30T06:54:30.596764Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-30T06:54:30.597042Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-30T06:54:30.597774Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-30T06:54:30.604292Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 1214 ...
+2025-03-30T06:54:30.921049Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-30T06:54:31.009712Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-30T06:54:31.529876Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-30T06:54:31.530680Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-30T06:54:31.531140Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-30T06:54:31.531497Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-30T06:54:31.533263Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-30T06:54:31.533617Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-30T06:54:31.580851Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-30T06:54:31.612347Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-30T06:54:31.619377Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-30T06:54:31.991233Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-30T06:54:32.050838Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-30T06:54:34.859944Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-30T06:54:35.034419Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 3387337
+2025-03-30T06:54:35.037295Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 3387346
+2025-03-30T06:54:35.037681Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-30T06:54:35.037997Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-30T06:54:42.659704Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-30T06:54:42.660218Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-30T06:54:42.665164Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-30T06:54:43.031241Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-30T06:54:43.058440Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-30T06:54:43.059424Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-30T06:54:43.062909Z 0 [Note] InnoDB: Waiting for purge to start
+2025-03-30T06:54:43.116301Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 11066ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-03-30T06:54:43.116630Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 3387346
+2025-03-30T06:54:43.122332Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-30T06:54:43.152354Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-30T06:54:43.633126Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-30T06:54:43.634729Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-30T06:54:43.637266Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T06:54:43.638558Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T06:54:43.813420Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-30T06:54:43.817453Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-30T06:54:43.896965Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250330  6:54:43
+2025-03-30T06:54:43.907362Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-30T06:54:43.908360Z 0 [Note] IPv6 is available.
+2025-03-30T06:54:43.909558Z 0 [Note]   - '::' resolves to '::';
+2025-03-30T06:54:43.910283Z 0 [Note] Server socket created on IP: '::'.
+2025-03-30T06:54:43.985058Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-30T06:54:45.021145Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-30T06:54:49.421367Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-30T06:54:49.423221Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-30T07:36:06.009248Z 26 [Note] Aborted connection 26 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T07:38:16.947925Z 39 [Note] Aborted connection 39 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T07:55:21.678425Z 40 [Note] Aborted connection 40 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T08:01:21.716401Z 43 [Note] Aborted connection 43 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T08:03:32.655156Z 46 [Note] Aborted connection 46 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T08:05:33.583291Z 47 [Note] Aborted connection 47 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T08:07:54.524691Z 48 [Note] Aborted connection 48 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T08:17:00.976120Z 63 [Note] Aborted connection 63 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T09:27:12.361916Z 136 [Note] Aborted connection 136 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T12:06:17.801883Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-30T12:06:17.853482Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-30T12:06:17.853560Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-30T12:06:17.854234Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-30T12:06:17.858712Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 1167 ...
+2025-03-30T12:06:18.490496Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-30T12:06:18.599227Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-30T12:06:18.909139Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-30T12:06:18.909861Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-30T12:06:18.910274Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-30T12:06:18.910697Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-30T12:06:18.911074Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-30T12:06:18.911528Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-30T12:06:18.982431Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-30T12:06:19.046800Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-30T12:06:19.143113Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-30T12:06:19.393987Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-30T12:06:19.467965Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-30T12:06:20.382699Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-30T12:06:20.638585Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 3449592
+2025-03-30T12:06:20.639106Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 3449601
+2025-03-30T12:06:20.639594Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-30T12:06:20.640084Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-30T12:06:26.121163Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-30T12:06:26.124232Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-30T12:06:26.190850Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-30T12:06:27.776721Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-30T12:06:27.851908Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-30T12:06:27.852599Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-30T12:06:27.862648Z 0 [Note] InnoDB: Waiting for purge to start
+2025-03-30T12:06:27.915230Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8447ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-03-30T12:06:27.978255Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 3449601
+2025-03-30T12:06:27.983472Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-30T12:06:28.028022Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-30T12:06:28.752601Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-30T12:06:28.764748Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-30T12:06:28.765571Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T12:06:28.766131Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-30T12:06:29.060182Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-30T12:06:29.075664Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-30T12:06:29.261542Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-30T12:06:29.262388Z 0 [Note] IPv6 is available.
+2025-03-30T12:06:29.264450Z 0 [Note]   - '::' resolves to '::';
+2025-03-30T12:06:29.264985Z 0 [Note] Server socket created on IP: '::'.
+2025-03-30T12:06:29.301525Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250330 12:06:29
+2025-03-30T12:06:29.390289Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-30T12:06:30.977472Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-30T12:06:36.079353Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-30T12:06:36.125369Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-30T12:13:18.370234Z 3 [Note] Aborted connection 3 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T12:23:25.079225Z 34 [Note] Aborted connection 34 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:03:21.433377Z 63 [Note] Aborted connection 63 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:06:37.795854Z 64 [Note] Aborted connection 64 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:16:04.209698Z 69 [Note] Aborted connection 69 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:20:26.111002Z 71 [Note] Aborted connection 71 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:21:31.572158Z 72 [Note] Aborted connection 72 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:23:32.517083Z 73 [Note] Aborted connection 73 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:25:33.390002Z 74 [Note] Aborted connection 74 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:26:26.142402Z 75 [Note] Aborted connection 75 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:27:54.366959Z 76 [Note] Aborted connection 76 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:28:37.102551Z 77 [Note] Aborted connection 77 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:31:53.457511Z 79 [Note] Aborted connection 79 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:31:53.467800Z 78 [Note] Aborted connection 78 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:38:48.991075Z 84 [Note] Aborted connection 84 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:41:22.898591Z 86 [Note] Aborted connection 86 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:43:10.865629Z 104 [Note] Aborted connection 104 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:43:20.835730Z 105 [Note] Aborted connection 105 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:47:55.471727Z 106 [Note] Aborted connection 106 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:48:28.197325Z 107 [Note] Aborted connection 107 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:50:06.719625Z 108 [Note] Aborted connection 108 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:51:31.849941Z 109 [Note] Aborted connection 109 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:53:10.067521Z 110 [Note] Aborted connection 110 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T13:53:42.713629Z 111 [Note] Aborted connection 111 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:01:53.799320Z 116 [Note] Aborted connection 116 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:03:11.971579Z 117 [Note] Aborted connection 117 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:03:21.935370Z 118 [Note] Aborted connection 118 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:14:06.636006Z 119 [Note] Aborted connection 119 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:14:59.370210Z 120 [Note] Aborted connection 120 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:15:22.102058Z 121 [Note] Aborted connection 121 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:17:32.944223Z 122 [Note] Aborted connection 122 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:20:49.540502Z 123 [Note] Aborted connection 123 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:21:22.208652Z 124 [Note] Aborted connection 124 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:28:37.642048Z 127 [Note] Aborted connection 127 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:42:48.715620Z 146 [Note] Aborted connection 146 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T14:43:01.442534Z 147 [Note] Aborted connection 147 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T16:34:06.421916Z 486 [Note] Aborted connection 486 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T16:36:07.351596Z 511 [Note] Aborted connection 511 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T16:40:19.207560Z 513 [Note] Aborted connection 513 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T16:43:37.607352Z 512 [Note] Aborted connection 512 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:03:23.972118Z 541 [Note] Aborted connection 541 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:05:24.902119Z 542 [Note] Aborted connection 542 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:06:50.361133Z 543 [Note] Aborted connection 543 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:09:01.300581Z 545 [Note] Aborted connection 545 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:10:39.508981Z 546 [Note] Aborted connection 546 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:11:44.970250Z 560 [Note] Aborted connection 560 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:11:57.694729Z 561 [Note] Aborted connection 561 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:17:12.277011Z 562 [Note] Aborted connection 562 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:18:30.493192Z 563 [Note] Aborted connection 563 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:19:23.242425Z 576 [Note] Aborted connection 576 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:21:14.143468Z 577 [Note] Aborted connection 577 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:25:35.996059Z 578 [Note] Aborted connection 578 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:25:45.992674Z 579 [Note] Aborted connection 579 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:34:07.002819Z 580 [Note] Aborted connection 580 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:35:57.912485Z 594 [Note] Aborted connection 594 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:36:07.989333Z 595 [Note] Aborted connection 595 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:36:30.686695Z 596 [Note] Aborted connection 596 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:36:50.677723Z 598 [Note] Aborted connection 598 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:38:18.862026Z 599 [Note] Aborted connection 599 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:44:28.931066Z 600 [Note] Aborted connection 600 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:44:41.609743Z 601 [Note] Aborted connection 601 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:46:29.851311Z 602 [Note] Aborted connection 602 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:52:52.657959Z 604 [Note] Aborted connection 604 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:53:02.662728Z 605 [Note] Aborted connection 605 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:55:03.582203Z 606 [Note] Aborted connection 606 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:56:29.099634Z 607 [Note] Aborted connection 607 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:59:35.431663Z 621 [Note] Aborted connection 621 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T17:59:35.435260Z 622 [Note] Aborted connection 622 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-30T18:05:25.478227Z 626 [Note] Aborted connection 626 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T00:41:24.263841Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-03-31T00:41:24.303685Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-03-31T00:41:24.304306Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-03-31T00:41:24.305143Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-03-31T00:41:24.306062Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 1647 ...
+2025-03-31T00:41:24.725943Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-03-31T00:41:24.847358Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-03-31T00:41:24.960559Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-03-31T00:41:24.961300Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-03-31T00:41:24.961613Z 0 [Note] InnoDB: Uses event mutexes
+2025-03-31T00:41:24.961875Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-03-31T00:41:24.962152Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-03-31T00:41:24.962390Z 0 [Note] InnoDB: Using Linux native AIO
+2025-03-31T00:41:24.965819Z 0 [Note] InnoDB: Number of pools: 1
+2025-03-31T00:41:24.977979Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-03-31T00:41:25.005561Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-03-31T00:41:25.226759Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-03-31T00:41:25.283661Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-03-31T00:41:25.624972Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-03-31T00:41:25.678527Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 3812825
+2025-03-31T00:41:25.678859Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 3812834
+2025-03-31T00:41:25.679141Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-03-31T00:41:25.679407Z 0 [Note] InnoDB: Starting crash recovery.
+2025-03-31T00:41:28.301477Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-03-31T00:41:28.301927Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-03-31T00:41:28.308386Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-03-31T00:41:28.658650Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-03-31T00:41:28.685407Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-03-31T00:41:28.685827Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-03-31T00:41:28.688730Z 0 [Note] InnoDB: Waiting for purge to start
+2025-03-31T00:41:28.740674Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 3812834
+2025-03-31T00:41:28.745370Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-03-31T00:41:28.786874Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-03-31T00:41:29.075518Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-03-31T00:41:29.076151Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-03-31T00:41:29.076596Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-03-31T00:41:29.077040Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-03-31T00:41:29.085343Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250331  0:41:29
+2025-03-31T00:41:29.260958Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-03-31T00:41:29.262750Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-03-31T00:41:29.317169Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-03-31T00:41:29.317585Z 0 [Note] IPv6 is available.
+2025-03-31T00:41:29.318764Z 0 [Note]   - '::' resolves to '::';
+2025-03-31T00:41:29.319178Z 0 [Note] Server socket created on IP: '::'.
+2025-03-31T00:41:29.374870Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-03-31T00:41:30.117587Z 0 [Note] Failed to start slave threads for channel ''
+2025-03-31T00:41:33.106852Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-03-31T00:41:33.108160Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-03-31T01:05:35.092027Z 4 [Note] Aborted connection 4 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T01:14:08.820831Z 6 [Note] Aborted connection 6 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:21:40.265401Z 144 [Note] Aborted connection 144 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:24:01.163127Z 145 [Note] Aborted connection 145 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:28:13.038056Z 146 [Note] Aborted connection 146 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:32:02.154095Z 148 [Note] Aborted connection 148 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:39:27.681564Z 234 [Note] Aborted connection 234 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:54:19.930540Z 269 [Note] Aborted connection 269 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T03:56:23.864886Z 270 [Note] Aborted connection 270 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:07:29.153178Z 283 [Note] Aborted connection 283 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:15:40.750830Z 493 [Note] Aborted connection 493 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:18:34.403579Z 494 [Note] Aborted connection 494 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:22:48.874555Z 472 [Note] Aborted connection 472 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:25:29.933917Z 495 [Note] Aborted connection 495 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:28:33.578690Z 497 [Note] Aborted connection 497 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:50:19.556114Z 502 [Note] Aborted connection 502 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T04:58:01.141296Z 507 [Note] Aborted connection 507 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T05:06:20.930968Z 503 [Note] Aborted connection 503 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T05:10:01.265425Z 511 [Note] Aborted connection 511 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-03-31T05:20:35.945884Z 512 [Note] Aborted connection 512 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)

@@ -32,19 +32,23 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
-                                <input type="text" class="form-control" name="name" required>
+                                <input type="text" class="form-control" name="addusername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="addfullname" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email" required>
+                                <input type="email" class="form-control" name="addemail" required>
                             </div>
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <label class="form-label">Role</label>
                                 <select class="form-control" name="role">
                                     <option value="Admin">Admin</option>
                                     <option value="User">User</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <div class="mb-3">
                                 <label class="form-label">Password</label>
                                 <input type="password" class="form-control" name="password" required>
@@ -62,8 +66,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Full Name</th>
                     <th>Email</th>
-                    <th>Role</th>
+                    <!-- <th>Role</th> -->
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -71,14 +76,17 @@
             @foreach ($users as $user)
                 <tr>
                     <td>{{ $user->id }}</td>
-                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->username }}</td>
+                    <td>{{ $user->fullname }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->role }}</td>
+                    <!-- <td>{{ $user->role }}</td> -->
                     <td>
                         <button class="btn btn-sm btn-warning editUserBtn"
                             data-bs-toggle="modal" data-bs-target="#editUserModal"
-                            data-id="{{ $user->id }}" data-name="{{ $user->name }}"
-                            data-email="{{ $user->email }}" data-role="{{ $user->role }}">
+                            data-id="{{ $user->id }}" 
+                            data-name="{{ $user->username }}" 
+                            data-fullname="{{ $user->fullname }}" 
+                            data-email="{{ $user->email }}">
                             Edit
                         </button>
 
@@ -108,20 +116,24 @@
                         @method('PUT')
                         <input type="hidden" id="editUserId" name="id">
                         <div class="mb-3">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" id="editName" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" id="editEmail" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Role</label>
-                            <select class="form-control" id="editRole" name="role">
-                                <option value="Admin">Admin</option>
-                                <option value="User">User</option>
-                            </select>
-                        </div>
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" name="editusername" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="editfullname" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="editemail" required>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <label class="form-label">Role</label>
+                                <select class="form-control" name="role">
+                                    <option value="Admin">Admin</option>
+                                    <option value="User">User</option>
+                                </select>
+                            </div> -->
                         <button type="submit" class="btn btn-warning">Update</button>
                     </form>
                 </div>
@@ -154,19 +166,28 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.editUserBtn').forEach(button => {
-                button.addEventListener('click', function () {
-                    document.getElementById('editUserId').value = this.dataset.id;
-                    document.getElementById('editName').value = this.dataset.name;
-                    document.getElementById('editEmail').value = this.dataset.email;
-                    document.getElementById('editRole').value = this.dataset.role;
-                    document.getElementById('editUserForm').action = `/users/${this.dataset.id}`;
+            document.querySelectorAll(".editUserBtn").forEach(button => {
+                button.addEventListener("click", function () {
+                    // Lấy dữ liệu từ data-attributes
+                    const userId = this.getAttribute("data-id");
+                    const username = this.getAttribute("data-name");
+                    const fullname = this.getAttribute("data-fullname");
+                    const email = this.getAttribute("data-email");
+                    // Đổ dữ liệu vào form
+                    document.querySelector("input[name='editusername']").value = username;
+                    document.querySelector("input[name='editfullname']").value = fullname;
+                    document.querySelector("input[name='editemail']").value = email;
+
+                    // Cập nhật action của form
+                    document.getElementById("editUserForm").action = `/users/${userId}`;
                 });
             });
 
-            document.querySelectorAll('.deleteUserBtn').forEach(button => {
-                button.addEventListener('click', function () {
-                    document.getElementById('deleteUserForm').action = `/users/${this.dataset.id}`;
+            // Xử lý khi nhấn nút "Delete"
+            document.querySelectorAll(".deleteUserBtn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const userId = this.getAttribute("data-id");
+                    document.getElementById("deleteUserForm").action = `/users/${userId}`;
                 });
             });
         });

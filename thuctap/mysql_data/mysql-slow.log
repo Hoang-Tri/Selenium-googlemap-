@@ -40,3 +40,39 @@ Time                 Id Command    Argument
 /www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
 Tcp port: 3306  Unix socket: /tmp/mysql.sock
 Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+# Time: 2025-03-30T02:03:44.439654Z
+# User@Host: web_googlemap.com[web_googlemap.com] @ localhost []  Id:    86
+# Query_time: 3.272411  Lock_time: 0.000280 Rows_sent: 2  Rows_examined: 2
+SET timestamp=1743300224;
+SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA`;
+# Time: 2025-03-30T03:24:43.312745Z
+# User@Host: web_googlemap.com[web_googlemap.com] @ localhost []  Id:   240
+# Query_time: 3.488062  Lock_time: 0.000378 Rows_sent: 2  Rows_examined: 16
+SET timestamp=1743305083;
+SELECT `SCHEMA_NAME` FROM `INFORMATION_SCHEMA`.`SCHEMATA`, (SELECT DB_first_level FROM ( SELECT DISTINCT SUBSTRING_INDEX(SCHEMA_NAME, '_', 1) DB_first_level FROM INFORMATION_SCHEMA.SCHEMATA WHERE TRUE ) t ORDER BY DB_first_level ASC LIMIT 0, 100) t2 WHERE TRUE AND 1 = LOCATE(CONCAT(DB_first_level, '_'), CONCAT(SCHEMA_NAME, '_')) ORDER BY SCHEMA_NAME ASC;
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+# Time: 2025-03-30T09:06:15.132978Z
+# User@Host: web_googlemap.com[web_googlemap.com] @ localhost []  Id:   109
+# Query_time: 3.733237  Lock_time: 0.016184 Rows_sent: 10  Rows_examined: 10
+SET timestamp=1743325575;
+SHOW TABLES FROM `web_googlemap.com`;
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+# Time: 2025-03-31T03:44:27.068005Z
+# User@Host: web_googlemap.com[web_googlemap.com] @ localhost []  Id:   239
+# Query_time: 4.754717  Lock_time: 0.010433 Rows_sent: 1  Rows_examined: 1008
+use web_googlemap.com;
+SET timestamp=1743392667;
+SHOW GLOBAL VARIABLES LIKE 'innodb_file_per_table';

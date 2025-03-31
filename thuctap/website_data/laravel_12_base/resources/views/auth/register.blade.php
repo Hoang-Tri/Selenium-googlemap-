@@ -26,6 +26,11 @@
             </div>
 
             <div class="input-box">
+                <input type="text" name="fullname" placeholder="Fullname" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="input-box">
                 <input type="email" name="email" placeholder="Email" required>
                 <i class="fas fa-envelope"></i>
             </div>
@@ -40,7 +45,7 @@
                 <i class="fas fa-lock"></i>
             </div>
 
-            <button type="submit" class="btn"><a href="{{ route('login') }}">REGISTER</a></button>
+            <button type="submit" class="btn">REGISTER</button>
             <!-- <button type="submit" class="btn">REGISTER</button> -->
 
             <p class="register-link">Already have an account? → <a href="{{ route('login') }}">Login Here</a></p>

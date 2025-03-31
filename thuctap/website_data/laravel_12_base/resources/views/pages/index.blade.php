@@ -32,11 +32,24 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Title</label>
-                            <input type="text" class="form-control" name="title" required>
+                            <input type="text" class="form-control" name="title_page" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Author</label>
+                            <input type="text" class="form-control" name="author_page" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Slug</label>
-                            <input type="text" class="form-control" name="slug" required>
+                            <label class="form-label">Content</label>
+                            <textarea class="form-control" name="content_page" rows="4"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-control" name="status_page">
+                                <option value="Draft">Draft</option>
+                                <option value="Published">Published</option>
+                                <option value="Pending">Pending</option>
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-success">Save</button>
                     </form>
@@ -52,28 +65,38 @@
                 <th>ID</th>
                 <th>Page Title</th>
                 <th>Slug</th>
+                <th>Author</th>
+                <th>Content</th>
+                <th>Status</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($pages as $page)
                 <tr>
-                    <td>{{ $page->id }}</td>
-                    <td>{{ $page->title }}</td>
-                    <td>{{ $page->slug }}</td>
+                    <td>{{ $page->id_page }}</td>
+                    <td>{{ $page->title_page }}</td>
+                    <td>{{ $page->slug_page }}</td>
+                    <td>{{ $page->author_page }}</td>
+                    <td>{{ $page->content_page }}</td>
+                    <td>{{ $page->status_page }}</td>
                     <td>
-                        <button class="btn btn-sm btn-warning editPageBtn"
-                            data-bs-toggle="modal" data-bs-target="#editPageModal"
-                            data-id="{{ $page->id }}" data-title="{{ $page->title }}"
-                            data-slug="{{ $page->slug }}">
-                            Edit
-                        </button>
+                    <button class="btn btn-sm btn-warning editPageBtn"
+                        data-bs-toggle="modal" data-bs-target="#editPageModal"
+                        data-id="{{ $page->id_page }}" 
+                        data-title="{{ $page->title_page }}"
+                        data-slug="{{ $page->slug_page }}"
+                        data-author="{{ $page->author_page }}"
+                        data-content="{{ $page->content_page }}"
+                        data-status="{{ $page->status_page }}">
+                        Edit
+                    </button>
 
-                        <button class="btn btn-sm btn-danger deletePostBtn"
-                            data-bs-toggle="modal" data-bs-target="#deletePostModal"
-                            data-id="{{ $page->id }}">
-                            Delete
-                        </button>
+                    <button class="btn btn-sm btn-danger deletePageBtn"
+                        data-bs-toggle="modal" data-bs-target="#deletePageModal"
+                        data-id="{{ $page->id_page }}">
+                        Delete
+                    </button>
                     </td>
                 </tr>
             @endforeach
@@ -84,35 +107,45 @@
 <!-- Modal: Sửa Page -->
 <div class="modal fade" id="editPageModal" tabindex="-1">
     <div class="modal-dialog">
-        <form id="editPageForm" method="POST">
-            @csrf
-            @method('PUT')
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Page</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" id="editPageId" name="id">
+    <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editPageForm" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" id="editPageId" name="id_page">
                     <div class="mb-3">
                         <label class="form-label">Title</label>
-                        <input type="text" id="editPageTitle" name="title" class="form-control" required>
+                        <input type="text" id="editPageTitle" name="title_page" class="form-control" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Author</label>
+                        <input type="text" id="editPageAuthor" name="author_page" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Slug</label>
-                        <input type="text" id="editPageSlug" name="slug" class="form-control" required>
+                        <label class="form-label">Content</label>
+                        <textarea class="form-control" id="editPageContent" name="content_page" rows="4"></textarea>
                     </div>
-                </div>
-                <div class="modal-footer">
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <select class="form-control" id="editPageStatus" name="status_page">
+                            <option value="Draft">Draft</option>
+                            <option value="Published">Published</option>
+                            <option value="Pending">Pending</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-success">Save</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-
-<div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModalLabel" aria-hidden="true">
+<!-- Modal: Xóa Page -->
+<div class="modal fade" id="deletePageModal" tabindex="-1" aria-labelledby="deletePageModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -123,7 +156,7 @@
                 <p>Are you sure you want to delete this page?</p>
             </div>
             <div class="modal-footer">
-                <form id="deletePostForm" method="POST">
+                <form id="deletePageForm" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
@@ -133,6 +166,7 @@
         </div>
     </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     // Xử lý nút "Edit"
@@ -140,15 +174,18 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function () {
             document.getElementById('editPageId').value = this.dataset.id;
             document.getElementById('editPageTitle').value = this.dataset.title;
-            document.getElementById('editPageSlug').value = this.dataset.slug;
+            document.getElementById('editPageAuthor').value = this.dataset.author;
+            document.getElementById('editPageContent').value = this.dataset.content;
+            document.getElementById('editPageStatus').value = this.dataset.status;
             document.getElementById('editPageForm').action = `/pages/${this.dataset.id}`;
+            
         });
     });
 
     // Xử lý nút "Delete"
-    document.querySelectorAll('.deletePostBtn').forEach(button => {
+    document.querySelectorAll('.deletePageBtn').forEach(button => {
         button.addEventListener('click', function () {
-            document.getElementById('deleteUserForm').action = `/posts/${this.dataset.id}`;
+            document.getElementById('deletePageForm').action = `/pages/${this.dataset.id}`;
         });
     });
 });

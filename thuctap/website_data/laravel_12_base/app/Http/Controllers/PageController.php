@@ -2,80 +2,68 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Page;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    private $pages;
-
-    public function __construct()
-    {
-        // Dữ liệu giả lập, thay cho database
-        $this->pages = collect([
-            (object) ['id' => 1, 'title' => 'About Us', 'slug' => 'about-us', 'created_at' => '2025-03-18'],
-            (object) ['id' => 2, 'title' => 'Contact', 'slug' => 'contact', 'created_at' => '2025-03-17'],
-        ]);
-    }
-
     public function index()
     {
-        return view('pages.index', ['pages' => $this->pages]);
+        $pages = Page::all();
+        return view('pages.index', compact('pages'));
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'slug' => 'required|max:255|unique:pages,slug',
+            'title_page' => 'required|string|max:255',
+            'author_page' => 'required|string|max:255',
+            'content_page' => 'required|string',
+            'status_page' => 'required|in:Draft,Published,Pending',
         ]);
 
-        // Giả lập thêm dữ liệu vào danh sách
-        $newPage = (object) [
-            'id' => $this->pages->max('id') + 1,
-            'title' => $request->title,
-            'slug' => $request->slug,
-            'created_at' => now()->format('Y-m-d'),
-        ];
+        $page = new Page();
+        $page->title_page = $request->title_page;
+        $page->slug_page = convertToSlug($request->title_page);
+        $page->author_page = $request->author_page;
+        $page->content_page = $request->content_page;
+        $page->status_page = $request->status_page;
 
-        $this->pages->push($newPage);
-
-        return redirect()->route('pages.index')->with('success', 'Page added successfully.');
-    }
-
-    public function edit($id)
-    {
-        $page = $this->pages->firstWhere('id', $id);
-
-        if (!$page) {
-            return redirect()->route('pages.index')->with('error', 'Page not found.');
+        if ($page->save()) {
+            return redirect()->route('pages.index')->with('success', 'Page created successfully!');
+        } else {
+            return back()->withErrors('Failed to add page, please try again.');
         }
-
-        return view('pages.edit', compact('page'));
     }
 
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'slug' => 'required|max:255',
+            'title_page' => 'required|string|max:255',
+            'author_page' => 'required|string|max:255',
+            'content_page' => 'required|string',
+            'status_page' => 'required|in:Draft,Published,Pending',
         ]);
 
-        $page = $this->pages->firstWhere('id', $id);
+        $page = Page::findOrFail($id);
+        $page->title_page = $request->title_page;
+        $page->slug_page = convertToSlug($request->title_page);
+        $page->author_page = $request->author_page;
+        $page->content_page = $request->content_page;
+        $page->status_page = $request->status_page;
 
-        if ($page) {
-            $page->title = $request->title;
-            $page->slug = $request->slug;
+        if ($page->save()) {
+            return redirect()->route('pages.index')->with('success', 'Page updated successfully!');
+        } else {
+            return back()->withErrors('Failed to update page, please try again.');
         }
-
-        return redirect()->route('pages.index')->with('success', 'Page updated successfully.');
     }
 
     public function destroy($id)
     {
-        $this->pages = $this->pages->reject(function ($page) use ($id) {
-            return $page->id == $id;
-        });
-
-        return response()->json(['success' => true]);
+        $page = Page::find($id);
+    
+        $page->delete();
+        return redirect()->route('pages.index')->with('success', 'Page deleted successfully!');
     }
 }

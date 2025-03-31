@@ -3,67 +3,110 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Category;
 
 class PostController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('posts.index');
-    // }
+    // Hiển thị danh sách bài viết
     public function index()
     {
-        // Tạo danh sách bài viết giả lập
-        $posts = collect([
-            (object) ['id' => 1, 'title' => 'First Blog Post', 'author' => 'John Doe', 'created_at' => '2025-03-20'],
-            (object) ['id' => 2, 'title' => 'Second Post', 'author' => 'Jane Smith', 'created_at' => '2025-03-19'],
-        ]);
-    
-        return view('posts.index', compact('posts'));
+        $posts = Post::with('category')->get();
+        $categories = Category::all(); // Lấy tất cả categories để dùng trong form
+
+        return view('posts.index', compact('posts', 'categories'));
     }
 
-    // Hiển thị form tạo bài viết mới
-    public function create()
-    {
-        return view('posts.create');
-    }
+    // Thêm bài viết mới
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'title_post' => 'required|string|max:255',
+    //         'id_cate' => 'required|exists:categories,id_cate',
+    //         'author' => 'required|string|max:255',
+    //         'content_post' => 'required|string',
+    //         'status_post' => 'required|in:Draft,Published,Pending',
+    //     ]);
 
-    // Xử lý lưu bài viết mới
+    //     Post::create([
+    //         'title_post' => $request->title_post,
+    //         'id_cate' => $request->id_cate,
+    //         'author' => $request->author,
+    //         'content_post' => $request->content_post,
+    //         'status_post' => $request->status_post, 
+    //         'created_at_post' => now(),
+    //     ]);
+
+    //     return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+    // }
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'author' => 'required|max:100',
-            'content' => 'required',
-            'created_at' => 'required|date',
+            'title_post' => 'required|string|max:255',
+            'id_cate' => 'required|exists:category,id_cate',
+            'author' => 'required|string|max:255',
+            'content_post' => 'required|string',
+            'status_post' => 'required|in:Draft,Published,Pending',
         ]);
 
-        $post = Post::create($request->all());
+        $post = new Post();
+        $post->title_post = $request->title_post;
+        $post->id_cate = $request->id_cate; 
+        $post->author = $request->author;
+        $post->content_post = $request->content_post;
+        $post->status_post = $request->status_post;
 
-        return response()->json(['success' => true, 'post' => $post]);
+        if ($post->save()) {
+            return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+        } else {
+            return back()->withErrors('Failed to add post, please try again.');
+        }
     }
 
+    // Cập nhật bài viết
+    // public function update(Request $request, $id)
+    // {
+    //     $request->validate([
+    //         'title_post' => 'required|string|max:255',
+    //         'id_cate' => 'required|exists:categories,id_cate',
+    //         'author' => 'required|string|max:255',
+    //         'content_post' => 'required|string',
+    //         'status_post' => 'required|in:Draft,Published,Pending', // 🔥 Thêm validation cho status_post
+    //     ]);
 
-    // Hiển thị form chỉnh sửa bài viết
-    public function edit($id)
-    {
-        $post = Post::findOrFail($id);
-        return view('posts.edit', compact('post'));
-    }
+    //     $post = Post::findOrFail($id);
+    //     $post->update([
+    //         'title_post' => $request->title_post,
+    //         'id_cate' => $request->id_cate,
+    //         'author' => $request->author,
+    //         'content_post' => $request->content_post,
+    //         'status_post' => $request->status_post, // 🔥 Thêm status_post
+    //     ]);
 
-    // Xử lý cập nhật bài viết
+    //     return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+    // }
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|max:255',
-            'author' => 'required|max:100',
-            'content' => 'required',
-            'created_at' => 'required|date',
+            'title_post' => 'required|string|max:255',
+            'id_cate' => 'required|exists:category,id_cate',
+            'author' => 'required|string|max:255',
+            'content_post' => 'required|string',
+            'status_post' => 'required|in:Draft,Published,Pending',
         ]);
 
         $post = Post::findOrFail($id);
-        $post->update($request->all());
+        $post->title_post = $request->title_post;
+        $post->id_cate = $request->id_cate;
+        $post->author = $request->author;
+        $post->content_post = $request->content_post;
+        $post->status_post = $request->status_post;
 
-        return redirect()->route('posts.index')->with('success', 'Post updated successfully.');
+        if ($post->save()) {
+            return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+        } else {
+            return back()->withErrors('Failed to update post, please try again.');
+        }
     }
 
     // Xóa bài viết
@@ -71,7 +114,7 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
-    
-        return response()->json(['success' => true]);
-    }    
+
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully!');
+    }
 }

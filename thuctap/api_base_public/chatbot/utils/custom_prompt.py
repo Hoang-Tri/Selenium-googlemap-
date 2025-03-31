@@ -54,11 +54,26 @@ class CustomPrompt:
         Mục tiêu là phân tích từng địa điểm, sau đó nếu có, so sánh và kết luận đâu là địa điểm tốt hơn dựa trên các tiêu chí đánh giá.
         Nếu có từ **2 địa điểm trở lên**, tiến hành so sánh và xếp hạng.
 
-        Thông tin người dùng cung cấp (chỉ bao gồm những người có nhận xét):
+        ## ** Xử lý loại địa điểm**  
 
-        - Địa điểm: {{place}}
-        - user : {{user}}
-        - Comment : {{comment}}
+            - **Địa điểm cụ thể**: Nếu người dùng nhập **tên đầy đủ** (có kèm địa chỉ hoặc chi nhánh) → chỉ lấy dữ liệu của địa điểm đó.  
+            - **Địa điểm chung chung**: Nếu người dùng nhập một **tên thương hiệu chung** (ví dụ: `"Bách Hóa Xanh"`) → lấy tất cả các địa điểm có tên đó và phân tích.  
+
+             **Ví dụ:**  
+            - **Người dùng nhập `"Bách Hóa Xanh - Nguyễn Văn Cừ"`** → chỉ lấy dữ liệu của chi nhánh Nguyễn Văn Cừ.  
+            - **Người dùng nhập `"Bách Hóa Xanh"`** → lấy tất cả các chi nhánh `"Bách Hóa Xanh"` và phân tích.  
+
+            ---
+        Thông tin người dùng cung cấp (chỉ bao gồm những người có nhận xét):
+        Người dùng có thể nhập yêu cầu dưới nhiều dạng:  
+            - "So sánh quán A với quán B"  
+            - "Nên đi quán A hay quán B?"  
+            - "Địa điểm nào tốt hơn: A, B, C?"  
+            - "Tôi muốn biết về quán A và quán B" 
+        Dữ liệu phản hồi từ người dùng có dạng:  
+            - Địa điểm: {{place}}
+            - user : {{user}}
+            - Comment : {{comment}}
 
         (Có thể có nhiều nhận xét từ các người dùng khác nhau...)
 
@@ -68,10 +83,12 @@ class CustomPrompt:
 
         1. Đọc kỹ toàn bộ văn bản phản hồi.
             - Bỏ qua các địa điểm không khớp hoàn toàn với tên "{{place}}" (so sánh các tên địa điểm khớp khoảng 99%).
-
+            = Nếu **người dùng chỉ tìm 1 địa điểm cụ thể** → Chỉ phân tích địa điểm đó.  
+            - Nếu **người dùng nhập một địa điểm chung chung** → Lấy toàn bộ địa điểm khớp với tên đó, phân tích và so sánh giữa các chi nhánh.  
+            - Nếu **người dùng nhập từ 2 địa điểm trở lên** → Phân tích tất cả địa điểm và thực hiện so sánh.
         2. Bỏ qua các phản hồi **không có nội dung nhận xét** (comment rỗng hoặc trống). **Chỉ phân tích các nhận xét có nội dung.**
             - Lấy toàn bộ review có trong dũ liệu liên quan dến địa điểm đó, có bao nhiêu cũng lấy hết
-        3. Phân tích từng địa điểm:
+        3. Phân tích từng địa điểm(nếu có nhiều địa điểm cũng phân tích như vậy):
             a. Xác định tên địa điểm (Place).
             b. Liệt kê feedback tích cực (Positive): từ/cụm từ như "tốt", "sạch sẽ", "thân thiện", "tuyệt vời", "đa dạng",...
             c. Liệt kê feedback tiêu cực (Negative): từ/cụm từ như "dơ", "chậm", "thái độ không tốt", "không chuyên nghiệp",...

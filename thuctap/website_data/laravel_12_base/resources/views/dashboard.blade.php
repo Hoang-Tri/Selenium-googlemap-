@@ -13,6 +13,7 @@
     <div class="sidebar">
         <h2>Admin Panel</h2>
         <ul>
+            <li><a href="{{ url('/category') }}">Category</a></li>
             <li><a href="{{ url('/users') }}">Users</a></li>
             <li><a href="{{ url('/posts') }}">Posts</a></li>
             <li><a href="{{ url('/pages') }}">Pages</a></li>
