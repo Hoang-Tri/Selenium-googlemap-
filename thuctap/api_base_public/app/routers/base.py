@@ -6,6 +6,7 @@ from chatbot.services.chatbot_api_agent import FilesChatAgent
 from ingestion.ingestion  import Ingestion
 import json, re
 from app.config import settings
+from ggmap.crawl_api import crawl_places
 # Tạo router cho người dùng
 router = APIRouter(prefix="/base", tags=["base"])
 
@@ -60,4 +61,20 @@ async def chat_ingestion(
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")
+    
 
+#tạo api crawl data
+@router.post("/start/", response_model=Base)
+async def start_crawl(
+    api_key: str = get_api_key,
+    keywords: str = Form(...)
+):
+    print(f"Từ khóa nhận được: {keywords}")
+    """API để crawl dữ liệu từ danh sách từ khóa"""
+    try:
+        results = crawl_places(keywords)
+
+        return Base(id="crawl-response", data=json.dumps(results))
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lỗi khi crawl dữ liệu: {str(e)}")

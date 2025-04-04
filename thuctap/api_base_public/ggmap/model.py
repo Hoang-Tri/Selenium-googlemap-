@@ -3,7 +3,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from collections import defaultdict
 from datetime import datetime, timedelta
-import time, json, re, os, calendar
+import time, json, re, os, csv
+import unicodedata
+import uuid
+
+def remove_accents(text):
+    return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+
+def generate_unique_id():
+    return str(uuid.uuid4())[:8]  # Lấy 8 ký tự đầu của UUID
 
 def is_single_place_page(driver):
     try:
@@ -42,7 +50,7 @@ def open_reviews_tab(driver):
     except:
         print("Không tìm thấy nút mở review – có thể đã hiện sẵn.")
 
-def scroll_reviews(driver, max_scrolls=20):
+def scroll_reviews(driver, max_scrolls=2):
     try:
         scrollable_div = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
@@ -79,23 +87,17 @@ def scroll_reviews(driver, max_scrolls=20):
 def calculate_review_date(review_time_str):
     today = datetime.today()
 
-    # Xử lý "Today"
-    if "today" in review_time_str.lower():
+    # Xử lý "Hôm nay"
+    if "Hôm nay" in review_time_str:
         return today.strftime("%Y-%m-%d")
 
-    # Xử lý "Yesterday"
-    if "yesterday" in review_time_str.lower():
+    # Xử lý "Hôm qua"
+    if "Hôm qua" in review_time_str:
         return (today - timedelta(days=1)).strftime("%Y-%m-%d")
 
     # Xử lý "a year ago"
     if "a year ago" in review_time_str:
         return f"{today.year - 1}-{today.month:02d}-{today.day:02d}"
-
-    # Xử lý "X years ago"
-    year_match = re.search(r"(\d+) years? ago", review_time_str)
-    if year_match:
-        years = int(year_match.group(1))
-        return f"{today.year - years}-{today.month:02d}-{today.day:02d}"
 
     # Xử lý "X months ago"
     month_match = re.search(r"(\d+) months? ago", review_time_str)
@@ -108,11 +110,7 @@ def calculate_review_date(review_time_str):
             new_month += 12
             new_year -= 1
 
-        # Điều chỉnh ngày nếu vượt quá số ngày trong tháng mới
-        last_day_of_new_month = calendar.monthrange(new_year, new_month)[1]
-        new_day = min(today.day, last_day_of_new_month)
-
-        return f"{new_year}-{new_month:02d}-{new_day:02d}"
+        return f"{new_year}-{new_month:02d}-{today.day:02d}"
 
     # Xử lý "X weeks ago"
     week_match = re.search(r"(\d+) weeks? ago", review_time_str)
@@ -126,7 +124,12 @@ def calculate_review_date(review_time_str):
         days = int(day_match.group(1))
         return (today - timedelta(days=days)).strftime("%Y-%m-%d")
 
-    # Nếu không khớp với bất kỳ định dạng nào, trả về ngày hôm nay
+    # Xử lý "X năm trước"
+    year_match = re.search(r"(\d+) năm trước", review_time_str)
+    if year_match:
+        years = int(year_match.group(1))
+        return f"{today.year - years}-{today.month:02d}-{today.day:02d}"
+
     return today.strftime("%Y-%m-%d")
 
 def get_reviews(driver):
@@ -138,8 +141,7 @@ def get_reviews(driver):
             try:
                 more_button = review_element.find_element(By.CLASS_NAME, 'w8nwRe')
                 driver.execute_script("arguments[0].click();", more_button)
-                WebDriverWait(driver, 1).until_not(EC.element_to_be_clickable((By.CLASS_NAME, 'w8nwRe')))
-           
+                time.sleep(0.3)
             except:
                 pass
 
@@ -181,15 +183,15 @@ def get_reviews(driver):
 
 def process_single_place(driver):
     data = {}
-    scraped_date = datetime.today().strftime("%Y-%m-%d")  # ✅ Lấy ngày cào dữ liệu
+    scraped_date = datetime.today().strftime("%Y-%m-%d")  
 
     try:
         title = driver.find_element(By.CLASS_NAME, "DUwDvf").text.strip()
         print(f"Đang xử lý địa điểm: {title}")
-        data['title'] = f"{title} - {scraped_date}"  # ✅ Thêm ngày vào title
+        data['title'] = f"{title}"  # 
         data['address'] = driver.find_element(By.CLASS_NAME, 'Io6YTe').text.strip()
         data['link'] = driver.current_url
-        data['scraped_date'] = scraped_date  # ✅ Lưu ngày cào vào dữ liệu
+        data['scraped_date'] = scraped_date  
     except:
         pass  # Nếu không load được địa điểm
 
@@ -273,6 +275,7 @@ def process_places_from_urls(driver,keyword_name="default"):
         return
 
     all_data = []
+    place_counter = 1  # Đếm số thứ tự của địa điểm
 
     for url in urls:
         print(f"Đang xử lý: {url}")
@@ -282,62 +285,60 @@ def process_places_from_urls(driver,keyword_name="default"):
         try:
             data = process_single_place(driver)
             if data:
+                place_name = data.get("title", "").strip()
+                place_id = generate_unique_id()
+                data["ID_place"] = place_id
+
+                # Gán ID_review cho từng review
+                review_counter = 1
+                for review in data.get("reviews", []):
+                    review["ID_review"] = f"{place_id}_{review_counter}"
+                    review_counter += 1
+
                 all_data.append(data)
+                place_counter += 1  # Tăng số thứ tự địa điểm
         except Exception as e:
             print("Lỗi khi xử lý:", e)
             continue
 
-    with open(f"data/data_result/{keyword_name}.json", "w", encoding="utf-8") as f:
+    json_path = f"data/data_result/{keyword_name}.json"
+    with open(json_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, indent=2, ensure_ascii=False)
 
-    print(f"Đã lưu kết quả vào data/data_result/{keyword_name}.json")
-
-    # Ghi JSON vào file .txt với định dạng mong muốn
+    print(f"Đã lưu kết quả vào {json_path}")
+#####
     scraped_date = datetime.today().strftime("%Y-%m-%d")
 
     os.makedirs("demo/data_in", exist_ok=True)
-    
-    crawl_date = datetime.now().strftime("%Y-%m-%d")  # Ngày cào dữ liệu
-    text_output = ""
-
     for item in all_data:
-        place_name = item.get("title", "").strip()
-        address = item.get("address", "").strip()
+        place_id = item["ID_place"]
+        place_name = item.get("title", "").strip().replace(" ", "_")  
+        address = item.get("address", "Không rõ địa chỉ").strip()
+        link = item.get("link", "Không có link").strip()
         reviews = item.get("reviews", [])
 
-        if not reviews:
+        
+        # Chỉ tạo file cho những địa điểm có ít nhất 20 reviews
+        if len(reviews) < 20:
             continue
 
-        # Tính số sao trung bình chính xác từ review
-        total_stars = 0
-        count_stars = 0
-        user_reviews = []
+        # Định dạng tên file tránh trùng lặp
+        csv_filename = f"{place_id}_{place_name}_{scraped_date}.csv"
+        csv_path = os.path.join("data/data_in", csv_filename)
 
-        for r in reviews:
-            user = r.get("name", "Ẩn danh").strip()
-            comment = r.get("review", "").strip().replace("\n", " ")  # Bỏ xuống dòng trong comment
-            stars = r.get("star", None)  # Đảm bảo lấy đúng key từ `get_reviews()`
-            review_date = r.get("date", "Không rõ ngày").strip()  # Lấy ngày đánh giá
+        with open(csv_path, mode="w", newline='', encoding="utf-8") as file:
+            writer = csv.writer(file)
+            
+            # Ghi header vào file CSV
+            writer.writerow(["places","address", "link", "user", "star", "creat_date", "comment", "data_llm"])
 
-            if comment:
-                formatted_review = f"\t\t- {user} ({stars if stars is not None else 'N/A'}⭐, {review_date}): {comment}"
-                user_reviews.append(formatted_review)
-                if stars is not None:
-                    total_stars += stars
-                    count_stars += 1
+            for review in reviews:
+                user = review.get("name", "Ẩn danh").strip()
+                comment = review.get("review", "").strip().replace("\n", " ")
+                stars = review.get("star", None)
+                review_date = review.get("date", "Không rõ ngày").strip()
 
-        avg_stars = round(total_stars / count_stars, 1) if count_stars else 0
-
-        # Ghi dữ liệu vào file
-        # text_output += f"place: {place_name} (crawled on {crawl_date})\n"
-        text_output += f"place: {place_name}\n"
-        text_output += f"address: {address}\n"
-        text_output += f"average stars: {avg_stars}⭐\n"
-        text_output += f"reviews:\n" + "\n".join(user_reviews) + "\n\n"
-
-    # Lưu vào file .txt
-    txt_path = f"demo/data_in/{keyword_name}.txt"
-    with open(txt_path, "w", encoding="utf-8") as f:
-        f.write(text_output)
-
-    print(f"Đã lưu kết quả vào {txt_path}")
+                if comment:
+                    # Ghi dữ liệu review vào file CSV
+                    writer.writerow([place_name, address, link, user, stars if stars is not None else "N/A", review_date, comment, None])
+        print(f"Đã lưu kết quả vào {csv_path}")

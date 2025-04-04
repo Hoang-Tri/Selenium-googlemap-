@@ -1,1271 +1,1762 @@
 [
   {
-    "title": "Ninh Kieu Wharf - 2025-03-28",
-    "address": "",
-    "link": "https://www.google.com/maps/place/Ninh+Kieu+Wharf/@10.0322715,105.7882308,17z/data=!3m1!4b1!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D",
-    "scraped_date": "2025-03-28",
+    "title": "Ninh Kieu Wharf",
+    "address": "106 Đường Hai Bà Trưng, Tân An, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Ninh+Kieu+Wharf/@10.0322715,105.7882308,17z/data=!3m1!4b1!4m6!3m5!1s0x31a06298aae43e71:0xc6a64bdac582285d!8m2!3d10.0322715!4d105.7882308!16s%2Fg%2F11_ygvs77?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-01",
     "star": 4.4,
     "reviews": [
       {
         "name": "Hong Nguyen",
-        "review": "Coming to the Mekong Delta without stopping at Ninh Kieu wharf would probably be a mistake.\nThe feeling of sailing on the vast river really makes us satisfied.  Beautiful scenery, delicious food, and many convenient services available at reasonable prices.  Come here and feel it your way.\nHighly recommended!",
+        "review": "Coming to the Mekong Delta without stopping at Ninh Kieu wharf would probably be a mistake.\nThe feeling of sailing on the vast river really makes us satisfied.  Beautiful …",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_1"
       },
       {
         "name": "Arun Jayaprakash",
         "review": "Visited the marina to take a boat on our way to the Cai Rang Floating Market. The place is neat and well maintained, with beautiful gardens, plants and trees, and is a nice place to spend time with a view of the river.",
         "star": 4.0,
-        "date": "2024-04-28"
-      },
-      {
-        "name": "Hà Việt Thắng",
-        "review": "It’s new year so there are so much lights. Very cool, very demure",
-        "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2024-05-01",
+        "ID_review": "0aa75c53_2"
       },
       {
         "name": "Ko Koo",
-        "review": "The floating market tour was okay... not really impressive.\nIf you don't have time in Cần Thơ, you can easily pass on this tour. Typical tourist trap.\n\nThe fruit sellers will come to you and try to sell it. If you don't like this kind of vibe, it's not for you....\n\nIf you have time to kill and wouldn't mind to go around the river for 2 hours, go for it.",
+        "review": "The floating market tour was okay... not really impressive.\nIf you don't have time in Cần Thơ, you can easily pass on this tour. Typical tourist trap. …",
         "star": 2.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_3"
       },
       {
         "name": "Tomas Hendrych",
         "review": "Be sure what you expect. There is almost no floating market any more, there are tourist floating souvenir market. We paid for private boat, had to wait 30 minutes abd finaly ended with 10 other tourist.",
         "star": 2.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_4"
       },
       {
         "name": "Natalia T",
-        "review": "We rented a small boat for two people at 400,000 VND, which I found to be a reasonable price. Larger boats cost 100,000 VND per person and carry up to 20 people, but I don’t think they’re worth it. To get a good deal, arrive at the port by 4:50 AM. The trip to Cai Rang floating market takes about 50 minutes by boat. Well, if you come to Can Tho you should definitely try it but please do not overpay for it.\n\nCai Rang, however, feels overhyped. It’s not the bustling market with hundreds of small boats as often depicted. Instead, it’s mostly tourist barges with just a few local boats, and there’s little genuine commerce happening. You’ll find one boat selling coffee, another offering noodles, and a couple of floating restaurants. We stopped at a staged rice paper factory and at the shops aimed at selling souvenirs. Unfortunately, the water is also heavily polluted with garbage, which takes away from the experience.",
+        "review": "We rented a small boat for two people at 400,000 VND, which I found to be a reasonable price. Larger boats cost 100,000 VND per person and carry up to 20 people, but I don’t think they’re worth it. To get a good deal, arrive at the port by …",
         "star": 4.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_5"
       },
       {
         "name": "David Henderson",
         "review": "A nice area to walk through, but kind of a bummer being constantly accosted by people trying to sell you boat tickets.\n\nFYI don't buy from any of them.\n\nVisited during my 2024 bicycle trip around SE Asia. Watch on YouTube: @VeloObscura",
         "star": 3.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_6"
       },
       {
         "name": "J C",
         "review": "The highlight of this warfare was supposed to be the boat dining experience. Sadly, the ride was short of good, and the food was mediocre at best.\n\nBoat ride: With the expectation of a moving boat accompanying sights and views of the river, you only get about 5 minutes of the boat going. Then the boat makes a slow rotation and your headed back to base.\n\nMusic on the boat was ok. Was not the best as it only included traditional music.\n\nFood: Orders of food was pricey. Even the sodas were pricey. The best deal you would get is ordering one of the hotpot. Anything else, don't say you weren't warned. But, to be fare, it's a tourist attraction. So pricey food is expected.\n\nOverall, this boat dinner affair isn't good. Many things can be improved. Many things can be possible, should the owners want it better to represent Vietnam.",
         "star": 1.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_7"
+      },
+      {
+        "name": "Hà Việt Thắng",
+        "review": "It’s new year so there are so much lights. Very cool, very demure",
+        "star": 5.0,
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_8"
       },
       {
         "name": "C CLARENCE",
         "review": "Fun place to visit lot's of nice restaurant's and Bar's around. The floating market isn't much existing as I expected. Looks like it doesn't active as it used to be. But anyway you can experience what it's looks like Vietnamese culture",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_9"
       },
       {
         "name": "Nguyen Thanh Tam",
         "review": "Touristic site with lots of restaurants, buildings and shops, so not spacious enough for those who like walking.\nThis is also a boat dock to visit the floating markets and the island so many vendors will come to offer the services as you walk by but they are polite, not try to stop or scare you. Totally understand why they have to do this, COVID time and very few guests.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_10"
       },
       {
         "name": "Eric Christophe",
         "review": "Great place with garden, as a ship docking there local authorities are not very complaisant or helpful, for our guests to embark the Sampan. Can tho is a busy town with its floating market CAI RANG therefore it can be very noisy for the guests sleeping and karaoke going on late at night.",
         "star": 3.0,
-        "date": "2024-12-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_11"
       },
       {
         "name": "Dr. Stephen Bui",
         "review": "Really nice place to walk by the pier with lots of restaurants and coffee shops. The place is beautiful and made to accommodate pedestrians. Lots of restaurants on the river as well. You would have a wonderful time there for dinner and after.",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_12"
       },
       {
         "name": "Darren Bird",
         "review": "I truly love this place. Day or night it is spectacular. A wonderful open place for walking. All sorts of food for sale. And a bridge for lovers. Young or old you will be enamored by this place. 5 stars.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_13"
       },
       {
         "name": "Thu Lưu",
         "review": "I went on Saturday, the led lights are turned off, so, I can not see many things in there.\nI came in October during flood season, so the streets are drowned.\nI came back Nink Kieu wharf at the next morning, I can photo some pictures there.\nThat's an experience bad.",
         "star": 2.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Olivine Thuy Phan",
-        "review": "So nice, the atmosphere so nice in the morning, location veru friendly",
-        "star": 4.0,
-        "date": "2024-09-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_14"
       },
       {
         "name": "Jeff Byron",
         "review": "Quick little ferry to get across the river. Costs  4000 per person for a return trip.",
         "star": 4.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_15"
       },
       {
         "name": "Tu Nguyen",
         "review": "Pure Air with view, you can see Can Tho River, Hau River. You also can see Can Tho Bridge. Clean and many people visit there in the evening. But sometimes Some people ask you want to go Cai Rang Floating Market by their boats, I thought that it is too dangerous although I want to help them because they are poor. This is a good place for having a walk.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_16"
       },
       {
         "name": "Hoàng Yến Phùng",
         "review": "\"Ninh Kieu Wharf\" is one of the most famous symbols of Can Tho City and is also a cultural symbol of the Southwest region. The  floated market usually begins at dawn, which is very bustling and crowded. They mainly sell fruits for the traders as well as many products like a normal market. It has attracted many domectic and foreign tourists come to enjoy the feeling of traveling on the river. There are some ships for rent to take you around the river to take part in the lively atmosphere of Ninh Kieu Wharf. 💜",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_17"
       },
       {
         "name": "Dan Nguyen",
         "review": "The city improved this place quite a bit.  I love how you take a long walk along the river.  It is dimly lit in some area,  but brighly lit in the tourist area.  There are several boats serving dinner cruise at night.  You can order food,  and they add $.50 or 10,000 dong for the cruise.  I don't like the loud music and the crowd.  I come before the cruise and eat on the boat, and get off the boat before the cruise.  You can hire a boat to take you on the opposite side of the river, to enjoy the extremly long promenade,  a good place to practice a marathon or ride your bike.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_18"
       },
       {
         "name": "To Nhu Tran",
         "review": "Welcome to Can Tho (my hometown) 🥰\nProud of was born and grown up at here!\nWish you have a great vacation/business trip! …",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_19"
       },
       {
         "name": "Eric Dương",
         "review": "Nice and cool place at night. Maybe not so clean. There are many small boats on the quay. Rental price is just 10usd per hour sailing around the Mekong river in Can Tho",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_20"
       },
       {
         "name": "Loc Van Truong",
         "review": "Night walking street with variety foods and drink. Resonable price. With night market at the end, variable clothing and toy choices for adults and kids.",
         "star": 4.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_21"
       },
       {
         "name": "Anh Chau",
         "review": "Very clean area and fresh air. Good for morning jogging",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_22"
       },
       {
         "name": "Максим Ивонин",
         "review": "A beautiful park with a promenade along the Mekong River, there are very few tourists, not far from the park in 5 minutes walk there is a large local market with cheap prices",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_23"
       },
       {
         "name": "HAZIZIE SIDEK",
         "review": "Beautiful View. Clean and nice walkway. Such a relaxing and good memories take photo with friends and family.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_24"
+      },
+      {
+        "name": "Olivine Thuy Phan",
+        "review": "So nice, the atmosphere so nice in the morning, location veru friendly",
+        "star": 4.0,
+        "date": "2024-10-01",
+        "ID_review": "0aa75c53_25"
       },
       {
         "name": "Huongt Minh",
         "review": "Very famous place in Mekong Delta is Bến Ninh Kiều, located in the center of Can Tho city, Ninh Kieu district, very easy for you to find this place. You'll see Ben Ninh Kieu very dynamic in the evening, there are many food and souvenirs kiosks. Many diversified food for you to try. Beside that, you can also have many beautiful photos in the Ninh Kieu walked bridge.",
         "star": 5.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Vũ Thị Kim Chi",
-        "review": "Not bad. They have night market here\nAnd in the morning, from the left side. I can take a walk and discover some foood vegetables in the market",
-        "star": 5.0,
-        "date": "2024-06-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_26"
       },
       {
         "name": "Bill Lovett",
         "review": "I and my wife visited in an early Saturday evening. Lots of people about. Nice vibe, great futuristic  lights. Just lovely.",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_27"
       },
       {
         "name": "Ben Quintana",
         "review": "Open bridge across the water. Relaxing walk and nice views plus it is free to just hangout. A few restaurants around so it is a good spot to stop before or after eating.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_28"
       },
       {
         "name": "Lan Anh Nguyễn",
         "review": "This is a place for relaxation at the weekend. You can bring your children, go skating, take a walk around the Ninh Kiều harbor. There are cruises for tourists. You can book tickets first. You can go sightseeing on the cruise and enjoy the nightlife. Along the river, there are a bunch of coffee shop where you have a cup of black coffee or cold beer. If you're hungry you can wander around and find many street food venders at the food market.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_29"
       },
       {
         "name": "Volkan Sakarya",
         "review": "Try to use known agencies on Marina Road. Some scammed people can approach you to sell Mekong boat tour and show their boat. Please don't take into consideration their offer even cheaper than official tour agencies.",
         "star": 5.0,
-        "date": "2024-10-28"
+        "date": "2024-11-01",
+        "ID_review": "0aa75c53_30"
       },
       {
         "name": "Letícia Usanovich",
         "review": "Great evening vibe by the river. Also great street food market in the area. You can book tours to the floating market at the pier.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_31"
       },
       {
         "name": "Richard jackson",
         "review": "Nice restaurant, has a better than average drinks list, nice service and views of the boats chuggingup an down the river. Friendly staff. 100k vnd for a glass of Dalat white wine.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_32"
+      },
+      {
+        "name": "Vũ Thị Kim Chi",
+        "review": "Not bad. They have night market here\nAnd in the morning, from the left side. I can take a walk and discover some foood vegetables in the market",
+        "star": 5.0,
+        "date": "2024-07-01",
+        "ID_review": "0aa75c53_33"
       },
       {
         "name": "Mr. RA THA",
         "review": "Nice hotel and nice pace to visit it. It is located in Can Tho city, Mekong Delta. This is a new city in the Mekong and attracting many tourists come stay at the hotel and visit it. Close to the hotel is a Walking Bridge",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_34"
       },
       {
         "name": "Dazai Au",
         "review": "The park is green and clean, it is great to have a walk here in the morning and watch boats.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_35"
       },
       {
         "name": "Can Pham",
         "review": "Coming to Can Tho city, this beautiful place is great to see in the evening.",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_36"
       },
       {
         "name": "VAN DEO NGUYEN",
         "review": "the beautiful park beside the river, most of visitor are walking along side of park and walking bridge (Can Tho's Love Bridge). But if you wanna see the whole park with light and reflection, you can take a boat to Fishing Village to see the park from other side of river",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_37"
       },
       {
         "name": "Nguyen Duc Nguyen",
         "review": "Clean water and fresh air morning and night. Just wonderful!",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_38"
       },
       {
         "name": "vu nghi nguyen",
         "review": "Beautiful place to visit...be mindful when crossing the road.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_39"
       },
       {
         "name": "Robert Chase",
         "review": "Beautiful at night. Great views. Great place to bring the family at night.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_40"
       },
       {
         "name": "Son Nguyen Van Thanh",
         "review": "Beautiful park, too crowded at the weekend.",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_41"
       },
       {
         "name": "Ryan Shady",
         "review": "Nice and happening place. You can get from street food to gourmet just by walking along the street. You can also get souvenirs or clothing at the night market, but remember to bargain. This is what Ben Thanh market and Bach Dang wharf of Sai Gon used to look and fell like 10-15 years ago",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_42"
       },
       {
         "name": "Anh Nhi Ta",
         "review": "Having a cup of hot tea and enjoying night scene from the high is recommended [at the hotel - but cannot remember the name, but it is opposite to the floating restaurant area). The price is not as expensive as I expected (~1.5-2USD/ cup of tea/ coffee).",
         "star": 3.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Linh Clark",
-        "review": "Crowded and not much to see.",
-        "star": 5.0,
-        "date": "2024-07-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_43"
       },
       {
         "name": "Trung Nguyen",
         "review": "It was a nice experience. The food were good but very expressive.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_44"
       },
       {
         "name": "Miroslav Lazic (Miki)",
         "review": "Central spot of Can Tho city. Nice walking area, well illuminated and clean.",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_45"
+      },
+      {
+        "name": "Linh Clark",
+        "review": "Crowded and not much to see.",
+        "star": 5.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_46"
       },
       {
         "name": "Jack lee Sức sống mới",
         "review": "A fun place to hang out with many activities, upstairs has billiards and archery and a very nice atmosphere, lots of choice for food and drinks! :))",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_47"
       },
       {
         "name": "Michael Golden",
         "review": "We had a good lunch here while touring the water ways of this area. We also visited the area by day and night. It is a good place to step of to the night market or just walk around.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_48"
       },
       {
         "name": "Brian Collyer",
         "review": "Thoroughly recommend a long evening walk here. Great atmosphere, safe and convenient",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_49"
       },
       {
         "name": "טל לוריא",
         "review": "Colorfuly lit , gentle brease . A Verity of people walking talking and enjoying the weather. We sat to eat near by to enjoy the color show of sunset",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_50"
       },
       {
         "name": "denise brooks",
         "review": "Interesting place to soak in Vietnamese local tourism on the water.",
         "star": 4.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_51"
       },
       {
         "name": "Benny T W Wong",
         "review": "Peaceful and clean park with lots of park benches. Good river view to watch boats go by.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_52"
       },
       {
         "name": "francis dureza sablon",
         "review": "Can Tho City's South of Vietnam must visit place",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_53"
       },
       {
         "name": "Rob Deleurme",
         "review": "It's the main tourist area of cantho, boat rides and plenty of shopping and during the holiday time a beautiful collection of of flowers and culture type displays and activities.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_54"
       },
       {
         "name": "Trần",
         "review": "Cool atmosphere, except for the rat, it tries to eat my bottom, but everything else is fine.",
         "star": 5.0,
-        "date": "2024-08-28"
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_55"
       },
       {
         "name": "Ho Ngoc Tin",
         "review": "So colorful at night. Crowded. Nice place!",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_56"
       },
       {
         "name": "James O Mahony",
         "review": "Nice litre oasis with an impressive statue of Ho Chi Minh. A nicely tended garden and a pedestrian bridge",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_57"
       },
       {
         "name": "Thanh Cao",
         "review": "Well come to Vietnam my lovely home town guys",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_58"
       },
       {
         "name": "tchongi nguyen",
         "review": "A walking alley for night sightseeing in Cần Thơ, nothing unforgettable unfortunately",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_59"
+      },
+      {
+        "name": "Derek Williamson",
+        "review": "Good place to pick up a boat",
+        "star": 4.0,
+        "date": "2025-03-27",
+        "ID_review": "0aa75c53_60"
       },
       {
         "name": "Khairul Hazrin Hashim",
         "review": "Nice scenary at dawn and dusk.. nice place to chill out",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_61"
       },
       {
         "name": "Vuong Nguyen An",
         "review": "A place to visit at night. Amazing!",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_62"
       },
       {
         "name": "Joseph Sullivan",
         "review": "Expect to spend about 3 hours in the floating market, and we arrived around 5 am. The smaller boats will approach you mostly with fresh fruits. Sometimes they will have hot coffee, tea, or bun boa. Always break one open to verify the meat was cooked through.\n\nThere’s some larger boats that you can board with mini markets. Other larger boats will line the shores and may have restrooms and a small dining area.\n\nFor the best experience, doc at one of the tourist ports for hot food and restrooms. The floating market is a great experience.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_63"
       },
       {
         "name": "lê đình thiện",
         "review": "Ok",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_64"
       },
       {
         "name": "Erica Bailey",
         "review": "Great gardens well maintained.\nLots of shade as we walked up to Lovers Bridge.\nWell worth a visit on the vast river in Can Tho.",
         "star": 4.0,
-        "date": "2024-03-28"
-      },
-      {
-        "name": "J DN",
-        "review": "An enjoyable walk by the river.\n\nHighly recommend early morning and late and night.",
-        "star": 4.0,
-        "date": "2024-08-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_65"
       },
       {
         "name": "Lian Chengyuan",
         "review": "Decent walk to experience how the locals chill. (the locals really love to karaoke, ha). The street food is interesting, esp if you take your time to look first.\n\nWent later at night, so unable to take those boat rides. On second time, maybe it's a blessing in disguise. Not that they are bad, just that, they look and feel like just another boat ride.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_66"
       },
       {
         "name": "Kenny G",
         "review": "One of the most fantastic 2-3 km walks in all of Vietnam. Whether at dawn or dusk, it never gets old and there's a lot of nice sights along the path. Do come at night when everything is lit up beautifully. Great town and this is one of the highlights.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_67"
       },
       {
         "name": "Ai Fu CHIN",
         "review": "Visit day and evening for different scenery.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_68"
       },
       {
         "name": "Kevin H. Nguyen",
         "review": "Great place and love the night market...",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_69"
       },
       {
         "name": "Douglas Page",
         "review": "Interesting to see how daily life is for locals..",
         "star": 4.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_70"
       },
       {
         "name": "Sujita Balami",
         "review": "Very good place to go and hang out with friends. Or couples can also enjoy in this peaceful place.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_71"
       },
       {
         "name": "M. HBart",
         "review": "Nice wharf but COVID-19 remnants are visible. We visited toward the end of raining season, hence there were not many foreign tourists. Businesses are trying to open back up slowly while others are still closed or went out of business.\nVisitors can take boat tours to the floating market to watch local traders go about their business daily or to visit local fish 🐟 farm.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_72"
+      },
+      {
+        "name": "J DN",
+        "review": "An enjoyable walk by the river.\n\nHighly recommend early morning and late and night.",
+        "star": 4.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_73"
       },
       {
         "name": "Quỳnh Mai Lê Thị",
         "review": "Ok",
         "star": 5.0,
-        "date": "2024-12-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_74"
       },
       {
         "name": "Jeff Teh",
         "review": "Good to hangout at night in Can Tho",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_75"
       },
       {
         "name": "Aaron d",
         "review": "Lovely park . Enjoy a pleasant walk along the river and a great newish bridge festooned with lights. Very.popular with Vietnamese locals and tourists taking a stroll or relaxing on the many benches. Great for taking selfies and holiday photos.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_76"
       },
       {
         "name": "Trung Nguyen Viet",
         "review": "Nothing special abt this place. There is long park along the wharf, make it nice to walk. There's a restaurant & coffee boat docking at the Wharf where u can enjoy some food & drink by the river.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_77"
       },
       {
         "name": "Bach Nguyen",
         "review": "Peaceful and beautiful. Should come here",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_78"
       },
       {
         "name": "Thành Phạm",
         "review": "Great!",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_79"
       },
       {
         "name": "Shark Hunter",
         "review": "A good place to visit to see the floating markets. My advice is go with a local and hire your own boat. Its a great place to see real Can Tho life. The ladies who sell their food are generally happy to see foreigners and will smile if you are friendly.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_80"
       },
       {
         "name": "Khang Thanh Dương",
         "review": "Such a nice place to walk and enjoy peaceful landscape of Can Tho province.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_81"
       },
       {
         "name": "fc looi",
         "review": "Room seems to be recently refurbished but the toilet is a let down. Poor water pressure and the shower is broken. Ask about the room if it's close to their karaoke. The room I had was close  and the karaoke was blasting away during the day. Luckily it was quiet the night I was there. It's close to a shopping centre and waterfront.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_82"
       },
       {
         "name": "Andrew Dinh",
         "review": "It's a fun place to walk around and chow down on snack food.  There is a little night market inside that you can browse around.   There were a couple floating restaurants that I could see.  There are souvenir shops inside.   It costs 40,000 Dong a car to park in their parking area.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_83"
       },
       {
         "name": "Harry Nguyen",
         "review": "Prime spot for tourists and local to hang out. Lots of restaurants, cafes, food stalls, and shops. You can take a dinner/Vietnamese music show boat tour to see the town from the river, or you can take a mini sampan boat tour from one of the piers from the local people. They usually charge 50k VND/person/hour. The sampan can accommodate up to 6 guests, but to be comfortable, 4 is max.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_84"
       },
       {
         "name": "Ngoc Quang Dang",
         "review": "Joyous promenade in Mekong delta",
         "star": 4.0,
-        "date": "2025-03-14"
+        "date": "2025-03-11",
+        "ID_review": "0aa75c53_85"
       },
       {
         "name": "Marcel Cybon",
         "review": "It is not relaxing for a stroll as you are bothered constantly by very pushy touts. Not worth to come to stroll around. Other areas of town with less tourists and touts are much better.",
         "star": 2.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_86"
       },
       {
         "name": "Jean Pierre Jacobs",
         "review": "Visiting the market on the Mekong Delta river.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_87"
       },
       {
         "name": "Ngocminh Doan",
         "review": "Beautiful scenery. They ban vehicle traffic every Saturday night and holds event there, highly recommend visiting on Saturday nights.",
         "star": 5.0,
-        "date": "2024-03-28"
-      },
-      {
-        "name": "Henrik Snellman",
-        "review": "Pretty nice riverside park",
-        "star": 4.0,
-        "date": "2025-01-28"
-      },
-      {
-        "name": "vinh tran",
-        "review": "Nothing special.",
-        "star": 4.0,
-        "date": "2024-08-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_88"
       },
       {
         "name": "Lars",
         "review": "Not much to see. Mainly an promenade by the riverside",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_89"
       },
       {
         "name": "Hang Nguyen",
         "review": "I think Ninh Kieu Pier is a long-lasting and attractive tourist site in Can Tho with poetic landscapes and favorable position near Hau River. This is a attractive symbol of Can Tho that I really love to come every time I visit this city. It has beautiful views with comfortable atmosphere and the wind from Hau river. The decoration is nice. If you finish the road along Hau river side you will pass by Victoria Hotel. It is a long walking but worth to do.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_90"
+      },
+      {
+        "name": "Henrik Snellman",
+        "review": "Pretty nice riverside park",
+        "star": 4.0,
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_91"
       },
       {
         "name": "MinhBao Bui",
         "review": "Can i help u. If u don't want to be out of money",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_92"
+      },
+      {
+        "name": "vinh tran",
+        "review": "Nothing special.",
+        "star": 4.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_93"
       },
       {
         "name": "Jacopo",
         "review": "This riverside walk is barely pleasent. Vietnam clearly loves these trash led lights and place them everywhere making me feel quite unconfortable. The bridge at the end of the shack is the major example.",
         "star": 2.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_94"
       },
       {
         "name": "Tue Nguyen Phuoc",
         "review": "Great for a walk and enjoy life of the locals around. Get even further down to a market for tourist to discover more local specialities.\nBeware of guys who try to pursuade you to buy erotic massage services. It is illegal. Only go ahead if you are with a local who knows all tricks around.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_95"
       },
       {
         "name": "Sophie Hunt",
         "review": "As a tourist interest spot, I'd recommend finding your way to the statue. It's a large statue of ho chi Minh and the area is well kept, very nice walk along the quay.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_96"
       },
       {
         "name": "Vira Glushchenko",
         "review": "Good place for evening walk",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_97"
       },
       {
         "name": "DiemThuy Huynh",
         "review": "Food not nice and the price quite expensive.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_98"
       },
       {
         "name": "Khánh Thi Đặng",
         "review": "Colorful place. Worth to take a trip.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_99"
       },
       {
         "name": "Tran May",
         "review": "So noisy n crowded on weeken. So great view at Ninh Kieu river. Night market around there. You can loooking everything you want.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_100"
       },
       {
         "name": "Hans van Rijsewijk",
         "review": "Very nice hotel, clean spacious rooms. Nicely located near the old district (Just 5 mins walk)",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_101"
       },
       {
         "name": "Louis Pham",
         "review": "Good place for walking",
         "star": 4.0,
-        "date": "2024-07-28"
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_102"
       },
       {
         "name": "Jane Fahlman",
         "review": "A nice little park to find some shade and a cool breeze. As with many vietnamese parks, wifi is free and readily available.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_103"
       },
       {
         "name": "Diana U",
         "review": "Love it. Love it. Beautiful place to rest and relax and enjoy the scene. But not at the weekend. Too many people there. It was too crowded. Go there weekdays to hangout.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_104"
       },
       {
         "name": "Gavin Brown",
         "review": "Nice tourist attraction.\nWell frequented by the locals as well.\nBest to go at night to see all the pretty lights",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_105"
       },
       {
         "name": "C S",
         "review": "Very busy vietnamese market street. The food is amazing. If you are in Cần Thơ you should definitely go there in the evening.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_106"
       },
       {
         "name": "Riki Hiagari",
         "review": "Love it",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_107"
       },
       {
         "name": "Khanh Tuan TRAN",
         "review": "Nice park",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_108"
       },
       {
         "name": "Vinh Tran",
         "review": "Pretty great place to go for a walk near the night market! My parents says it reminds them of their childhood !",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_109"
       },
       {
         "name": "Thập Tam Hắc",
         "review": "Good place for a walk at night ịn Can Tho. Parking cost 10k for motorcycle",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_110"
       },
       {
         "name": "Thang Tran",
         "review": "Beautiful park. The place is near the Can Tho river with many boats. Tourists can ask the tour guide a tour with boats.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_111"
       },
       {
         "name": "Joshua Fitzpatrick",
         "review": "It's pretty to walk along the riverside here, and it's quite lively at night time",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_112"
       },
       {
         "name": "Hyungnyoon Yoo",
         "review": "Bến Ninh Kiều ( Ninh Kieu Pier / Wharf )  ;\n\nNinh Kieu Pier is situated on the right bank of Hau River, between the junction of Hau River and Can Tho River. This pier is adjacent to Hai Ba Trung Street, Tan An Ward in Ninh Kieu District of Can Tho City.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_113"
       },
       {
         "name": "Lê MiNh Tâm",
         "review": "Ok",
         "star": 5.0,
-        "date": "2025-03-14"
+        "date": "2025-03-11",
+        "ID_review": "0aa75c53_114"
       },
       {
         "name": "Tris R (BrokeBritinParis)",
         "review": "Nice Park by the side of the river, surrounded by local businesses. You may get touted for a boat tour but they take no for an answer.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_115"
       },
       {
         "name": "Duong Rinoa",
         "review": "Long time i didn't go to this place and It's quite crowded now! Lovers, friends moreover, I saw a lot of people catching pokemon go",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_116"
       },
       {
         "name": "Asher de Silva",
         "review": "A great place to just relax and enjoy the evening or take a quiet stroll down the lit up streets and walkways. Plenty of street food, bars and coffee shops to chose from.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_117"
       },
       {
         "name": "Dam Tran Thanh",
         "review": "This place is one of the must-to-go in CT. Located in the center of the city and along a river. Nice place!",
         "star": 3.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_118"
       },
       {
         "name": "Ric",
         "review": "Cozy place at night, great for a walk and next to a walking street. Several restaurants and caphes aroung",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_119"
       },
       {
         "name": "Kelsey",
         "review": "Gorgeous place! Recommend a visit",
         "star": 5.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Rhys SmeathThomas",
-        "review": "Quite busy at night, especially with the night markets nearby.",
-        "star": 4.0,
-        "date": "2024-04-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_120"
       },
       {
         "name": "Karis Phuong Do",
         "review": "Nice place to walk with friends or someone special, especially in the twilight. See the river, see the people, and taste the food.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_121"
       },
       {
         "name": "Vinnie Food & Travel Vietnam",
         "review": "Great place to walk with your half",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_122"
+      },
+      {
+        "name": "Rhys SmeathThomas",
+        "review": "Quite busy at night, especially with the night markets nearby.",
+        "star": 4.0,
+        "date": "2024-05-01",
+        "ID_review": "0aa75c53_123"
       },
       {
         "name": "Long Phan",
         "review": "Good light at night",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_124"
       },
       {
         "name": "TÂM VĂN LÊ",
         "review": "Great place, and where you can buy boat ticket to floating market, or you exercise in the morning.",
         "star": 5.0,
-        "date": "2024-07-28"
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_125"
       },
       {
         "name": "Xuan Tran",
         "review": "The heart city of Mekong delta",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_126"
       },
       {
         "name": "于腾飞",
         "review": "Very nice place!",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_127"
       },
       {
         "name": "skud pick",
         "review": "Great, everyone is soo friendly😍 …",
         "star": 5.0,
-        "date": "2024-07-28"
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_128"
       },
       {
         "name": "Duy Pham",
         "review": "Ok",
         "star": 5.0,
-        "date": "2024-12-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_129"
       },
       {
         "name": "Phạm Loan",
         "review": "Ok",
         "star": 5.0,
-        "date": "2024-12-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_130"
       },
       {
         "name": "Loc Le",
         "review": "A must visit place in can tho VN. Very fun at night. Has many restaurants, street food, and night market",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_131"
       },
       {
         "name": "David Sinclair",
         "review": "Surprisingly attractive riverside. Recently renovated and a real promenade in the evenings. Go and watch the world go by.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_132"
       },
       {
         "name": "T. Đạt Phan (MD)",
         "review": "Beautiful landscape with romantic river, fresh park and great nearby street cuisine! 4 stars",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_133"
       },
       {
         "name": "Joe N",
         "review": "Fun place to stroll or border one of the floating restaurants (cruise).",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_134"
       },
       {
         "name": "Yan Ruan",
         "review": "Beautiful place for walking at night",
         "star": 5.0,
-        "date": "2024-06-28"
-      },
-      {
-        "name": "Tran Mai Phong",
-        "review": "Great view. Be extra careful with souvenir shops. Bargaining is definitely useful.",
-        "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2024-06-01",
+        "ID_review": "0aa75c53_135"
       },
       {
         "name": "David Le",
         "review": "Nice walk at night to see all the beautiful  lights .",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_136"
       },
       {
         "name": "Anh Nguyễn",
         "review": "Crownded",
         "star": 2.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Raphael Caillon",
-        "review": "Impressive neons and nice sights, busy at night",
-        "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_137"
       },
       {
         "name": "QUOC MINH DO",
         "review": "A great place to hang out with your beloved ones. Food and drinks are offered at good prices.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_138"
+      },
+      {
+        "name": "Raphael Caillon",
+        "review": "Impressive neons and nice sights, busy at night",
+        "star": 5.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_139"
       },
       {
         "name": "frank Rudd",
         "review": "Best view at high while you visit can tho City",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_140"
       },
       {
         "name": "Thanh Chiang (Chiang Thanh)",
         "review": "5 out of 5 ! Great view ! A must do thing in Can Tho city by night",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_141"
       },
       {
         "name": "Tran Manh Hung",
         "review": "View dep, bat tau di cho noi Cai Rang tu day",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_142"
       },
       {
         "name": "David Vo",
         "review": "Packed in Tet holiday esp in the evening but good to have a walk in the morning as quiet.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_143"
       },
       {
         "name": "matthieu labeylie",
         "review": "Pics talk for themselves",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_144"
       },
       {
         "name": "Tim Tran",
         "review": "Nice riverside public park, you can have beautiful pictures here",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_145"
       },
       {
         "name": "rob blood",
         "review": "Nice waterfront park try to. Go at night when everything is lit up nice photo of.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_146"
       },
       {
         "name": "The Green Dragon - Rồng Xanh",
         "review": "Nice views and a beautiful spot to walk day or night.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_147"
       },
       {
         "name": "VĂN MINH TRẦN",
         "review": "Ok",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_148"
       },
       {
         "name": "502 ywy",
         "review": "Normal small park. You can see the river side.",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_149"
       },
       {
         "name": "Anh Khoa",
         "review": "Great place to visit",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_150"
       },
       {
         "name": "Nho Cao",
         "review": "Good place for enjoy Mekong delta rivers by night",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_151"
       },
       {
         "name": "Long trương huỳnh Đại",
         "review": "Nice place to have a walk and best place to find delicious snack",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_152"
       },
       {
         "name": "Aaron Rice",
         "review": "This is a great place to walk and enjoy the beauty of Vietnam. Absolutely beautiful",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_153"
       },
       {
         "name": "Nguyễn Trung Tính",
         "review": "Good.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_154"
       },
       {
         "name": "KHOA TRAN ANH",
         "review": "View ok",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_155"
       },
       {
         "name": "Hon Nguyen",
         "review": "Good view",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_156"
       },
       {
         "name": "Phong Dang",
         "review": "So beautiful",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_157"
       },
       {
         "name": "Eddie See",
         "review": "Never feel alone here n good place to chill the day away.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_158"
       },
       {
         "name": "Nguyen Sinh",
         "review": "Good place for traveler. Nice view in th night",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_159"
       },
       {
         "name": "Trung Pham",
         "review": "Ok",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_160"
       },
       {
         "name": "Thien Nguyen",
         "review": "Nice and clean,  worth to visit",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_161"
       },
       {
         "name": "son tran",
         "review": "Check in",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_162"
       },
       {
         "name": "Neil Gregory",
         "review": "Nice bit of  peace and quiet  , good  coffee shops and  restaurants",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_163"
       },
       {
         "name": "Trung Nguyen Thanh",
         "review": "Beautiful!!!  Not too crowded and noisy, should visit.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_164"
       },
       {
         "name": "Illusion “Illusion”",
         "review": "Best place for couples to hang out when the sun sets.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_165"
       },
       {
         "name": "Jo Wynn",
         "review": "Historic place. Nice cafe along the wharf",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_166"
       },
       {
         "name": "Ninh Nguyễn Hồng",
         "review": "Good food, nice location, reasonable price, worth the money spent.",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_167"
       },
       {
         "name": "Gaurav Singh Rathore",
         "review": "It's very good place",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_168"
       },
       {
         "name": "អោម មុន្នីរ័ត្ន",
         "review": "Some light on the walking bridge is cut off",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_169"
       },
       {
         "name": "Hieu Nguyen Chi",
         "review": "Nothing special in here. Just an park and wharf for traveling round",
         "star": 3.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_170"
       },
       {
         "name": "Simon Hook",
         "review": "Great place for afternoon walk and eating options",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_171"
       },
       {
         "name": "Nguyễn Lê Văn",
         "review": "Ok",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_172"
       },
       {
         "name": "Horizon Hugo",
         "review": "Nice place",
         "star": 4.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_173"
       },
       {
         "name": "Ladislav Kocián",
         "review": "Nice place to visit during evening",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_174"
       },
       {
         "name": "Thinh Tran",
         "review": "Nice place for a walk at night time",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_175"
       },
       {
         "name": "Vu Hao Tran",
         "review": "Ordinary park, beautiful view.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_176"
       },
       {
         "name": "Bảo Bình",
         "review": "O day rat vui🌉🌉🎠🎠🎪 …",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_177"
       },
       {
         "name": "Tien Thach",
         "review": "Good",
         "star": 5.0,
-        "date": "2024-03-28"
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_178"
       },
       {
         "name": "Gia-Hue On",
         "review": "There  is a lack of light at night.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_179"
       },
       {
         "name": "Huỳnh Anh Nguyễn (Jenny)",
         "review": "Good place for amazing views",
         "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_180"
       },
       {
         "name": "74G1 Úts",
         "review": "The impression here is that there are quite a lot of Chinese people. There is a quite busy market, I didn't ask the price so I don't know what the prices of the items here are.\nIn the evening, there is a walking street with many houses built a long time ago, creating an ancient feeling. It's like getting lost in buildings like in a Hong Kong movie.\n\nNowadays, the wharf is mainly used for tourism purposes, but there is rarely any commercial space like before. I heard people here say that in the past, when there was no urbanization, it was much more fun.\n\nThis is a place that when you come to Can Tho, I think you should definitely visit to experience and feel.\n\n#Utdiconquered 13 western provinces\n#Ut74G1visit",
         "star": 4.0,
-        "date": "2025-03-07"
-      },
-      {
-        "name": "Người trải nghiệm Trí Dũng -Follow TD",
-        "review": "CAM THI GIANG-BEN NINH KIEU-HANG DUONG Wharf\n“Can Tho has Ninh Kieu wharf\nThere is a beautiful river with many beautiful women.\n\nNinh Kieu Wharf, now known as Ninh Kieu Park, is a water wharf and a tourist and cultural landmark of Can Tho city formed in the 19th century. Ninh Kieu Wharf is located on the right bank of Hau River, between the confluence of Hau River and Can Tho River, adjacent to Hai Ba Trung Street, Tan An Ward, Ninh Kieu District, Can Tho City.\n\nNinh Kieu wharf is a long-standing tourist destination and attracts tourists because of its charming river scenery and favorable location overlooking the Hau river. Ninh Kieu wharf has long become a symbol of poetic beauty. on the banks of Hau River in Can Tho City, attracting many tourists to visit and engage in poetry:\n“Can Tho has Ninh Kieu wharf\nThere is a beautiful river with many beautiful women.\"\n\n1️⃣HISTORY\nThere are no historical documents clearly recording the formation of Ninh Kieu Wharf, but according to some researchers, there are anecdotes about the formation of this place from the Gia Long Dynasty of the Nguyen Dynasty and that Ninh Kieu Wharf was originally a river wharf. at the beginning of Can Tho market. In addition, Hang Duong wharf is another name of Ninh Kieu known since ancient times. People here still talk about it today\n\nAccordingly, before he became king, Nguyen Anh went to the South. One day, his boat followed the Hau River into the capital city of Tran Giang (formerly Can Tho). As night fell, the boat group just arrived at the river, Ben Ninh Kieu wharf today. In the middle of the night, there were many recitations of poetry, singing, the sounds of guitars and flutes. He praised the river for its charming landscape and named the river Cam Thi river.\n\nNear Ninh Kieu wharf there is Can Tho market, a large trading center in the Southwest region. The river wharf is always crowded with ships and boats moving back and forth filled with products from the Mekong Delta. Standing on Ninh Kieu wharf, you can see the largest cable-stayed bridge in Can Tho, Can Tho bridge, as well as looking towards Xom Chai and towards Con Au at the beginning of the wharf, you will see a strip of isle with many trees, and if you stand from the side Looking over at Xom Chai, you will see a panoramic view of Ninh Kieu and its streets. Currently around. The wharf has aquatic restaurants, floating markets on the river, restaurants with specialty dishes...And this is the starting point to visit another famous landmark of Can Tho, Cai Rang floating market, about 0.5km. Also at Ninh Kieu Wharf, besides tourism and cultural activities, this place is bustling with trading activities and the livelihood of poor workers.\n\n2️⃣Walking street and night market\nOn January 10, 2016, the walking, culinary and night market area at Ninh Kieu wharf, Can Tho city officially came into operation. The project is invested by Dia Cau Trading and Services Limited Liability Company with a budget of more than 4.5 billion VND. The walking and culinary street will stretch about 200m from the International Hotel to the intersection of Ngo Quyen, Hai Ba Trung, Nguyen Thai Hoc - Vo Van Tan and ends at the Old Market House area (Tan An ward, district Ninh Kieu). The night market includes food areas, night market areas and souvenir sales areas. This night market operates from 4:00 p.m. the previous day to 4:00 a.m. the next day.\n\n3️⃣Tourist walking bridge\nOn February 6, 2016 (ie the 28th of the Lunar New Year), Can Tho city's first tourist pedestrian bridge was inaugurated, attracting a large number of people and tourists to enjoy after nearly a year of construction.\n\nThe bridge spans Khai Luong canal, connecting Ninh Kieu wharf and Cai Khe islet, made of semi-permanent reinforced concrete, nearly 200 m long, 7.2 m wide, with a total investment of nearly 50 billion VND. The bridge's surface is designed with a stylized curving S shape symbolizing the country. At the two extended bridge sections, there are two lotus flower stands. The bridge is equipped with a system of colored LED lights controlled according to different scenarios, creating a vivid and modern beauty. The system of trees and flower beds outside the railing on the bridge wall is automatically watered and drained for convenient maintenance.",
-        "star": 5.0,
-        "date": "2025-03-28"
-      },
-      {
-        "name": "Thiên Thu Tạ",
-        "review": "I visited the Vu Gia 15 ship during an internship from Hai Phong, Quang Ninh and then went to Can Tho to visit... until now I have not had a chance to come back to roam around and admire the scenery.",
-        "star": 5.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_181"
       },
       {
         "name": "John Cashew Machine",
         "review": "The reason this place is famous is the boat wharf.\nHere, many boats gather in all directions: go to the dunes, go to the market, go sightseeing on the river, see Can Tho bridge...\nNear the marina, there is an ancient temple that also attracts tourists and local visitors\nCrowded shops are also a plus point\nAlong the marina is a walking street with many western dishes...",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_182"
       },
       {
         "name": "Benno Krummenacher",
         "review": "It could be so beautiful if the whole river wasn't full of trash.\nUnfortunately, I have to point out this problem once again: the waste is simply left lying around somewhere. You can see the result in my photos, which I actually hate taking.",
         "star": 1.0,
-        "date": "2025-03-14"
+        "date": "2025-03-11",
+        "ID_review": "0aa75c53_183"
       },
       {
-        "name": "Mẹ San-Đan-Di- DSD",
-        "review": "I went on weekdays and saw only the night market, with quite a few activities. There is jaggery juice for sale, everyone should try it!",
+        "name": "Người trải nghiệm Trí Dũng -Follow TD",
+        "review": "CAM THI GIANG-BEN NINH KIEU-HANG DUONG Wharf\n“Can Tho has Ninh Kieu wharf\nThere is a beautiful river with many beautiful women.\n\nNinh Kieu Wharf, now known as Ninh Kieu Park, is a water wharf and a tourist and cultural landmark of Can Tho city formed in the 19th century. Ninh Kieu Wharf is located on the right bank of Hau River, between the confluence of Hau River and Can Tho River, adjacent to Hai Ba Trung Street, Tan An Ward, Ninh Kieu District, Can Tho City.\n\nNinh Kieu wharf is a long-standing tourist destination and attracts tourists because of its charming river scenery and favorable location overlooking the Hau river. Ninh Kieu wharf has long become a symbol of poetic beauty. on the banks of Hau River in Can Tho City, attracting many tourists to visit and engage in poetry:\n“Can Tho has Ninh Kieu wharf\nThere is a beautiful river with many beautiful women.\"\n\n1️⃣HISTORY\nThere are no historical documents clearly recording the formation of Ninh Kieu Wharf, but according to some researchers, there are anecdotes about the formation of this place from the Gia Long Dynasty of the Nguyen Dynasty and that Ninh Kieu Wharf was originally a river wharf. at the beginning of Can Tho market. In addition, Hang Duong wharf is another name of Ninh Kieu known since ancient times. People here still talk about it today\n\nAccordingly, before he became king, Nguyen Anh went to the South. One day, his boat followed the Hau River into the capital city of Tran Giang (formerly Can Tho). As night fell, the boat group just arrived at the river, Ben Ninh Kieu wharf today. In the middle of the night, there were many recitations of poetry, singing, the sounds of guitars and flutes. He praised the river for its charming landscape and named the river Cam Thi river.\n\nNear Ninh Kieu wharf there is Can Tho market, a large trading center in the Southwest region. The river wharf is always crowded with ships and boats moving back and forth filled with products from the Mekong Delta. Standing on Ninh Kieu wharf, you can see the largest cable-stayed bridge in Can Tho, Can Tho bridge, as well as looking towards Xom Chai and towards Con Au at the beginning of the wharf, you will see a strip of isle with many trees, and if you stand from the side Looking over at Xom Chai, you will see a panoramic view of Ninh Kieu and its streets. Currently around. The wharf has aquatic restaurants, floating markets on the river, restaurants with specialty dishes...And this is the starting point to visit another famous landmark of Can Tho, Cai Rang floating market, about 0.5km. Also at Ninh Kieu Wharf, besides tourism and cultural activities, this place is bustling with trading activities and the livelihood of poor workers.\n\n2️⃣Walking street and night market\nOn January 10, 2016, the walking, culinary and night market area at Ninh Kieu wharf, Can Tho city officially came into operation. The project is invested by Dia Cau Trading and Services Limited Liability Company with a budget of more than 4.5 billion VND. The walking and culinary street will stretch about 200m from the International Hotel to the intersection of Ngo Quyen, Hai Ba Trung, Nguyen Thai Hoc - Vo Van Tan and ends at the Old Market House area (Tan An ward, district Ninh Kieu). The night market includes food areas, night market areas and souvenir sales areas. This night market operates from 4:00 p.m. the previous day to 4:00 a.m. the next day.\n\n3️⃣Tourist walking bridge\nOn February 6, 2016 (ie the 28th of the Lunar New Year), Can Tho city's first tourist pedestrian bridge was inaugurated, attracting a large number of people and tourists to enjoy after nearly a year of construction.\n\nThe bridge spans Khai Luong canal, connecting Ninh Kieu wharf and Cai Khe islet, made of semi-permanent reinforced concrete, nearly 200 m long, 7.2 m wide, with a total investment of nearly 50 billion VND. The bridge's surface is designed with a stylized curving S shape symbolizing the country. At the two extended bridge sections, there are two lotus flower stands. The bridge is equipped with a system of colored LED lights controlled according to different scenarios, creating a vivid and modern beauty. The system of trees and flower beds outside the railing on the bridge wall is automatically watered and drained for convenient maintenance.",
         "star": 5.0,
-        "date": "2025-03-14"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_184"
       },
       {
         "name": "Quốc Hùng Nguyễn",
         "review": "In the evening, there is a river tour and dinner, and there is also a bridge with beautiful night views",
         "star": 5.0,
-        "date": "2025-03-14"
+        "date": "2025-03-11",
+        "ID_review": "0aa75c53_185"
+      },
+      {
+        "name": "Thiên Thu Tạ",
+        "review": "I visited the Vu Gia 15 ship during an internship from Hai Phong, Quang Ninh and then went to Can Tho to visit... until now I have not had a chance to come back to roam around and admire the scenery.",
+        "star": 5.0,
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_186"
       },
       {
         "name": "Luong Tri",
         "review": "A short business trip to Can Tho, although the time was short, I still tried to experience all the suggested places.\n1. Night market - Ninh Kieu wharf: maybe because it's far from SG and it's in the middle of the week, not during the tourist season, so I feel deserted and peaceful => like this feeling.\n2. While walking at the night market, I met a friend who advised me on floating market tickets from the Tu An shipyard => Completely by accident but highly appreciated:\n- Dedicated consulting\n- enthusiasm\n- The ticket price is 100k but the train costs less than 20 but only has 4 tour guides. The two people in the photo are Huy - Hien (the other photo is me and my friend)\n- Buying some fruits at the floating market is called experiencing the river.\n- Everyone, please note that you should leave early around 5:00 am. They told me to leave before 5:30 am, but when I came out at 5:20 am, they expected only us to go (we came out early 😳)",
         "star": 5.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_187"
       },
       {
-        "name": "Tomoyuki Tango",
-        "review": "Can Tho river cruise 👍️\nRelax on the river at sunrise\nLess than 2 hours\nVisiting small floating markets.\nAn affordable way to kill time 👍️\nManufacturing of candy and colorful\nObservation of making Fu Tiu.",
+        "name": "Mẹ San-Đan-Di- DSD",
+        "review": "I went on weekdays and saw only the night market, with quite a few activities. There is jaggery juice for sale, everyone should try it!",
         "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2025-03-18",
+        "ID_review": "0aa75c53_188"
       },
       {
         "name": "An Long Nguyen",
         "review": "A place name in a song that I often hear about from time to time, but nothing stands out",
         "star": 3.0,
-        "date": "2025-03-07"
+        "date": "2025-03-04",
+        "ID_review": "0aa75c53_189"
       },
       {
         "name": "Linh Nguyễn",
         "review": "Coming to Ninh Kieu, you cannot miss this place to take pictures! During the day you see a gentle simplicity with rivers, sailboats and natural scenery, but at night, shimmering colors. With diverse food with regional characteristics. The people are friendly and easy to approach, and their way of speaking is very attractive... We hope you have a wonderful experience when you come here!",
         "star": 5.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_190"
       },
       {
         "name": "Poly Khô Gà (Càng Ăn Càng Mê Ly)",
         "review": "The scene is very chill, suitable for walking, going in groups, security is very good, there are many parking spaces at reasonable prices.",
         "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_191"
+      },
+      {
+        "name": "tuân nguyễn văn",
+        "review": "100k is not the same as before... just went around to the floating market for a tooth... put it on a raft house to make noodles and then came back... no food... first it was in the oven on land... then in the garden. fruit...",
+        "star": 4.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_192"
       },
       {
         "name": "THỦY NGUYỄN",
         "review": "Having a famous name, he likes to go by boat to Con to eat at death anniversary feasts filled with fruit.",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_193"
       },
       {
         "name": "Chi Anh",
         "review": "The first destination and also the ending point before returning to SG, stop at Ninh Kieu wharf to enjoy the cool air",
         "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_194"
       },
       {
         "name": "Đức Nguyễn",
         "review": "It's a walking street with beautiful scenery but I don't think there are many places to play",
         "star": 4.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_195"
       },
       {
         "name": "MAI CHI LUONG",
         "review": "Ninh Kieu Wharf in Can Tho is a famous tourist destination in the South, where there are walking streets, night market shopping streets, going to the island to eat seafood...",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_196"
       },
       {
         "name": "Alice Nguyen",
         "review": "East is bustling and bustling, right in the center so walking around is very convenient. Need to keep general hygiene cleaner, add public trash bins.",
         "star": 4.0,
-        "date": "2025-01-28"
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_197"
       },
       {
         "name": "PHƯƠNG UYÊN BẢN ĐỒ",
         "review": "Ninh Kieu Wharf is famous for domestic and foreign tourists when they set foot in TAY DO (Can Tho), the capital of the famous Western river region....",
         "star": 5.0,
-        "date": "2024-11-28"
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_198"
       },
       {
         "name": "Hùng Phan Minh",
         "review": "Ninh Kieu Can Tho Wharf has a beauty that is both peaceful and poetic, while also having a youthful and modern look that will definitely bring you unforgettable memories when you set foot in this Western capital. The photos were taken in 2016 and retain beautiful memories.",
         "star": 5.0,
-        "date": "2024-12-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_199"
       },
       {
-        "name": "Trâm Nguyễn",
-        "review": "If you go quite a few times, you can ask the receptionist of the hotel you are staying at to book a tour in advance. I asked if there are 5am and 7am tours. You can even rent a private boat to visit the island. In general, the experience is worth a try. When I return to Can Tho, I have breakfast of vermicelli noodles at the floating market, buy some gifts, the noodles here are also delicious, people make them in many colors and like them, I buy them and cook them quite delicious, I'm afraid they'll be tough.",
+        "name": "Tomoyuki Tango",
+        "review": "Can Tho river cruise 👍️\nRelax on the river at sunrise\nLess than 2 hours\nVisiting small floating markets.\nAn affordable way to kill time 👍️\nManufacturing of candy and colorful\nObservation of making Fu Tiu.",
         "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_200"
       },
       {
         "name": "Hoa Nguyen",
         "review": "It's very beautiful, there are also parks and walking streets around, shopping malls, restaurants, and roadside eateries. Night activities here are very bustling. Prices range from cheap to expensive. And early in the morning you can go to the floating market. So please try to experience it🥰 …",
         "star": 5.0,
-        "date": "2025-01-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_201"
       },
       {
         "name": "Ngoc Dung Duong",
         "review": "Cool, fun. Ideal check-in point for young people",
         "star": 4.0,
-        "date": "2025-03-28"
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_202"
       },
       {
         "name": "Thy Hương Phạm Vũ",
         "review": "Can Tho Market Complex - Can Tho Night Market - Ninh Kieu Wharf\n\nPark the car at the coopmart and walk to the night market. The evening is cool, the lights are quite beautiful. Visit the night market to buy sticky rice with chicken and young eggs like a tiktok review. If there are many cars, stop by. On the opposite side of the street, there are advertising vehicles crowded with buyers. The price of sticky rice seems to be 45-55k/big box for 2 people, 5k/ball of foxglove, 10k-15k/piece of kimsa dumplings.\n\nAfter buying, bring the stone benches to Ninh Kieu wharf to eat and admire the scenery. There are cruise ships on the river, the menu is a bit high (drinks 110k-140k, hotpot 3xx-400k...). After buying water, sitting on a chill cruise is fine. There should be one trip in the evening around 7:00 a.m. - 7:30 p.m\n\nAt the beginning of Can Tho market, there was a stall selling anime models. My lover was there struggling to choose for 2 hours. I saw a lot of young men coming in to choose. When buying, remember to pay the price because the seller quotes a fake price. After asking the price, be careful not to miss out.\n\nIn the evening, take a cool tour of the city center and then return to your room to rest. Only had 1 night in Can Tho so I didn't experience many places.",
         "star": 5.0,
-        "date": "2024-08-28"
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_203"
       },
       {
         "name": "Thanh Phong Nguyễn Hoàng",
         "review": "Yesterday, September 1, 2024, I stopped by and visited Ninh Kieu Wharf\nIt is a tourist destination where many foreign and domestic tourists go out in large numbers and are very happy. I really like it",
         "star": 5.0,
-        "date": "2024-09-28"
+        "date": "2024-10-01",
+        "ID_review": "0aa75c53_204"
       },
       {
         "name": "Tất Thắng Hoàng (ThangHT)",
         "review": "Can Tho has Ninh Kieu wharf...\nIt must be said that this is an ideal check-in point for locals and tourists when visiting the Western capital\nThe scenery, cuisine and people here are quite suitable and friendly\nIdeal destination for families, couples…",
         "star": 5.0,
-        "date": "2024-12-28"
-      },
-      {
-        "name": "Lượng Thiên Xích (Lượng Thiên Xích)",
-        "review": "With its peaceful and poetic beauty in the modern city of Can Tho, Ninh Kieu wharf is considered a cultural symbol of Tay Do. This place has a strong Southern identity and is associated with the image of boats on the river bustling with buying and selling at the floating market.\n\nThis wharf is located on the right bank of Hau River, in Tan An ward, Ninh Kieu district, Can Tho city. It is located between the confluence of Hau River and Can Tho River, so it was once considered a goods trading dock during the French colonial period. Until now, people have not found any official documents recording the history of this location. Just know that according to an anecdote, this place used to be a river wharf at the beginning of Can Tho market.",
-        "star": 4.0,
-        "date": "2024-08-28"
-      },
-      {
-        "name": "Chung Oanh",
-        "review": "Near the wharf there are many places to experience and entertain, the closest is Can Tho market, which is more fun at night because there is a night market selling a lot of food and drinks. Along the wharf, there is also a cool walking street, suitable for strolling and enjoying the breeze. Around the wharf there are also relics that can be visited in the morning",
-        "star": 5.0,
-        "date": "2024-07-28"
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_205"
       },
       {
         "name": "Vương Thu Hà",
         "review": "Ninh Kieu Wharf is not what I thought 😂 it's just a riverside road, quite small and nothing special, a few groups of street performers, but not very attractive. The food is different from the region so it doesn't suit your taste …",
         "star": 3.0,
-        "date": "2024-09-28"
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_206"
       },
       {
         "name": "Minh Pham",
         "review": "Places to visit and have fun at night for tourists and local people.\nHere you can enjoy snacks, restaurants on the river, bars.... and visit the bridge of love.\nIn particular, you can buy individual tickets to visit Cai Rang floating market at Ninh Kieu wharf.\nThe atmosphere here is very cheerful.",
         "star": 4.0,
-        "date": "2024-08-28"
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_207"
       },
       {
         "name": "NEUAN",
         "review": "\"Stop at Ninh Kieu wharf via Can Tho bridge\nConnecting the two banks of Hau Giang river\nSoc Trang waits to hear the advertisement\nShe sells delicious cakes\nBuy Dung Thom Pia cake for me...\"\n\nA verse that captivates listeners about a famous place, in the busiest and most developed city in the Mekong Delta and beyond... The beauty of the land of white rice and clear water truly deserves its name. capital of the western region, urban area of the river region. This is a tourist destination that attracts both domestic and foreign tourists to visit. There's nothing more to say, when everything around meets your expectations. If I have a chance, I will still come back to visit this place, it's worth staying for a few days to visit this city❤️",
         "star": 5.0,
-        "date": "2024-04-28"
+        "date": "2024-05-01",
+        "ID_review": "0aa75c53_208"
+      },
+      {
+        "name": "Việt Anh Trần",
+        "review": "Ben Ninh Kieu night market walking street is spacious and crowded. The shops sell quite high prices but are not delicious. However, there are very good free singing and cultural activities here.",
+        "star": 5.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_209"
+      },
+      {
+        "name": "Thuy ZOE",
+        "review": "- Watching the river and coffee on the cruise is okay, but I don't think there are many special scenes\n- It's a famous place so you should visit it. If you go during the day, there's nothing interesting. You should go in the evening to see the city and the night market.",
+        "star": 4.0,
+        "date": "2024-10-01",
+        "ID_review": "0aa75c53_210"
+      },
+      {
+        "name": "Thuc Nguyen",
+        "review": "My impression of Can Tho is going to Cai Rang floating market at 5am by Uncle Cho boat. He was very gentle, typical of a simple Westerner, and did not compete with rowdy guests, so I found it very peaceful. The day I went, there were only 2 people (including the boat) and each person cost 150k, so I didn't have to pair up with anyone so I felt very comfortable. Besides, I still got all the places. The small boat runs slower than the boats of other groups. Although it's a bit slow, it's a great experience on the river. Here is my phone number for everyone to contact: 039607209",
+        "star": 5.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_211"
+      },
+      {
+        "name": "Nguyễn Tất Hoàng Gia",
+        "review": "The first time I came to Ninh Kieu, I felt the vastness of the river..",
+        "star": 5.0,
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_212"
+      },
+      {
+        "name": "Thị Thùy Linh Nguyễn",
+        "review": "There are many services, go in the evening so you can't experience the floating market. But there is a night market that sells a lot of dishes. Cool air. Ok",
+        "star": 4.0,
+        "date": "2024-11-01",
+        "ID_review": "0aa75c53_213"
+      },
+      {
+        "name": "Thuỳ Dương Lê",
+        "review": "Coming to Can Tho, tourists should visit Ninh Kieu wharf.\n\nI booked a hotel right nearby so walking there at night was very cool. Along the way, they often sell traditional items, lots of food and cheap prices.\n\nIn the morning, I went from 5am to Ninh Kieu wharf to get on the motorboat to go to Cai Rang floating market. Price 100k/person, travel to about 2-3 places such as having breakfast on a boat, visiting a noodle village, experiencing making noodles and rice paper, then going around to buy fruit.\n\nWhen I went this month, I saw that around the floating market there were mainly watermelons, pineapples... and mangoes were sold for 80k/kg, big fruits, sweet to eat, but I didn't buy them.\n\nThe price of the floating market boat trip can be booked separately or together depending on the negotiated price and the destination. Price does not include breakfast on the river, and purchasing souvenirs.",
+        "star": 5.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_214"
+      },
+      {
+        "name": "Eric Vo",
+        "review": "I like the food the most, it's delicious and not too expensive, and the atmosphere is fun. I went during the September 2nd holiday so it was crowded",
+        "star": 5.0,
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_215"
+      },
+      {
+        "name": "tri Dung Pham",
+        "review": "The scenery is beautiful and poetic, but unfortunately, when I go alone, I miss my lover",
+        "star": 5.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_216"
+      },
+      {
+        "name": "MASTER HN",
+        "review": "Always a famous place in Can Tho. Wander around drinking coffee at local shops instead of going to luxury places",
+        "star": 5.0,
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_217"
+      },
+      {
+        "name": "Strom Jack",
+        "review": "Ninh Kieu Wharf is one of the prominent and characteristic places of Can Tho city. Located on the gentle Hau River, this place is not only a tourist attraction but also an ideal relaxing space for both tourists and local people.\nI visited the wharf in the evening, when the city started to light up. The atmosphere here is very pleasant, the river breeze blows coolly, creating a feeling of relaxation. Walking along the river, I saw many people strolling, exercising and chatting loudly. Along the wharf, there are many restaurants with all kinds of delicious Western dishes, especially fresh seafood dishes and typical fish sauce hotpot.\nA big plus is that the cruise ship terminal is very busy. If you have time, you can take a boat trip on the river, sightseeing and enjoying amateur music. However, during rush hour, the station is quite crowded so it is sometimes a bit noisy and difficult to find an ideal seat. In addition, some areas still have garbage, which needs to be improved to preserve the beauty of the landscape.\nHowever, Ninh Kieu Wharf is still a destination worth visiting if you want to feel the beauty of Can Tho at night. A place that is both simple and romantic!",
+        "star": 4.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_218"
+      },
+      {
+        "name": "Men Nguyen",
+        "review": "Going on the weekend will be more fun. A bit empty, mainly tourists, food and drink prices are not much higher.",
+        "star": 5.0,
+        "date": "2024-11-01",
+        "ID_review": "0aa75c53_219"
+      },
+      {
+        "name": "Năm Tháng Trần",
+        "review": "It's been 6 years since I last visited here, the scenery has changed a lot",
+        "star": 5.0,
+        "date": "2024-11-01",
+        "ID_review": "0aa75c53_220"
+      },
+      {
+        "name": "Chung Oanh",
+        "review": "Near the wharf there are many places to experience and entertain, the closest is Can Tho market, which is more fun at night because there is a night market selling a lot of food and drinks. Along the wharf, there is also a cool walking street, suitable for strolling and enjoying the breeze. Around the wharf there are also relics that can be visited in the morning",
+        "star": 5.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_221"
+      },
+      {
+        "name": "Tư vấn thực phẩm - Tiêu chuẩn - chất lượng",
+        "review": "Characteristics of Mekong Delta tourism: bustle, rich services, beautiful landscape, fun and airy",
+        "star": 4.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_222"
+      },
+      {
+        "name": "Lượng Thiên Xích (Lượng Thiên Xích)",
+        "review": "With its peaceful and poetic beauty in the modern city of Can Tho, Ninh Kieu wharf is considered a cultural symbol of Tay Do. This place has a strong Southern identity and is associated with the image of boats on the river bustling with buying and selling at the floating market.\n\nThis wharf is located on the right bank of Hau River, in Tan An ward, Ninh Kieu district, Can Tho city. It is located between the confluence of Hau River and Can Tho River, so it was once considered a goods trading dock during the French colonial period. Until now, people have not found any official documents recording the history of this location. Just know that according to an anecdote, this place used to be a river wharf at the beginning of Can Tho market.",
+        "star": 4.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_223"
+      },
+      {
+        "name": "Ho Quoc Dat",
+        "review": "Airy space. Bustle. The food is rich and delicious. Great!",
+        "star": 5.0,
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_224"
+      },
+      {
+        "name": "Phước Lê",
+        "review": "Can Tho white rice, clear water\nWhoever goes there doesn't want to give up.",
+        "star": 5.0,
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_225"
+      },
+      {
+        "name": "Linh Kona Life",
+        "review": "Ninh Kieu Wharf - A brand, a specialty that anyone coming to Can Tho must visit once.",
+        "star": 5.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_226"
+      },
+      {
+        "name": "Bùi Kiên",
+        "review": "Bustling evening, mainly Thai sweet soup, dirty skewers, not much food. Crazy sunny morning.",
+        "star": 3.0,
+        "date": "2024-11-01",
+        "ID_review": "0aa75c53_227"
+      },
+      {
+        "name": "Yevu House",
+        "review": "Returned to Can Tho after 10 years, now stopping at Ninh Kieu Wharf after leaving school.\nCan Tho has now changed and developed a lot more than before. Only the people of Can Tho have not changed, still friendly and rustic as before.",
+        "star": 5.0,
+        "date": "2024-07-01",
+        "ID_review": "0aa75c53_228"
+      },
+      {
+        "name": "HAO LE HUU",
+        "review": "Ninh Kieu wharf at night has a walking street and business activities, cuisine, music for children and youth, Cai Luong stage, river tour services by boat... quite diverse, typical and effective. If you increase street decoration and space for organizing activities, it will be very good. However, we must acknowledge the efforts of the local government and people to maintain and implement the current situation to meet the needs of tourists.",
+        "star": 4.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_229"
+      },
+      {
+        "name": "S kim",
+        "review": "If you go around 5 a.m., you can purchase floating market tour package tickets on-site (much cheaper than Klook).\nThe Cai Rang Floating Market + Visiting a Rice Noodle Making Shop (?) package costs 100,000 dong.\nThere is also an allocated time for pho meals, but you have to pay a separate fee. The rice noodles are amazingly delicious. Fruits are cheaper and more diverse than in Ho Chi Minh, so it is better to buy a lot here.\nAfter eating, I went to see a place that makes pho, but it was small in the corner of what looked like a shopping center, so it felt like I was visiting a shopping center on a package tour. The atmosphere is not forced, but you stay for quite a while.\n1 bowl of rice noodles 45,000 dong\n1 coconut 25,000 dong\nLongan 1kg 40,000 dong\nLongan 1.5kg 50,000 dong",
+        "star": 5.0,
+        "date": "2024-12-01",
+        "ID_review": "0aa75c53_230"
+      },
+      {
+        "name": "MINH THUẬN VP",
+        "review": "I went on a rainy day but the night landscape was very beautiful and poetic. Very friendly.",
+        "star": 5.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_231"
+      },
+      {
+        "name": "NDK Family Travels",
+        "review": "Walking in the evening is quite enjoyable, but there is a lot of trash.",
+        "star": 4.0,
+        "date": "2025-01-01",
+        "ID_review": "0aa75c53_232"
+      },
+      {
+        "name": "Thanh Đoàn Mai",
+        "review": "Ninh Kieu Wharf, now known as Ninh Kieu Park, is a water wharf and a tourist and cultural landmark of Can Tho city formed in the 19th century. Ninh Kieu Wharf is located on the right bank of Hau River, between the confluence of Hau River and Can Tho River, adjacent to Hai Ba Trung Street, Tan An Ward, Ninh Kieu District, Can Tho City.\n\nNinh Kieu Wharf is a long-standing tourist destination and attracts tourists because of its charming river scenery and favorable location overlooking the Hau River.[1][2] For a long time, Ninh Kieu Wharf has become a symbol of the poetic beauty on the banks of the Hau River of the entire Can Tho City, attracting many tourists to visit [3] and engage in poetry.",
+        "star": 5.0,
+        "date": "2025-03-18",
+        "ID_review": "0aa75c53_233"
+      },
+      {
+        "name": "Serry Bùi",
+        "review": "Where the port takes visitors to floating markets, islands, etc., there is a bustling dining area around",
+        "star": 5.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_234"
+      },
+      {
+        "name": "Mermaid",
+        "review": "Visited on March 27, 2024, Can Tho's most representative tourist attraction. Dining on a three-story boat, enjoying the night view on the river while dining, and live singing, very comfortable.\nIt's a pity that the food did not meet my personal preference.",
+        "star": 4.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_235"
+      },
+      {
+        "name": "Hải Trường",
+        "review": "Quite crowded. Convenient for those staying in Ninh Kieu. No need to go through the teeth to find the boat",
+        "star": 3.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_236"
+      },
+      {
+        "name": "Châu Hữu Nghĩa",
+        "review": "Very nice and cool. Walking around Ninh Kieu wharf at night is a wonderful experience. Nearby there is a night market with lots of cheap and delicious food.",
+        "star": 5.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_237"
+      },
+      {
+        "name": "Hà Nguyễn ngọc",
+        "review": "It's so beautiful, luoin",
+        "star": 5.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_238"
+      },
+      {
+        "name": "So Zux",
+        "review": "Location to board the boat to move to the floating market.\nThe ticket price is the same 100k/person if traveling together, it's the same price.",
+        "star": 5.0,
+        "date": "2024-06-01",
+        "ID_review": "0aa75c53_239"
+      },
+      {
+        "name": "SH Jeon",
+        "review": "It's at the end of the park, and the lighting is pretty, so I like it.",
+        "star": 5.0,
+        "date": "2025-02-01",
+        "ID_review": "0aa75c53_240"
+      },
+      {
+        "name": "Linh Dang",
+        "review": "Ninh Kieu wharf actually has nothing special. Perhaps it is the center of Can Tho city so the population is concentrated here. If you have a chance, sleep over and go for a walk in the morning.",
+        "star": 5.0,
+        "date": "2024-08-01",
+        "ID_review": "0aa75c53_241"
+      },
+      {
+        "name": "Trần Hân Hân",
+        "review": "Watching the sunrise on the Hau River at Ninh Kieu wharf is an unforgettable experience. The quiet sunrise scene with the stream of tourists rushing to get off the boat is truly real\ninteresting contrast.\nHowever, at 5:30 a.m., the garbage truck went to dump the trash and had a foul smell. Garbage should be taken out in the early morning hours, it will be more aesthetically appropriate.",
+        "star": 4.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_242"
+      },
+      {
+        "name": "Toàn Thanh",
+        "review": "Beautiful, ok tourist destination, but the parking lot at the front of the night market is full of market people, extremely uneducated, ready to scold customers when they like, frankly the whole army is uneducated. How to collect ticket money if you want to collect it, not according to any regulations. Everyone, please avoid the parking lot at the front of the night market",
+        "star": 2.0,
+        "date": "2024-04-01",
+        "ID_review": "0aa75c53_243"
+      },
+      {
+        "name": "Nguyễn Hoàng Duy",
+        "review": "The idea of creating a walking street is very good, but the park is too dark and messy. I hope the city will invest in designing and renovating it.",
+        "star": 4.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_244"
+      },
+      {
+        "name": "Nghiêm Tây TV",
+        "review": "Cool CV..the food is quite cheap..the people here are so cute.",
+        "star": 4.0,
+        "date": "2024-09-01",
+        "ID_review": "0aa75c53_245"
+      },
+      {
+        "name": "Dinh Thang Thang",
+        "review": "Sightseeing on foot is ok. Going on the train to eat and drink is very expensive. If there are few people traveling, you should not go on the train to eat or drink",
+        "star": 5.0,
+        "date": "2025-03-11",
+        "ID_review": "0aa75c53_246"
+      },
+      {
+        "name": "f_a_c_s",
+        "review": "There are a lot of possibilities to explore the river and its canals, it is a good idea to check the price at some local place a day in advance and agree on the route, the sunsets are great, go with peace of mind as the small canals will open your eyes.",
+        "star": 5.0,
+        "date": "2024-07-01",
+        "ID_review": "0aa75c53_247"
+      },
+      {
+        "name": "Bạc's Pharmacy",
+        "review": "After many years of visits, it's even more beautiful than before. But finding parking is difficult. People leave it on the sidewalk without fear of losing their car or being fined.\nBut I was afraid of being fined and losing money so I spent 2 hours trying to find a place to stay at the hotel at the end of the street😅",
+        "star": 5.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_248"
+      },
+      {
+        "name": "王冠晟",
+        "review": "If you go there in the evening, you can take a boat to have dinner while listening to Vietnamese songs, and enjoy the scenery on the boat. The trails beside the pier are also very suitable for walking and relaxing.\nThere are also several fine restaurants nearby for dining.",
+        "star": 5.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_249"
+      },
+      {
+        "name": "Lưu TRẦN",
+        "review": "Ninh Kieu wharf is one of the most beautiful and sparkling tourist destinations to visit at night. There are many places for you and your friends to take photos at night and during the day for free. The food in that area is also very delicious, especially the sour soup with sesbania fish, from July to October the fish is soft, the sweet soup is fragrant and crispy. These days, the roads are expanding a number of routes near the night market, so people go a bit. I'm sure next time will be fine. Wishing everyone an impressive trip with loved ones and fun ❤️☕, thank you family",
+        "star": 5.0,
+        "date": "2025-04-01",
+        "ID_review": "0aa75c53_250"
       }
-    ]
+    ],
+    "ID_place": "0aa75c53"
   }
 ]

@@ -1,0 +1,39 @@
+Location ID: 46
+Location Name: CGV_Vincom_Xuân_Khánh
+Data LLM:
+{
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+} {
+    "danh_sach_tu_tot": null,
+    "danh_sach_tu_xau": "talking over the movie, disrupting, not courteous, make you wait, dumb commercials, dirty, grimy, minging, rickety",
+    "percentage_tot": 0.0,
+    "percentage_xau": 100.0
+}

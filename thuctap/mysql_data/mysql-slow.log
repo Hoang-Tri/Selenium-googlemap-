@@ -76,3 +76,33 @@ Time                 Id Command    Argument
 use web_googlemap.com;
 SET timestamp=1743392667;
 SHOW GLOBAL VARIABLES LIKE 'innodb_file_per_table';
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+/www/server/mysql/bin/mysqld, Version: 5.7.44-log (Source distribution). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument

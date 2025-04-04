@@ -156,3 +156,18 @@ class CustomPrompt:
         }}
         Cảm ơn bạn đã sử dụng hệ thống!
     """
+
+    GENERATE_COMMENT_ANSWER_PROMPT = """
+        Bạn là một chatbot chuyên phân tích cảm xúc của văn bản. Nhiệm vụ của bạn là trích xuất các từ ngữ thể hiện sắc thái cảm xúc trong bình luận của người dùng.
+
+
+        **Yêu cầu:**
+        1. Liệt kê feedback tích cực (Positive): từ/cụm từ như "good", "clean", "friendly", "great", "diverse", etc.
+        2. Liệt kê feedback tiêu cực (Negative): từ/cụm từ như "dirty", "slow", "bad attitude", "unprofessional", etc.
+        3. Chỉ trả về dữ liệu dưới dạng với đúng định dạng sau, không thêm mô tả nào khác:
+        {{
+            "danh_sach_tu_tot": "<liệt kê các cụm tích cực>",
+            "danh_sach_tu_xau": "<liệt kê các cụm tiêu cực>",
+        }}" 
+    """
+    

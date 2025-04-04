@@ -28,7 +28,7 @@
 
     <div class="main-content image-dashboard">
         <!-- Sửa đường dẫn ảnh -->
-        <img src="{{ asset('images/maps.jpg') }}" alt="Dashboard Image" class="dashboard-img">
+        <!-- <img src="{{ asset('images/maps.jpg') }}" alt="Dashboard Image" class="dashboard-img"> -->
         
         <div class="welcome-overlay">
             <h1>Welcome, {{ Auth::user()->name }}</h1>
