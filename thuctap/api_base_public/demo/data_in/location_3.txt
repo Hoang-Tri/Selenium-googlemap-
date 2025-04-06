@@ -1,5 +1,6 @@
 Location ID: 3
 Location Name: LOTTE_Mart_Can_Tho
+Address: 84 Đ. Mậu Thân, An Hội, Ninh Kiều, Cần Thơ 900000
 Data LLM:
 {
     "danh_sach_tu_tot": "Great, plenty, huge, big, Lovely, friendly, Diverse, enthusiastic, friendly, public-spirited, Got some snacks, drinks, Ok, Free, cheap, Ok, Good, Nice, great, wide range, high quality, good, free parking, good, awesome, good, better, godsend, Great, fabulous, Good, good, Nice, Nice, good, Decent, Great, diverse, nice, pleasant, helpfull, well done, I love it!!, favorite, fun, enjoy, various, great, Love it, enjoy, Ok, best, good, cheap, good, Great, Nice, competitive, attract, ok, Clean, neat, Good, Ok, find what I need, Nice",

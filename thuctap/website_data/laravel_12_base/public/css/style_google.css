@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+}
+
+.main-content {
+    margin-left: 0px;       /* chừa chỗ cho sidebar */
+    padding: 20px 10px;       /* cách trái 10px, cách phải 10px */
+    box-sizing: border-box;
+    width: 100%; /* chiếm toàn bộ phần còn lại */
+}
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 100px;          /* tăng padding */
+    min-width: 200px;       /* hoặc set width cụ thể */
+    font-size: 20px;        /* tăng cỡ chữ */
+}
+.progress-bar {
+    background-color: #4e73df;
+}
+.search-box {
+    width: 300px;
+    position: relative;
+}
+.search-box input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+/* contact */
+.contact-info {
+    position: absolute;
+    bottom: 20px; /* Đặt cách đáy sidebar 20px */
+    width: 100%;
+    font-size: 14px;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Flexbox layout */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Khoảng cách giữa các box */
+}
+
+.search-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%;  /* Mỗi box chiếm 48% chiều rộng */
+    min-height: 200px;  /* Đảm bảo box có chiều cao tối thiểu */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;  /* Căn giữa các phần tử theo chiều dọc */
+    gap: 10px;  /* Khoảng cách giữa ô input và button */
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;  /* Chiếm hết không gian có sẵn, bạn có thể chỉnh lại */
+    max-width: 300px;  /* Chiều rộng tối đa của ô input */
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.response-box {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    min-height: 40px;
+    margin-top: 10px;
+}
+
+/* Divider between the two boxes */
+.divider {
+    height: 100%;
+    border-left: 2px solid #ddd;
+    margin: 0 20px;
+}
+/* history */
+.history-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.history-box h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#history-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}

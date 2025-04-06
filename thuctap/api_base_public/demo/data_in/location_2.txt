@@ -1,5 +1,6 @@
 Location ID: 2
 Location Name: Trung_Nguyên_E-coffee
+Address: Đ. Số 1/2-4 KĐTM Đại Ngân, Phường An Khánh, Ninh Kiều, Cần Thơ 890000
 Data LLM:
 {
     "danh_sach_tu_tot": "Spacous, comfortable, nice, cool, suitable, good, moderate, Airy, Lovely, responsive, diverse, Delicious, good, cheap, enthusiastic, cute, comfortable, polite, Suitable, very good, good, enthusiastic, worth experiencing, pretty good, delicious, rich flavors, easy to drink, diverse, comfortable, enthusiastic, cool, cheerful, attentive, clean, chill, normal, beautiful, delicious, airy, cool, delicious, cool air, spacious, clean, beautiful, Attentive, cheerful, delicious, affordable, airy, quiet, convenient, spacious, comfortable, friendly, okay, great, luxurious, good, good, delicious, spacious, luxurious, cool, Popular, Nice, clean, Good",

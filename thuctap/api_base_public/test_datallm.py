@@ -27,13 +27,13 @@ def connect_to_database():
 # );
 
 # Hàm lưu thông tin địa điểm vào bảng locations
-def save_location(name):
+def save_location(name, address=None):
     conn = connect_to_database()
     cursor = conn.cursor()
     cursor.execute(''' 
-        INSERT INTO locations (name) 
-        VALUES (%s)
-    ''', (name,))
+        INSERT INTO locations (name, address) 
+        VALUES (%s, %s)
+    ''', (name, address))
     conn.commit()
     location_id = cursor.lastrowid  
     cursor.close()
@@ -189,7 +189,7 @@ def export_location_to_txt(location_id):
     location = cursor.fetchone()
     
     if location:
-        location_id, name, data_llm = location
+        location_id, name, address, data_llm = location
 
         # Đường dẫn thư mục lưu file
         output_dir = "demo/data_in"
@@ -200,6 +200,7 @@ def export_location_to_txt(location_id):
         with open(file_name, "w", encoding="utf-8") as file:
             file.write(f"Location ID: {location_id}\n")
             file.write(f"Location Name: {name}\n")
+            file.write(f"Address: {address}\n")
             file.write(f"Data LLM:\n{data_llm}\n")
 
         # print(f"Đã lưu {file_name}")
@@ -213,9 +214,11 @@ def process_csv_file(input_file):
     df = df.dropna(subset=['user'])
     local = []
     
-    # Kiểm tra cột 'comment' có tồn tại không
+    # Kiểm tra cột 'comment' và 'address' có tồn tại không
     if "comment" not in df.columns:
         raise ValueError("File CSV phải có cột 'comment' chứa nội dung đánh giá!")
+    if "address" not in df.columns:
+        raise ValueError("File CSV phải có cột 'address' chứa địa chỉ!")
 
     # Thêm cột 'data_llm' nếu chưa có
     if "data_llm" not in df.columns:
@@ -225,14 +228,15 @@ def process_csv_file(input_file):
         location_name = row["places"]  
         user_name = row["user"]
         comment = row["comment"]
+        address = row["address"]  # Lấy địa chỉ từ cột 'address'
 
-         # Kiểm tra nếu địa điểm đã có trong database, nếu chưa thì thêm vào
+        # Kiểm tra nếu địa điểm đã có trong database, nếu chưa thì thêm vào
         conn = connect_to_database()
         cursor = conn.cursor()
         cursor.execute("SELECT id FROM locations WHERE name = %s", (location_name,))
         location = cursor.fetchone()
 
-        location_id = save_location(location_name) if location is None else location[0]
+        location_id = save_location(location_name, address) if location is None else location[0]
 
         # # Gọi API để lấy phản hồi
         # chat = FilesChatAgent().get_workflow().compile().invoke(input={"question": comment})
@@ -300,5 +304,5 @@ def process_csv_file(input_file):
     return local
 
 # Gọi hàm xử lý
-input_file = "data/data_in/50d04f87_Trung_Nguyên_E-Coffee_71-73A6_Hung_Phu_1_2025-04-01.csv"
+input_file = "data/data_in/c15bfe20_Minh_Long_-_Showroom_Quận_3_2025-04-01.csv"
 local = process_csv_file(input_file)

@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+}
+.sidebar {
+    width: 250px;
+    background-color: #2c2f33;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.sidebar a:hover {
+    background-color: #2e59d9;
+    border-radius: 5px;
+}
+.main-content {
+    margin-left: 250px;       /* chừa chỗ cho sidebar */
+    padding: 20px 10px;       /* cách trái 10px, cách phải 10px */
+    box-sizing: border-box;
+    width: calc(100% - 250px); /* chiếm toàn bộ phần còn lại */
+}
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 100px;          /* tăng padding */
+    min-width: 200px;       /* hoặc set width cụ thể */
+    font-size: 20px;        /* tăng cỡ chữ */
+}
+.progress-bar {
+    background-color: #4e73df;
+}
+.search-box {
+    width: 300px;
+    position: relative;
+}
+.search-box input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.search-box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+/* contact */
+.contact-info {
+    position: absolute;
+    bottom: 20px; /* Đặt cách đáy sidebar 20px */
+    width: 100%;
+    font-size: 14px;
+}
+/* api */
+.input-group {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa input và button */
+}
+
+#place {
+    flex: 1; /* Chiếm hết không gian còn lại */
+}
+
+button {
+    padding: 8px 16px;
+}
+
+.response-box {
+    margin-top: 10px;
+    margin-left: 10px;  /* Cách trái 10px */
+    margin-right: 10000px; /* Cách phải 10px */
+    padding: 10px;
+    border: 2px solid #020202;
+    background-color: #f9f9f9;
+    min-height: 50px;
+    max-height: 200px;
+    overflow-y: auto;
+}

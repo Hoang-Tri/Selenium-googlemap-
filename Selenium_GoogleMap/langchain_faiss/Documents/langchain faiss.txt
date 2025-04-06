@@ -1,3 +1,0 @@
-LangChain FAISS
-FAISS (Facebook AI Similarity Search) là công cụ giúp tìm kiếm nhanh các vector tương tự. 
-LangChain sử dụng FAISS để lưu trữ và truy vấn embedding.
