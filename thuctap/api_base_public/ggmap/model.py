@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 import time, json, re, os, csv
 import unicodedata
 import uuid
+from test_datallm import process_csv_file
 
 def remove_accents(text):
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
@@ -342,3 +343,4 @@ def process_places_from_urls(driver,keyword_name="default"):
                     # Ghi dữ liệu review vào file CSV
                     writer.writerow([place_name, address, link, user, stars if stars is not None else "N/A", review_date, comment, None])
         print(f"Đã lưu kết quả vào {csv_path}")
+        process_csv_file(csv_path)

@@ -1,0 +1,5 @@
+Location ID: 7
+Location Name: Trường_Đại_học_FPT_Cần_Thơ
+Address: 600 Nguyễn Văn Cừ Nối Dài, An Bình, Bình Thủy, Cần Thơ 900000
+Data LLM:
+{"danh_sach_tu_tot":[],"danh_sach_tu_xau":[],"percentage_tot":0,"percentage_xau":100}

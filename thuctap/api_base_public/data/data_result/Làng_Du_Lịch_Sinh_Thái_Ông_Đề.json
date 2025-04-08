@@ -1,0 +1,231 @@
+[
+  {
+    "title": "Làng Du Lịch Sinh Thái Ông Đề",
+    "address": "Mỹ Khánh, Phong Điền, Cần Thơ",
+    "link": "https://www.google.com/maps/place/L%C3%A0ng+Du+L%E1%BB%8Bch+Sinh+Th%C3%A1i+%C3%94ng+%C4%90%E1%BB%81/@9.9918188,105.7077647,17z/data=!3m1!4b1!4m6!3m5!1s0x31a089405a22cc65:0xd01cf07236452972!8m2!3d9.9918188!4d105.7077647!16s%2Fg%2F11hc_zth9b?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-07",
+    "star": 3.9,
+    "reviews": [],
+    "ID_place": "170e79e4"
+  },
+  {
+    "title": "Làng Du Lịch Sinh Thái Ông Đề",
+    "address": "303 Ấp Mỹ Lộc, Mỹ Khánh, Phong Điền, Cần Thơ",
+    "link": "https://www.google.com/maps/place/L%C3%A0ng+Du+L%E1%BB%8Bch+Sinh+Th%C3%A1i+%C3%94ng+%C4%90%E1%BB%81/@9.992319,105.7075316,17z/data=!4m6!3m5!1s0x31a0899e26674a1f:0x549000aa429b5896!8m2!3d9.992319!4d105.7075316!16s%2Fg%2F11h_425425?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-07",
+    "star": 3.8,
+    "reviews": [
+      {
+        "name": "Phil Langdon",
+        "review": "A place for kids & teenagers to play water sports and enjoy themselves. Some organsied games. Restaurants and novelty shops. Cafe sua dua is very nice. Not a place to relax. Loud music for the kids and the neighbours compete with karaoke !!!!",
+        "star": 4.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_1"
+      },
+      {
+        "name": "Thaycacac",
+        "review": "This is beautiful place. You should go to there if you travel at Can Tho",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_2"
+      },
+      {
+        "name": "Minh Le",
+        "review": "Beside from the water games and huge stage blasting music, everything else looks deserted about this place.\n\nThose accommodation rooms on the water looks like appalling area to stay at with the random dogs all the place",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_3"
+      },
+      {
+        "name": "Quý Lê Thị Hồng",
+        "review": "Gorgeous, it would be a shame if you came to Can Tho without stopping by",
+        "star": 5.0,
+        "date": "2025-02-07",
+        "ID_review": "99ff543a_4"
+      },
+      {
+        "name": "pha le huynh",
+        "review": "The area is not very large, the entrance ticket price is 100k for adults and 50k for children, given a hand buoy for children, does not include tickets to wonderland, if you go there, buy an extra ticket to go back there, mainly team building fun. Moreover, there is a swimming pool for children, but the water smells a bit too strong of bleach, and the smell sticks when you return, and there are a few small landscapes to take pictures, the staff are very friendly and talkative.",
+        "star": 3.0,
+        "date": "2024-08-07",
+        "ID_review": "99ff543a_5"
+      },
+      {
+        "name": "Vinh Tran quoc",
+        "review": "Delicious food, attentive service in a cool, airy space, you should come here",
+        "star": 5.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_6"
+      },
+      {
+        "name": "Nang Nang",
+        "review": "Ticket price 120 is very expensive, nothing fun, fake flowers, nothing real.",
+        "star": 2.0,
+        "date": "2025-02-07",
+        "ID_review": "99ff543a_7"
+      },
+      {
+        "name": "王俊榮",
+        "review": "The service is friendly and the food is delicious. The waiter rides a motorcycle and holds a tray to deliver the food.",
+        "star": 4.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_8"
+      },
+      {
+        "name": "VN Vũ Trọc",
+        "review": "Good food, good price.\nThere are especially fun underwater folk games. When I was about to leave, I discovered there was a film studio here with many beautiful scenes. Take virtual photos and post them for a whole year",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_9"
+      },
+      {
+        "name": "HỒ CAO THẮNG",
+        "review": "The resort is very fun, there are beautiful landscapes for taking photos, enthusiastic staff, delicious food, will come back many times, especially the homestay is very beautiful and the 2ng1 VND program is very good",
+        "star": 5.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_10"
+      },
+      {
+        "name": "Tường Vi",
+        "review": "I went on Saturday, there were quite a few customers but the support staff were also very enthusiastic, the game competing with other groups was also very fun, the MC was funny, there was also loto singing, delicious food, especially banh xeo, there was also Many small landscapes to take photos, the homestay is airy and clean, it's fun to go with friends and form a team",
+        "star": 5.0,
+        "date": "2024-08-07",
+        "ID_review": "99ff543a_11"
+      },
+      {
+        "name": "Hậu Dương",
+        "review": "Have fun and have fun at an affordable price",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_12"
+      },
+      {
+        "name": "Vân Anh Vũ",
+        "review": "My family had a really bad experience here. The space doesn't have anything beautiful, just some really boring games.\nThe food is expensive and not worth the price.\nStaff has very bad service attitude!!!\nI have never gone to eat anywhere without paper towels like here. When I asked the staff here if they had hand towels, they said no. If you want to wipe your hands, you have to buy cold towels!!!!\nWill never return to this place.",
+        "star": 1.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_13"
+      },
+      {
+        "name": "le cuong",
+        "review": "It's okay. But buying an entrance ticket and having to buy a pool ticket is not very pleasant.",
+        "star": 4.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_14"
+      },
+      {
+        "name": "Mỹ Duyên",
+        "review": "The staff's service and the food are very good. But the MC named Hoang Phat was really speechless. Everyone in the world has the right to idolize someone they like. But when this MC found out that our group was coming on November 20, what kind of defamatory words did he say about our idol? After this episode, I lost a lot of sympathy for the MC in particular and the Eco Village in general. I hope that MC's superiors will take action to remind us and apologize to us. Thank you!",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_15"
+      },
+      {
+        "name": "Hoang Phuong Le",
+        "review": "Many games and group activities are very interesting and fun",
+        "star": 5.0,
+        "date": "2024-04-07",
+        "ID_review": "99ff543a_16"
+      },
+      {
+        "name": "Thanh Phương Lý",
+        "review": "Good service, delicious food",
+        "star": 4.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_17"
+      },
+      {
+        "name": "PHÚC LÊ HẢI",
+        "review": "A new tourist destination with a full range of new entertainment services, with many beautiful views to check in and many delicious dishes of the Southwest.",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_18"
+      },
+      {
+        "name": "Nathan Phung",
+        "review": "Spacious tourist area, fun activities with bold Southern characteristics. However, it is necessary to invest in attractiveness to further improve service quality to attract customers.",
+        "star": 3.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_19"
+      },
+      {
+        "name": "Hải Nguyễn Vlog",
+        "review": "Ecological model tourist area in the southwest, a place that attracts not only local people but also people from other places, a place worth visiting once.",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_20"
+      },
+      {
+        "name": "Cho thuê xe máy Cần Thơ",
+        "review": "The pond is small and the water is dirty, the ticket price is 100k to get there, there's no point in watching",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_21"
+      },
+      {
+        "name": "Huy Trần Quốc",
+        "review": "Good service, very beautiful scenery!!!",
+        "star": 5.0,
+        "date": "2024-06-07",
+        "ID_review": "99ff543a_22"
+      },
+      {
+        "name": "Black Tribe",
+        "review": "Mc is cute and the food is delicious",
+        "star": 5.0,
+        "date": "2024-08-07",
+        "ID_review": "99ff543a_23"
+      },
+      {
+        "name": "Nguyễn Thị Thủy Tiên",
+        "review": "The staff is not welcoming, there is no one to guide guests, the service attitude is unprofessional.",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_24"
+      },
+      {
+        "name": "Ct Hoàng Nam",
+        "review": "Very fun and interesting",
+        "star": 5.0,
+        "date": "2024-11-07",
+        "ID_review": "99ff543a_25"
+      },
+      {
+        "name": "Lợi Tăng",
+        "review": "The guide and driver waited for more than an hour but the food was slow",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_26"
+      },
+      {
+        "name": "wedding phatduong",
+        "review": "Great",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_27"
+      },
+      {
+        "name": "Trí Trần Minh",
+        "review": "Long service staff",
+        "star": 1.0,
+        "date": "2024-05-07",
+        "ID_review": "99ff543a_28"
+      },
+      {
+        "name": "Đăng Khoa Võ",
+        "review": "50k to the gate and nothing :)",
+        "star": 1.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_29"
+      },
+      {
+        "name": "Linh Khanh Nguyễn",
+        "review": "Beautiful scenery of the southwest",
+        "star": 5.0,
+        "date": "2025-04-07",
+        "ID_review": "99ff543a_30"
+      }
+    ],
+    "ID_place": "99ff543a"
+  }
+]

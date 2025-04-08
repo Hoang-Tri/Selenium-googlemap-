@@ -1,10 +1,10 @@
 Location ID: 1
-Location Name: Ninh_Kieu_Wharf
-Address: 106 Đường Hai Bà Trưng, Tân An, Ninh Kiều, Cần Thơ
+Location Name: Can_Tho_University
+Address: Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ
 Data LLM:
 {
-    "danh_sach_tu_tot": "neat, well maintained, beautiful, nice, reasonable price, good deal, nice, ok, best, cool, demure, Fun, nice, polite, Great place, nice, beautiful, wonderful, love, spectacular, wonderful, enamored, photo some pictures, quick, Pure Air, with view, Clean, good place, famous, cultural symbol, bustling, crowded, attracted, enjoy, lively atmosphere, improved, love, long walk, brighly lit, good, Proud, great, Nice, cool, variety, resonable, variable",
-    "danh_sach_tu_xau": "okay, not really impressive, pass on this tour, typical tourist trap, had to wait, not worth it, bummer, accosted, short of good, mediocre, slow, pricey, isn't good, isn't much existing as I expected, doesn't active as it used to be, not spacious enough, scare, very few guests, not very complaisant or helpful, busy, very noisy, bad, too dangerous, poor, dimly lit, loud, not so clean",
-    "percentage_tot": 63.51,
-    "percentage_xau": 36.49
+    "danh_sach_tu_tot": "Ok, knowledge",
+    "danh_sach_tu_xau": "",
+    "percentage_tot": 100.0,
+    "percentage_xau": 0.0
 }

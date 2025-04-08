@@ -47,10 +47,10 @@ async def chat_ingestion(
     api_key: str = get_api_key,
     Place: str = Form(...)
 ):
-    # Ingestion(settings.LLM_NAME).ingestion_folder(
-    #     path_input_folder="demo\data_in",
-    #     path_vector_store="demo\data_vector",
-    # )
+    Ingestion(settings.LLM_NAME).ingestion_folder(
+        path_input_folder="demo\data_in",
+        path_vector_store="demo\data_vector",
+    )
     try:
         chat = FilesChatAgent("demo\data_vector").get_workflow().compile().invoke(
             input={"question": Place}
