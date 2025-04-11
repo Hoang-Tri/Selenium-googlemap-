@@ -50,87 +50,80 @@ class CustomPrompt:
         Lưu ý: Không thêm bất kỳ nội dung gì khác.
     """
     GENERATE_FEEDBACK_ANSWER_PROMPT = """
-        Bạn là người đánh giá mức độ liên quan và chất lượng giữa các địa điểm dựa trên các phản hồi của người dùng.
-        Mục tiêu là phân tích từng địa điểm, sau đó nếu có, so sánh và kết luận đâu là địa điểm tốt hơn dựa trên các tiêu chí đánh giá.
-        Nếu có từ **2 địa điểm trở lên**, tiến hành so sánh và xếp hạng.
+        Bạn là một chuyên gia đánh giá chất lượng địa điểm dựa trên phản hồi của người dùng.
 
-        ## ** Xử lý loại địa điểm**  
+        Tôi cung cấp cho bạn thông tin phân tích về hai địa điểm đã được xử lý sẵn, bao gồm:
+        - danh_sach_tu_tot: các từ khóa tích cực được trích xuất từ phản hồi người dùng,
+        - danh_sach_tu_xau: các từ khóa tiêu cực,
+        - GPT: phần trăm phản hồi tích cực và tiêu cực (dưới dạng phần trăm). 
+        
+        ### Ví dụ định hướng:
+        Người dùng yêu cầu: "So sánh giữa Phúc Long và The Coffee House"
+        → Hệ thống cần:
+            - Phân tích đầy đủ cả Phúc Long và The Coffee House.
+            - Sau đó thực hiện phần SoSanhChung để đưa ra đánh giá tổng quan và xếp hạng.
 
-            - **Địa điểm cụ thể**: Nếu người dùng nhập **tên đầy đủ** (có kèm địa chỉ hoặc chi nhánh) → chỉ lấy dữ liệu của địa điểm đó.  
-            - **Địa điểm chung chung**: Nếu người dùng nhập một **tên thương hiệu chung** (ví dụ: `"Bách Hóa Xanh"`) → lấy tất cả các địa điểm có tên đó và phân tích.  
-
-             **Ví dụ:**  
-            - **Người dùng nhập `"Bách Hóa Xanh - Nguyễn Văn Cừ"`** → chỉ lấy dữ liệu của chi nhánh Nguyễn Văn Cừ.  
-            - **Người dùng nhập `"Bách Hóa Xanh"`** → lấy tất cả các chi nhánh `"Bách Hóa Xanh"` và phân tích.  
-
-            ---
-        Thông tin người dùng cung cấp (chỉ bao gồm những người có nhận xét):
-        Người dùng có thể nhập yêu cầu dưới nhiều dạng:  
-            - "So sánh quán A với quán B"  
-            - "Nên đi quán A hay quán B?"  
-            - "Địa điểm nào tốt hơn: A, B, C?"  
-            - "Tôi muốn biết về quán A và quán B" 
-        Dữ liệu phản hồi từ người dùng có dạng:  
-            - Địa điểm: {{place}}
-            - user : {{user}}
-            - Comment : {{comment}}
-
-        (Có thể có nhiều nhận xét từ các người dùng khác nhau...)
-
-        ---
+        Dữ liệu đầu vào có dạng:  
+            "danh_sach_tu_tot": [...],
+            "danh_sach_tu_xau": [...],
+            "GPT": 
+                "phan_tram_tot": "70.0",
+                "phan_tram_xau": "30.0"
 
         ### Hướng dẫn thực hiện:
 
-        1. Đọc kỹ toàn bộ văn bản phản hồi.
-            - Bỏ qua các địa điểm không khớp hoàn toàn với tên "{{place}}" (so sánh các tên địa điểm khớp khoảng 99%).
-            = Nếu **người dùng chỉ tìm 1 địa điểm cụ thể** → Chỉ phân tích địa điểm đó.  
-            - Nếu **người dùng nhập một địa điểm chung chung** → Lấy toàn bộ địa điểm khớp với tên đó, phân tích và so sánh giữa các chi nhánh.  
-            - Nếu **người dùng nhập từ 2 địa điểm trở lên** → Phân tích tất cả địa điểm và thực hiện so sánh.
-        2. Bỏ qua các phản hồi **không có nội dung nhận xét** (comment rỗng hoặc trống). **Chỉ phân tích các nhận xét có nội dung.**
-            - Lấy toàn bộ review có trong dũ liệu liên quan dến địa điểm đó, có bao nhiêu cũng lấy hết
+        1. Nhận diện mục đích của người dùng:
+            - Nếu yêu cầu chứa các từ như **"so sánh"**, **"nên đi địa điểm nào"**, **"địa điểm nào tốt hơn"** → Kích hoạt chế độ **SoSanhChung**.
+            - Nếu người dùng nhập từ **2 địa điểm trở lên** (ví dụ: "Highlands và Phúc Long") → Phải thực hiện phân tích tất cả địa điểm đó, sau đó mới tiến hành **SoSanhChung**.
+
+        2. Quy tắc phân tích:
+            - Chỉ phân tích các địa điểm có tên **khớp gần như chính xác (tối thiểu 99%)** với tên trong yêu cầu.
+            - Nếu chỉ có **1 địa điểm cụ thể** → chỉ phân tích địa điểm đó.
+            - Nếu địa điểm được nhắc đến là **tên chung (ví dụ: "Highlands")**, thì phân tích tất cả các chi nhánh/địa điểm có tên tương tự.
+            - Nếu có **2 địa điểm trở lên** hoặc yêu cầu có ý định **so sánh** → **PHẢI phân tích từng địa điểm riêng biệt**, không được bỏ sót. Sau đó mới thực hiện so sánh.
+
         3. Phân tích từng địa điểm(nếu có nhiều địa điểm cũng phân tích như vậy):
             a. Xác định tên địa điểm (Place).
-            b. Liệt kê feedback tích cực (Positive): từ/cụm từ như "tốt", "sạch sẽ", "thân thiện", "tuyệt vời", "đa dạng",...
-            c. Liệt kê feedback tiêu cực (Negative): từ/cụm từ như "dơ", "chậm", "thái độ không tốt", "không chuyên nghiệp",...
+            b. Đọc danh sách từ tốt và tỷ lệ phần trăm tốt
+            c. Đọc danh sách từ xấu và tỷ lệ phần trăm xấu
             d. Đưa ra "Kết luận":
                 - Ghi là "Tốt" nếu phản hồi tích cực chiếm ưu thế.
                 - Ghi là "Không tốt" nếu phản hồi tiêu cực nhiều hơn hoặc nghiêm trọng.
+             e. **Hướng khắc phục**:
+                - Dựa trên danh_sach_tu_xau, gợi ý các cách cải thiện tương ứng. Ví dụ:
+                    - Nếu có từ "ồn ào" → Gợi ý cải thiện không gian yên tĩnh hơn.
+                    - Nếu có từ "phục vụ chậm" → Gợi ý đào tạo nhân viên hoặc cải thiện quy trình phục vụ.
+                - Liệt kê tối đa 3 gợi ý khắc phục cụ thể, ngắn gọn, dễ hiểu.
 
-        4.  Nếu có từ 2 địa điểm trở lên hoặc **có sự so sánh giữa các địa điểm**, thực hiện xếp hạng (Ranking) trong "SoSanhChung":
-            - So sánh địa điểm "{{place}}" với các địa điểm khác có trong danh sách phản hồi.
-            - Dựa trên số lượng và mức độ feedback **tích cực và tiêu cực** để đánh giá nơi nào tốt hơn.
-            - Nếu địa điểm "{{place}}" được đánh giá cao hơn, đưa ra lý do.
-            - Nếu có địa điểm khác tốt hơn, đề xuất địa điểm đó.
-            - Xếp hạng các địa điểm dựa trên số lượng và mức độ feedback **tích cực và tiêu cực**.
-            - Tạo bảng xếp hạng theo mức độ tốt nhất, định dạng:
-            - Thêm bảng xếp hạng vào **SoSanhChung** :
-            - Địa điểm có nhiều phản hồi tích cực nhất, ít phản hồi tiêu cực nhất sẽ được xếp hạng cao hơn.
-            - Nếu có hai địa điểm cùng số điểm, xếp theo số lượng review nhiều hơn.
+       4. **SoSanhChung** (Chỉ thực hiện sau khi đã phân tích hết các địa điểm):
+            - So sánh tất cả các địa điểm đã phân tích ở trên.
+            - Xếp hạng dựa trên: mức độ và tỷ lệ **feedback tích cực và tiêu cực**.
+            - Ghi rõ:
+                - Địa điểm nào được đánh giá cao hơn và lý do.
+                - Nếu có địa điểm nổi bật hơn, **đề xuất** địa điểm đó.
+            - Đưa ra bảng xếp hạng tổng quan cuối cùng (nơi có phản hồi tích cực nhiều nhất, ít tiêu cực nhất được xếp đầu).
 
-        5. Nếu **chỉ có một địa điểm** hoặc **không có so sánh giữa các địa điểm**, chỉ cần phân tích và đưa ra "Kết luận" cho từng địa điểm là đủ.
-
-        6. **Trường hợp không tìm thấy địa điểm {{place}}**:
+        5. **Trường hợp không tìm thấy địa điểm {{place}}**:
             Trả về phản hồi:
             {{
-                "message": "Xin lỗi, tôi không tìm thấy địa điểm hoặc thương hiệu nào trong dữ liệu để có thể đánh giá.\nCảm ơn bạn đã sử dụng hệ thống! "
+                "mesess":"Xin lỗi, tôi không tìm thấy địa điểm hoặc thương hiệu nào trong dữ liệu để có thể đánh giá. Cảm ơn bạn đã sử dụng hệ thống! "
             }}
-        7. Nếu có địa điểm, trả về phản hồi dưới định dạng sau:
+
+        6. Nếu có địa điểm, trả về phản hồi dưới định dạng sau:
             Tạo một bản tóm tắt duy nhất của địa điểm, không lặp lại 'Data'.
+            Với mỗi địa điểm, hãy trả về một đối tượng JSON theo cấu trúc sau:
             {{
-                "Place": "Tên địa điểm ",
-                "Address": "address",
-                "Reviews": [
+                "Đánh giá địa điểm"[
                     {{
-                        "Tên người dùng": "Nhận xét"
-                    }},
-                ],
-                "Data": {{
-                    "Place": "Tên địa điểm",
-                    "Positive": "<liệt kê các cụm tích cực>",
-                    "Negative": "<liệt kê các cụm tiêu cực>",
-                    "Conclusion": "<Tốt hoặc Không tốt>. <Lý do ngắn gọn.>"
-                }},
-                "SoSanhChung": {{
+                    "Place": "Tên địa điểm ",
+                    "Address": "address ",
+                    "Conclusion": "<Dựa vào danh sách từ tốt và danh sách từ xấu đưa ra kết luận Tốt hoặc Không tốt (không cần liệt kê những từ đó ra)>. ",
+                    "Because":" <Đưa ra vài lý do ngắn gọn(vì sao tốt, vì sao không tốt) dựa trên những dánh sách từ tốt và danh sách từ xấu (liên quan đến hai danh sách đó).>",
+                    "Remedial direction": "<Dựa vào danh sách từ xấu đưa ra vài lý do để khắc phục những từ xấu đó>. ",
+                    }}
+                    ...
+                ]
+                **SoSanhChung**:
                     "Ranking": [
                     "Top 1: {{place}} - {{address_1}}",
                     "Top 2: {{place}} - {{address_2}}",
@@ -138,9 +131,8 @@ class CustomPrompt:
                     ]
                     "RecommendedPlace": "Tên địa điểm tốt hơn",
                     "Reason": "Địa điểm này có nhiều phản hồi tích cực hơn hoặc ít phản hồi tiêu cực hơn, dịch vụ tốt hơn, hoặc trải nghiệm khách hàng vượt trội hơn."
-                }}
+                    
             }}
-            (Có thể có thêm địa điểm thì cũng phân tích như vậy)
             *Lưu ý:
             - Chỉ bao gồm mục "SoSanhChung" nếu có sự so sánh rõ ràng giữa các địa điểm.*
     """

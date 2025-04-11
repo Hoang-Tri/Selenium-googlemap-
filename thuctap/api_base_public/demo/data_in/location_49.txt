@@ -1,9 +1,0 @@
-Location ID: 49
-Location Name: Vincom_Hùng_Vương_-_Cần_Thơ
-Data LLM:
-{
-    "danh_sach_tu_tot": "decorated beautifully, easy to find, very large, very cool, very clean, fragrant, shiny, high quality goods, excellent, very well, happy, enthusiastic, very satisfied, Prime location, large, airy space, cheerful staff, big, decorated beautifully, beautiful, luxurious, splendid, ok, delicious",
-    "danh_sach_tu_xau": "not large, very high, limited items, few, expensive",
-    "percentage_tot": 82.76,
-    "percentage_xau": 17.24
-}

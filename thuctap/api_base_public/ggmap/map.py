@@ -13,7 +13,7 @@ if __name__ == "__main__":
         keywords = [kw.strip() for kw in input_keywords.split(",") if kw.strip()]
         
         chrome_options = webdriver.ChromeOptions()
-        driver = webdriver.Chrome(service=Service(r"E:\Student\New folder\chromedriver-win32\chromedriver.exe"))
+        driver = webdriver.Chrome(service=Service(r"E:\Student\New folder\chromedriver-win64\chromedriver.exe"))
 
 
         for keyword in keywords:

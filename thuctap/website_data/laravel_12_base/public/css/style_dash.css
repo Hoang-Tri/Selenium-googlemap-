@@ -35,6 +35,34 @@ body {
     min-width: 200px;       /* hoặc set width cụ thể */
     font-size: 20px;        /* tăng cỡ chữ */
 }
+.card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Phát sáng nhẹ */
+.card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(255, 200, 0, 0.3), 0 0 15px rgba(255, 165, 0, 0.4);
+    background: linear-gradient(135deg, #ffe29f, #ffa751);
+    color: #222;
+}
+
+/* Icon động */
+.card-hover i {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.card-hover:hover i {
+    transform: scale(1.2) rotate(10deg);
+    color: #fff;
+}
 .progress-bar {
     background-color: #4e73df;
 }

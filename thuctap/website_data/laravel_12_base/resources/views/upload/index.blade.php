@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File</title>
+    <title>Danh sách File CSV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-@include('layouts.header')
-    <h2>Upload File</h2>
-    
-    <!-- Form upload file -->
-    <form action="{{ route('upload.file') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <label for="file">Choose file:</label>
-        <input type="file" name="file" id="file" required>
-        <button type="submit">Upload</button>
-    </form>
+<body class="bg-light">
+    @include('layouts.header')
+
+
+    <h1>Danh sách địa điểm có đánh giá</h1>
+
+<ul class="list-group">
+    @foreach($locations as $location)
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ $location->name }} - 
+            <a href="{{ url('/download/' . $location->location_id) }}" class="btn btn-sm btn-primary">
+                Tải về
+            </a>
+        </li>
+    @endforeach
+</ul>
 </body>
 </html>

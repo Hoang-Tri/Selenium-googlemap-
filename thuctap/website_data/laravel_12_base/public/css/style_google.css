@@ -125,3 +125,28 @@ button:hover {
     list-style-type: disc;
     padding-left: 20px;
 }
+
+.response-box {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    min-height: 50px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    font-family: 'Segoe UI', sans-serif;
+    background: #fffdfc;
+}
+.card h3 {
+    margin-top: 0;
+    color: #2b7a78;
+}
+.card p {
+    margin: 4px 0;
+}

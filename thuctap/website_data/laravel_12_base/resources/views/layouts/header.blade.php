@@ -7,6 +7,6 @@
         <a href="{{ url('/locations') }}" style="color: white; margin-right: 15px;">Location</a>
         <a href="{{ url('/google') }}" style="color: white; margin-right: 15px;">GoogleMaps</a>
         <a href="{{ url('/users-reviews') }}" style="color: white; margin-right: 15px;">User Review</a>
-        <a href="{{ url('/upload') }}" style="color: white; margin-right: 15px;">UploadFile</a>
+        <a href="{{ url('/upload') }}" style="color: white; margin-right: 15px;">File</a>
     </nav>
 </header>

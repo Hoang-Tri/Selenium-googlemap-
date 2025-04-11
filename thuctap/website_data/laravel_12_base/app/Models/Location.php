@@ -14,4 +14,8 @@ class Location extends Model
     protected $fillable = [
         'name', 'address','data_llm'
     ];
+    public function userReviews()
+    {
+        return $this->hasMany(UserReview::class, 'location_id'); // 'location_id' là khóa ngoại trong bảng UserReview
+    }
 }

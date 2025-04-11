@@ -18,7 +18,6 @@ class User extends Authenticatable
      * @var list<string>
      */
 
-
     protected $fillable = [
         'username',
         'fullname',
@@ -49,5 +48,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function count()
+    {
+        $userCount = User::count();
+        return view('users.count', compact('userCount'));
     }
 }

@@ -8,12 +8,3 @@ docker load -i api_web_leech_truyen_audio.tar
 
 
 docker exec -it api_web_leech_truyen_audio bash
-
-data = {
-    "danh_sach_tu_tot": str(danh_sach_tu_tot)
-    "danh_sach_tu_xau": str(danh_sach_tu_xau)
-    "GPT":{
-        "phan_tram_tot": str(ty_le_tot)
-        "phan_tram_xau": str(ty_le_xau)
-    }
-}

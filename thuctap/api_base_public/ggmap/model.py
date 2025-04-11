@@ -12,18 +12,18 @@ def remove_accents(text):
     return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
 
 def generate_unique_id():
-    return str(uuid.uuid4())[:8]  # Lấy 8 ký tự đầu của UUID
+    return str(uuid.uuid4())[:8] 
 
 def is_single_place_page(driver):
     try:
         WebDriverWait(driver, 5).until(
-            EC.presence_of_element_located((By.CLASS_NAME, 'DUwDvf'))  # Tên địa điểm
+            EC.presence_of_element_located((By.CLASS_NAME, 'DUwDvf'))  
         )
         return True
     except:
         return False
 
-def scroll_to_load_all(driver, max_items=5):
+def scroll_to_load_all(driver, max_items=4):
     scrollable_div = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, 'div[role="feed"]'))
     )
@@ -51,7 +51,7 @@ def open_reviews_tab(driver):
     except:
         print("Không tìm thấy nút mở review – có thể đã hiện sẵn.")
 
-def scroll_reviews(driver, max_scrolls=2):
+def scroll_reviews(driver, max_scrolls=5):
     try:
         scrollable_div = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(
@@ -307,7 +307,7 @@ def process_places_from_urls(driver,keyword_name="default"):
         json.dump(all_data, f, indent=2, ensure_ascii=False)
 
     print(f"Đã lưu kết quả vào {json_path}")
-#####
+
     scraped_date = datetime.today().strftime("%Y-%m-%d")
 
     os.makedirs("demo/data_in", exist_ok=True)

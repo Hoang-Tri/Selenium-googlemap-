@@ -13,15 +13,25 @@ class AuthController extends Controller
     {
         $credentials = $request->validate([
             'email' => 'required|email',
-            'password' => 'required'
+            'password' => 'required',
         ]);
-    
+
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->route('dashboard')->with('success', 'Đăng nhập thành công!');
+            $user = Auth::user();
+
+            if ($user->status != 1) {
+                Auth::logout();
+                return redirect()->route('login')->withErrors(['status' => 'Tài khoản của bạn đã bị khóa.']);
+            }
+
+            if ($user->level == 1) {
+                return redirect()->route('admin.dashboard');
+            } else {
+                return redirect()->route('nguoidung.dashboard');
+            }
         }
-    
-        return back()->with('error', 'Email hoặc mật khẩu không đúng.');
+
+        return redirect()->route('login')->with('error', 'Sai email hoặc mật khẩu.');
     }
 
     public function logout(Request $request)
@@ -31,6 +41,11 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('login');
+    }
+    public function count()
+    {
+        $userCount = User::count();
+        return view('users.count', compact('userCount'));
     }
 }
 

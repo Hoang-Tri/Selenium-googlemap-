@@ -10,8 +10,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        $userCount = User::count(); // Đếm số lượng người dùng
-        return view('users.index', compact('users', 'userCount'));
+        return view('users.index', compact('users'));
     }
 
     public function create()
@@ -61,11 +60,5 @@ class UserController extends Controller
     {
         User::findOrFail($id)->delete();
         return redirect()->route('users.index')->with('success', 'User deleted successfully!!');
-    }
-
-    public function count()
-    {
-        $userCount = User::count();
-        return view('users.count', compact('userCount'));
     }
 }

@@ -1,0 +1,432 @@
+[
+  {
+    "title": "Nam Can Tho University",
+    "address": "168 Nguyễn Văn Cừ Nối Dài, An Bình, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Nam+Can+Tho+University/@10.0079465,105.7228316,17z/data=!3m1!4b1!4m6!3m5!1s0x31a08903d92d1d0d:0x2c147a40ead97caa!8m2!3d10.0079465!4d105.7228316!16s%2Fg%2F11hd5fbp56?entry=ttu&g_ep=EgoyMDI1MDQwNy4wIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-10",
+    "star": 4.5,
+    "reviews": [
+      {
+        "name": "Carl Nguyen",
+        "review": "A great university with many cool things, and many playgrounds for you to play such as football, tennis or badminton. Friendly teachers and the study environment is awesome and dynamic. The university even has a convenience store, a coffee shop, and a food restaurant. Overall, spectacular",
+        "star": 5.0,
+        "date": "2024-07-10",
+        "ID_review": "d95cb502_1"
+      },
+      {
+        "name": "Dam Tran Thanh",
+        "review": "One of big colleges in CT city and Mekong Delta",
+        "star": 4.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_2"
+      },
+      {
+        "name": "Anh Lan",
+        "review": "Dynamic learning environment; Spacious and modern facilities; Professional teaching quality; Movement activities for students are rich and diverse.",
+        "star": 5.0,
+        "date": "2024-06-10",
+        "ID_review": "d95cb502_3"
+      },
+      {
+        "name": "Thu Hằng",
+        "review": "I Love DNC",
+        "star": 5.0,
+        "date": "2025-03-13",
+        "ID_review": "d95cb502_4"
+      },
+      {
+        "name": "Khánh Ngọc",
+        "review": "I love DNC",
+        "star": 5.0,
+        "date": "2025-03-13",
+        "ID_review": "d95cb502_5"
+      },
+      {
+        "name": "Ww Wier",
+        "review": "service is too bad",
+        "star": 1.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_6"
+      },
+      {
+        "name": "Huy Lê",
+        "review": "5 stars",
+        "star": 5.0,
+        "date": "2024-09-10",
+        "ID_review": "d95cb502_7"
+      },
+      {
+        "name": "lý huỳnh",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2024-09-10",
+        "ID_review": "d95cb502_8"
+      },
+      {
+        "name": "Đức Nguyễn Trí",
+        "review": "Great Uni",
+        "star": 5.0,
+        "date": "2024-04-10",
+        "ID_review": "d95cb502_9"
+      },
+      {
+        "name": "Arthaloith Xeres",
+        "review": "Very good uni, a place to kickstart your career",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_10"
+      },
+      {
+        "name": "Phan Minh Đẳng",
+        "review": "Perfect",
+        "star": 5.0,
+        "date": "2024-07-10",
+        "ID_review": "d95cb502_11"
+      },
+      {
+        "name": "Mỹ Dung",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2024-07-10",
+        "ID_review": "d95cb502_12"
+      },
+      {
+        "name": "Thông Trần Tuấn",
+        "review": "good",
+        "star": 5.0,
+        "date": "2024-04-10",
+        "ID_review": "d95cb502_13"
+      },
+      {
+        "name": "03-08-03 Nguyễn Ngọc Quỳnh Giao",
+        "review": "Good :)",
+        "star": 5.0,
+        "date": "2024-04-10",
+        "ID_review": "d95cb502_14"
+      },
+      {
+        "name": "Trương Triệu Vy",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_15"
+      },
+      {
+        "name": "ngothi phuongchi",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_16"
+      },
+      {
+        "name": "Tim Nguyen",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_17"
+      },
+      {
+        "name": "Huỳnh Bảo Luận 10-06-00",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_18"
+      },
+      {
+        "name": "Đặng Trinh",
+        "review": "ok",
+        "star": 3.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_19"
+      },
+      {
+        "name": "Hau Nguyen",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_20"
+      },
+      {
+        "name": "Nguyễn Thành Trâm",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_21"
+      },
+      {
+        "name": "Trung Tính",
+        "review": "Excellent",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_22"
+      },
+      {
+        "name": "Nhung Cold",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_23"
+      },
+      {
+        "name": "01-11-02 Từ Thanh Đoan",
+        "review": "Very  good",
+        "star": 5.0,
+        "date": "2024-04-10",
+        "ID_review": "d95cb502_24"
+      },
+      {
+        "name": "Nguyen Loc",
+        "review": "Nice place",
+        "star": 4.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_25"
+      },
+      {
+        "name": "Nam Trần Lê Phương",
+        "review": "The Department of Dentistry at Southern Can Tho University is one of the high-quality training majors, meeting the growing needs of the oral health care field. The school has continuously invested in modern facilities, advanced practice rooms and experienced lecturers to ensure students have the best learning environment. One of the highlights of the training program is the close combination of theory and practice. Students are not only equipped with in-depth knowledge about dentistry but also have the opportunity to practice at large hospitals and clinics, helping to improve practical skills right from the time they are still in school. In addition, the school always focuses on updating its curriculum according to international standards, creating conditions for students to access the latest advances in the dental industry. Thanks to that, graduates can confidently work at hospitals, clinics or open their own clinics with solid skills. With strong investment in facilities, quality lecturers and a systematic training program, the Department of Dentistry at Nam Can Tho University is a worthy choice for those who are passionate about the field of dentistry and want to have a solid career in the future.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_26"
+      },
+      {
+        "name": "Trí Trần Minh",
+        "review": "Based on 2 years of study at Southern Can Tho University, here are the four T's that confirm the quality of this school:\n1. Vision - Southern Can Tho University constantly innovates and develops in the direction of applied training, keeping up with modern educational trends. Students are equipped with solid professional knowledge, practical skills and creative thinking to meet labor market needs.\n2. Amenities - Modern facilities, from lecture halls, laboratories, practice centers to electronic libraries, all meet standards to provide the best learning environment. The school also has a hospital, sports complex and spacious dormitories, creating favorable conditions for students to study and live.\n3. Dedicated - A team of experienced lecturers, dedicated to their profession, always accompanying students on their path of learning and personal development. The school focuses on training not only knowledge but also soft skills, professional ethics and responsibility, helping students to comprehensively improve.\n4. Practicality – The training program closely follows reality, regularly updated according to business needs. The school has close links with many large businesses, opening up many internship and job opportunities. Graduates not only have knowledge but also practical experience, ready to integrate into the domestic and foreign labor market.\n\nWith high quality training orientation, Southern Can Tho University increasingly affirms its position in the higher education system in Vietnam.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_27"
+      },
+      {
+        "name": "Trương Nguyễn Thảo Nguyên",
+        "review": "1. Need to improve the quality of the timetable website. Updating the exam schedule on the website instead of sending the exam schedule file is very inconvenient.\n2. The school's computer room is not really good and needs to improve the quality of computers. The school's computers are too slow to serve learning.\n3. The paper-based final exam should be replaced with the school's computer-based exam to ensure early scores for students.\n4.Buying coupons at the school canteen is very unnecessary and time consuming.\n5. School events should be held in a visible area, which could be the yard of building C instead of the yard of building E, out of sight and many times when going to school, you still don't know that an event is happening.\n6. The school's swimming pool is beautiful and clean, but it would be more convenient if there were shampoo, shower gel and wraps for students to buy.\n\nIn addition to the above problems, the rest is very good, the teachers are happy and friendly, the health institute is fully equipped with many modern equipment, if there is an additional canteen in the health building it would be better.\n\nThe above comments are based on the experience of having studied at Vinh Long Technical Pedagogical School and currently studying at Nam Can Tho School to comment.",
+        "star": 5.0,
+        "date": "2025-03-27",
+        "ID_review": "d95cb502_28"
+      },
+      {
+        "name": "Phan Thị Thu Hạnh",
+        "review": "Nam Can Tho University is a modern, dynamic and quality learning environment. The school has spacious facilities and full equipment, creating good conditions for students to study and research. The training program is updated according to actual needs, especially in health fields such as Dentistry, Pharmacy, Medicine, etc. Dedicated and experienced teaching staff always support students in the learning process. In addition, the school also organizes many useful extracurricular activities, helping students develop soft skills and have more opportunities to interact. With close links with businesses and hospitals, students have many internship and job opportunities after graduation. This is an option worth considering for those who want to pursue their education in a professional and friendly environment.",
+        "star": 5.0,
+        "date": "2025-03-13",
+        "ID_review": "d95cb502_29"
+      },
+      {
+        "name": "Tường Di Phạm",
+        "review": "Hello everyone, I am currently a student majoring in Dentistry at Nam Can Tho University. During my studies here, I feel that this place is truly an ideal environment for you to explore, freely create, and practice knowledge. In addition to studying in lecture halls, the school also promotes students' access to knowledge through practical lessons, closely following theory so that students can understand best. In addition, the school also invests in a lot of modern equipment and builds facilities to ensure the best conditions for students. Hopefully in the coming time the school will continue to develop so that students have the opportunity to access more new knowledge and become useful people for society!",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_30"
+      },
+      {
+        "name": "Nguyễn Duy Khãi",
+        "review": "(*)Can Tho University – The Dream School of Every Student\n-Facilities – 5-star class\nCan Tho University is not just a school, but an entire international-class educational ecosystem. The campus is spacious, airy, filled with green trees, bringing a feeling of comfort and relaxation to students. The school also owns a comfortable dormitory, a magnificent library, smart classrooms, modern practice areas, all of which are invested with the highest standards. In particular, DNC also has a hospital, golf course, and shopping center right on campus – something that not every school has!\n-Lecturers – The convergence of intellectual elite\nThe school gathers a team of lecturers who are leading experts, experienced and dedicated to students. Not only are the teachers at DNC good at their profession, they are also very enthusiastic, ready to support and answer all questions from students, helping them have the most effective learning environment. \n- Training program - Keeping up with the trend of the times\nDNC constantly innovates its curriculum, applying advanced teaching methods, helping students not only grasp the theory but also practice practical skills. The majors at the school are extremely diverse, meeting all the needs of students, from Medicine, Information Technology, Business Administration to Law, Construction and the unique Golf & Golf Course Management major. Ensuring that upon graduation, DNC students will have enough luggage to conquer any employer. \n- Student activities - More than just a learning environment\nNot only a place to train knowledge, DNC is also a school full of energy with a series of clubs, events, seminars and exciting academic and sports competitions. Students not only study well but also develop comprehensively in soft skills, communication and teamwork skills - important factors that help you shine in the future. \n- Job opportunities - Guaranteed output, no worries about unemployment \nThanks to extensive cooperation with large enterprises, DNC students always have the opportunity to intern and work right from their school days. The rate of students having jobs after graduation is extremely impressive, a clear testament to the excellent training quality of the school. \n(*) Faculty of Dentistry - The Bright Gem of the Institute of Health, Nam Can Tho University \nIf Nam Can Tho University (DNC) is a bright gem of Vietnamese education, then the Faculty of Dentistry under the Institute of Health of the school is the brightest highlight! This is where the quintessence of knowledge, modern medical technology and advanced training methods gather, bringing students the ultimate learning experiences. \nFacilities – The most modern in the region\nDNC's Faculty of Dentistry has invested in a system of practice rooms and laboratories that meet international standards. From dental clinics, treatment simulation rooms to specialized research rooms, all are equipped with the most advanced medical equipment. Students not only learn theory but also have the opportunity to practice on modern equipment, helping to improve their skills and confidence when graduating.\nTraining program – Combining theory and practice\nThe faculty's training program not only closely follows practice but is also constantly updated to keep up with world medical trends. Students not only learn from the basic foundations of Dentistry but also access advanced dental techniques such as Implant placement, modern orthodontics, and cosmetic porcelain restorations. The school cooperates with many large hospitals and clinics, helping students have the opportunity to practice and get acquainted with a professional environment right from the first year.\nCareer Opportunities – Ensuring a Bright Future\nWith thorough investment from the training program to the facilities, graduates from DNC Faculty of Dentistry can confidently enter the labor market with solid skills. Job opportunities are wide open with many attractive directions: from opening a private dental clinic, working at major hospitals, to becoming a lecturer or researcher in the field of dentistry.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_31"
+      },
+      {
+        "name": "Phú Hưng Trần Nguyễn",
+        "review": "Southern Can Tho University is considered one of the best universities in the Mekong Delta region. The school has a team of experienced lecturers. The school has modern facilities, including classrooms, laboratories, practice rooms, libraries, and dormitories. The school's training program is diverse, including fields such as Medicine, Dentistry, Dentistry, Engineering, Economics, Foreign Languages, and Social Sciences. The school has a team of experienced and enthusiastic lecturers. Students highly appreciate the school's facilities, training programs, and teaching staff. South Can Tho University degrees are recognized and highly appreciated by employers and other educational institutions. The school is also recognized as one of 30 schools ranked and evaluated to meet educational quality standards. Southern Can Tho University is a prestigious public university with high educational quality in Vietnam. But the Department of Dentistry and Maxillofacial Medicine at Southern Can Tho University has received many awards, including Certificates of Merit for students with excellent academic achievements and Certificates of Merit from the Minister of Health. The school has also developed strongly in training and research in this field. The school has invested in modern facilities and equipment to serve teaching and practice in the field of Dentistry. Students in the Department of Dentistry and Maxillofacial Surgery have won many awards in academic competitions and scientific research, demonstrating their capacity and creativity in the field. Lecturers in the field are also rewarded for their contributions to improving the quality of training and research. Southern Can Tho University has established cooperative relationships with many hospitals and medical facilities, creating conditions for students to practice and learn from leading experts in the industry. This cooperation not only helps students have the opportunity to practice but also improves the quality of training, meeting the actual needs of the medical industry.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_32"
+      },
+      {
+        "name": "Vy Tran",
+        "review": "Can Tho University (DNC) is a private higher education institution in Can Tho City, Vietnam, which has achieved many remarkable achievements in recent times.\n\nTraining quality and accreditation\n\nDNC has achieved the accreditation of educational institutions according to the regulations of the Ministry of Education and Training, along with the certification of meeting educational quality standards for many undergraduate and master's training programs. In 2020, the school was ranked 3 stars according to the University Performance Metrics (UPM) comparison ranking system, and by 2023, the school will be upgraded to 4 UPM stars. According to the 2024 Vietnam University Rankings, DNC ranked 61st out of 230 universities nationwide, up 37 places compared to the previous year.\n\nFacilities\n\nThe school owns a campus of more than 30 hectares with many modern facilities such as lecture halls, laboratories, dormitories with a capacity of more than 2,000 students, an electronic library, a national standard swimming pool and a multi-functional practice area. In addition, DNC also has Nam Can Tho University Hospital, Nam Can Tho DNC Auto Showroom, and the Institute of Research and Development of Medicinal Materials, creating conditions for students to practice and research.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_33"
+      },
+      {
+        "name": "Khả Mi Trần",
+        "review": "Nam Can Tho University (NCTU) is a prestigious higher education institution in the Mekong Delta, with a multidisciplinary training program and a high rate of students finding employment after graduation. The school owns modern facilities, including lecture halls, libraries and advanced laboratories. NCTU has achieved educational quality accreditation, affirming its commitment to improving training. The school applies many flexible admission methods, making it easy for candidates to access. This is a worthy choice for students who want to study in a professional environment.",
+        "star": 5.0,
+        "date": "2025-03-27",
+        "ID_review": "d95cb502_34"
+      },
+      {
+        "name": "Nguyễn Quỳnh",
+        "review": "Southern Can Tho University (NCTU) is a highly regarded private university in the Mekong Delta region. Below are some general reviews about the school:\nAdvantage:\n* Training quality:\n* The school has achieved accreditation of educational institution quality according to regulations of the Ministry of Education and Training.\n* Many training programs meet quality standards for undergraduate and master's level education.\n* The school is rated 4 stars for application orientation by the UPM higher education quality comparison system.\n* Modern facilities:\n* The school invests in building many spacious and modern buildings, including lecture halls, classrooms, laboratories, dormitories, electronic libraries, and swimming pools that meet national standards.\n* The campus is spacious and green, creating a comfortable learning and living environment for students.\n* Teaching staff:\n* The teaching staff is highly qualified and experienced.\n* Enthusiastic and dedicated to the profession, always ready to support students in their studies and research.\n* Extracurricular activities:\n* The school organizes many diverse and rich extracurricular activities, helping students develop comprehensively.\n* Many clubs, teams, and student groups are active.\n* Job opportunities:\n* The school has cooperative relationships with many businesses, creating internship and job opportunities for students after graduation.\n* Many graduates have stable jobs.\nSome points to note:\n* As a private school, tuition may be higher than public schools.\n* Although it is a high quality school in the Mekong Delta region, compared to the top schools in the country, there are still many points that need to be improved.\nOverview:\nNam Can Tho University is a worthy choice for those who want to study in a modern, dynamic environment with many development opportunities.\nTo have a more objective and detailed view, you can refer to more information on the school's website, student forums or visit the school directly.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_35"
+      },
+      {
+        "name": "Đạt",
+        "review": "Nam Can Tho University (DNC) is one of the prestigious educational institutions in the Mekong Delta region, outstanding with modern facilities, experienced lecturers and training programs linked to practice.\n\nIn particular, the school's Faculty of Dentistry is well-invested with a system of standard practice rooms and clinics, helping students have conditions to study and practice practical skills. The training program is always updated according to advanced medical trends, creating a solid foundation for students upon graduation. This is an ideal choice for those who are passionate about dentistry and wish to develop a career in the field of oral health care.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_36"
+      },
+      {
+        "name": "Trâm Nguyễn",
+        "review": "Nam Can Tho University is constantly innovating and developing in the direction of applied training, keeping up with modern educational trends. Students are equipped with solid professional knowledge, practical skills and creative thinking to meet labor market needs.\nModern facilities, from lecture halls, laboratories, practice centers to electronic libraries, all meet standards to provide the best learning environment. The school also has a hospital, sports complex and spacious dormitories, creating favorable conditions for students to study.\nA team of experienced lecturers, dedicated to their profession, always accompanies students on their path of learning and personal development. The school focuses on training not only knowledge but also soft skills, professional ethics and responsibility, helping students to comprehensively improve.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_37"
+      },
+      {
+        "name": "Võ Huỳnh Đông Thư",
+        "review": "The Department of Dentistry at Southern Can Tho University is one of the well-invested fields with a modern training program that closely follows practice. The school owns spacious facilities, an advanced dental practice room and its own hospital to help students have the best learning and practice environment. A team of experienced lecturers, dedicated to teaching, combined with a training program focusing on practical skills, ensures students have a solid foundation to become good dentists. This is a reliable choice for those who want to pursue the Dentistry industry.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_38"
+      },
+      {
+        "name": "Vy Kiều",
+        "review": "Nam Can Tho University (DNC) is one of the young but potential universities in the Southwest region. Established in 2013, the school is constantly developing and improving training quality, becoming an ideal destination for students inside and outside the region.\n\nFrom the first day of entering the school, the first impression is of modern facilities with a spacious and spacious campus. The school has many learning buildings that are fully equipped with amenities, spacious and airy classrooms, and all have air conditioning. In addition, the school's library is also an ideal place for students to research and study with thousands of books and a quiet space.\n\nThe best thing about studying here is having the opportunity to meet many new people from all over, everyone is friendly and open. Not only that, the school's teaching staff is very dedicated, teaches in an easy-to-understand manner and is always ready to support students in the learning process. Thanks to this environment, students can develop communication skills, teamwork and have more memorable experiences.\n\nIn addition to studying, DNC also has many exciting extracurricular activities such as academic, sports, art and volunteer clubs. These programs not only help students entertain after stressful classes but also help practice soft skills and create bonds between friends at school.\n\nThe school also has dormitories for students living far away, ensuring safety and full amenities. The area around the school has many delicious restaurants with reasonable prices, very suitable for student life. DNC's tuition is considered reasonable compared to the quality of training, and the school also has many scholarship policies to support students with good achievements or difficult circumstances.\n\nStudying at Nam Can Tho University is not only a process of accumulating knowledge but also beautiful youthful days, a place to bond friendships and create unforgettable memories. This is definitely an option worth considering for those who want a modern, dynamic learning environment and full of development opportunities.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_39"
+      },
+      {
+        "name": "Đặng Mỹ Kiều",
+        "review": "Southern Can Tho University in the Mekong Delta region. There are many major groups so you can easily choose the sub-major that suits you. The school offers graduate training and an international joint program. There are many good choices when it comes to the DNC. With equipment, each room is equipped with 2 air conditioners, modern computers, very strong network coverage... good service for studying. In particular, the school has a new building, the Institute of Health Sciences, with 11 floors designed in the shape of a 5-petal lotus - the flower that symbolizes the Southwest region and is considered the national flower of Vietnam. Each petal also symbolizes the perfection and beauty of the Medicine and Pharmacy industry. The teaching staff at Southern Can Tho University are also advisors and support students in scientific research activities, project implementation and participation in practical projects. The dedication of the teaching staff, along with a modern learning environment and advanced teaching methods, has created a solid foundation to help students be confident and ready to face challenges in their careers. future.",
+        "star": 5.0,
+        "date": "2025-02-10",
+        "ID_review": "d95cb502_40"
+      },
+      {
+        "name": "Sane Mian",
+        "review": "Nam Can Tho University was established in 2013 and has so far accepted training in more than 40 university majors from many fields. Not only does it stand out with its spacious campus and many trees, Nam Can Tho School is also equipped with many modern facilities and equipment to serve the learning and living needs of students such as a hospital, car showroom, dormitory, football field, swimming pool and most recently, the Institute of Health Sciences at the School. Although only recently established, the school has developed rapidly, with modern and methodical facilities and a training program that emphasizes practice and the development of communication and teamwork skills. The Department of Dentistry at Nam Can Tho University is one of the fields that the school focuses on and develops. With a systematic, realistic training program and modern facilities, the school has attracted many students to the industry.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_41"
+      },
+      {
+        "name": "20. Mỹ Liên",
+        "review": "Nam Can Tho University (DNC) is one of the leading private universities in the Mekong Delta region. Established in 2013, the school quickly developed and became an ideal destination for students who love a modern, dynamic learning environment.\n*Facilities:\nOne of the biggest strengths of Southern Can Tho University is its modern facilities. The school has a spacious, green campus with a well-invested system of lecture halls, laboratories, libraries and dormitories. In particular, the school also owns **Southern Can Tho University Hospital** - where medical and pharmaceutical students can practice while still in school. In addition, a sports center, gymnasium, and entertainment area were also built to serve the living and physical training needs of students.\n*Training Program:\nDNC offers a variety of majors from Medicine, Engineering, Technology to Economics, Law and Tourism. The curriculum is designed in a practical direction, combining theory with practice. The school also has many extracurricular activities, seminars and international exchange programs, giving students the opportunity to interact, learn and develop soft skills.\n*Teaching Team:\nLecturers at DNC are all highly professional, dedicated and ready to support students. In addition, the school also invites many successful experts and businessmen to teach and guide students, helping them have a more realistic view of the profession they pursue.\n*Job Opportunities:\nThanks to the training program associated with practice, graduates from Nam Can Tho University have many job opportunities. The school has the **Center for Student Support and Business Relations**, which regularly organizes career guidance sessions and connects students with businesses. The rate of students having jobs after graduation is quite high, especially in the fields of Medicine, Pharmacy, Technology and Economics.\n*Student Activities:\nDNC students are encouraged to participate in many extracurricular activities such as academic clubs, sports, arts and volunteer activities. This is not only an opportunity for entertainment but also helps students develop soft skills and build relationships.\n*Tuition and Scholarships:\nTuition fees at Southern Can Tho University are considered appropriate compared to the quality of training. The school also has many scholarship policies for excellent students and students in difficult circumstances, helping them have the best learning opportunities.\n\n*South Can Tho University is a good choice for those who want to study in a modern, practical environment and rich in development opportunities. With spacious facilities, a team of quality lecturers and training programs linked to reality, DNC is increasingly asserting its position in the Vietnamese education system.\n\nIf you are looking for a dynamic university with many development opportunities and a good learning environment, Nam Can Tho University is a choice worth considering!",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_42"
+      },
+      {
+        "name": "4. Nguyễn Thị Kim Chi",
+        "review": "I am currently studying at Nam Can Tho University, a school that I always believe in and dream of attending. The school is equipped with modern facilities and a vibrant learning atmosphere, which greatly supports my learning process. The school also organizes meaningful activities to contribute to the community, contributing to building a young generation that is both knowledgeable and socially responsible. Besides studying, the school also organizes diverse extracurricular activities such as sports (basketball, volleyball, soccer) and interesting clubs, helping students develop comprehensively. With modern teaching methods, I appreciate my school even more.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_43"
+      },
+      {
+        "name": "Nguyễn Việt Phúc",
+        "review": "NCT University is a school with good training quality with a team of enthusiastic and experienced lecturers. Modern facilities and a dynamic learning environment help students have many opportunities to develop. In addition to professional knowledge, the school also organizes many useful extracurricular activities. Overall, this is a university worth attending.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_44"
+      },
+      {
+        "name": "22. Thanh Phong",
+        "review": "The Dental - Maxillofacial - Facial training program at Southern Can Tho University is designed to equip students with in-depth knowledge and solid practical skills. With modern facilities, regular investment and a team of experienced lecturers, students will have the best learning and practice conditions.\n\nThanks to that, students will confidently become good dentists, meeting the increasing needs of the industry. Open job opportunities, a dynamic learning environment and a promising career future are attractive factors that attract many young people to choose this field of study. In particular, having access to the most advanced dental technology will help students always update their knowledge and be ready to face challenges in the profession.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_45"
+      },
+      {
+        "name": "Lê Châu Anh Thy",
+        "review": "Nam Can Tho University is an ideal learning environment with excellent training quality. The school offers a diverse curriculum, ensuring students are equipped with solid knowledge and practical skills. The school's facilities are modern, with comfortable lecture halls, laboratories and libraries, creating favorable conditions for learning and research. The teaching staff here is not only professional but also dedicated, always ready to support students. In addition, the school also focuses on rich extracurricular activities, helping students develop comprehensively and improve soft skills.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_46"
+      },
+      {
+        "name": "Minh Nhựt Phạm",
+        "review": "The Department of Dentistry at Southern Can Tho University is designed with a systematic training program, including both theoretical knowledge and practical skills.\nThe Department of Dentistry and Stomatology of Southern Can Tho University has a team of lecturers who are leading experts with many years of experience in the field of Dentistry.\nLecturers are always enthusiastic in guiding and supporting students in the learning and research process.\nStudents have the opportunity to intern at these facilities, helping them gain practical experience and become familiar with the professional working environment.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_47"
+      },
+      {
+        "name": "Thị Thuý An Nguyễn",
+        "review": "I have had many positive experiences while studying at Nam Can Tho University. The first impression is the modern facilities. The school campus is spacious, clean, and fully equipped with modern learning equipment, from computer rooms to laboratories, helping me and my students have the best learning conditions.\n\nThe school's teaching staff is also very enthusiastic and dedicated. Teachers are not only good at their profession but also ready to support students, answer all questions, and always create a feeling of comfort and closeness. This helps me be more confident in studying and ready to ask teachers when I encounter difficulties.\n\nIn addition, extracurricular activities and student clubs are very diverse, creating opportunities for me to connect with many friends and develop soft skills. I can participate",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_48"
+      },
+      {
+        "name": "Duy Tường Đào",
+        "review": "Nam Can Tho University is known as one of the prestigious higher education institutions in the Mekong Delta region, with the mission of providing high quality human resources for society. One of the outstanding factors that help the school build its reputation is its team of excellent lecturers, with high educational qualifications, extensive experience and a sense of responsibility in their work.\n\nThe school's teaching staff includes masters and doctorates from many different professional fields. They not only bring students quality lectures, update modern knowledge, but also impart valuable practical experiences. The diversity of lecturers' expertise helps students access many new perspectives, improving their thinking and creativity. The school pays special attention to selecting good, knowledgeable and dedicated lecturers, making an important contribution to training students who are not only good at theory but also strong in practical skills.\n\nTo improve the quality of education, Southern Can Tho University also actively cooperates internationally, organizing academic exchange programs with lecturers from developed countries. Classes and seminars with the participation of foreign experts not only bring new knowledge but also help students become familiar with the globalized learning environment, thereby expanding their horizons and opportunities. enter better. In addition, the school also regularly invites leading PhDs and masters to teach specialized subjects, focusing on improving practical skills and in-depth understanding of the careers that students pursue.\n\nNot only stopping at teaching, the teaching staff at Southern Can Tho University are also advisors and support students in scientific research activities, project implementation and participation in real-life projects. international. This not only gives students the opportunity to apply their learning knowledge into practice, but also improves their ability to self-study, research and work in groups, skills that are extremely necessary in today's working environment. .\n\nThe school always sets the goal of comprehensive development for students, from professional knowledge, professional skills to professional ethics. The dedication of the teaching staff, along with a modern learning environment and advanced teaching methods, has created a solid foundation to help students be confident and ready to face challenges in their careers. future. Nam Can Tho University is not only a place to provide knowledge but also a launching pad to help students reach out and develop themselves in an increasingly competitive society.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_49"
+      },
+      {
+        "name": "20.Lâm Hiếu Nhân",
+        "review": "Nam Can Tho University is a school with extremely rapid development with modern facilities and an extremely excellent teaching staff. Along with that, the school also has convenience stores, multi-functional gyms and especially the school library, which is invested in a wealth of books and documents for students to refer to, which is a valuable treasure for students. DNC member.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_50"
+      },
+      {
+        "name": "Chi Đặng Linh",
+        "review": "The school has modern facilities, each classroom is equipped with air conditioning, no need to worry about heat. Many lecturers are very dedicated and cute, especially the library manager who is very friendly with students 🙆🏻‍♀️🙆🏻‍♀️🙆🏻‍♀️. The school has many sports activities such as soccer, volleyball, swimming,... especially the school updates the trend of adding pickleball to teaching 🙆🏻‍♀️💖",
+        "star": 5.0,
+        "date": "2025-02-10",
+        "ID_review": "d95cb502_51"
+      },
+      {
+        "name": "Trần Thế Vinh 12a2 -",
+        "review": "Nam Can Tho University has achieved accreditation for educational institution quality according to the regulations of the Ministry of Education and Training and achieved certification for meeting educational quality standards for 11 regular undergraduate and master's training programs. These are important milestones, affirming that the school is an advanced, multi-disciplinary, multi-field training facility - international integration, meeting the requirements of industrialization and modernization of the country.\n\nIn 2020, the school was one of 30 star-rated educational institutions, achieving 3-star international standards according to the \"University Performance Metrics\" (UPM) comparative ranking system.\n\nDNC is a multi-disciplinary training school in many fields such as: Health, Economics, Engineering Technology, Social Sciences and Humanities with admission method based on academic transcripts, high school test scores and according to the results of the competency assessment exam. Every year, the school spends tens of billions of dong in scholarship funds for new students, students, and trainees.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_52"
+      },
+      {
+        "name": "Lã Tường Vy",
+        "review": "Southern Can Tho University is a university with modern facilities and a team of professional, enthusiastic and dedicated lecturers. There are also many activities, clubs and meetings from experts in various fields invited by the school.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_53"
+      },
+      {
+        "name": "Mai Tuyết",
+        "review": "I am currently studying Dentistry at school. For me, this is a challenging but also extremely interesting experience. During the learning process, we acquire knowledge about diagnosing and treating oral and maxillofacial diseases, etc., while also practicing meticulous and sophisticated practical skills. The special thing to mention is that the school provides extremely modern equipment to serve the major. Next is the dedicated guidance from the team of lecturers, helping us know more, learn more and be more confident in the journey to become a dentist ❤️👩🏻‍⚕️",
+        "star": 5.0,
+        "date": "2025-03-13",
+        "ID_review": "d95cb502_54"
+      },
+      {
+        "name": "Yến Trang Đỗ Nguyễn",
+        "review": "Nam Can Tho University is one of the most modern private schools in the Mekong Delta, with a dynamic learning environment, focusing on practice and developing professional skills. The school has the Institute of Health Research & Development, a leader in medical and pharmaceutical research, biotechnology and health care, with a team of experienced experts and advanced equipment. In particular, the school's Faculty of Dentistry and Maxillofacial Medicine provides thorough training, combining theory and practice at the hospital, helping students become professionally qualified and ready to meet practical needs in the dental field.",
+        "star": 5.0,
+        "date": "2025-04-10",
+        "ID_review": "d95cb502_55"
+      },
+      {
+        "name": "Thúy Ngân",
+        "review": "Southern Can Tho University is one of the prominent private universities in the Mekong Delta region, Vietnam. The school is known for its diverse training programs, including fields such as economics, engineering, medicine and information technology. I am very happy to study at such a school.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_56"
+      },
+      {
+        "name": "Myduyen",
+        "review": "Southern Can Tho University is a great school. The first thing is that this place has many beautiful views, airy and spacious space. The team of teachers here is not only experienced but also teaches very enthusiastically. The classrooms are fully equipped with equipment, each room is also equipped with air conditioning",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_57"
+      },
+      {
+        "name": "Nguyên Nguyễn",
+        "review": "Study until 2nd year at school. You can see that the supporting equipment for learning is very complete. Highly qualified lecturers, learning from good lecturers from Ho Chi Minh City in teaching. The educational environment ensures adequate conditions for students to study and participate in movement activities. The scoring rules have changed, but I think it helps me study harder. The school campus is fully equipped, with many buildings and classrooms. There are many programs to help you have more skills in the learning and development process. The school is also very worthy to study and develop yourself.",
+        "star": 5.0,
+        "date": "2025-03-20",
+        "ID_review": "d95cb502_58"
+      },
+      {
+        "name": "Tiên Thủy",
+        "review": "Modern facilities, very new equipment. Lecturers are very good at teaching, very attentive to students. Always make students feel comfortable when studying, not stressed",
+        "star": 5.0,
+        "date": "2025-02-10",
+        "ID_review": "d95cb502_59"
+      },
+      {
+        "name": "Thảo My Huỳnh",
+        "review": "Modern facilities, from computers to air conditioners for students, and a research library for students. There is a convenience store on campus, a cool campus, a team of dedicated lecturers, and also creates many playgrounds for students through experiential activities.",
+        "star": 5.0,
+        "date": "2024-12-10",
+        "ID_review": "d95cb502_60"
+      }
+    ],
+    "ID_place": "d95cb502"
+  }
+]
