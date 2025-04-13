@@ -1,0 +1,13 @@
+Location ID: 19
+Location Name: KFC_Đường_Trần_Hoàng_Na_Cần_Thơ
+Address: 207-209-211, Đ. Nguyễn Hiền, Khu dân cư 91B, Ninh Kiều, Cần Thơ 94000
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['gooddddd', 'ok', 'Ngonnnnnnnn', 'open widely', 'Enthusiastic', 'cheerful', 'delicious', 'love', 'good', 'Clean', 'tidy', 'Great', 'Enthusiastic', 'attentive', 'Great', 'sunny', 'delivered on time', 'delicious chicken', 'many offers', 'enthusiastic', 'cheerful', 'spacious', 'comfortable', 'spacious', 'clean', 'delivers food quickly', 'right dishes', 'delicious', 'enthusiastic', 'eager to welcome', 'talk politely', 'politely', 'cute', 'Delicious', 'quick', 'enthusiastic', 'worth the experience', 'comfortable', 'extremely good', 'Fast service', 'friendly', 'attentive', 'great', 'cute', 'great', 'best', 'Clean', 'delicious', 'friendly', 'Reasonable price']",
+    "danh_sach_tu_xau": "['Not satisfied at all', 'too hot', 'bitter', \"wasn't spicy\", 'rolled her eyes', 'scolded me', 'miserable', 'Worst', 'slow', 'late', 'not responsible', 'waited 40 minutes', 'ignored', 'angry', 'cold', \"don't understand\"]",
+    "GPT": {
+        "phan_tram_tot": "75.76",
+        "phan_tram_xau": "24.24"
+    }
+}

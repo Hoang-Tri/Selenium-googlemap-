@@ -320,8 +320,8 @@ def process_places_from_urls(driver,keyword_name="default"):
 
         
         # Chỉ tạo file cho những địa điểm có ít nhất 20 reviews
-        if len(reviews) < 20:
-            continue
+        # if len(reviews) < 20:
+        #     continue
 
         # Định dạng tên file tránh trùng lặp
         csv_filename = f"{place_id}_{place_name}_{scraped_date}.csv"

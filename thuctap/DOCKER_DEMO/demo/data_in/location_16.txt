@@ -1,0 +1,13 @@
+Location ID: 16
+Location Name: Trường_Phổ_Thông_FPT_Cần_Thơ
+Address: Số 600 Nguyễn Văn Cừ Nối Dài, An Bình, Bình Thủy, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['fun', 'cute', 'ideal', 'comprehensive development', 'Good', 'polite', 'independent', 'caring', 'easy to find', 'clean', 'open', 'good', 'fine', 'worthwhile', 'cute', 'number 1', 'clear']",
+    "danh_sach_tu_xau": "['difficult', 'hateful', 'degraded', 'no hot water', \"doesn't work\", 'annoyingly', 'weak', 'controlled', 'annoying', 'confusing', 'disappointed', 'weak', 'confusing', 'not explained clearly', 'gangster', 'weak']",
+    "GPT": {
+        "phan_tram_tot": "51.52",
+        "phan_tram_xau": "48.48"
+    }
+}

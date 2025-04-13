@@ -1,0 +1,13 @@
+Location ID: 18
+Location Name: Lotte_Cinema_Ninh_Kiều
+Address: Tầng 3 TTTM Lotte Mart, 84 Đ. Mậu Thân, An Hoà, Ninh Kiều, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['Good', 'relax', 'with friends', 'Good good', 'Good', 'Perfect', 'good', 'Same standards', 'Comfortable', 'good feeling', 'nice for relax', 'Good atmosphere', 'friendly', 'Ok', 'Ok', 'full fill your needs', 'Good', 'Friendly', 'good', 'nice', 'Good', 'Good', 'ok', 'Very happy', 'Great', 'great', 'ok', 'Good', 'Best', 'Enjoy', 'good', 'Nice', 'Good', 'Good', 'Okay', 'OK', 'Like', 'great', 'OK', 'Good', 'Good', 'Beautiful', 'Interesting', 'Interesting', 'Ok', 'good', 'Ok']",
+    "danh_sach_tu_xau": "[\"Didn't enjoy\", 'unorganised', 'not professional', 'Not comfortable', 'Cheap']",
+    "GPT": {
+        "phan_tram_tot": "90.38",
+        "phan_tram_xau": "9.62"
+    }
+}

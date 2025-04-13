@@ -1,0 +1,10 @@
+Location ID: 6
+Location Name: Can_Tho_University
+Address: Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ
+Data LLM:
+{
+    "danh_sach_tu_tot": "Ok, OK, love, Perfect, fresh fresh fresh, Great, Good, Good, Good, interesting, relaxing, special, friendly, enthusiastic, super, cozy, rest, enjoy, relaxation, large, green, more than 100, good, spacious, airy, develop strongly, talented people, impressed, large, dynamic, famous, ideal, unique, lush green, leading, innovation, creativity, memorable, top largest, eldest, quality, top, key, longest history, educational training center, very high expertise, extensive experience, successful, largest area, great choice, high expertise, large, spearhead",
+    "danh_sach_tu_xau": "stressful, lost, late, toxicity, cursing, seeming superior, useless, Regret",
+    "percentage_tot": 86.89,
+    "percentage_xau": 13.11
+}

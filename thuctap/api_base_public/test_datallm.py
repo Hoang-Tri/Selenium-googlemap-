@@ -5,26 +5,16 @@ from chatbot.services.chatbot_api_agent_comment import FilesChatAgent
 
 # Hàm kết nối đến cơ sở dữ liệu MySQL
 def connect_to_database():
+    host = "localhost"
+    if os.getenv("IN_DOCKER") == "true":
+        host = "host.docker.internal"
+
     return mysql.connector.connect(
-        host="localhost",  
+        host=host,  
         user="root",      
         password="",       
         database="db_googlemap" 
     )
-# CREATE TABLE locations (
-#     id INT AUTO_INCREMENT PRIMARY KEY,
-#     name TEXT,
-#     address TEXT,
-#     data_llm TEXT
-# );
-
-# CREATE TABLE users_review (
-#     id INT AUTO_INCREMENT PRIMARY KEY,
-#     location_id INT,
-#     user_review TEXT,
-#     data_llm TEXT,
-#     FOREIGN KEY (location_id) REFERENCES locations(id)
-# );
 # Hàm lưu thông tin địa điểm vào bảng locations
 def save_location(name, address=None):
     conn = connect_to_database()
@@ -65,6 +55,8 @@ def calculate_percentage(danh_sach_tu_tot, danh_sach_tu_xau):
 # Hàm lưu thông tin người dùng vào bảng users
 def save_or_update_user(location_id, user_review, data_llm, danh_sach_tu_tot, danh_sach_tu_xau, percentage_tot, percentage_xau):
     conn = connect_to_database()
+
+
     cursor = conn.cursor(buffered=True)
 
     data = {
@@ -95,6 +87,7 @@ def save_or_update_user(location_id, user_review, data_llm, danh_sach_tu_tot, da
     conn.commit()
     cursor.close()
     conn.close()
+
 
 # Cập nhật data_llm trong bảng locations
 def update_location_data_llm(location_id):
@@ -139,6 +132,7 @@ def update_location_data_llm(location_id):
     cursor.close()
     conn.close()
 
+
 #lấy db về lưu thành file txt
 def export_location_to_txt(location_id):
     conn = connect_to_database()
@@ -173,6 +167,7 @@ def export_location_to_txt(location_id):
 
     cursor.close()
     conn.close()
+
 
 # Hàm xử lý file CSV và gọi API để lấy dữ liệu
 def process_csv_file(input_file):
