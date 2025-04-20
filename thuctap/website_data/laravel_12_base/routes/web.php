@@ -11,6 +11,7 @@ use App\Http\Controllers\UserGoogleMapsController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\UserReviewController;
+use App\Http\Controllers\NguoidungController;
 use Illuminate\Support\Facades\File;
 
 // Hiển thị form đăng nhập
@@ -62,8 +63,8 @@ Route::get('/google', [UserGoogleMapsController::class, 'index']);
 //location
 Route::get('/locations', [LocationController::class, 'index'])->name('locations.index');
 
-Route::get('/nguoidung/dashboard', [LocationController::class, 'showChart'])
-    ->name('nguoidung.dashboard')->middleware('auth');
+// Route::get('/nguoidung/dashboard', [LocationController::class, 'showChart'])
+//     ->name('nguoidung.dashboard')->middleware('auth');
 //upload file
 
 Route::get('/upload', function () {
@@ -74,3 +75,15 @@ Route::get('/upload', [FileUploadController::class, 'index'])->name('upload.inde
 
 Route::get('/download/{location_id}', [App\Http\Controllers\FileUploadController::class, 'download']);
 Route::get('/review', [App\Http\Controllers\FileUploadController::class, 'index']);
+
+// Route::get('/nguoidung/dashboard', [NguoidungController::class, 'index']);
+
+Route::get('/nguoidung/dashboard', [NguoidungController::class, 'showChart1'])->name('nguoidung.dashboard');
+Route::get('/nguoidung/show/{location_id}', [NguoidungController::class, 'showChart1'])->name('nguoidung.showChart1');
+
+Route::get('/nguoidung/chart/{id}', [NguoidungController::class, 'chart'])->name('nguoidung.chart');
+
+Route::get('/nguoidung/sosanh', [NguoidungController::class, 'showSoSanh'])->name('nguoidung.sosanh');
+
+Route::get('/sosanh/{id1}/{id2}', [\NguoidungController::class, 'soSanhPlace'])->name('sosanh.place');
+

@@ -1,0 +1,13 @@
+Location ID: 20
+Location Name: Là_CAFE_Nguyễn_Văn_Linh
+Address: 29D Đ. Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['good', 'good', 'good', 'good', 'polite', 'thoughtfully prepared', 'super large space', 'many tables and chairs', 'diverse', 'cool air-conditioned', 'Cute', 'friendly', 'Cute', 'enthusiastic', 'beautiful', 'airy', 'delicious', 'beautiful', 'large', 'quiet', 'suitable', 'satisfied', 'Delicious', 'spacious and comfortable', 'very friendly', 'convenient', 'enthusiastic', 'supportive', 'sweetly', 'spacious', 'Cool space', 'Cool', 'suitable', 'spacious', 'stable', 'serves well', 'cute', 'quiet', 'arranged', 'supported', 'Deserves 5 stars', 'Attentive']",
+    "danh_sach_tu_xau": "['not convenient', 'too sweet', \"doesn't smell very fragrant\", 'mild', 'gloomy attitude', 'too bad', 'so bad', 'spoke quickly', 'too soft to hear', 'not friendly', 'trash', 'noisy', 'so bad', 'dirty', 'no faucet', 'not cleaned thoroughly', 'trash', 'broken', 'not very good', 'unpleasant', 'disrespectful attitude', 'kicking the customer out', 'bad attitude', 'weak', 'not good', 'hot', 'unprofessional']",
+    "GPT": {
+        "phan_tram_tot": "60.87",
+        "phan_tram_xau": "39.13"
+    }
+}

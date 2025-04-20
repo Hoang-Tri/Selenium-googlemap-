@@ -53,10 +53,8 @@ def calculate_percentage(danh_sach_tu_tot, danh_sach_tu_xau):
     return percentage_tot, percentage_xau
 
 # Hàm lưu thông tin người dùng vào bảng users
-def save_or_update_user(location_id, user_review, data_llm, danh_sach_tu_tot, danh_sach_tu_xau, percentage_tot, percentage_xau):
+def save_or_update_user(location_id, user_review, data_llm, danh_sach_tu_tot, danh_sach_tu_xau, percentage_tot, percentage_xau, star=None, creat_date=None):
     conn = connect_to_database()
-
-
     cursor = conn.cursor(buffered=True)
 
     data = {
@@ -76,13 +74,15 @@ def save_or_update_user(location_id, user_review, data_llm, danh_sach_tu_tot, da
 
     if user_review_entry is None:
         cursor.execute(''' 
-            INSERT INTO users_review (location_id, user_review, data_llm) 
-            VALUES (%s, %s, %s)
-        ''', (location_id, user_review, data_llm_with_percentage))
+            INSERT INTO users_review (location_id, user_review, data_llm, star, creat_date) 
+            VALUES (%s, %s, %s, %s, %s)
+        ''', (location_id, user_review, data_llm_with_percentage, star, creat_date))
     else:
-        cursor.execute(""" 
-            UPDATE users_review SET data_llm = %s WHERE id = %s
-        """, (data_llm_with_percentage, user_review_entry[0]))
+        cursor.execute(''' 
+            UPDATE users_review 
+            SET data_llm = %s, star = %s, creat_date = %s
+            WHERE id = %s
+        ''', (data_llm_with_percentage, star, creat_date, user_review_entry[0]))
     
     conn.commit()
     cursor.close()
@@ -131,7 +131,6 @@ def update_location_data_llm(location_id):
     export_location_to_txt(location_id)
     cursor.close()
     conn.close()
-
 
 #lấy db về lưu thành file txt
 def export_location_to_txt(location_id):
@@ -189,6 +188,8 @@ def process_csv_file(input_file):
     for index, row in df.iterrows():
         location_name = row["places"]  
         user_name = row["user"]
+        star = row["star"] if "star" in row else None
+        creat_date = row["creat_date"] if "creat_date" in row else None
         comment = row["comment"]
         address = row["address"]  
 
@@ -242,12 +243,15 @@ def process_csv_file(input_file):
             percentage_tot, percentage_xau = calculate_percentage(danh_sach_tu_tot, danh_sach_tu_xau)
 
         except json.JSONDecodeError:
-            # Nếu có lỗi khi chuyển đổi JSON, đặt tỷ lệ về 0
             percentage_tot = 0
             percentage_xau = 0
 
-        save_or_update_user(location_id, user_name, json_string, danh_sach_tu_tot, danh_sach_tu_xau, percentage_tot, percentage_xau)
-        
+        save_or_update_user(
+            location_id, user_name, json_string,
+            danh_sach_tu_tot, danh_sach_tu_xau,
+            percentage_tot, percentage_xau,
+            star, creat_date
+            )
         result = {"location": location_name, "user": user_name, "response": json_string, "percentage_tot": percentage_tot, "percentage_xau": percentage_xau}
         local.append(result)
         

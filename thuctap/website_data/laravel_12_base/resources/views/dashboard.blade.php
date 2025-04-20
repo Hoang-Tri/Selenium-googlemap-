@@ -13,7 +13,7 @@
 <body>
     <div class="d-flex">
     <div class="sidebar">
-        <h2 >Chào mừng, {{ Auth::user()->fullname }}!</h2>
+        <h2>Chào mừng admin</h2>
         <ul>
             <li><a href="{{ url('/users') }}">User</a></li>
             <li><a href="{{ url('/locations') }}">Location</a></li>
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <a href="{{ url('/users') }}" style="text-decoration: none; color: inherit;">
+                    <a href="{{ url('/locations') }}" style="text-decoration: none; color: inherit;">
                         <div class="card text-center p-3 card-hover" style="border: 2px solid #ff4d4d; background-color:rgb(238, 143, 143);">
                             <i class="fas fa-map-marker-alt"></i>
                             <h5>Locations</h5>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="col-md-3">
-                    <a href="{{ url('/users') }}" style="text-decoration: none; color: inherit;">
+                    <a href="{{ url('/users-reviews') }}" style="text-decoration: none; color: inherit;">
                         <div class="card text-center p-3 card-hover" style="border: 2px solid rgb(230, 182, 25); background-color: #ffffe0;">
                             <i class="fas fa-star-half-alt"></i>
                             <h5>User-Review</h5>

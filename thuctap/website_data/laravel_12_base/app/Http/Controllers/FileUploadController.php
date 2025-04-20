@@ -34,7 +34,7 @@ class FileUploadController extends Controller
 
         // Lấy dữ liệu users_review liên quan
         $reviews = DB::table('users_review')
-            ->select('id', 'location_id', 'user_review', 'data_llm')
+            ->select('id', 'location_id', 'user_review','star', 'creat_date', 'data_llm')
             ->where('location_id', $location_id)
             ->get();
 
@@ -44,13 +44,15 @@ class FileUploadController extends Controller
 
         // Chuẩn bị nội dung CSV
         $csvLines = [];
-        $csvLines[] = "id,location_id,user_review,data_llm"; // Tiêu đề
+        $csvLines[] = "id,location_id,user_review,star,creat_date,data_llm"; // Tiêu đề
 
         foreach ($reviews as $row) {
             $csvLines[] = implode(",", [
                 $row->id,
                 $row->location_id,
                 '"' . str_replace('"', '""', $row->user_review) . '"',
+                '"' . str_replace('"', '""', $row->star) . '"',
+                '"' . str_replace('"', '""', $row->creat_date) . '"',
                 '"' . str_replace('"', '""', $row->data_llm) . '"'
             ]);
         }

@@ -115,9 +115,12 @@ class CustomPrompt:
             {{
                 "Đánh giá địa điểm"[
                     {{
+                    "ID": "Location ID"
                     "Place": "Tên địa điểm ",
                     "Address": "address ",
                     "Conclusion": "<Dựa vào danh sách từ tốt và danh sách từ xấu đưa ra kết luận Tốt hoặc Không tốt (không cần liệt kê những từ đó ra)>. ",
+                    "Good": "percentage_tot ",
+                    "Bad": "percentage_xau ",
                     "Because":" <Đưa ra vài lý do ngắn gọn(vì sao tốt, vì sao không tốt) dựa trên những dánh sách từ tốt và danh sách từ xấu (liên quan đến hai danh sách đó).>",
                     "Remedial direction": "<Dựa vào danh sách từ xấu đưa ra vài lý do để khắc phục những từ xấu đó>. ",
                     }}

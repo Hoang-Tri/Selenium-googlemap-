@@ -1,0 +1,13 @@
+Location ID: 22
+Location Name: GO!_Can_Tho_Supermarket
+Address: Lô, Số 1, KHU DÂN CƯ ĐÔ THỊ MỚI HƯNG PHÚ, Cái Răng, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['Good', 'cheap', 'Free', 'Great', 'delicious', 'good', 'convenient', 'big', 'good price', 'good', 'reasonable', 'good', 'vivid', 'Nice', 'attractive', 'loved', 'good', 'very good', 'cute', 'wonderful', 'great', 'clean', 'fresh', 'Nice', 'very large', 'interesting', 'Good', 'relax', 'like', 'acceptable', 'good', 'Mind blowing', 'recommendation', 'great', 'clean', 'upgraded', 'additional range of products', 'cheap price', 'cheaper', 'imports many foreign products', 'like', 'very tasty', 'the best', 'enjoyed a lot', 'friendly', 'helpful', 'good', 'Great', 'good', 'comfortable', 'decent', 'plenty of selection', 'wide number', 'lots of parking', 'enjoyed', 'fresh', 'nice', 'fast', 'diverse', 'friendly', 'amiable', 'efficient', 'Ok', 'Ok', 'new', 'decent', 'new', 'Awesome', 'fresh', 'Good', 'Good price', 'good', 'Good', 'Ok', 'Free parking', 'Convenient', 'large', 'good service', 'variety of food', 'wide', 'Good price', 'good', 'save money', 'Ok', 'Good', 'Ok', 'liked', 'convenient', 'best', 'ok', 'Ok', 'value for money', 'value for money', 'reasonable', 'easy to choose', 'beautiful', 'Good', 'Ok', 'tot', 'Day du']",
+    "danh_sach_tu_xau": "['understaffed', 'long queues', 'horrible', 'unfriendly', 'expensive', 'uncomfortably', 'harsh', 'hurt', 'not like', 'no halal', \"doesn't have most Western-type food and grocery items\", 'takes forever to do', 'limited', 'not much a western person wants to cook or eat', 'a little cheaper', 'unoccupied', 'Horrible', 'not fresh', 'Need to improve', 'avoid', 'ignorant', 'cheap', 'uncheerful', 'abandon', 'will not work', 'unavailable', \"don't like\", 'low price', 'cheaper', 'need', 'Nothing beyond', 'Nothing beyond', 'expensive']",
+    "GPT": {
+        "phan_tram_tot": "75.19",
+        "phan_tram_xau": "24.81"
+    }
+}

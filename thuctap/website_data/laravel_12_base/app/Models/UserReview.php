@@ -11,11 +11,11 @@ class UserReview extends Model
     protected $table = 'users_review'; // Bảng cần làm việc
     protected $primaryKey = 'id';
     public $timestamps = false;
-    protected $fillable = ['location_id', 'user_review', 'data_llm'];
+    protected $fillable = ['location_id', 'user_review','star', 'creat_date','data_llm'];
 
     // Định nghĩa mối quan hệ với bảng Location (khóa ngoại)
     public function location()
     {
-        return $this->belongsTo(Location::class, 'location_id'); // Đảm bảo 'location_id' là khóa ngoại
+        return $this->belongsTo(Location::class, 'location_id'); 
     }
 }

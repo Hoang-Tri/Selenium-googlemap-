@@ -1,0 +1,13 @@
+Location ID: 24
+Location Name: LOTTE_Mart_Can_Tho
+Address: 84 Đ. Mậu Thân, An Hội, Ninh Kiều, Cần Thơ 900000
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['Great', 'plenty', 'huge', 'big', 'Lovely', 'friendly', 'Diverse', 'enthusiastic', 'friendly', 'public-spirited', 'Got some snacks', 'drinks', 'Good', 'Ok', 'Free', 'cheap', 'Ok', 'Good', 'Nice', 'great', 'wide range', 'high quality', 'good', 'free parking', 'good', 'awesome', 'good', 'better', 'nice', 'godsend', 'Great', 'craving', 'fabulous', 'good', 'Nice', 'Nice', 'good', 'Decent', 'Good', 'Great', 'diverse', 'nice', 'pleasant', 'helpfull', 'well done', 'I love it!!', 'favorite', 'fun', 'enjoy', 'various', 'great', 'Love it', 'enjoy', 'Ok', 'best', 'good', 'cheap', 'good', 'Great', 'Nice', 'competitive', 'attract', 'ok', 'Clean', 'neat', 'Good', 'find what I need', 'Nice', 'big', 'various', 'Great', 'a lot of choices', 'available', 'Ok', 'Nice', 'Special', 'great', 'clean', 'nice view', 'Good', 'good', 'Lots', 'ngon', 're', 'Wide selection of products', 'Good staff', 'Clean', 'Modern', 'Great', 'Very good', 'reasonable prices', 'Nice', 'beautiful', 'good', 'Big', 'various', 'huge', 'Ok', 'Nice', 'Love', 'good atmosphere', 'good staffs', 'beautiful', 'Nice', 'great', 'Good', 'Very nice', 'like', 'Good']",
+    "danh_sach_tu_xau": "['no', 'hot', 'Too jot', 'crowded', 'higher', 'better', 'surprisingly disappointing', \"wasn't\", 'poor', 'low on customer service staff', 'expensive', 'horrible', 'no concept', 'cutting in line', 'do nothing', 'zero star', 'impossible', 'hot', 'crowded', 'Mouldy', 'bone bits', 'crisis', 'be careful', 'not true', 'busy', 'depresses', 'more expensive', 'can not pack car', 'fired']",
+    "GPT": {
+        "phan_tram_tot": "78.99",
+        "phan_tram_xau": "21.01"
+    }
+}

@@ -8,6 +8,30 @@ import json, re
 from app.config import settings
 from pathlib import Path
 from ggmap.crawl_api import crawl_places
+import mysql.connector
+
+
+# connect_db
+def get_place_data_from_db(place_name: str):
+    conn = mysql.connector.connect(
+        host="localhost",
+        user="root",      
+        password="",       
+        database="db_googlemap" 
+    )
+    cursor = conn.cursor(dictionary=True)
+
+    query = "SELECT id, data_llm FROM locations WHERE name LIKE %s"
+    cursor.execute(query, (place_name,))
+    result = cursor.fetchone()
+
+    cursor.close()
+    conn.close()
+
+    if not result:
+        raise ValueError(f"Không tìm thấy dữ liệu cho địa điểm: {place_name}")
+
+    return result["id"], result["data_llm"]
 # Tạo router cho người dùng
 router = APIRouter(prefix="/base", tags=["base"])
 
@@ -50,6 +74,12 @@ async def chat_ingestion(
     input_folder = Path("demo") / "data_in"
     vector_folder = Path("demo") / "data_vector"
 
+      # Đọc dữ liệu từ DB
+    try:
+        id, content = get_place_data_from_db(Place)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
     Ingestion(settings.LLM_NAME).ingestion_folder(
         path_input_folder=str(input_folder),
         path_vector_store=str(vector_folder),
@@ -63,8 +93,12 @@ async def chat_ingestion(
         json_string = response.replace('```json', '').replace('```', '').strip()
         parsed = json.loads(json_string)
 
-        return Base(id="chatbot-response", data=json.dumps(parsed, ensure_ascii=False, indent=4))
-
+        # return Base(id="chatbot-response", data=json.dumps(parsed, ensure_ascii=False, indent=4))
+        return Base(
+            id=str(id),  # Trả về id của địa điểm
+            data=json.dumps(parsed, ensure_ascii=False, indent=4),
+        )
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")
     

@@ -297,7 +297,7 @@ def process_places_from_urls(driver,keyword_name="default"):
                     review_counter += 1
 
                 all_data.append(data)
-                place_counter += 1  # Tăng số thứ tự địa điểm
+                place_counter += 1  
         except Exception as e:
             print("Lỗi khi xử lý:", e)
             continue
@@ -317,11 +317,6 @@ def process_places_from_urls(driver,keyword_name="default"):
         address = item.get("address", "Không rõ địa chỉ").strip()
         link = item.get("link", "Không có link").strip()
         reviews = item.get("reviews", [])
-
-        
-        # Chỉ tạo file cho những địa điểm có ít nhất 20 reviews
-        # if len(reviews) < 20:
-        #     continue
 
         # Định dạng tên file tránh trùng lặp
         csv_filename = f"{place_id}_{place_name}_{scraped_date}.csv"

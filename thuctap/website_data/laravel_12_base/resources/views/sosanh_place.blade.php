@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Giao Diện Người Dùng</title>
+    <title>Trang Giao Diện So Sánh</title>
     <link rel="stylesheet" href="{{ asset('css/style_nguoidung.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -22,11 +22,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
-                    </li> -->
                     <li class="nav-item">
-                        <a href="{{ route('nguoidung.sosanh') }}" class="nav-link active" aria-current="page" href="#">So sánh</a>
+                        <a href="{{ route('nguoidung.dashboard') }}" class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
                     </li>
                     <li class="nav-item">
                         <button type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#infoModal">
@@ -55,35 +52,6 @@
             </div>
         </div>
     </nav>
-
-    <div class="modal fade" id="extraRequestModal" tabindex="-1" aria-labelledby="extraRequestModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="extraRequestModalLabel">Yêu cầu thêm lượt gửi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Form gửi yêu cầu thêm -->
-                <form action="https://formspree.io/f/your-form-id" method="POST">
-                    <label for="email">Email của bạn:</label>
-                    <input type="email" id="email" name="email" required class="form-control">
-                    <br>
-                    <label for="username">Tên của bạn:</label>
-                    <input type="text" id="username" name="username" required class="form-control">
-                    <br>
-                    <label for="quantity">Số lượt muốn thêm:</label>
-                    <input type="number" id="quantity" name="quantity" required class="form-control">
-                    <br>
-                    <label for="reason">Lý do:</label>
-                    <textarea id="reason" name="reason" required class="form-control"></textarea>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
-                </form>
-            </div>
-            </div>
-        </div>
-    </div>
     <!-- Modal profile -->
     <div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -163,54 +131,49 @@
             </div>
         </div>
     </div>
-
     <div class="slogan-container">
        <h2>Trải nghiệm tốt bắt đầu từ quyết định đúng</h2>
     </div>
-    <div class="container mt-4">
+    <div class="container-fluid mt-3 px-4 ">
         <div class="mt-3">
-            <!-- <button class="btn btn-warning" onclick="addExtraRequest()">Nạp tiền để gửi thêm yêu cầu</button> -->
-            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#extraRequestModal">Nạp tiền để gửi thêm yêu cầu</button>
+            <button class="btn btn-warning" onclick="addExtraRequest()">Nạp tiền để gửi thêm yêu cầu</button>
             <p id="request-count">Số lần gửi còn lại hôm nay: ...</p>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="search-box">
-                    <h3>Đánh giá địa điểm</h3>
-                    @if($recentPlaces->count())
-                        <div class="mb-2">
-                            <small class="text-muted">Gợi ý địa điểm gần đây:</small>
-                            <ul class="list-unstyled mb-2">
-                                @foreach ($recentPlaces as $place)
-                                    <li>
-                                        <a href="javascript:void(0)" onclick="document.getElementById('place').value = '{{ $place }}'" class="text-primary">
-                                            {{ $place }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-box p-4 shadow rounded bg-light">
+                    <h3>So sánh địa điểm</h3>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="placeA" placeholder="Nhập địa điểm A...">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="placeB" placeholder="Nhập địa điểm B...">
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-primary w-100" onclick="askComparePlace()">Gửi</button>
+                            </div>
                         </div>
-                    @endif
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="place" placeholder="Nhập tên địa điểm..." />
-                        <button class="btn btn-primary" onclick="askPlace()">Gửi</button>
+
+                        <div class="mt-3">
+                            <p><strong>Phản hồi:</strong></p>
+                            <div id="response-ask" class="response-box"></div>
+                        </div>
                     </div>
-                    <p><strong>Phản hồi:</strong></p>
-                    <div id="response-ask" class="response-box"></div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div id="chart-container-1" style="width: 50vh; height: 100%;"></div>
             </div>
             <div class="col-md-6">
-                <div class="search-box">
-                    <h3>Biểu đồ đánh giá tổng quan</h3>
-                    <canvas id="gptChart"></canvas>
-                </div>
+                <div id="chart-container-2" style="width: 50vh; height: 100%x;"></div>
             </div>
         </div>
-        
-        <div id="chart-container">
-            <!-- Nội dung biểu đồ sẽ chèn vào đây -->
-        </div>
-    
+
         <div class="row mt-4">
             <div class="history-box mx-auto">
                 <h4>Lịch sử đánh giá</h4>
@@ -259,88 +222,204 @@
             alert("Bạn đã nạp thành công 1 yêu cầu thêm!");
         }
 
-        async function askPlace() {
-            const place = document.getElementById("place").value.trim();
-            if (!place) {
-                alert("Vui lòng nhập tên địa điểm.");
+        async function askComparePlace() {
+            const placeA = document.getElementById("placeA").value.trim();
+            const placeB = document.getElementById("placeB").value.trim();
+
+            if (!placeA || !placeB) {
+                alert("Vui lòng nhập cả hai địa điểm.");
                 return;
             }
+
             if (!canSendRequest()) {
                 alert("Bạn đã hết lượt gửi yêu cầu hôm nay!");
                 return;
             }
+
             const responseElement = document.getElementById("response-ask");
             responseElement.innerText = "Đang gửi yêu cầu...";
 
             try {
-                // Request to your external API to get reviews and other data
-                const res = await fetch("http://localhost:60074/base/chat-ingestion/", {
-                    method: "POST",
-                    headers: {
-                        "accept": "application/json",
-                        "Content-Type": "application/x-www-form-urlencoded",
-                        "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
-                    },
-                    body: new URLSearchParams({ Place: place })
-                });
+                const [resA, resB] = await Promise.all([
+                    fetch("http://localhost:60074/base/chat-ingestion/", {
+                        method: "POST",
+                        headers: {
+                            "accept": "application/json",
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
+                        },
+                        body: new URLSearchParams({ Place: placeA })
+                    }),
+                    fetch("http://localhost:60074/base/chat-ingestion/", {
+                        method: "POST",
+                        headers: {
+                            "accept": "application/json",
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
+                        },
+                        body: new URLSearchParams({ Place: placeB })
+                    })
+                ]);
 
-                const data = await res.json();
+                const dataA = await resA.json();
+                const dataB = await resB.json();
 
-                if (res.ok) {
-                    try {
-                        const parsed = JSON.parse(data.data);
-                        const reviews = parsed["Đánh giá địa điểm"];
-                        let html = "";
-                        reviews.forEach(item => {
-                            html += `
-                                <div class="card">
-                                    <button onclick="loadChart(${item.ID})">Xem thông tin</button>
-                                </div>
-                            `;
-                        });
-                        responseElement.innerHTML = html;
+                let html = "";
 
-                    } catch (err) {
-                        console.error("Lỗi khi xử lý dữ liệu phản hồi", err);
-                    }
-                    
-                    let requestCounts = JSON.parse(localStorage.getItem("askPlaceCounts")) || {};
-                    const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
-                    requestCounts[today] = (requestCounts[today] || 0) + 1;
-                    localStorage.setItem("askPlaceCounts", JSON.stringify(requestCounts));
+                if (resA.ok && resB.ok) {
+                    const parsedA = JSON.parse(dataA.data);
+                    const parsedB = JSON.parse(dataB.data);
 
-                    // Thêm vào lịch sử
-                    if (place) {
-                        addHistoryItem(`Đánh giá địa điểm: ${place}`);
-                    }
-                    if (!canSendRequest()) {
-                        responseBox.innerHTML = "Bạn đã vượt quá số lần yêu cầu miễn phí trong ngày. Hãy nạp tiền để gửi thêm yêu cầu.";
-                        return;
-                    }
+                    const reviewsA = parsedA["Đánh giá địa điểm"];
+                    const reviewsB = parsedB["Đánh giá địa điểm"];
+
+                    // Nút xem tất cả biểu đồ
+                    html += `
+                        <div class="text-center mb-3">
+                            <button onclick="loadAllCharts()" class="btn btn-primary">Xem thông tin</button>
+                        </div>
+                    `;
+
+                    // Danh sách cho Place A
+                    html += `
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-center">Phản hồi cho <strong>${placeA}</strong></h5>
+                    `;
+
+                    reviewsA.forEach(item => {
+                        const chartContainerId = `chart-container-a-${item.ID}`;
+                        html += `
+                            <div class="card mb-2 p-2">
+                                <div id="${chartContainerId}" class="mt-2" data-location-id="${item.ID}"></div>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                            </div> <!-- end col A -->
+                            <div class="col-md-6">
+                                <h5 class="text-center">Phản hồi cho <strong>${placeB}</strong></h5>
+                    `;
+
+                    reviewsB.forEach(item => {
+                        const chartContainerId = `chart-container-b-${item.ID}`;
+                        html += `
+                            <div class="card mb-2 p-2">
+                                <div id="${chartContainerId}" class="mt-2" data-location-id="${item.ID}"></div>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                            </div> <!-- end col B -->
+                        </div> <!-- end row -->
+                    `;
+                    html += `
+                        <h3 class="text-center">So sánh giữa <strong>${placeA}</strong> và <strong>${placeB}</strong></h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Thông tin</th>
+                                    <th>${placeA}</th>
+                                    <th>${placeB}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+
+                    reviewsA.forEach((itemA, index) => {
+                        const itemB = reviewsB[index]; 
+
+                        html += `
+                            <tr>
+                                <td>Địa chỉ</td>
+                                <td>${itemA.Address}</td>
+                                <td>${itemB.Address}</td>
+                            </tr>
+                            <tr>
+                                <td>Tỷ lệ đánh giá tốt (%)</td>
+                                <td>${itemA.Good}%</td>
+                                <td>${itemB.Good}%</td>
+                            </tr>
+                            <tr>
+                                <td>Tỷ lệ đánh giá xấu (%)</td>
+                                <td>${itemA.Bad}%</td>
+                                <td>${itemB.Bad}%</td>
+                            </tr>
+                            <tr>
+                                <td>Kết luận</td>
+                                <td>${itemA.Conclusion}</td>
+                                <td>${itemB.Conclusion}</td>
+                            </tr>
+                            <tr>
+                                <td>Lý do</td>
+                                <td>${itemA.Because}</td>
+                                <td>${itemB.Because}</td>
+                            </tr>
+                            <tr>
+                                <td>Hướng khắc phục</td>
+                                <td>${itemA["Remedial direction"]}</td>
+                                <td>${itemB["Remedial direction"]}</td>
+                            </tr>
+                        `;
+                    });
+
+                    html += `
+                            </tbody>
+                        </table>
+                    `;
+                    // Lưu lịch sử
+                    addHistoryItem(`So sánh địa điểm: ${placeA} & ${placeB}`);
+
                     increaseRequestCount();
+
+                    // Cập nhật số lượt gửi yêu cầu
+                    let requestCounts = JSON.parse(localStorage.getItem("askPlaceCounts")) || {};
+                    const today = new Date().toISOString().split("T")[0];
+                    requestCounts[today] = (requestCounts[today] || 0) + 2;
+                    localStorage.setItem("askPlaceCounts", JSON.stringify(requestCounts));
+                } else {
+                    html = "Không thể lấy dữ liệu cho một trong hai địa điểm.";
                 }
-                window.loadChart = async function(location_id) {
-                    console.log("loadChart được gọi với location_id:", location_id);
-                    if (location_id) {
-                        try {
-                            const res = await fetch(`/nguoidung/chart/${location_id}`);
-                            if (res.ok) {
-                                const htmlFromServer = await res.text();
-                                document.getElementById("chart-container").innerHTML = htmlFromServer;
-                            } else {
-                                console.error("Không thể lấy dữ liệu từ controller", res.status);
-                            }
-                        } catch (err) {
-                            console.error("Lỗi khi fetch dữ liệu từ controller", err);
-                        }
-                    } else {
-                        console.error("location_id không hợp lệ");
-                    }
-                };
+
+                responseElement.innerHTML = html;
+
+                if (!canSendRequest()) {
+                    responseElement.innerHTML += "<p class='text-danger mt-2'>Bạn đã vượt quá số lần yêu cầu miễn phí trong ngày.</p>";
+                }
+                increaseRequestCount();
+
             } catch (error) {
                 responseElement.innerText = "Lỗi khi gọi API: " + error;
             }
         }
+
+        // Gắn ngoài hàm chính
+        async function loadChart(location_id, containerId) {
+            try {
+                const res = await fetch(`/nguoidung/chart/${location_id}`);
+                if (res.ok) {
+                    const htmlFromServer = await res.text();
+                    document.getElementById(containerId).innerHTML = htmlFromServer;
+                } else {
+                    console.error("Không thể lấy dữ liệu từ controller", res.status);
+                }
+            } catch (err) {
+                console.error("Lỗi khi fetch dữ liệu từ controller", err);
+            }
+        }
+
+        // Load tất cả biểu đồ
+        function loadAllCharts() {
+            const containers = document.querySelectorAll("div[data-location-id]");
+            containers.forEach(div => {
+                const id = div.getAttribute("data-location-id");
+                const containerId = div.id;
+                loadChart(id, containerId);
+            });
+        }
+
         function updateRemainingRequestsDisplay() {
             const today = getTodayKey();
             const data = getRequestData();
@@ -385,109 +464,6 @@
             loadHistory();
             updateRemainingRequestsDisplay();
         }
-
-        // Biểu đồ đánh giá
-        const chartData = @json($chartData);
-
-        const ctx = document.getElementById('gptChart').getContext('2d');
-
-        const labels = chartData.length > 0 ? chartData.map(item => item.name) : [];
-        const dataTot = chartData.length > 0 ? chartData.map(item => item.phan_tram_tot) : [];
-        const dataXau = chartData.length > 0 ? chartData.map(item => item.phan_tram_xau) : [];
-
-        const gptChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [
-                    {
-                        label: '% Tốt',
-                        data: dataTot,
-                        backgroundColor: 'rgba(75, 192, 192, 0.6)'
-                    },
-                    {
-                        label: '% Xấu',
-                        data: dataXau,
-                        backgroundColor: 'rgba(255, 99, 132, 0.6)'
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'top' },
-                    title: { 
-                        display: true, 
-                        text: chartData.length > 0 ? 'Đánh giá cho địa điểm đã chọn' : 'Chưa có địa điểm được chọn' 
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const rawData = @json($userReviewChartData->toArray());
-
-            // ==== Biểu đồ ====
-            const filteredData = rawData.filter(item => item.star > 0);
-            const allDates = [...new Set(filteredData.map(item => item.date))].sort();
-            const groupedByUser = {};
-
-            filteredData.forEach(item => {
-                const userLabel = `User ${item.id}`;
-                if (!groupedByUser[userLabel]) {
-                    groupedByUser[userLabel] = {};
-                }
-                groupedByUser[userLabel][item.date] = item.star;
-            });
-
-            const datasets = Object.entries(groupedByUser).map(([userLabel, dateStars], index) => {
-                const data = allDates.map(date => dateStars[date] || 0); 
-                return {
-                    label: userLabel,
-                    data: data,
-                    backgroundColor: `hsl(${index * 60}, 70%, 60%)`
-                };
-            });
-
-            const ctxUser = document.getElementById('userReviewChart').getContext('2d');
-            new Chart(ctxUser, {
-                type: 'bar',
-                data: {
-                    labels: allDates,
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { position: 'bottom' },
-                        title: {
-                            display: true,
-                            text: 'Biểu đồ đánh giá của người dùng'
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 5,
-                            title: {
-                                display: true,
-                                text: 'Số sao'
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Ngày đánh giá'
-                            }
-                        }
-                    }
-                }
-            });
-        });
     </script>
 </body>
 </html>
