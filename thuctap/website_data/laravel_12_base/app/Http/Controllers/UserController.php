@@ -21,17 +21,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
+            'username' => 'required|unique:users,username',
+            'fullname' => 'required',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
-            'role' => 'required'
         ]);
 
         User::create([
-            'name' => $request->name,
+            'username' => $request->username,
+            'fullname' => $request->fullname,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            //'role' => $request->role
         ]);
 
         return redirect()->route('users.index')->with('success', 'User created successfully!');

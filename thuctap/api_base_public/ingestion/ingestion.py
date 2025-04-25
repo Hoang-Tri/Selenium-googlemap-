@@ -84,7 +84,3 @@ class Ingestion:
             docs[idx].metadata["chunk_size"] = chunk_size  # Lưu kích thước đoạn văn bản
 
         return docs
-
-if __name__ == "__main__":
-    ingestion = Ingestion("all-MiniLM-L6-v2")  # hoặc "all-MiniLM-L6-v2" nếu dùng model khác
-    ingestion.ingestion_folder("demo/data_in", "demo/data_vector")

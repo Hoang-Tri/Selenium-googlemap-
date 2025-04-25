@@ -26,6 +26,7 @@ WORKDIR /_app_
 COPY app /_app_/app
 COPY chatbot /_app_/chatbot
 COPY data /_app_/data
+COPY database /_app_/database
 COPY demo /_app_/demo
 COPY ggmap /_app_/ggmap
 COPY ingestion /_app_/ingestion

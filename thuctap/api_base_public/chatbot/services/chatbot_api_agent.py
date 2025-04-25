@@ -7,13 +7,14 @@ from langgraph.graph import END, StateGraph, START
 from chatbot.utils.graph_state import GraphState
 from typing import Dict, Any
 
-from app.config import settings
+# from app.config import settings
+from app.ai_config import settings
 
 
 class FilesChatAgent:
     def __init__(self,path_vector_store) -> None:
-        self.retriever = Retriever(settings.LLM_NAME).set_retriever(path_vector_store)  # Khởi tạo trình tìm kiếm tài liệu
-        self.llm = LLM().get_llm(settings.LLM_NAME)  # Khởi tạo mô hình ngôn ngữ
+        self.retriever = Retriever(settings.AI).set_retriever(path_vector_store)  # Khởi tạo trình tìm kiếm tài liệu
+        self.llm = LLM().get_llm(settings.AI)  # Khởi tạo mô hình ngôn ngữ
         self.answer_generator = AnswerGenerator(self.llm)  # Bộ tạo câu trả lời
 
     def retrieve(self, state: GraphState) -> Dict[str, Any]:

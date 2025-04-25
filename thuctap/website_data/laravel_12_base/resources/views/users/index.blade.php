@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
     <title>User Management</title>
     <link rel="stylesheet" href="{{ asset('css/style_user.css') }}">
     <script src="{{ asset('js/user_management.js') }}"></script>
@@ -32,15 +33,15 @@
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Name</label>
-                                <input type="text" class="form-control" name="addusername" required>
+                                <input type="text" class="form-control" name="username" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" name="addfullname" required>
+                                <input type="text" class="form-control" name="fullname" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" name="addemail" required>
+                                <input type="email" class="form-control" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Password</label>
@@ -53,6 +54,27 @@
             </div>
         </div>
 
+        <!-- Modal xem lịch sử -->
+        <div class="modal fade" id="userHistoryModal" tabindex="-1" aria-labelledby="userHistoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content shadow rounded">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userHistoryModalLabel">Lịch sử tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="mb-3"><strong>Người dùng:</strong> <span id="historyUsername"></span></h6>
+                    <ul id="historyList" class="list-group">
+                    <!-- Lịch sử sẽ được chèn ở đây -->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Bảng hiển thị danh sách user -->
         <table class="table table-striped table-hover shadow rounded">
             <thead class="table-dark">
@@ -61,7 +83,6 @@
                     <th>Name</th>
                     <th>Full Name</th>
                     <th>Email</th>
-                    <!-- <th>Role</th> -->
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -72,10 +93,15 @@
                     <td>{{ $user->username }}</td>
                     <td>{{ $user->fullname }}</td>
                     <td>{{ $user->email }}</td>
-                    <!-- <td>{{ $user->role }}</td> -->
                     <td>
+                        <button class="btn btn-sm btn-info viewHistoryBtn"
+                            data-bs-toggle="modal" data-bs-target="#userHistoryModal"
+                            data-history='@json($user->history ? json_decode($user->history, true) : [])'
+                            data-username="{{ $user->username }}">
+                            Xem lịch sử
+                        </button>
                         <button class="btn btn-sm btn-warning editUserBtn"
-                            data-bs-toggle="modal" data-bs-target="#editUserModal"
+                            data-bs-toggle="modal" data-bs-target="#editUserForm"
                             data-id="{{ $user->id }}" 
                             data-name="{{ $user->username }}" 
                             data-fullname="{{ $user->fullname }}" 
@@ -98,7 +124,7 @@
     </div>
 
     <!-- Modal Edit User -->
-    <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editUserForm" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form action="{{ route('users.update', $user->id) }}" method="POST">
@@ -186,6 +212,28 @@
                 });
             });
         });
+        document.querySelectorAll('.viewHistoryBtn').forEach(button => {
+            button.addEventListener('click', function () {
+                const username = this.getAttribute('data-username');
+                const history = JSON.parse(this.getAttribute('data-history') || '[]');
+                const historyList = document.getElementById('historyList');
+
+                document.getElementById('historyUsername').textContent = username;
+                historyList.innerHTML = '';
+
+                if (history.length === 0) {
+                    historyList.innerHTML = '<li class="list-group-item">Chưa có lịch sử tìm kiếm.</li>';
+                } else {
+                    history.forEach(item => {
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item';
+                        li.textContent = item;
+                        historyList.appendChild(li);
+                    });
+                }
+            });
+        });
+
     </script>
 </body>
 </html>

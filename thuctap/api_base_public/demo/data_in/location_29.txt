@@ -1,0 +1,13 @@
+Location ID: 29
+Location Name: Can_Tho_University
+Address: Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['Ok', 'beautiful', 'Ok', 'knowledge', 'Nice', 'Ok', 'Ok', 'great', 'Good', 'OK', 'love', 'Perfect', 'fresh', 'Great', 'Good', 'Good', 'Good', 'Beautiful', 'suitable', 'Wide', 'cool', 'large', 'many', 'amenities', 'Large', 'green', 'good', 'spacious', 'airy', 'develop strongly', 'talented people', 'interesting', 'relaxing', 'special', 'friendly', 'enthusiastic', 'super', 'cozy', 'rest', 'enjoy', 'relaxation', 'impressed', 'large', 'dynamic', 'famous', 'ideal', 'unique', 'lush green', 'leading', 'innovation', 'creativity', 'memorable', 'longest history', 'high expertise', 'extensive experience', 'successful', 'great choice', 'top largest', 'eldest', 'quality', 'top', 'key', 'largest', 'huge', 'worthy', 'large', 'multidisciplinary', 'brand', 'pillar', 'recognized', 'key', 'training quality meeting international standards', 'cradle for Vietnamese talents', 'reaped many achievements', 'attracting a large number of candidates', 'large', 'spearhead', 'key', 'multi-disciplinary', 'multi-field', 'continuously improved', 'developed', 'consolidated', 'countless', 'good', 'top', 'large', 'unforgettable', 'airy', 'clean', 'beloved', 'largest', 'spacious', 'full of trees', 'Prestigious', 'many', 'enthusiastic support', 'beautiful scenery', 'large campus', 'great', 'beautiful', 'spacious', 'better experience', 'so good', 'enthusiastic', 'caring', 'Thank you', 'helping', 'Spacious', 'modern', 'enthusiastic', 'modern', 'comfortable', 'good facilities', 'dedicated lecturers', 'friendly', 'helpful', 'fun', 'memorable', 'useful knowledge', 'develop soft skills', 'create opportunities', 'diverse extracurricular activities', 'beautiful', 'green', 'clean', 'airy', 'ideal environment', 'variety', 'magnificent', 'lush green', 'fresh', 'good', 'high level', 'pivotal', 'first', 'spacious', 'airy', 'comfortable', 'wider', 'cool', 'good', 'enthusiastic', 'dynamic', 'satisfied', 'good', 'enthusiastic', 'dynamic', 'satisfied']",
+    "danh_sach_tu_xau": "['dirty', 'not maintained', 'aggressive', 'racist', 'poor', 'disappointing', 'backwards', 'messy', 'inconvenient', 'failed', 'unfortunately', 'toxicity', 'cursing', 'seeming superior', 'useless', 'Regret', 'stressful', 'lost', 'late', 'too hot to bear', 'old and degraded', 'uncomfortable', 'quiet', 'deserted', 'extremely large', 'construction phase', 'bad', 'pressure', 'difficult to move between buildings in time', 'limited parking space', 'waste', 'disappointing', 'do not agree', 'banning']",
+    "GPT": {
+        "phan_tram_tot": "81.42",
+        "phan_tram_xau": "18.58"
+    }
+}

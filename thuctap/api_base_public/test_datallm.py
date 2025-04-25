@@ -16,13 +16,13 @@ def connect_to_database():
         database="db_googlemap" 
     )
 # Hàm lưu thông tin địa điểm vào bảng locations
-def save_location(name, address=None):
+def save_location(name, address=None, scraped_date=None):
     conn = connect_to_database()
     cursor = conn.cursor()
     cursor.execute(''' 
-        INSERT INTO locations (name, address) 
-        VALUES (%s, %s)
-    ''', (name, address))
+        INSERT INTO locations (name, address, scraped_date) 
+        VALUES (%s, %s, %s)
+    ''', (name, address, scraped_date))
     conn.commit()
     location_id = cursor.lastrowid  
     cursor.close()
@@ -192,6 +192,7 @@ def process_csv_file(input_file):
         creat_date = row["creat_date"] if "creat_date" in row else None
         comment = row["comment"]
         address = row["address"]  
+        scraped_date = row["scraped_date"] if "scraped_date" in row else None 
 
         # Kiểm tra nếu địa điểm đã có trong database, nếu chưa thì thêm vào
         conn = connect_to_database()
@@ -199,7 +200,7 @@ def process_csv_file(input_file):
         cursor.execute("SELECT id FROM locations WHERE name = %s", (location_name,))
         location = cursor.fetchone()
 
-        location_id = save_location(location_name, address) if location is None else location[0]
+        location_id = save_location(location_name, address, scraped_date) if location is None else location[0]
 
         for attempt in range(3):
             try:

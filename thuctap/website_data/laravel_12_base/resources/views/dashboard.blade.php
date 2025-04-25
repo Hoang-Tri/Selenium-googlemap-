@@ -3,39 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
     <title>Admin Dashboard</title>
+    <meta name="description" content="Hệ thống đánh giá dữ liệu từ Google Maps, phân tích nhận xét người dùng và trực quan hóa thông tin bằng biểu đồ.">
+    <meta name="keywords" content="Google Maps, đánh giá địa điểm, nhận xét người dùng, trực quan hóa, biểu đồ, phân tích dữ liệu">
+     <!-- Thẻ Open Graph giúp tối ưu hóa khi chia sẻ trên các mạng xã hội như Facebook -->
+    <meta property="og:title" content="Admin Dashboard">
+    <meta property="og:description" content="Hệ thống đánh giá dữ liệu từ Google Maps, phân tích nhận xét người dùng và trực quan hóa thông tin bằng biểu đồ.">
+    <meta property="og:image" content="{{ asset('images/GMG.ico') }}">
+    <meta property="og:url" content="http://lht_2110421:8080/dashboard">
+
     <link rel="stylesheet" href="{{ asset('css/style_dash.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .notification-icon {
+            position: relative;
+            font-size: 24px;
+            cursor: pointer;
+            color: black;
+        }
+        #notification-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 12px;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 60%;
+            margin: 15% auto;
+        }
+
+        .close-btn {
+            font-size: 24px;
+            color: #aaa;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Style cho danh sách thông báo */
+        #notifications {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        #notifications li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .notification-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        }
+
+        .notification-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        .notification-text {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .notification-buttons button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-ok {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="d-flex">
-    <div class="sidebar">
-        <h2>Chào mừng admin</h2>
-        <ul>
-            <li><a href="{{ url('/users') }}">User</a></li>
-            <li><a href="{{ url('/locations') }}">Location</a></li>
-            <li><a href="{{ url('/google') }}">GoogleMaps</a></li>
-            <li><a href="{{ url('/users-reviews') }}">User Review</a></li>
-            <li><a href="{{ url('/upload') }}">File</a></li>
-            <li>
+        <div class="sidebar">
+            <h2>Chào mừng admin</h2>
+            <ul>
+                <a href="{{ url('/users') }}">User</a>
+                <a href="{{ url('/locations') }}">Location</a>
+                <a href="{{ url('/google') }}">GoogleMaps</a>
+                <a href="{{ url('/users-reviews') }}">User Review</a>
+                <a href="{{ url('/upload') }}">File</a>
+                <a href="{{ url('/settings') }}">Setting</a>
+                
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
                 </form>
-            </li>
-        </ul>
-        <div class="contact-info">
-            Contact: lehoangtri@gmail.com
+                
+            </ul>
+            <div class="contact-info">
+                Contact: lehoangtri@gmail.com
+            </div>
         </div>
-    </div>
         <div class="main-content">
+
+            <nav class="navbar">
+                <div class="container-fluid d-flex justify-content-between">
+                    <!-- Icon thông báo -->
+                    <div id="notification-icon" class="notification-icon" onclick="showNotifications()">
+                        <i class="fa fa-bell"></i>
+                        <span id="notification-count"></span>
+                    </div>
+                </div>
+
+                <!-- Modal thông báo -->
+                <div id="notification-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <div id="notifications"></div>
+                    </div>
+                </div>
+            </nav>
+
             <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-between">
                 </div>
             </nav>
+
             <div class="row">
                 <div class="col-md-3">
                     <a href="{{ url('/users') }}" style="text-decoration: none; color: inherit;">
@@ -75,6 +191,8 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="notifications"></div>
             <div class="row mt-4">
                 <div class="col-md-8">
                     <div class="card p-3">
@@ -94,6 +212,76 @@
         </div>
     </div>
     <script>
+        window.onload = function() {
+            displayNotifications();
+        };
+
+        // Hàm hiển thị thông báo
+        function displayNotifications() {
+            const notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+            const notificationsElement = document.getElementById("notifications");
+            const notificationCountElement = document.getElementById("notification-count");
+
+            if (notifications.length > 0) {
+                let html = '<ul class="notification-list">';
+                notifications.forEach((notification, index) => {
+                    const location = notification.replace("Hãy cung cấp thông tin địa chỉ cho địa điểm: ", "");
+                    html += `
+                        <li class="notification-item">
+                            <span class="notification-text">${notification}</span>
+                            <div class="notification-buttons">
+                                <button class="btn-ok" onclick="markAsRead(${index}, '${location}')">OK</button>
+                                <button class="btn-delete" onclick="deleteNotification(${index})">Xóa</button>
+                            </div>
+                        </li>
+                    `;
+                });
+                html += "</ul>";
+                notificationsElement.innerHTML = html;
+                notificationCountElement.textContent = notifications.length;
+            } else {
+                notificationsElement.innerHTML = "<p>Không có thông báo mới.</p>";
+                notificationCountElement.textContent = "";
+            }
+        }
+
+        function deleteNotification(index) {
+            let notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+            notifications.splice(index, 1);
+            localStorage.setItem("adminNotifications", JSON.stringify(notifications));
+            displayNotifications(); // Cập nhật lại hiển thị
+        }
+
+        function extractPlace(notification) {
+            const match = notification.match(/địa điểm: (.+)/);
+            return match ? match[1] : '';
+        }
+
+        function showNotifications() {
+            document.getElementById("notification-modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("notification-modal").style.display = "none";
+        }
+
+        function markAsRead(index, place) {
+            let notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+            notifications.splice(index, 1);
+            localStorage.setItem("adminNotifications", JSON.stringify(notifications));
+
+            displayNotifications();
+
+            // Chuyển hướng sang trang /google với place là tham số trên URL
+            window.location.href = `http://lht_2110421:8080/google?place=${encodeURIComponent(place)}`;
+        }
+
+        function saveNotification(place) {
+            let notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+            notifications.push(`Hãy cung cấp thông tin địa chỉ cho địa điểm: ${place}`);
+            localStorage.setItem("adminNotifications", JSON.stringify(notifications));
+        }
+
         function getLast7Days() {
             const days = [];
             for (let i = 29; i >= 0; i--) {
@@ -130,7 +318,7 @@
                 }
             });
         }
-
+ 
         loadChartData()
         //màu
         const generateColors = (count) => {

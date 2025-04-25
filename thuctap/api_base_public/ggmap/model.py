@@ -100,6 +100,15 @@ def calculate_review_date(review_time_str):
     if "a year ago" in review_time_str:
         return f"{today.year - 1}-{today.month:02d}-{today.day:02d}"
 
+    # Xử lý "a month ago"
+    if "a month ago" in review_time_str:
+        new_month = today.month - 1
+        new_year = today.year
+        if new_month <= 0:
+            new_month += 12
+            new_year -= 1
+        return f"{new_year}-{new_month:02d}-{today.day:02d}"
+    
     # Xử lý "X months ago"
     month_match = re.search(r"(\d+) months? ago", review_time_str)
     if month_match:
@@ -129,6 +138,12 @@ def calculate_review_date(review_time_str):
     year_match = re.search(r"(\d+) năm trước", review_time_str)
     if year_match:
         years = int(year_match.group(1))
+        return f"{today.year - years}-{today.month:02d}-{today.day:02d}"
+    
+    # Xử lý "X years ago"
+    year_eng_match = re.search(r"(\d+) years? ago", review_time_str)
+    if year_eng_match:
+        years = int(year_eng_match.group(1))
         return f"{today.year - years}-{today.month:02d}-{today.day:02d}"
 
     return today.strftime("%Y-%m-%d")
@@ -194,11 +209,11 @@ def process_single_place(driver):
         data['link'] = driver.current_url
         data['scraped_date'] = scraped_date  
     except:
-        pass  # Nếu không load được địa điểm
+        pass  
 
     try:
         rating_element = driver.find_element(By.CSS_SELECTOR, 'span[role="img"]')
-        rating_text = rating_element.get_attribute('aria-label')  # Ví dụ: "4.4 stars"
+        rating_text = rating_element.get_attribute('aria-label')  
         rating_number = float(re.search(r"[\d.]+", rating_text).group())
         data['star'] = rating_number
     except:
@@ -276,7 +291,7 @@ def process_places_from_urls(driver,keyword_name="default"):
         return
 
     all_data = []
-    place_counter = 1  # Đếm số thứ tự của địa điểm
+    place_counter = 1  
 
     for url in urls:
         print(f"Đang xử lý: {url}")
@@ -326,7 +341,7 @@ def process_places_from_urls(driver,keyword_name="default"):
             writer = csv.writer(file)
             
             # Ghi header vào file CSV
-            writer.writerow(["places","address", "link", "user", "star", "creat_date", "comment", "data_llm"])
+            writer.writerow(["places","address", "link", "user", "star", "creat_date", "comment", "data_llm", "scraped_date"])
 
             for review in reviews:
                 user = review.get("name", "Ẩn danh").strip()
@@ -336,6 +351,6 @@ def process_places_from_urls(driver,keyword_name="default"):
 
                 if comment:
                     # Ghi dữ liệu review vào file CSV
-                    writer.writerow([place_name, address, link, user, stars if stars is not None else "N/A", review_date, comment, None])
+                    writer.writerow([place_name, address, link, user, stars if stars is not None else "N/A", review_date, comment, None, scraped_date])
         print(f"Đã lưu kết quả vào {csv_path}")
         process_csv_file(csv_path)

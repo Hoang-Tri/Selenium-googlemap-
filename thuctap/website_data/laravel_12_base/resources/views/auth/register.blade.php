@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('css/style_login.css') }}">
     <!-- Google Fonts + Icons -->

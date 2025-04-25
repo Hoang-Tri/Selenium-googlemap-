@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
     <title>GoogleMaps</title>
     <link rel="stylesheet" href="{{ asset('css/style_google.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -10,7 +11,6 @@
 </head>
 <body>
 @include('layouts.header')
-
     <div class="main-content">
         <div class="row mt-4">
             <div class="d-flex justify-content-between">
@@ -54,9 +54,9 @@
     <script>
         function updateDailyRequests() {
             let dailyRequests = JSON.parse(localStorage.getItem("dailyRequests")) || new Array(30).fill(0);
-            let today = new Date().getDate(); // Lấy ngày hiện tại
-            dailyRequests[today - 1] += 1; // Tăng số yêu cầu trong ngày hôm nay
-            localStorage.setItem("dailyRequests", JSON.stringify(dailyRequests)); // Lưu lại vào localStorage
+            let today = new Date().getDate(); 
+            dailyRequests[today - 1] += 1; 
+            localStorage.setItem("dailyRequests", JSON.stringify(dailyRequests)); 
         }
 
         let searchResults = [];
@@ -81,9 +81,13 @@
 
                 if (res.ok) {
                     responseElement.innerText = "Dữ liệu đã được crawl thành công!";
+                    
                     searchResults = data.results || [];  
+                    if (!place) addSearchHistoryItem(keywords);
 
                     addSearchHistoryItem(keywords);
+
+                    localStorage.setItem("successMessage", `Đã có dữ liệu của địa điểm: ${keywords}`);
                 } else {
                     responseElement.innerText = "Lỗi: " + data.detail;
                 }
@@ -91,11 +95,23 @@
                 responseElement.innerText = "Lỗi khi gọi API: " + error;
             }
         }
+
+        window.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const place = urlParams.get("place");
+
+            if (place) {
+                document.getElementById("keywords").value = place;
+                crawlPlaces();  // Gọi hàm crawl
+            }
+        });
+
         window.onload = function () {
             loadSearchHistory();
         };
+
          // Thêm từ khóa tìm kiếm vào lịch sử
-         function addSearchHistoryItem(keyword) {
+        function addSearchHistoryItem(keyword) {
             const historyList = document.getElementById("search-history-list");
             const li = document.createElement("li");
             li.textContent = keyword;
@@ -154,6 +170,8 @@
 
         async function askPlace() {
             const place = document.getElementById("place").value.trim();
+            const formattedPlace = place.replace(/\s+/g, '_');
+
             const responseElement = document.getElementById("response-ask");
             responseElement.innerText = "Đang gửi yêu cầu...";
 
@@ -165,7 +183,7 @@
                         "Content-Type": "application/x-www-form-urlencoded",
                         "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
                     },
-                    body: new URLSearchParams({ Place: place })
+                    body: new URLSearchParams({ Place: formattedPlace })
                 });
 
                 const data = await res.json();
@@ -173,8 +191,10 @@
                 if (res.ok) {
                     // responseElement.innerText = data.data;
                     try {
-                        const parsed = JSON.parse(data.data); 
-                        const reviews = parsed["Đánh giá địa điểm"];
+                        const parsed = JSON.parse(data.data);
+                        const reviews = parsed["Đánh giá địa điểm"].filter(item =>
+                            item.Place.trim().toLowerCase() === formattedPlace .trim().toLowerCase()
+                        );
                         let html = "";
 
                         reviews.forEach(item => {
@@ -253,7 +273,14 @@
                 historyList.appendChild(li);
             });
         }
+        function clearHistory() {
+            // Xoá dữ liệu trong localStorage
+            localStorage.removeItem("placeHistory");
 
+            // Xoá các phần tử hiển thị trong HTML
+            const historyList = document.getElementById("history-list");
+            historyList.innerHTML = '';
+        }
         // Tải lịch sử khi trang được tải
         window.addEventListener("DOMContentLoaded", loadHistory);
     </script>

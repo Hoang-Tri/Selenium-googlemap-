@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://lht_2110421:8080/dashboard</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/users</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/locations</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/google</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/users-reviews</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/upload</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/settings</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/nguoidung/sosanh</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/nguoidung/dashboard</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/login</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>http://lht_2110421:8080/register</loc>
+    <lastmod>2025-04-25</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>

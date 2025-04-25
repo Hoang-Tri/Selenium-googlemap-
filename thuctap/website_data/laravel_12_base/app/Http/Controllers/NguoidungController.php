@@ -3,14 +3,22 @@ namespace App\Http\Controllers;
 
 use App\Models\UserReview;
 use App\Models\Location;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 
 class NguoidungController extends Controller
 {   
     public function showSoSanh()
-    {
+    {   
+        $user = Auth::user();
+        $history = $user->history ? json_decode($user->history, true) : [];
+        
         return view('sosanh_place', [
+            'history'=>$history,
         ]);
     }
 
@@ -184,6 +192,54 @@ class NguoidungController extends Controller
             'data2' => $data2,
         ]);
     }
+// cập nhật user
+    public function update(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $user->username = $request->username;
+        $user->fullname = $request->fullname;
+        $user->email = $request->email;
+
+        // Nếu có nhập mật khẩu mới thì mã hóa lại
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password);
+        }
+
+        $user->save();
+
+        return redirect()->back()->with('success', 'Cập nhật người dùng thành công!');
+    }
+// lịch sử người dùng
+    public function saveHistory(Request $request)
+    {
+        $user = Auth::user();
+        $newPlace = $request->input('place');
+
+        if (!$newPlace) {
+            return response()->json(['message' => 'Thiếu dữ liệu địa điểm'], 400);
+        }
+
+        $history = $user->history ?? [];
+
+        if (is_string($history)) {
+            $history = json_decode($history, true);
+        }
+
+        if (!is_array($history)) {
+            $history = [];
+        }
+
+        // Không lưu trùng
+        if (!in_array($newPlace, $history)) {
+            $history[] = $newPlace;
+        }
+
+        $user->history = json_encode($history);
+        $user->save();
+
+        return response()->json(['message' => 'Lưu lịch sử thành công']);
+    }
     
     public function showChart1($location_id = null )
     {
@@ -195,40 +251,8 @@ class NguoidungController extends Controller
             session(['current_location_id' => $location_id]);
         }
     
-        $location = Location::find($location_id);
-        if (!$location) {
-            return redirect()->back()->with('error', 'Không tìm thấy địa điểm!');
-        }
-        $reviews = $location->userReviews;
-        if (!$location) {
-            return redirect()->back()->with('error', 'Không tìm thấy địa điểm!');
-        }
-
-        // Biểu đồ 1: Tính điểm tin cậy từ bảng review
-        $reviews = DB::table('users_review')
-            ->where('location_id', $location_id)
-            ->select(
-                DB::raw('SUM(CASE WHEN star >= 5 THEN 1 ELSE 0 END) as good_count'),
-                DB::raw('SUM(CASE WHEN star <= 1 THEN 1 ELSE 0 END) as bad_count')
-            )
-            ->first();
-
-        $good = $reviews->good_count ?? 0;
-        $bad = $reviews->bad_count ?? 1;
-        $trustScore = ($good - $bad) > 0 ? 100 - (min($bad, 5) * 10) : 0;
-
-        // Biểu đồ 2 & 3: Phân tích cảm xúc từ data_llm
-        $llm = json_decode($location->data_llm, true);
-        $phan_tram_tot = floatval($llm['GPT']['phan_tram_tot'] ?? 0);
-        $phan_tram_xau = floatval($llm['GPT']['phan_tram_xau'] ?? 0);
-
-        // Biểu đồ 4: Lịch sử đánh giá người dùng
-        $userReviewChartData = DB::table('users_review')
-            ->where('location_id', $location_id)
-            ->select('id', DB::raw('IFNULL(star, 0) as star'), DB::raw('DATE(creat_date) as date'))
-            ->orderBy('id')
-            ->orderBy('creat_date')
-            ->get();
+        $user = Auth::user();
+        $history = $user->history ? json_decode($user->history, true) : [];
 
         $locations = Location::all();
         $chartData = $locations->map(function ($loc) {
@@ -243,14 +267,17 @@ class NguoidungController extends Controller
         $recentPlaces = $locations->slice(-5)->pluck('name');
 
         return view('nguoidung', [
-            'location_name' => $location->name,
-            'trustScore' => $trustScore,
-            'phan_tram_tot' => $phan_tram_tot,
-            'phan_tram_xau' => $phan_tram_xau,
-            'userReviewChartData' => $userReviewChartData,
             'chartData' => $chartData,
-            'location_id' => $location->id,
             'recentPlaces'=> $recentPlaces,
+            'history'=>$history
         ]);
+    }
+    public function clearHistory()
+    {
+        $user = Auth::user();
+        $user->history = json_encode([]);
+        $user->save();
+
+        return redirect()->route('nguoidung.dashboard')->with('success', 'Đã xóa lịch sử thành công!');
     }
 }

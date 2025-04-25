@@ -1,0 +1,432 @@
+[
+  {
+    "title": "Can Tho University",
+    "address": "Khu II, Đ. 3 Tháng 2, Xuân Khánh, Ninh Kiều, Cần Thơ",
+    "link": "https://www.google.com/maps/place/Can+Tho+University/@10.0299337,105.7706153,17z/data=!3m1!4b1!4m6!3m5!1s0x31a0895a51d60719:0x9d76b0035f6d53d0!8m2!3d10.0299337!4d105.7706153!16s%2Fm%2F02r6wmy?entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-23", 
+    "star": 4.4,
+    "reviews": [
+      {
+        "name": "25-05-03 Phan Tuấn Kiệt",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2025-02-23",
+        "ID_review": "b0232046_1"
+      },
+      {
+        "name": "Miroslav Lazic (Miki)",
+        "review": "Surely it's beautiful nature as a park, but it's so dirty and not maintained at all. Trash is everywhere around the campus (obviously nobody is teaching the students anything to change this behavior) security guards are aggressive and racist, very poor offer to eat anything or even have a decent cup of coffee. Disappointing to see considering it's been running for 60years and it is going backwards in development.",
+        "star": 1.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_2"
+      },
+      {
+        "name": "Luca Al.",
+        "review": "u already know the reason y",
+        "star": 1.0,
+        "date": "2025-04-09",
+        "ID_review": "b0232046_3"
+      },
+      {
+        "name": "Vũ Đoàn Thanh",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2024-11-23",
+        "ID_review": "b0232046_4"
+      },
+      {
+        "name": "ARUN KUMAR MISHRA",
+        "review": "Temple of knowledge",
+        "star": 4.0,
+        "date": "2024-08-23",
+        "ID_review": "b0232046_5"
+      },
+      {
+        "name": "Sibibalan Sibibalan",
+        "review": "Nice environment",
+        "star": 5.0,
+        "date": "2024-11-23",
+        "ID_review": "b0232046_6"
+      },
+      {
+        "name": "anhtriet danghuynh",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2024-09-23",
+        "ID_review": "b0232046_7"
+      },
+      {
+        "name": "lehai1509",
+        "review": "Ok",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_8"
+      },
+      {
+        "name": "Lam Thi Huong Duyen 001826",
+        "review": "A great university in the Mekong River",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_9"
+      },
+      {
+        "name": "strwbrr",
+        "review": "Average. The buildings' locations are messy and inconvenient for students",
+        "star": 1.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_10"
+      },
+      {
+        "name": "MINH KHA",
+        "review": "Runner.instance_.setSpeed (1000)",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_11"
+      },
+      {
+        "name": "Tuấn Huỳnh Anh",
+        "review": "Good.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_12"
+      },
+      {
+        "name": "CFP Techsol",
+        "review": "OK",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_13"
+      },
+      {
+        "name": "Háo Hồng",
+        "review": "I love CTU",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_14"
+      },
+      {
+        "name": "Dang Hai Lam",
+        "review": "Perfect University for students",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_15"
+      },
+      {
+        "name": "Robbins Anthony",
+        "review": "View in Can Tho Uni",
+        "star": 4.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_16"
+      },
+      {
+        "name": "Lê Đoan",
+        "review": "Fresh fresh fresh",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_17"
+      },
+      {
+        "name": "Anji Feldspar",
+        "review": "Great place",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_18"
+      },
+      {
+        "name": "Phạm Truyền",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_19"
+      },
+      {
+        "name": "Trương Đỗ Anh Kha",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_20"
+      },
+      {
+        "name": "Thúy Quỳnh",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_21"
+      },
+      {
+        "name": "Trí Hướng Nguyễn (Sleuth)",
+        "review": "Executive, I applied here before but unfortunately I failed\n- Many times when attending friends' graduations, they often come here to take check-in photos\n- Beautiful scenery suitable for taking photos\n- Wide\n- There are many trees on both sides of the road so it is very cool",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_22"
+      },
+      {
+        "name": "Duy Trần",
+        "review": "The school is very large. Many trees. There are many amenities.\nCame here to do a show.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_23"
+      },
+      {
+        "name": "Tuan Dung Hoang",
+        "review": "Large, green university with more than 100 training majors",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_24"
+      },
+      {
+        "name": "Nguyen Duy",
+        "review": "French Language K46 graduated in 2024, with a good bachelor's degree but cannot apply to majors, even related jobs or using French!\nStudents believe blindly and do not see what is in front of their eyes. If you post anything about the industry, you will be exposed to toxicity, cursing, and seeming superior!\nIf I could go back in time, I wish I had never studied here. The victim of unemployment is me.\nPlease repeat!\nRegret offering money for 4 years in exchange for a useless piece of red paper ☺️",
+        "star": 1.0,
+        "date": "2024-12-23",
+        "ID_review": "b0232046_25"
+      },
+      {
+        "name": "Hue Dung",
+        "review": "The school is spacious and airy thanks to the rows of large trees. I walked around for a while... wanted to get lost.\nWishing Can Tho University will develop strongly and become a place to train talented people for the country.",
+        "star": 5.0,
+        "date": "2024-05-23",
+        "ID_review": "b0232046_26"
+      },
+      {
+        "name": "Tài Danh (Bùa)",
+        "review": "Can Tho University - where you will find everything, from stressful classes to equally interesting and relaxing \"off\" sessions. The special thing is, if you walk through the campus, you will understand what \"studying hard\" means when you have to try not to get lost in the vast campus like a maze. But don't worry, just walk around and you'll meet new friends - because this place is famous for its friendly spirit of exchange.\n\nThe lecturers here are quite enthusiastic, sometimes so \"hot\" that you have to applaud their \"super\" communication ability, but if you happen to be late, don't forget to prepare yourself mentally, because their \"enthusiasm\" sometimes even surpasses the limits of the subject! And in terms of facilities, the school may not be too luxurious, but you will always find a cozy study corner, or at least a seat enough to \"rest\" while studying.\n\nCan Tho University is a place where you can both \"bury your head\" in books and enjoy moments of Western-style relaxation.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_27"
+      },
+      {
+        "name": "Minh Ngoc Le",
+        "review": "Really impressed with the school's large campus and dynamic academic environment. The school is not only famous for its educational quality but is also an ideal tourist destination with unique architectural works and lush green gardens. Can Tho University is not only a leading training place in the South but also a cultural symbol, a place that preserves traditional values combined with the spirit of innovation and creativity. A memorable destination for anyone looking to explore culture and education.",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_28"
+      },
+      {
+        "name": "Jackie Phương",
+        "review": "Can Tho University can be considered the school with the longest history in the Mekong Delta. The school is considered an educational training center in the West. Teachers here are Professors, Associate Professors, Doctors, and Masters with very high expertise and extensive experience. Many successful students in life are trained from this school.\n\nHead of CTU has a very large area. Including the largest area 2 at 3/2 Can Tho street. Area 1 is located on Ly Tu Trong street, area 3 in Hoa An and a new area in Mang Den.\n\nThe school offers multi-disciplinary training but the strongest is Agriculture and Fisheries with huge investment. This can be a great choice for young people studying in Can Tho and having high expertise in the future.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_29"
+      },
+      {
+        "name": "Nguyễn Hoàng Nhật Hào",
+        "review": "Belonging to the top largest schools in Vietnam and the eldest among universities in the Mekong Delta, the quality of training is always among the top in the country. It is a key national university.",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_30"
+      },
+      {
+        "name": "TRỌNG ĐỨC",
+        "review": "A place to train the country's future preschools, in 2017 I graduated with a K39 degree in Electrical and Electronics Engineering, now in 2023 my youngest brother graduated with a Bachelor's degree in Travel and Tourism.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_31"
+      },
+      {
+        "name": "Dương Đại",
+        "review": "It is the largest university in the West. With a huge campus, many shade trees. Worthy of being a pillar university in the West.\nApril 4, 2021.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_32"
+      },
+      {
+        "name": "Nguyễn Hữu Thắng",
+        "review": "Can Tho University is a large multidisciplinary university in Vietnam, with a brand of training in agriculture - forestry - fishery - biology, a pillar in the country's higher education system, recognized by the Government. Ranked among Vietnam's key national universities",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_33"
+      },
+      {
+        "name": "Đào Vũ Ngọc Thảo Anne Marie",
+        "review": "Can Tho University is a school with training quality meeting international standards of the ASEAN University system. This is like a cradle for Vietnamese talents. In recent years, the school has reaped many achievements, attracting a large number of candidates from across the country to apply for admission.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_34"
+      },
+      {
+        "name": "Minh Nguyen",
+        "review": "Large university in the Mekong Delta region, large campus, place of study for thousands of students throughout the South, large faculties are the spearhead in training human resources for the region such as Faculty of Agriculture, Faculty of Technology, Faculty of Pedagogy, ....",
+        "star": 5.0,
+        "date": "2024-11-23",
+        "ID_review": "b0232046_35"
+      },
+      {
+        "name": "Khiem Tran",
+        "review": "Some classrooms are too hot to bear\nThe tables and chairs are relatively old and degraded, making it very uncomfortable to sit on. There is no drinking water when going to meetings",
+        "star": 1.0,
+        "date": "2025-01-23",
+        "ID_review": "b0232046_36"
+      },
+      {
+        "name": "Thai Van Luong",
+        "review": "Can Tho University, Area II is located on 3/2 Street, Xuan Khanh Ward, Ninh Kieu District, Can Tho City, is a key undergraduate and postgraduate training facility of our Country, the University offers multi-disciplinary and multi-field training. Over the past 55 years, the School has continuously improved and developed. From a small number of initial training majors, the School has consolidated and developed into a multi-disciplinary, multi-disciplinary School as it is today. Countless generations of students and researchers have graduated from the school to serve the socio-economic development of Can Tho and the Mekong Delta provinces in particular and the whole country in general.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_37"
+      },
+      {
+        "name": "Kim Ngan",
+        "review": "The school is so good that from the outside you can see the large scale of the school. Belongs to the top school in Can Tho. There are many faculties and dormitories for boarding students",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_38"
+      },
+      {
+        "name": "phu Thien",
+        "review": "The teaching school is large, quite large, with many majors",
+        "star": 5.0,
+        "date": "2025-01-23",
+        "ID_review": "b0232046_39"
+      },
+      {
+        "name": "Hoang Giang",
+        "review": "The school brought me so many memories between teachers and friends that I cannot forget, engraved in my soul unforgettable memories, the school space is airy and clean, I will always remember my beloved school. 🤗🤗🤗 …",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_40"
+      },
+      {
+        "name": "Memories Thanh Trường",
+        "review": "The largest university in the West, spacious and full of trees.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_41"
+      },
+      {
+        "name": "Trí Lương Quang",
+        "review": "Prestigious university in the Mekong Delta. My children and grandchildren all study here!",
+        "star": 5.0,
+        "date": "2025-02-23",
+        "ID_review": "b0232046_42"
+      },
+      {
+        "name": "Vinicius Jr",
+        "review": "In the summer it is very quiet and deserted here. But before the festival, it was still crowded with young people taking pictures with the rock to prove that they had been to the university",
+        "star": 4.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_43"
+      },
+      {
+        "name": "Review Sociu",
+        "review": "The school is extremely large and is in the construction phase. The school offers many majors",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_44"
+      },
+      {
+        "name": "Huệ Phan",
+        "review": "Attend scientific conferences, receive enthusiastic support from staff, beautiful scenery, large campus",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_45"
+      },
+      {
+        "name": "VO THANH TUAN",
+        "review": "So great for students in the Mekong Delta.\nI studied here for 4 years, the school is very beautiful, with many trees and spacious.\nCurrently being invested and renovated.\nNow, compared to 10 years ago, graduating is completely different and you will have a better experience because the facilities are so good.\nThe teachers are enthusiastic and caring.\nThank you school for helping me with foundational knowledge for my future work.\nThanks .",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_46"
+      },
+      {
+        "name": "Nguyễn Di",
+        "review": "Spacious campus, many family houses, modern equipment, however some roads are quite bad",
+        "star": 5.0,
+        "date": "2024-10-23",
+        "ID_review": "b0232046_47"
+      },
+      {
+        "name": "Han Kim",
+        "review": "What do Can Tho University (CTU) students think about their school? alltop.vn/all-top/cam-nhan-cua-student-ve-school-dai-hoc-can-tho-ctu-20506",
+        "star": 5.0,
+        "date": "2024-06-23",
+        "ID_review": "b0232046_48"
+      },
+      {
+        "name": "Phú Nguyễn",
+        "review": "A university that trains a variety of professions, the campus has many trees and many parking areas",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_49"
+      },
+      {
+        "name": "Kim Thoa Nguyễn",
+        "review": "This is a corner of the magnificent flower house. Place where the school's administrative units gather. A place where every student has to go for many reasons, whether it's going to lecture, going on a study exchange or dealing with procedures. Surrounded by large lawns, lush green trees, and fresh air. In the afternoon, I see a few people going to the gym or many people sitting there relaxing and chatting, sometimes there are art groups playing the flute, playing the guitar, and singing.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_50"
+      },
+      {
+        "name": "Vĩnh Phát",
+        "review": "A good school like this is not a waste of investment hehe",
+        "star": 5.0,
+        "date": "2024-04-23",
+        "ID_review": "b0232046_51"
+      },
+      {
+        "name": "正義の味方",
+        "review": "Why is the school affiliated with Hai Phong xkld center, high level students are directed to interns, while they can be engineers. Army-style training, speaking of low fees, you should go to the government's non-profit program (free). IMMJAPAN also offers army-style training, really disappointing, students should consider.",
+        "star": 1.0,
+        "date": "2024-09-23",
+        "ID_review": "b0232046_52"
+      },
+      {
+        "name": "Nhi Đỗ",
+        "review": "In the name of the head of the Department of Obsessive Arts Prevention, I do not agree with banning exams for students who have only been absent for two days",
+        "star": 1.0,
+        "date": "2024-10-23",
+        "ID_review": "b0232046_53"
+      },
+      {
+        "name": "Huỳnh Anh Tiến",
+        "review": "a large multidisciplinary university with a pivotal position in Vietnam's higher education system\nAccording to the 2018 uniRank rankings, Can Tho University ranked first in the Mekong Delta, ranked 3rd in the South and ranked 5th in Vietnam.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_54"
+      },
+      {
+        "name": "Ngocbich Nguyen",
+        "review": "I used to come here for career guidance. The school is very spacious, airy and comfortable",
+        "star": 4.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_55"
+      },
+      {
+        "name": "Bình Lâm Thanh",
+        "review": "Can Tho University Area 2 is located on 3/2 Street with three gates A, B and C located near the beginning of Tran Van Hoai Street. Area 2 is where the main headquarters of faculties, institutes, centers, libraries, learning resource centers, administration buildings, school buildings, dormitories, sports areas... are concentrated.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_56"
+      },
+      {
+        "name": "Huyy NG",
+        "review": "The school gets wider with every step",
+        "star": 5.0,
+        "date": "2024-11-23",
+        "ID_review": "b0232046_57"
+      },
+      {
+        "name": "Near Media",
+        "review": "The campus is cool, on the afternoon of May 13, 2021, I stopped by the school and went to the cafeteria to meet a salesperson.",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_58"
+      },
+      {
+        "name": "Đặng Thành Thân",
+        "review": "The school is very good, the teachers are enthusiastic, the environment is dynamic, I am very satisfied.",
+        "star": 1.0,
+        "date": "2024-10-23",
+        "ID_review": "b0232046_59"
+      },
+      {
+        "name": "Trương Ca",
+        "review": "National standard educational place in the Mekong Delta",
+        "star": 5.0,
+        "date": "2025-04-23",
+        "ID_review": "b0232046_60"
+      }
+    ],
+    "ID_place": "b0232046"
+  }
+]

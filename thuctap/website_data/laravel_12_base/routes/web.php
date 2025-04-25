@@ -13,6 +13,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\UserReviewController;
 use App\Http\Controllers\NguoidungController;
 use Illuminate\Support\Facades\File;
+use App\Http\Controllers\SettingController;
 
 // Hiển thị form đăng nhập
 Route::get('/login', function () {
@@ -25,24 +26,19 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Admin dashboard (yêu cầu xác thực)
-// Route::get('/admin/dashboard', function () {
-//     return view('dashboard'); // Đây là file dashboard.blade.php
-// })->name('admin.dashboard')->middleware('auth');
-
 // User dashboard (yêu cầu xác thực)
 Route::get('/nguoidung/dashboard', function () {
     return view('nguoidung'); // Đây là file welcome.blade.php
-})->name('nguoidung.dashboard')->middleware('auth');
+})->middleware('auth')->name('nguoidung.dashboard');
 
-// Admin dashboard (Không yêu cầu xác thực, có thống kê số liệu)
-    Route::get('/dashboard', function () {
-        $userCount = \App\Models\User::all()->count(); // Đếm số lượng user
-        $locationCount = \App\Models\Location::count();
-        $usersreviewCount = \App\Models\UserReview::count();
-        $locationsReviews = \App\Models\Location::withCount('userReviews')->get();
-        return view('dashboard', compact('userCount','locationCount', 'usersreviewCount', 'locationsReviews'));
-    })->name('admin.dashboard');
+// Admin dashboard 
+Route::get('/dashboard', function () {
+    $userCount = \App\Models\User::all()->count(); 
+    $locationCount = \App\Models\Location::count();
+    $usersreviewCount = \App\Models\UserReview::count();
+    $locationsReviews = \App\Models\Location::withCount('userReviews')->get();
+    return view('dashboard', compact('userCount','locationCount', 'usersreviewCount', 'locationsReviews'));
+})->middleware('auth')->name('admin.dashboard');
 
 // Register
 Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
@@ -86,4 +82,15 @@ Route::get('/nguoidung/chart/{id}', [NguoidungController::class, 'chart'])->name
 Route::get('/nguoidung/sosanh', [NguoidungController::class, 'showSoSanh'])->name('nguoidung.sosanh');
 
 Route::get('/sosanh/{id1}/{id2}', [\NguoidungController::class, 'soSanhPlace'])->name('sosanh.place');
+
+// cập nhật user
+Route::put('/user/update/{id}', [NguoidungController::class, 'update'])->name('user.update');
+// lưu history
+Route::post('/save-history', [NguoidungController::class, 'saveHistory'])->name('user.saveHistory');
+// xóa history
+Route::post('/nguoidung/clear-history', [NguoidungController::class, 'clearHistory'])->name('nguoidung.clearHistory');
+
+// cấu hình api-key
+Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])->name('settings.index');
+Route::post('/settings', [App\Http\Controllers\SettingController::class, 'update'])->name('settings.update');
 

@@ -5,13 +5,15 @@ from langgraph.graph import END, StateGraph, START
 from chatbot.utils.graph_state import GraphState
 from typing import Dict, Any
 
-from app.config import settings
+# from app.config import settings
+from app.ai_config import settings
+
 
 
 class FilesChatAgent:
     def __init__(self) -> None:
 
-        self.llm = LLM().get_llm(settings.LLM_NAME)  # Khởi tạo mô hình ngôn ngữ
+        self.llm = LLM().get_llm(settings.AI)  # Khởi tạo mô hình ngôn ngữ
         self.answer_generator = FeedBackGenerator(self.llm)  # Bộ tạo câu trả lời
 
     def generate(self, state: GraphState) -> Dict[str, Any]:

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
     <title>Trang Giao Diện So Sánh</title>
     <link rel="stylesheet" href="{{ asset('css/style_nguoidung.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -10,10 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 
-    <!-- Thanh điều hướng (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <h2 class="navbar-brand">Chào mừng, {{ Auth::user()->fullname }}!</h2>
@@ -52,6 +53,27 @@
             </div>
         </div>
     </nav>
+
+    <div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="requestModalLabel">Nạp thêm lượt yêu cầu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="random-code" style="font-weight: bold;"></p>
+                <input type="number" class="form-control" id="request-quantity" placeholder="Nhập số lượt yêu cầu thêm" min="1" />
+                <input type="text" class="form-control mt-2" id="code-input" placeholder="Nhập mã xác nhận" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="verifyCodeAndAddRequests()">Xác nhận</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal profile -->
     <div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -131,12 +153,14 @@
             </div>
         </div>
     </div>
+
     <div class="slogan-container">
        <h2>Trải nghiệm tốt bắt đầu từ quyết định đúng</h2>
     </div>
+    
     <div class="container-fluid mt-3 px-4 ">
-        <div class="mt-3">
-            <button class="btn btn-warning" onclick="addExtraRequest()">Nạp tiền để gửi thêm yêu cầu</button>
+    <div class="mt-3">
+            <button class="btn btn-warning" onclick="openRequestModal()">Thêm lượt yêu cầu</button>
             <p id="request-count">Số lần gửi còn lại hôm nay: ...</p>
         </div>
         <div class="container-fluid mt-4">
@@ -174,11 +198,27 @@
             </div>
         </div>
 
-        <div class="row mt-4">
-            <div class="history-box mx-auto">
-                <h4>Lịch sử đánh giá</h4>
-                <ul id="history-list"></ul>
-                <button class="btn btn-danger mt-2" onclick="clearHistory()">Xóa toàn bộ lịch sử</button>
+         <!-- lịch sử -->
+         <div class="card mt-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <strong>Lịch sử tìm kiếm địa điểm</strong>
+                @if (!empty($history))
+                    <form method="POST" action="{{ route('nguoidung.clearHistory') }}">
+                        @csrf
+                        <button class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa toàn bộ lịch sử không?')">Xóa lịch sử</button>
+                    </form>
+                @endif
+            </div>
+            <div class="card-body">
+                @if (!empty($history))
+                    <ul class="list-group">
+                        @foreach ($history as $item)
+                            <li class="list-group-item">{{ $item }}</li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>Chưa có lịch sử tìm kiếm.</p>
+                @endif
             </div>
         </div>
     </div>
@@ -206,20 +246,67 @@
         function increaseRequestCount() {
             const today = getTodayKey();
             const data = getRequestData();
-            data.counts[today] = (data.counts[today] || 0) + 1;
-            if (data.counts[today] > MAX_REQUESTS_PER_DAY) {
-                data.extra--;
+
+            const usedToday = data.counts[today] || 0;
+
+            if (usedToday < MAX_REQUESTS_PER_DAY) {
+                data.counts[today] = usedToday + 1; // Dùng lượt miễn phí
+            } else if (data.extra > 0) {
+                data.extra--; // Dùng lượt mua thêm
+            } else {
+                // Không có lượt, không làm gì cả
+                alert("Bạn đã hết lượt!");
+                return;
             }
+
             saveRequestData(data);
             updateRemainingRequestsDisplay();
         }
 
-        function addExtraRequest() {
+        function openRequestModal() {
+            // Generate random 8-digit code
+            const randomCode = generateRandomCode();
+            document.getElementById("random-code").innerText = `Mã xác nhận: ${randomCode}`;
+
+            // Store the random code in localStorage
+            localStorage.setItem("randomCode", randomCode);
+
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('requestModal'));
+            modal.show();
+        }
+
+        function generateRandomCode() {
+            return Math.floor(10000000 + Math.random() * 90000000);  // Random 8-digit number
+        }
+
+        function verifyCodeAndAddRequests() {
+            const enteredCode = document.getElementById("code-input").value;
+            const storedCode = localStorage.getItem("randomCode");
+            const quantity = parseInt(document.getElementById("request-quantity").value, 10);
+
+            if (enteredCode === storedCode && quantity > 0) {
+                // Add the specified number of requests
+                const data = getRequestData();
+                data.extra += quantity;
+                saveRequestData(data);
+                updateRemainingRequestsDisplay();
+                alert(`${quantity} lượt yêu cầu đã được thêm thành công!`);
+                
+                // Close the modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('requestModal'));
+                modal.hide();
+            } else {
+                alert("Mã xác nhận không đúng hoặc số lượng yêu cầu không hợp lệ. Vui lòng thử lại.");
+            }
+        }
+
+        function updateRemainingRequestsDisplay() {
             const data = getRequestData();
-            data.extra += 1;
-            saveRequestData(data);
-            updateRemainingRequestsDisplay();
-            alert("Bạn đã nạp thành công 1 yêu cầu thêm!");
+            const today = getTodayKey();
+            const remainingRequests = Math.max(0, MAX_REQUESTS_PER_DAY - (data.counts[today] || 0));
+            const extraRequests = data.extra;
+            document.getElementById("request-count").innerText = `Số lần gửi còn lại hôm nay: ${remainingRequests + extraRequests}`;
         }
 
         async function askComparePlace() {
@@ -230,6 +317,9 @@
                 alert("Vui lòng nhập cả hai địa điểm.");
                 return;
             }
+
+            const formattedPlaceA = placeA.replace(/\s+/g, '_');
+            const formattedPlaceB = placeB.replace(/\s+/g, '_');
 
             if (!canSendRequest()) {
                 alert("Bạn đã hết lượt gửi yêu cầu hôm nay!");
@@ -248,7 +338,7 @@
                             "Content-Type": "application/x-www-form-urlencoded",
                             "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
                         },
-                        body: new URLSearchParams({ Place: placeA })
+                        body: new URLSearchParams({ Place: formattedPlaceA })
                     }),
                     fetch("http://localhost:60074/base/chat-ingestion/", {
                         method: "POST",
@@ -257,7 +347,7 @@
                             "Content-Type": "application/x-www-form-urlencoded",
                             "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
                         },
-                        body: new URLSearchParams({ Place: placeB })
+                        body: new URLSearchParams({ Place: formattedPlaceB })
                     })
                 ]);
 
@@ -270,8 +360,26 @@
                     const parsedA = JSON.parse(dataA.data);
                     const parsedB = JSON.parse(dataB.data);
 
-                    const reviewsA = parsedA["Đánh giá địa điểm"];
-                    const reviewsB = parsedB["Đánh giá địa điểm"];
+                    function normalizeString(str) {
+                        function normalizeString(str) {
+                            return str
+                                .trim()
+                                .toLowerCase()
+                                .normalize("NFD")                  
+                                .replace(/[\u0300-\u036f]/g, '')   
+                                .replace(/[^a-z0-9]/g, '')         // BỎ luôn cả gạch dưới, space, ký tự đặc biệt
+                        }
+                    }
+                    const normalizedInputA = normalizeString(formattedPlaceA);
+                    const normalizedInputB = normalizeString(formattedPlaceB);
+
+                    const reviewsA = parsedA["Đánh giá địa điểm"].filter(item =>
+                        normalizeString(item.Place) === normalizedInputA
+                    );
+
+                    const reviewsB = parsedB["Đánh giá địa điểm"].filter(item =>
+                        normalizeString(item.Place) === normalizedInputB
+                    )
 
                     // Nút xem tất cả biểu đồ
                     html += `
@@ -328,8 +436,10 @@
                             <tbody>
                     `;
 
-                    reviewsA.forEach((itemA, index) => {
-                        const itemB = reviewsB[index]; 
+                    const maxLength = Math.max(reviewsA.length, reviewsB.length);
+                    for (let i = 0; i < maxLength; i++) {
+                        const itemA = reviewsA[i] || {};
+                        const itemB = reviewsB[i] || {};
 
                         html += `
                             <tr>
@@ -363,14 +473,22 @@
                                 <td>${itemB["Remedial direction"]}</td>
                             </tr>
                         `;
-                    });
+                    };
 
                     html += `
                             </tbody>
                         </table>
                     `;
+
                     // Lưu lịch sử
-                    addHistoryItem(`So sánh địa điểm: ${placeA} & ${placeB}`);
+                    await fetch("/save-history", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                        },
+                        body: JSON.stringify({ place: `So sánh địa điểm: ${placeA} & ${placeB}` }),
+                    });
 
                     increaseRequestCount();
 
@@ -380,7 +498,11 @@
                     requestCounts[today] = (requestCounts[today] || 0) + 2;
                     localStorage.setItem("askPlaceCounts", JSON.stringify(requestCounts));
                 } else {
-                    html = "Không thể lấy dữ liệu cho một trong hai địa điểm.";
+                    html = "<p>Không thể lấy dữ liệu cho một trong hai địa điểm. Đã gửi yêu cầu cho admin xử lý.</p>";
+                    let notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+                    if (!resA.ok) notifications.push(`Hãy cung cấp thông tin địa chỉ cho địa điểm: ${placeA}`);
+                    if (!resB.ok) notifications.push(`Hãy cung cấp thông tin địa chỉ cho địa điểm: ${placeB}`);
+                    localStorage.setItem("adminNotifications", JSON.stringify(notifications));
                 }
 
                 responseElement.innerHTML = html;
@@ -388,7 +510,6 @@
                 if (!canSendRequest()) {
                     responseElement.innerHTML += "<p class='text-danger mt-2'>Bạn đã vượt quá số lần yêu cầu miễn phí trong ngày.</p>";
                 }
-                increaseRequestCount();
 
             } catch (error) {
                 responseElement.innerText = "Lỗi khi gọi API: " + error;
@@ -420,48 +541,7 @@
             });
         }
 
-        function updateRemainingRequestsDisplay() {
-            const today = getTodayKey();
-            const data = getRequestData();
-            const count = data.counts[today] || 0;
-            const extra = data.extra || 0;
-            const remaining = Math.max(0, MAX_REQUESTS_PER_DAY - count) + extra;
-
-            const counterElement = document.getElementById("request-count");
-            if (counterElement) {
-                counterElement.textContent = `Số lần gửi còn lại hôm nay: ${remaining}`;
-            }
-        }
-
-        function addHistoryItem(text) {
-            const historyList = document.getElementById("history-list");
-            const li = document.createElement("li");
-            li.textContent = text;
-            historyList.appendChild(li);
-
-            let history = JSON.parse(localStorage.getItem("placeHistory")) || [];
-            history.push(text);
-            localStorage.setItem("placeHistory", JSON.stringify(history));
-        }
-
-        function loadHistory() {
-            const historyList = document.getElementById("history-list");
-            const history = JSON.parse(localStorage.getItem("placeHistory")) || [];
-
-            history.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                historyList.appendChild(li);
-            });
-        }
-
-        function clearHistory() {
-            localStorage.removeItem("placeHistory");
-            document.getElementById("history-list").innerHTML = "";
-        }
-
         window.onload = function () {
-            loadHistory();
             updateRemainingRequestsDisplay();
         }
     </script>

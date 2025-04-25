@@ -1,0 +1,792 @@
+[
+  {
+    "title": "Jollibee - Vincom3/2",
+    "address": "Đường Ba Tháng Hai, Phường 12, Quận 10, Phường 10, Quận 10, Hồ Chí Minh",
+    "link": "https://www.google.com/maps/place/Jollibee+-+Vincom3%2F2/@10.776081,106.6804705,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f26f24ef3e3:0x4bf9f1337e1a918!8m2!3d10.776081!4d106.6804705!16s%2Fg%2F11c48xd462?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-22",
+    "star": 4.1,
+    "reviews": [
+      {
+        "name": "Thúy Nguyễn",
+        "review": "Cheap and delicious",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_1"
+      },
+      {
+        "name": "Hạnh Vân",
+        "review": "Nothing to enjoy, just found out some food for lunch",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_2"
+      },
+      {
+        "name": "Đức Ngô THị Xuân",
+        "review": "ok",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_3"
+      },
+      {
+        "name": "Toshiya Momota",
+        "review": "It's Jollibee. Potatoes are not very tasty. The chili sauce is also a type that doesn't look like Vietnamese chili sauce. However, the price is low.",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_4"
+      },
+      {
+        "name": "Vo Khanh",
+        "review": "It's quite quiet at noon, the number of guests is moderate, so cleaning is okay and clean.\nStaff are cheerful and polite.\nStill love Jolliebee's spicy chicken rice. This branch has a salad that is quite fresh and crispy, the chicken pieces are dipped in sauce (because I like a lot of sauce).\nIt's a bit difficult to find, I can't determine if this is the 3rd or 4th floor (depending on each person's numbering method), going through an empty floor to get there so I'm a bit confused and afraid of getting lost =))",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_5"
+      },
+      {
+        "name": "Hoàn Mỹ Đặng thị",
+        "review": "Coming to Jollibee, diners will have the opportunity to enjoy delicious crispy fried chicken with attractive menus such as: Chikenjoy fried chicken, spaghetti, chicken wings marinated in sauce, rice, crispy fries, ice cream.\nAnd I really hate that I have to go get the spoon and fork myself and have to wait for each dish to come out. There's chicken but no potatoes.",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_6"
+      },
+      {
+        "name": "Lê Được",
+        "review": "Good food. Fun and cute service",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_7"
+      },
+      {
+        "name": "Phương Thúy Hà",
+        "review": "Delicious food, friendly staff.",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_8"
+      },
+      {
+        "name": "Vinh Quang Phan",
+        "review": "Delicious food!\nBut it's a bit inconvenient to have to go to the 3rd floor!",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_9"
+      },
+      {
+        "name": "JI SUP HAN",
+        "review": "The fast food here is delicious and attractive",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_10"
+      },
+      {
+        "name": "Tran Hong 2k1",
+        "review": "Enthusiastic service 😁food is quite delicious🍝🍗 …",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_11"
+      },
+      {
+        "name": "Vy Vũ",
+        "review": "The service is very honest and delicious 👍👍👍 …",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_12"
+      },
+      {
+        "name": "Nhung Le",
+        "review": "Cute staff, temporary food.",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_13"
+      },
+      {
+        "name": "Góc Quê",
+        "review": "This address has closed.",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_14"
+      },
+      {
+        "name": "Nguyen Thi Ngoc Thien",
+        "review": "My daughter's best microorganism",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_15"
+      },
+      {
+        "name": "Dũng Dương",
+        "review": "Great, convenient location.",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_16"
+      },
+      {
+        "name": "Quyền Phạm Bá",
+        "review": "It's normal...",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_17"
+      },
+      {
+        "name": "Phúc 武明福 Võ Minh",
+        "review": "Tasty",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_18"
+      },
+      {
+        "name": "Lê Tâm",
+        "review": "Good",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_19"
+      },
+      {
+        "name": "Nguyen Quoc Khanh",
+        "review": "To",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_20"
+      },
+      {
+        "name": "Huỳnh Nam",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_21"
+      },
+      {
+        "name": "Bao Nguyen",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_22"
+      },
+      {
+        "name": "anh linh",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_23"
+      },
+      {
+        "name": "Khuyến Trần",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_24"
+      },
+      {
+        "name": "anh thư bùi hồ",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_25"
+      },
+      {
+        "name": "Lorid",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_26"
+      },
+      {
+        "name": "My life channel",
+        "review": "",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_27"
+      },
+      {
+        "name": "Lan Luu",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_28"
+      },
+      {
+        "name": "Minh Thuấn Nguyễn",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_29"
+      },
+      {
+        "name": "Vi Lương",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_30"
+      },
+      {
+        "name": "Bao Nguyen",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_31"
+      },
+      {
+        "name": "Lê Trần Duy Thư",
+        "review": "",
+        "star": 2.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_32"
+      },
+      {
+        "name": "Tiền Ngọc",
+        "review": "",
+        "star": 1.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_33"
+      },
+      {
+        "name": "Nguyễn Trần Duy Kiên",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_34"
+      },
+      {
+        "name": "Hau Quoc",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_35"
+      },
+      {
+        "name": "Back Hua Wang",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_36"
+      },
+      {
+        "name": "Nie Lê",
+        "review": "",
+        "star": 2.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_37"
+      },
+      {
+        "name": "TiGi TV",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_38"
+      },
+      {
+        "name": "ANH MY DUONG",
+        "review": "Tasty",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_39"
+      },
+      {
+        "name": "thien vo",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_40"
+      },
+      {
+        "name": "T.Bảo Trương",
+        "review": "",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_41"
+      },
+      {
+        "name": "Nguyễn Thanh Tùng",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_42"
+      },
+      {
+        "name": "Uyên Thảo Hùynh Phương",
+        "review": "",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_43"
+      },
+      {
+        "name": "THO TV",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_44"
+      },
+      {
+        "name": "Minh Nhật",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_45"
+      },
+      {
+        "name": "Giao Phuong",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_46"
+      },
+      {
+        "name": "Hiền Đỗ",
+        "review": "",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_47"
+      },
+      {
+        "name": "Dang Thai Son",
+        "review": "",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_48"
+      },
+      {
+        "name": "RADIO* *UPDATE",
+        "review": "",
+        "star": 4.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_49"
+      },
+      {
+        "name": "Binh Nguyen",
+        "review": "",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "b571ce5b_50"
+      }
+    ],
+    "ID_place": "b571ce5b"
+  },
+  {
+    "title": "Jollibee Ba Tháng Hai",
+    "address": "",
+    "link": "https://www.google.com/maps/place/Jollibee+Ba+Th%C3%A1ng+Hai/@10.0165038,105.7602851,17z/data=!4m6!3m5!1s0x31a089a1fe7b351b:0x493fdc0cdb8cecfc!8m2!3d10.0165038!4d105.7602851!16s%2Fg%2F11st7341qq?authuser=0&hl=en&entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D",
+    "scraped_date": "2025-04-22",
+    "star": 4.3,
+    "reviews": [
+      {
+        "name": "Tuxx Nguyen",
+        "review": "Same as everywhere else",
+        "star": 4.0,
+        "date": "2025-01-22",
+        "ID_review": "aa921c93_1"
+      },
+      {
+        "name": "Michelle Dinh",
+        "review": "I stopped by here to buy chicken to take home. I eat jollibe a lot but only order the app. This time I stopped by because it was convenient, and the staff was actually very polite and friendly. The service is also dedicated. I have been to many stores and this is one of the places where the staff is very professional and friendly. The quality of the food is that the chicken here is number 1 delicious, crispy and hot. As for the potatoes, they have bad luck, some are crispy and some are cold. The space is a bit small, but there is a dining floor above, the space is clean and has cool air conditioning. The price is moderate, in general quite expensive compared to popular dishes but at such a price the quality is ok and the price is ok and acceptable. I told the employee to get large potatoes for me, but she must have misheard so I got small potatoes. As for the lemon tea, I find it a bit too sweet for my taste",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_2"
+      },
+      {
+        "name": "Vinh Truong",
+        "review": "The store is right at the corner of the intersection, easy to find, parking for motorbikes over 20 is still acceptable. The plus point is that the staff is very friendly and cheerful, from inside to outside and even the delivery staff. Everyone who meets guests happily bows their heads.\nMinus point, the parking guard is not friendly and not enthusiastic.",
+        "star": 4.0,
+        "date": "2025-03-25",
+        "ID_review": "aa921c93_3"
+      },
+      {
+        "name": "Thuan Thanh Tran",
+        "review": "Ideal place to eat, comfortable space, delicious food, quick service, enthusiastic customer support staff. 5⭐️ for the store 3/2",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_4"
+      },
+      {
+        "name": "Duy Đạt Lê (한빈)",
+        "review": "I have tried all Jollibee and this is the place with the best service quality from staff to managers and security guards.\n\nThe food is off the table, and the facilities are fully equipped with electrical outlets. Tables and chairs arranged reasonably.",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_5"
+      },
+      {
+        "name": "Vy Thang (pu)",
+        "review": "The branch is also quite spacious, from the security guards to the staff in the shop are super enthusiastic and friendly, easy to find, the shop is close by, so visit often 😍",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_6"
+      },
+      {
+        "name": "Truongg Vann",
+        "review": "Ordered online but received a missing item, contacted the branch and received a refund. The 20:00 evening shift employee (Truc Mai) answered the phone and enthusiastically supported\n5 ⭐️ for hotline",
+        "star": 4.0,
+        "date": "2024-06-22",
+        "ID_review": "aa921c93_7"
+      },
+      {
+        "name": "Phương Anh Võ Cloudly",
+        "review": "I've been there quite a few times. The food is new, the taste is good, the staff is dedicated and attentive, the restaurant space is spacious. Right at the 4th intersection, moving is quite difficult",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_8"
+      },
+      {
+        "name": "Đờ Phiu Dắc",
+        "review": "I really like the guys at Jo 3/2, very enthusiastic, the interview is very good. Unlike Jo April 30, it's boring to talk about.",
+        "star": 5.0,
+        "date": "2024-12-22",
+        "ID_review": "aa921c93_9"
+      },
+      {
+        "name": "Nguyên Nguyễn Hàng Chức",
+        "review": "The fresh food is quite delicious but the service is still slow. 3 managers are not enough to handle customers at 11am. They need to pay more attention to customer service. This is the opinion of a person who regularly eats at Jullibee restaurants in the area. Thank you for watching.",
+        "star": 4.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_10"
+      },
+      {
+        "name": "chonlatit Jetdatsakorn",
+        "review": "Totally deserves five stars for the customer service here. Some branches in Saigon don't have the same service.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_11"
+      },
+      {
+        "name": "Hồng Thắm",
+        "review": "I called to order delivery to my house and ordered chicken wings, but maybe because there were no wings left, I received this portion, but it's worth mentioning here that it's too small, a portion of that size and weight for a price of 33k is not reasonable.",
+        "star": 1.0,
+        "date": "2024-06-22",
+        "ID_review": "aa921c93_12"
+      },
+      {
+        "name": "Huang Jin",
+        "review": "Staff, restaurant space, prices and service are very good",
+        "star": 5.0,
+        "date": "2024-07-22",
+        "ID_review": "aa921c93_13"
+      },
+      {
+        "name": "Lê Lợi",
+        "review": "Staff have the attitude of chasing away customers when taking out",
+        "star": 1.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_14"
+      },
+      {
+        "name": "Nhi Lý",
+        "review": "What is the temperature of the security guard on the morning shift around 9:30 a.m. to 9:50 a.m.? When the customer comes out, he sits down and presses the phone to call, then he stares at the customer with an attitude? Not once, but 2 or 3 times, the restaurant should review the way this security guard works!!!",
+        "star": 2.0,
+        "date": "2024-10-22",
+        "ID_review": "aa921c93_15"
+      },
+      {
+        "name": "Xuyen Ngo",
+        "review": "Jollibee is always delicious! Attentive service! One thing is that the stores are all right at a red light intersection, so it's hard to find a car park. Every time I visit I have to park somewhere else and walk back. Or ask staff to bring it back to the car",
+        "star": 5.0,
+        "date": "2024-05-22",
+        "ID_review": "aa921c93_16"
+      },
+      {
+        "name": "29-Nguyễn Thị Mỹ Phượng-HS4",
+        "review": "The ordering staff is very cute. The waiters are very attentive and care about the guests. Will support fried chicken",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_17"
+      },
+      {
+        "name": "Nguyen Tan Datt",
+        "review": "Delicious food, enthusiastic staff.",
+        "star": 5.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_18"
+      },
+      {
+        "name": "Thịnh Trần",
+        "review": "The restaurant is crowded but the staff is small. Fast food but waiting for nearly 30 minutes. Card payments are not allowed.",
+        "star": 2.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_19"
+      },
+      {
+        "name": "Thanh Hào",
+        "review": "The food is delicious and hygienic. The service staff is enthusiastic, friendly, and cute!!!",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_20"
+      },
+      {
+        "name": "Nguyen Kharla",
+        "review": "The security guard was really bad, the day I went to eat it was raining heavily, my mother's hat was hanging on the car but the guard was leading the car, why did my mother's hat fly into the middle of the road and my feet were completely dirty :)). When I finished eating, I didn't see a hat and asked the security guard, so he ran into the street to help me, but the guard's attitude was somehow irresponsible. When I asked him, he laughed and joked and said \"I didn't notice\" :))) ???? Well, I won't come back next time, bye 🙂",
+        "star": 1.0,
+        "date": "2024-10-22",
+        "ID_review": "aa921c93_21"
+      },
+      {
+        "name": "Yến Ngọc",
+        "review": "When it was raining heavily, when I came to buy it, from the employee (who had a super polite attitude) to the security guards outside, they were all very enthusiastic about covering umbrellas and arranging chairs for customers. Not to mention the food, the service the staff provides at this branch is truly worth 10 VND.",
+        "star": 5.0,
+        "date": "2024-09-22",
+        "ID_review": "aa921c93_22"
+      },
+      {
+        "name": "Trúc Mai Nguyễn Lê",
+        "review": "Delicious food, very friendly and enthusiastic staff 😍😍",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_23"
+      },
+      {
+        "name": "Mai Thy",
+        "review": "The space is comfortable, the chicken is hot and crispy, the staff is always happy and enthusiastic. Super satisfied",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_24"
+      },
+      {
+        "name": "Sơn Long",
+        "review": "super cute staff gv",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_25"
+      },
+      {
+        "name": "Dương Chí Hào",
+        "review": "I bought peach mango cake, the employee asked if I could wait about 10 minutes. I said ok, but after more than 20 minutes there was still no cake.\nI know it's a new branch, so I might be a newbie, but I hope you'll train me more carefully.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_26"
+      },
+      {
+        "name": "Ngoc Giauu",
+        "review": "I don't know what other branches are like, but I really like this branch because it's spacious, the chicken comes out hot and crispy 😍 Every time I say I can't drink carbonated soft drinks, Joli will reduce my water bill. Always love jollibee",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_27"
+      },
+      {
+        "name": "Mr.Phúc",
+        "review": "Glue the cover tightly\nA little fall and it all spilled out",
+        "star": 3.0,
+        "date": "2025-04-22",
+        "ID_review": "aa921c93_28"
+      },
+      {
+        "name": "Mie Kiuf",
+        "review": "The food is hot, crispy, delicious. Enthusiastic and cheerful staff",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_29"
+      },
+      {
+        "name": "Thúy Thanh",
+        "review": "Delicious food, lovely management and staff",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_30"
+      },
+      {
+        "name": "Nga Đặng",
+        "review": "Super enthusiastic staff, delicious food, clean space 10,000 VND",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_31"
+      },
+      {
+        "name": "Thy Mai",
+        "review": "Delicious food, quick service, clean and comfortable space",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_32"
+      },
+      {
+        "name": "Nhật Duy Nguyễn Huỳnh",
+        "review": "This morning, July 27, around 9am, I came to buy a portion of chicken nuggets for my child. Staff member Truc confirmed the order for 1 fried chicken. I've corrected that for you, I ordered chicken nuggets, not fried chicken. Emphasized twice \"chicken nuggets, not fried\". Worked with cauliflower, didn't listen to customers, finally got home and opened it. fried chicken breast :)",
+        "star": 1.0,
+        "date": "2024-08-22",
+        "ID_review": "aa921c93_33"
+      },
+      {
+        "name": "HT Nguyen",
+        "review": "Crispy chicken, flavorful noodles, hot and crispy fries, food served quickly, cheerful and cute staff.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_34"
+      },
+      {
+        "name": "Pha Thành Công",
+        "review": "Guests have the right to choose this food or that food. Every time I come here, the restaurant keeps saying it's out of Thighs or the staff says I have to wait 10-15 Minutes. Using the given time reason to force customers to call another product instead. The store does not know which retail products are the best sellers so they can coordinate, import and process more to suit. Selling it but I'm afraid customers will eat it all or something.  Why do we have to force customers to use products that others don't like? Each person has different preferences.",
+        "star": 1.0,
+        "date": "2024-06-22",
+        "ID_review": "aa921c93_35"
+      },
+      {
+        "name": "Tường Vy",
+        "review": "Delicious food, lovely and beautiful staff, vibrant hiphop music",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_36"
+      },
+      {
+        "name": "Hoàng Phó Phạm",
+        "review": "Delicious food, fast, friendly service.",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_37"
+      },
+      {
+        "name": "Linhh Huỳnh",
+        "review": "Delicious food, good service, comfortable space",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_38"
+      },
+      {
+        "name": "Mai Trúc Nguyễn",
+        "review": "Spacious space. Cool. Cute staff",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_39"
+      },
+      {
+        "name": "THIEN HUONG LE VU",
+        "review": "Friendly and polite staff, delicious food and drinks!",
+        "star": 5.0,
+        "date": "2024-10-22",
+        "ID_review": "aa921c93_40"
+      },
+      {
+        "name": "Sang Lê",
+        "review": "I just stopped by to buy a hamburger and waited for a while. The customer who came later finished before me. Then asked me to wait another 6 minutes. After waiting for so long, I felt uncomfortable. When I opened it, I found there was a lack of ketchup and chili sauce. Sad 😞",
+        "star": 1.0,
+        "date": "2024-06-22",
+        "ID_review": "aa921c93_41"
+      },
+      {
+        "name": "Hoàng Tuấn",
+        "review": "The security guard was too rude and looked down on the shipper",
+        "star": 1.0,
+        "date": "2024-12-22",
+        "ID_review": "aa921c93_42"
+      },
+      {
+        "name": "Phúc Duy Nhâm",
+        "review": "The dining location is too noisy, sharing a birthday party with other tables, affecting many other customers",
+        "star": 1.0,
+        "date": "2024-09-22",
+        "ID_review": "aa921c93_43"
+      },
+      {
+        "name": "Chí Thành Lâm",
+        "review": "I really like eating fried chicken and spaghetti here, but I don't like hamburgers very much",
+        "star": 5.0,
+        "date": "2024-10-22",
+        "ID_review": "aa921c93_44"
+      },
+      {
+        "name": "Tường Duy",
+        "review": "Excellent 10 points 💯😍\nWill be a loyal customer iuuuuuu🌹🌹🌹",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_45"
+      },
+      {
+        "name": "Phương Nguyễn",
+        "review": "This morning I stopped to eat at Jollibee 3/2. The music was too loud and made my brain tired. I couldn't eat. The song wasn't that good. Could I turn on the music a little louder?",
+        "star": 4.0,
+        "date": "2024-09-22",
+        "ID_review": "aa921c93_46"
+      },
+      {
+        "name": "Phạm Ngọc Nữ 18-02-03",
+        "review": "The food came out quickly, was hot, and was delicious",
+        "star": 4.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_47"
+      },
+      {
+        "name": "Dư Thiên Lảm 27-03-03",
+        "review": "Good service, delicious food, enthusiastic staff",
+        "star": 5.0,
+        "date": "2024-11-22",
+        "ID_review": "aa921c93_48"
+      },
+      {
+        "name": "Kiệt Nguyen",
+        "review": "Note is the cheek of the thigh that meets the wing",
+        "star": 2.0,
+        "date": "2024-09-22",
+        "ID_review": "aa921c93_49"
+      },
+      {
+        "name": "Thu Thai",
+        "review": "I bought takeout but waited too long, more than 4 customers who came in later all left first.   Too boring",
+        "star": 2.0,
+        "date": "2024-06-22",
+        "ID_review": "aa921c93_50"
+      },
+      {
+        "name": "Vân Thơ",
+        "review": "This place's staff are so cute, there's nothing to criticize, the food is outstanding, the most delicious, the staff here are 10 stars, the service attitude is very good, I really like Jollibee. í, the surrounding space is clean, tables and chairs are always neat, staff are always enthusiastic, giving me 5 stars is too little, 100 stars is worthy.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_51"
+      },
+      {
+        "name": "Vân Anh Cao Thị",
+        "review": "Every Jollibee space is in a small corner, people's needs are many, the restaurant is crowded with no seats, the staff advises takeout, waits a long time for take-away food, and when food arrives, there are empty tables for new customers. The staff is very fast and enthusiastic. When they see customers waiting and have to stand, they quickly find chairs for them to wait.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_52"
+      },
+      {
+        "name": "03.Huỳnh Hồng Vân Anh",
+        "review": "Staff attitude is not polite. The person who bought in front of me sat down and waited for 30 minutes. No one else came to order and got the food right away",
+        "star": 1.0,
+        "date": "2024-05-22",
+        "ID_review": "aa921c93_53"
+      },
+      {
+        "name": "Thảo Ngân",
+        "review": "The food is very good, but why did I park my car in the right place, but when I got back, I parked in front of someone's house and lost my things? If I parked wrong, could you come up and tell me? look again",
+        "star": 3.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_54"
+      },
+      {
+        "name": "Hong Thao Huynh",
+        "review": "I ordered a spicy chicken combo here but the store delivered the wrong regular fried chicken, so when I called, the customer service support delivered an extra portion of chicken with sauce, good customer care, will continue to support.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_55"
+      },
+      {
+        "name": "308 TiNy",
+        "review": "I sympathize with the crowd at lunch time, people come first and get first, but I waited for 30 minutes or 45 minutes and still no one asked, so I waited for you a bit and then another 1 hour later, the person who came later got first :))) I'm hungry but I'm so upset that I waited until I ordered. I ordered combo 145 and had 2 chicken wings waiting to be delivered to someone else, so I changed the breast and thigh because I ran out of wings, of course I can't stand it. I'm so tired, let's go get another dish... In general, it's a couple. Sometimes we make mistakes, but we remember to learn from them later",
+        "star": 4.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_56"
+      },
+      {
+        "name": "Camera An Ninh 365 OFFICIAL",
+        "review": "Delicious food, enthusiastic staff, beautiful and clean space.\nExperienced many times when passing by.\nCan Tho camera installation & repair.",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_57"
+      },
+      {
+        "name": "Quí Nguyễn",
+        "review": "The employees of the service are happy and grateful",
+        "star": 5.0,
+        "date": "2024-10-22",
+        "ID_review": "aa921c93_58"
+      },
+      {
+        "name": "Trương Duy Tân",
+        "review": "Delicious fried chicken and potatoes, not oily, crispy skin, tender meat\nAgile staff, quick orders",
+        "star": 5.0,
+        "date": "2024-04-22",
+        "ID_review": "aa921c93_59"
+      },
+      {
+        "name": "Minh Thuận Đỗ",
+        "review": "The restaurant is quite crowded but the service is very professional",
+        "star": 5.0,
+        "date": "2024-09-22",
+        "ID_review": "aa921c93_60"
+      }
+    ],
+    "ID_place": "aa921c93"
+  }
+]

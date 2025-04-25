@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Giao Diện Người Dùng</title>
+    <link rel="shortcut icon" href="{{ asset($settings['favicon_path'] ?? 'images/GMG.ico') }}">
+    <title>{{ $settings['site_title'] ?? 'Trang Giao Diên Người Dùng' }}</title>
+    <meta name="description" content="{{ $settings['meta_description'] ?? 'Hệ thống đánh giá dữ liệu từ Google Maps...' }}">
+    <meta name="keywords" content="{{ $settings['meta_keywords'] ?? 'Google Maps, đánh giá địa điểm, nhận xét người dùng, trực quan hóa, biểu đồ' }}">
+     <!-- Thẻ Open Graph giúp tối ưu hóa khi chia sẻ trên các mạng xã hội như Facebook -->
+    <meta property="og:title" content="Admin Dashboard">
+    <meta property="og:description" content="Hệ thống đánh giá dữ liệu từ Google Maps, phân tích nhận xét người dùng và trực quan hóa thông tin bằng biểu đồ.">
+    <meta property="og:image" content="{{ asset('images/GMG.ico') }}">
+    <meta property="og:url" content="http://lht_2110421:8080/nguoidung/dashboard">
+
     <link rel="stylesheet" href="{{ asset('css/style_nguoidung.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 
@@ -45,45 +55,45 @@
                             </button>
                         </div>
                     </li>
+                    <li>
+                        <div>
+                            <button type="button" class="btn nav-link active" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
+                                Cập nhật thông tin
+                            </button>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button type="submit" class="nav-link active"> Logout</button>
                         </form>
+                        
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="modal fade" id="extraRequestModal" tabindex="-1" aria-labelledby="extraRequestModalLabel" aria-hidden="true">
+    <div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="extraRequestModalLabel">Yêu cầu thêm lượt gửi</h5>
+                <h5 class="modal-title" id="requestModalLabel">Nạp thêm lượt yêu cầu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Form gửi yêu cầu thêm -->
-                <form action="https://formspree.io/f/your-form-id" method="POST">
-                    <label for="email">Email của bạn:</label>
-                    <input type="email" id="email" name="email" required class="form-control">
-                    <br>
-                    <label for="username">Tên của bạn:</label>
-                    <input type="text" id="username" name="username" required class="form-control">
-                    <br>
-                    <label for="quantity">Số lượt muốn thêm:</label>
-                    <input type="number" id="quantity" name="quantity" required class="form-control">
-                    <br>
-                    <label for="reason">Lý do:</label>
-                    <textarea id="reason" name="reason" required class="form-control"></textarea>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Gửi yêu cầu</button>
-                </form>
+                <p id="random-code" style="font-weight: bold;"></p>
+                <input type="number" class="form-control" id="request-quantity" placeholder="Nhập số lượt yêu cầu thêm" min="1" />
+                <input type="text" class="form-control mt-2" id="code-input" placeholder="Nhập mã xác nhận" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="verifyCodeAndAddRequests()">Xác nhận</button>
             </div>
             </div>
         </div>
     </div>
+
     <!-- Modal profile -->
     <div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -104,6 +114,45 @@
             </div>
         </div>
     </div>
+
+    <!-- model cập nghật user -->
+    <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="updateProfileForm" method="POST" action="{{ route('user.update', Auth::user()->id) }}">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="updateProfileModalLabel">Cập nhật thông tin người dùng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label><strong>Tên đăng nhập:</strong></label>
+                            <input type="text" name="username" class="form-control" value="{{ Auth::user()->username }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label><strong>Họ tên:</strong></label>
+                            <input type="text" name="fullname" class="form-control" value="{{ Auth::user()->fullname }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label><strong>Email:</strong></label>
+                            <input type="email" name="email" class="form-control" value="{{ Auth::user()->email }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label><strong>Mật khẩu mới:</strong></label>
+                            <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu mới nếu muốn đổi">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal giới thiệu -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -122,7 +171,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                    <button type="button" class="btn btn-warning" onclick="addExtraRequest()">Nạp tiền</button>
                 </div>
             </div>
         </div>
@@ -167,10 +215,10 @@
     <div class="slogan-container">
        <h2>Trải nghiệm tốt bắt đầu từ quyết định đúng</h2>
     </div>
+
     <div class="container mt-4">
         <div class="mt-3">
-            <!-- <button class="btn btn-warning" onclick="addExtraRequest()">Nạp tiền để gửi thêm yêu cầu</button> -->
-            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#extraRequestModal">Nạp tiền để gửi thêm yêu cầu</button>
+            <button class="btn btn-warning" onclick="openRequestModal()">Thêm lượt yêu cầu</button>
             <p id="request-count">Số lần gửi còn lại hôm nay: ...</p>
         </div>
         <div class="row">
@@ -191,6 +239,7 @@
                             </ul>
                         </div>
                     @endif
+
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="place" placeholder="Nhập tên địa điểm..." />
                         <button class="btn btn-primary" onclick="askPlace()">Gửi</button>
@@ -210,12 +259,27 @@
         <div id="chart-container">
             <!-- Nội dung biểu đồ sẽ chèn vào đây -->
         </div>
-    
-        <div class="row mt-4">
-            <div class="history-box mx-auto">
-                <h4>Lịch sử đánh giá</h4>
-                <ul id="history-list"></ul>
-                <button class="btn btn-danger mt-2" onclick="clearHistory()">Xóa toàn bộ lịch sử</button>
+    <!-- lịch sử -->
+        <div class="card mt-3">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <strong>Lịch sử tìm kiếm địa điểm</strong>
+                @if (!empty($history))
+                    <form method="POST" action="{{ route('nguoidung.clearHistory') }}">
+                        @csrf
+                        <button class="btn btn-sm btn-danger" onclick="return confirm('Bạn có chắc muốn xóa toàn bộ lịch sử không?')">Xóa lịch sử</button>
+                    </form>
+                @endif
+            </div>
+            <div class="card-body">
+                @if (!empty($history))
+                    <ul class="list-group">
+                        @foreach ($history as $item)
+                            <li class="list-group-item">{{ $item }}</li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>Chưa có lịch sử tìm kiếm.</p>
+                @endif
             </div>
         </div>
     </div>
@@ -243,20 +307,67 @@
         function increaseRequestCount() {
             const today = getTodayKey();
             const data = getRequestData();
-            data.counts[today] = (data.counts[today] || 0) + 1;
-            if (data.counts[today] > MAX_REQUESTS_PER_DAY) {
-                data.extra--;
+
+            const usedToday = data.counts[today] || 0;
+
+            if (usedToday < MAX_REQUESTS_PER_DAY) {
+                data.counts[today] = usedToday + 1; // Dùng lượt miễn phí
+            } else if (data.extra > 0) {
+                data.extra--; // Dùng lượt mua thêm
+            } else {
+                // Không có lượt, không làm gì cả
+                alert("Bạn đã hết lượt!");
+                return;
             }
+
             saveRequestData(data);
             updateRemainingRequestsDisplay();
         }
 
-        function addExtraRequest() {
+        function openRequestModal() {
+            // Generate random 8-digit code
+            const randomCode = generateRandomCode();
+            document.getElementById("random-code").innerText = `Mã xác nhận: ${randomCode}`;
+
+            // Store the random code in localStorage
+            localStorage.setItem("randomCode", randomCode);
+
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('requestModal'));
+            modal.show();
+        }
+
+        function generateRandomCode() {
+            return Math.floor(10000000 + Math.random() * 90000000);  // Random 8-digit number
+        }
+
+        function verifyCodeAndAddRequests() {
+            const enteredCode = document.getElementById("code-input").value;
+            const storedCode = localStorage.getItem("randomCode");
+            const quantity = parseInt(document.getElementById("request-quantity").value, 10);
+
+            if (enteredCode === storedCode && quantity > 0) {
+                // Add the specified number of requests
+                const data = getRequestData();
+                data.extra += quantity;
+                saveRequestData(data);
+                updateRemainingRequestsDisplay();
+                alert(`${quantity} lượt yêu cầu đã được thêm thành công!`);
+                
+                // Close the modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('requestModal'));
+                modal.hide();
+            } else {
+                alert("Mã xác nhận không đúng hoặc số lượng yêu cầu không hợp lệ. Vui lòng thử lại.");
+            }
+        }
+
+        function updateRemainingRequestsDisplay() {
             const data = getRequestData();
-            data.extra += 1;
-            saveRequestData(data);
-            updateRemainingRequestsDisplay();
-            alert("Bạn đã nạp thành công 1 yêu cầu thêm!");
+            const today = getTodayKey();
+            const remainingRequests = Math.max(0, MAX_REQUESTS_PER_DAY - (data.counts[today] || 0));
+            const extraRequests = data.extra;
+            document.getElementById("request-count").innerText = `Số lần gửi còn lại hôm nay: ${remainingRequests + extraRequests}`;
         }
 
         async function askPlace() {
@@ -265,6 +376,7 @@
                 alert("Vui lòng nhập tên địa điểm.");
                 return;
             }
+            const formattedPlace = place.replace(/\s+/g, '_');
             if (!canSendRequest()) {
                 alert("Bạn đã hết lượt gửi yêu cầu hôm nay!");
                 return;
@@ -281,16 +393,28 @@
                         "Content-Type": "application/x-www-form-urlencoded",
                         "API-Key": "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa"
                     },
-                    body: new URLSearchParams({ Place: place })
+                    body: new URLSearchParams({ Place: formattedPlace  })
                 });
 
                 const data = await res.json();
-
                 if (res.ok) {
                     try {
                         const parsed = JSON.parse(data.data);
-                        const reviews = parsed["Đánh giá địa điểm"];
-                        let html = "";
+                        function normalizeString(str) {
+                            return str
+                                .trim()
+                                .toLowerCase()
+                                .normalize("NFD")                  
+                                .replace(/[\u0300-\u036f]/g, '')   
+                                .replace(/[^a-z0-9]/g, '')         // BỎ luôn cả gạch dưới, space, ký tự đặc biệt
+                        }
+
+                        const normalizedInput = normalizeString(place);
+                        const reviews = parsed["Đánh giá địa điểm"].filter(item =>
+                            normalizedInput === normalizeString(item.Place)
+                        );
+                        
+                        let html = ""; 
                         reviews.forEach(item => {
                             html += `
                                 <div class="card">
@@ -311,13 +435,29 @@
 
                     // Thêm vào lịch sử
                     if (place) {
-                        addHistoryItem(`Đánh giá địa điểm: ${place}`);
+                        // addHistoryItem(`Đánh giá địa điểm: ${place}`);
+                        await fetch("/save-history", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"),
+                            },
+                            body: JSON.stringify({ place }),
+                        });
                     }
                     if (!canSendRequest()) {
                         responseBox.innerHTML = "Bạn đã vượt quá số lần yêu cầu miễn phí trong ngày. Hãy nạp tiền để gửi thêm yêu cầu.";
                         return;
                     }
                     increaseRequestCount();
+                } else {
+                    console.log(data)
+                    responseElement.innerHTML = `<div>Không tìm thấy thông tin của ${place}. Đã gửi yêu cầu cho admin, vui lòng thử lại sau</div>`;
+                    let notifications = JSON.parse(localStorage.getItem("adminNotifications")) || [];
+                    notifications.push(`Hãy cung cấp thông tin địa chỉ cho địa điểm: ${place}`);
+                    localStorage.setItem("adminNotifications", JSON.stringify(notifications));
+                                    
+                    return;
                 }
                 window.loadChart = async function(location_id) {
                     console.log("loadChart được gọi với location_id:", location_id);
@@ -341,48 +481,18 @@
                 responseElement.innerText = "Lỗi khi gọi API: " + error;
             }
         }
-        function updateRemainingRequestsDisplay() {
-            const today = getTodayKey();
-            const data = getRequestData();
-            const count = data.counts[today] || 0;
-            const extra = data.extra || 0;
-            const remaining = Math.max(0, MAX_REQUESTS_PER_DAY - count) + extra;
 
-            const counterElement = document.getElementById("request-count");
-            if (counterElement) {
-                counterElement.textContent = `Số lần gửi còn lại hôm nay: ${remaining}`;
+        window.addEventListener("DOMContentLoaded", function () {
+            const message = localStorage.getItem("successMessage");
+            if (message) {
+                
+                alert(message);  
+
+                localStorage.removeItem("successMessage");
             }
-        }
-
-        function addHistoryItem(text) {
-            const historyList = document.getElementById("history-list");
-            const li = document.createElement("li");
-            li.textContent = text;
-            historyList.appendChild(li);
-
-            let history = JSON.parse(localStorage.getItem("placeHistory")) || [];
-            history.push(text);
-            localStorage.setItem("placeHistory", JSON.stringify(history));
-        }
-
-        function loadHistory() {
-            const historyList = document.getElementById("history-list");
-            const history = JSON.parse(localStorage.getItem("placeHistory")) || [];
-
-            history.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = item;
-                historyList.appendChild(li);
-            });
-        }
-
-        function clearHistory() {
-            localStorage.removeItem("placeHistory");
-            document.getElementById("history-list").innerHTML = "";
-        }
+        });
 
         window.onload = function () {
-            loadHistory();
             updateRemainingRequestsDisplay();
         }
 
@@ -427,66 +537,6 @@
                     }
                 }
             }
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const rawData = @json($userReviewChartData->toArray());
-
-            // ==== Biểu đồ ====
-            const filteredData = rawData.filter(item => item.star > 0);
-            const allDates = [...new Set(filteredData.map(item => item.date))].sort();
-            const groupedByUser = {};
-
-            filteredData.forEach(item => {
-                const userLabel = `User ${item.id}`;
-                if (!groupedByUser[userLabel]) {
-                    groupedByUser[userLabel] = {};
-                }
-                groupedByUser[userLabel][item.date] = item.star;
-            });
-
-            const datasets = Object.entries(groupedByUser).map(([userLabel, dateStars], index) => {
-                const data = allDates.map(date => dateStars[date] || 0); 
-                return {
-                    label: userLabel,
-                    data: data,
-                    backgroundColor: `hsl(${index * 60}, 70%, 60%)`
-                };
-            });
-
-            const ctxUser = document.getElementById('userReviewChart').getContext('2d');
-            new Chart(ctxUser, {
-                type: 'bar',
-                data: {
-                    labels: allDates,
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { position: 'bottom' },
-                        title: {
-                            display: true,
-                            text: 'Biểu đồ đánh giá của người dùng'
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 5,
-                            title: {
-                                display: true,
-                                text: 'Số sao'
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Ngày đánh giá'
-                            }
-                        }
-                    }
-                }
-            });
         });
     </script>
 </body>

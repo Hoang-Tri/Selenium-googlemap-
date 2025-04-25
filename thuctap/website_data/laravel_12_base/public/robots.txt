@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /dashboard
+Allow: /
+
+# Khai báo sitemap
+Sitemap: https://your-domain.com/sitemap.xml
