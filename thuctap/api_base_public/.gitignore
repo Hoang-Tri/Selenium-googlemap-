@@ -44,3 +44,4 @@ pytest_cache/
 /download/*
 /docker/
 /utils*
+.env
