@@ -1,0 +1,13 @@
+Location ID: 25
+Location Name: Sense_City_Can_Tho
+Address: 01 Đ. Hoà Bình, Tân An, Ninh Kiều, Cần Thơ 900000
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['Lovely', 'Nice', 'simple', 'good', 'enjoy', 'nice', 'well-trained', 'decent', 'good', 'great', 'interesting', 'new', 'super clean', 'enjoyed', 'enough', 'Good price', 'good', 'good bang', 'delicious', 'friendly', 'Great', 'Large', 'diverse', 'Good variety', 'Good place', 'good for travelers', 'nice', 'kind', 'friendly', 'modern', 'clean', 'vintage', 'Good', 'liked', 'Love box', 'nice', 'great', 'nice', 'Okay', 'okay', 'cool', 'great', 'great', 'clean', 'fun', 'safe', 'highly recomended', 'best choices', 'unique', 'funs', 'many', 'Good', 'various', 'Nice', 'diverse', 'Great', 'Very good', 'many things', 'low or normal', 'Very nice', 'good', 'loved', 'air-conditioned oasis', 'plenty of shopping options', 'good', 'convenient', 'Nice', 'convenient', 'Nice', 'big', 'Nice', 'clean', 'various', 'big', 'Nice', 'worth a visit', 'unique', 'great', 'good', 'good', 'Beautiful', 'clean', 'cool', 'nice', 'Clean', 'modern', 'premium', 'Nice', 'most things tourists would want', 'Good', 'good', 'delicious', 'Great', 'Good', 'diverse', 'Great', 'large', 'Convenient', 'simple', 'Nice', 'Great', 'Best', 'Ok', 'well', 'nice', 'Nice', 'reasonable', 'nice', 'clean', 'Great', 'Great', 'good', 'Convenient', 'good service', 'Nice', 'Nice', 'different', 'cheaper price', 'Popular', 'wide range', 'nice', 'available']",
+    "danh_sach_tu_xau": "['few', 'out of order', 'small', 'Very crowded', 'not very convenient', 'dont have to trry to negotiate the price', 'awful', 'hard', 'tiny', 'very crowded', 'long queue', 'not well designed', \"don't have good\", 'closing', 'Not so many thing to enjoy', 'limited', 'fast food', 'not enough', 'terrible', 'non respectable', 'insulting', 'crowded', 'Nothing special', 'limited']",
+    "GPT": {
+        "phan_tram_tot": "83.56",
+        "phan_tram_xau": "16.44"
+    }
+}

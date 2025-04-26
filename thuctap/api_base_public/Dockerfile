@@ -10,13 +10,19 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y python3 python3-pip git nano build-essential \
     libatlas-base-dev libffi-dev libcurl4-openssl-dev libssl-dev \
-    pkg-config libmysqlclient-dev fonts-liberation wget && \
-    wget -O google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    apt-get install -y ./google-chrome.deb && \
-    rm google-chrome.deb && \
+    pkg-config default-libmysqlclient-dev mysql-server \
+    fonts-liberation wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+
+# Cài đặt Google Chrome
+RUN wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
+    apt-get update && \
+    apt-get install -y /tmp/google-chrome.deb && \
+    rm /tmp/google-chrome.deb && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # Thiết lập thư mục làm việc trong container
 WORKDIR /_app_

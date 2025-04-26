@@ -32,7 +32,7 @@ Cài đặt:
 - Chỉnh sửa thông tin User: T
 - Phân quyền web: T
 - Đóng gói docker: F
-- Cấu hình LLM: F
+- Cấu hình LLM: T
 - API docs: T
 ----
 Tự động chạy dữ liệu: T

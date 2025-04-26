@@ -1,0 +1,13 @@
+Location ID: 28
+Location Name: Museum_of_Tarot_-_Bảo_Tàng_Tarot
+Address: 44 Đ. Nguyễn Khuyến, Tân An, Ninh Kiều, Cần Thơ 900000
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['fascinating', 'interesting', 'very nice', 'FREE', 'good reviews', 'informative', 'helpful', 'above and beyond', 'recommend', 'Fun', 'to see', 'take in', 'absolute delight', 'informative', 'passionate', 'astonishing', 'ever-growing', 'hidden gem', 'cool collection of items', 'photographed well', 'Great', 'interested', 'fantastic', 'real jewel', 'lovely', 'lovely surprise', 'enjoyed', 'pleased', 'amazing', 'highly recommend', 'astonishing', 'kindly', 'huge collection', 'riveted', 'highly recommend', 'very pleasant', 'Pretty place', 'potential', 'good', 'Awesome', 'incredibly knowledgable', 'perfect', 'Fascinating', 'great', 'unbelievable', 'knowledge', 'broad', 'detailed', 'highly recommend', 'awesome', 'amazing', 'beautifully restored', 'knowledgeable', 'respectful', 'must', 'Perfect', 'knowledge', 'kindly', 'Love', 'hope', 'perfect', 'great', 'interesting', 'perfect', 'love', 'great', 'Love', 'Magical', 'interesting', 'luv it', 'Amazing', 'wonderful', 'trustful', 'Love', 'Must come again', 'wonderful', 'love', 'perfect', 'love', 'quirky', 'one of a kind', 'hope', 'hope', 'Many thanks', 'Wonderful', 'lover', 'none', 'perfect', 'wonderful', 'different', 'trustful', 'nice', 'Good', 'fantastic', 'Great', 'amazing', 'amazinggg', 'nice', 'Wonderful', 'love', 'Ok', 'Good', 'nice', 'Amazingggggg']",
+    "danh_sach_tu_xau": "['dusty', 'cramped', 'poorly lit', 'hefty price', 'Overrated', 'bad place', 'does not match', 'no reply', 'busy texting / playing games on his phone', 'unmarked', 'poor reviews', 'not working', 'stuffy', 'turned off', 'no evidence', 'disappointed', 'let down', 'neglected', 'randomly displayed', 'bummed', 'no context', 'steep', 'robotic voice narration', 'not justified', 'missing links', 'waste of money', 'waste of time', 'closed for renovations', 'not useful at all', 'don’t know much', 'don’t know a lot', 'expensive', 'not good at all', 'hard to use', 'used', 'not worth it', 'didn’t like', 'far to high', 'closed', 'Disappointed', 'closed', 'never came', 'closed', 'bad', 'none']",
+    "GPT": {
+        "phan_tram_tot": "69.8",
+        "phan_tram_xau": "30.2"
+    }
+}

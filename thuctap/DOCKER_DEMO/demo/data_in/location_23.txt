@@ -1,0 +1,14 @@
+Location ID: 23
+Location Name: Là_CAFE_Nguyễn_Văn_Linh
+Address: 29D Đ. Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ
+
+Data LLM:
+{
+    "danh_sach_tu_tot": "['good', 'super large space', 'many tables and chairs', 'diverse', 'cool air-conditioned', 'good', 'good', 'good', 'polite', 'thoughtfully prepared', 'Cute', 'friendly', 'Cute', 'enthusiastic', 'beautiful', 'airy', 'delicious', 'beautiful', 'large', 'quiet', 'suitable', 'Delicious', 'spacious', 'comfortable', 'very friendly', 'convenient', 'enthusiastic', 'supportive', 'sweetly', 'satisfied', 'spacious', 'Cool space', 'Cool', 'suitable', 'spacious', 'stable', 'serves well', 'cute', 'quiet', 'arranged', 'supported', 'Deserves 5 stars', 'lovely', 'beautiful', 'Cute', 'lovely', 'Attentive', 'Delicious', 'good', 'Large', 'quiet', 'suitable', 'okay', 'Cute']",
+    "danh_sach_tu_xau": "['too sweet', \"doesn't smell very fragrant\", 'mild', 'not convenient', 'gloomy attitude', 'too bad', 'so bad', 'spoke quickly', 'too soft to hear', 'not friendly', 'trash', 'noisy', 'so bad', 'dirty', 'no faucet', 'not cleaned thoroughly', 'trash', 'broken', 'not very good', 'very unpleasant attitude', 'unpleasant', 'disrespectful attitude', 'kicking the customer out', 'bad attitude', 'weak', 'not good', 'hot', 'unprofessional', 'Bad', 'unpleasant', 'weak', 'steep', 'too hot', 'bad', 'rude attitude']",
+    "star": "4.5",
+    "GPT": {
+        "phan_tram_tot": "60.67",
+        "phan_tram_xau": "39.33"
+    }
+}

@@ -11,12 +11,18 @@ import mysql.connector
 
 # from app.config import settings
 from app.ai_config import settings
+import os
 
 
 # connect_db
 def get_place_data_from_db(place_name: str):
+    host = "localhost"
+        
+    # Nếu chạy trong Docker, dùng host.docker.internal để kết nối ra ngoài
+    if os.getenv("IN_DOCKER") == "true":
+        host = "host.docker.internal"
     conn = mysql.connector.connect(
-        host="localhost",
+        host=host,
         user="root",      
         password="",       
         database="db_googlemap" 
@@ -54,9 +60,10 @@ async def chat_bot(
 
 ):
     try:
+        vector_folder = Path("demo") / "data_vector"
         prompt = Place + "\n\n" + Comment
         # Khởi tạo chatbot với dữ liệu vector đã lưu
-        chat = FilesChatAgent().get_workflow().compile().invoke(
+        chat = FilesChatAgent(vector_folder).get_workflow().compile().invoke(
             input={"question": prompt}
         )
 

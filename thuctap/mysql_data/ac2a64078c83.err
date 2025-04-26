@@ -2051,3 +2051,725 @@ Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distributio
 2025-04-05T02:52:32.053346Z 59 [Note] Aborted connection 59 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
 2025-04-05T02:53:32.011808Z 60 [Note] Aborted connection 60 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
 2025-04-05T02:57:21.978653Z 81 [Note] Aborted connection 81 to db: 'web_googlemap.com' user: 'web_googlemap.com' host: 'localhost' (Got an error reading communication packets)
+2025-04-26T00:19:43.838019Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:19:43.956900Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:19:43.957031Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:19:43.972517Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:19:44.016779Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 2568 ...
+2025-04-26T00:19:45.909047Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:19:46.115151Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:19:47.528324Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:19:47.531990Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:19:47.541570Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:19:47.550731Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:19:47.553493Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:19:47.569883Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:19:47.608276Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:19:47.675980Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:19:47.822663Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:19:48.956244Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:19:49.428004Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:19:49.893759Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:19:50.045260Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 4449714
+2025-04-26T00:19:50.045883Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 4449723
+2025-04-26T00:19:50.046349Z 0 [Note] InnoDB: Database was not shutdown normally!
+2025-04-26T00:19:50.047020Z 0 [Note] InnoDB: Starting crash recovery.
+2025-04-26T00:19:57.444620Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:19:57.453289Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:19:57.519812Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:19:58.675512Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:19:58.868410Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:19:58.913797Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:19:58.932906Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 9505ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-04-26T00:19:58.985931Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449723
+2025-04-26T00:19:59.034593Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:19:59.038662Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:19:59.708578Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:19:59.709285Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:19:59.709813Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:19:59.710227Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:19:59.971911Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:19:59.979491Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:20:00.046264Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:20:00
+2025-04-26T00:20:00.148448Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:20:00.150723Z 0 [Note] IPv6 is available.
+2025-04-26T00:20:00.153864Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:20:00.154670Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:20:00.260853Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:20:03.821921Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:20:20.122166Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:20:20.127153Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:20:20.215204Z 2 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:20.242540Z 3 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:20.250611Z 4 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:20.263225Z 5 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:20.281337Z 6 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:20.283629Z 7 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:23.878037Z 8 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:23.896753Z 9 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:24.074937Z 10 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:24.089082Z 11 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:24.155841Z 12 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:24.176891Z 13 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:27.461170Z 14 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:27.496281Z 15 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:28.592155Z 16 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:28.685871Z 17 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:28.755108Z 18 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:28.939639Z 19 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.252839Z 20 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.477904Z 21 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.540250Z 22 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.555373Z 23 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.601795Z 24 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:48.674454Z 25 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:51.605260Z 26 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:51.700189Z 27 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:51.911857Z 28 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:52.019213Z 29 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:52.158432Z 30 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:52.259154Z 31 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:58.642709Z 32 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:58.655684Z 33 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:58.921164Z 34 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:58.965727Z 35 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:20:59.672403Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2025-04-26T00:20:59.675407Z 0 [Note] Shutting down slave threads
+2025-04-26T00:20:59.676383Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2025-04-26T00:20:59.677281Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2025-04-26T00:20:59.678627Z 0 [Note] Binlog end
+2025-04-26T00:20:59.694072Z 0 [Note] Shutting down plugin 'ngram'
+2025-04-26T00:20:59.694622Z 0 [Note] Shutting down plugin 'partition'
+2025-04-26T00:20:59.695045Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2025-04-26T00:20:59.695450Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2025-04-26T00:20:59.695962Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2025-04-26T00:20:59.696439Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2025-04-26T00:20:59.696843Z 0 [Note] Shutting down plugin 'MyISAM'
+2025-04-26T00:20:59.697288Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2025-04-26T00:20:59.697662Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2025-04-26T00:20:59.698046Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2025-04-26T00:20:59.698482Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2025-04-26T00:20:59.698955Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2025-04-26T00:20:59.699586Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2025-04-26T00:20:59.700037Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2025-04-26T00:20:59.700365Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2025-04-26T00:20:59.700687Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2025-04-26T00:20:59.701293Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2025-04-26T00:20:59.702048Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2025-04-26T00:20:59.702532Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2025-04-26T00:20:59.702973Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2025-04-26T00:20:59.703398Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2025-04-26T00:20:59.703844Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2025-04-26T00:20:59.704322Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2025-04-26T00:20:59.704796Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2025-04-26T00:20:59.705308Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2025-04-26T00:20:59.705864Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2025-04-26T00:20:59.706336Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2025-04-26T00:20:59.706723Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2025-04-26T00:20:59.707130Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2025-04-26T00:20:59.707459Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2025-04-26T00:20:59.707867Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2025-04-26T00:20:59.708367Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2025-04-26T00:20:59.708931Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2025-04-26T00:20:59.709571Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2025-04-26T00:20:59.710225Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2025-04-26T00:20:59.710710Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2025-04-26T00:20:59.711193Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2025-04-26T00:20:59.711696Z 0 [Note] Shutting down plugin 'InnoDB'
+2025-04-26T00:20:59.712666Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2025-04-26T00:20:59.713605Z 0 [Note] InnoDB: Starting shutdown...
+2025-04-26T00:20:59.820060Z 0 [Note] InnoDB: Dumping buffer pool(s) to /www/server/data/ib_buffer_pool
+2025-04-26T00:20:59.861980Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 250426  0:20:59
+2025-04-26T00:21:02.432779Z 0 [Note] InnoDB: Shutdown completed; log sequence number 4449811
+2025-04-26T00:21:02.451505Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:21:02.452069Z 0 [Note] Shutting down plugin 'MEMORY'
+2025-04-26T00:21:02.452790Z 0 [Note] Shutting down plugin 'CSV'
+2025-04-26T00:21:02.453643Z 0 [Note] Shutting down plugin 'sha256_password'
+2025-04-26T00:21:02.460277Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2025-04-26T00:21:02.470095Z 0 [Note] Shutting down plugin 'binlog'
+2025-04-26T00:21:02.510508Z 0 [Note] /www/server/mysql/bin/mysqld: Shutdown complete
+
+2025-04-26T00:21:19.251500Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:21:19.251780Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:21:19.251792Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:21:19.278140Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:21:19.278392Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 4115 ...
+2025-04-26T00:21:19.517132Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:21:19.579474Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:21:19.666733Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:21:19.670748Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:21:19.671539Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:21:19.672093Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:21:19.673011Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:21:19.673948Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:21:19.675560Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:21:19.676400Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:21:19.754435Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:21:20.623237Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:21:20.649082Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:21:21.272362Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:21:23.025304Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:21:23.030333Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:21:23.477104Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:21:23.555882Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:21:23.576295Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:21:23.587604Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449811
+2025-04-26T00:21:23.605814Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:21:23.648261Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:21:23.930247Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:21:23.930863Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:21:23.931760Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:21:23.932321Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:21:23.989595Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:21:24.014575Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:21:24.035785Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:21:24.036420Z 0 [Note] IPv6 is available.
+2025-04-26T00:21:24.037021Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:21:24.038230Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:21:24.120216Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:21:24.285666Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:21:24
+2025-04-26T00:21:25.307572Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:21:44.737407Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:21:44.738686Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:21:44.740900Z 2 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:44.743556Z 3 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:44.756640Z 4 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:44.768314Z 5 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:44.776326Z 6 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:44.779103Z 7 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.279888Z 8 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.302361Z 9 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.488111Z 10 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.513524Z 11 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.529694Z 12 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:52.536248Z 13 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:57.335889Z 14 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:57.387059Z 15 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:57.755801Z 16 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:57.814478Z 17 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:58.059946Z 18 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:21:58.101633Z 19 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:23:06.777115Z 20 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:23:06.789252Z 21 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:23:07.288972Z 22 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:23:07.292600Z 23 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:23:08.041224Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2025-04-26T00:23:08.043798Z 0 [Note] Shutting down slave threads
+2025-04-26T00:23:08.049183Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2025-04-26T00:23:08.050137Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2025-04-26T00:23:08.079150Z 0 [Note] Binlog end
+2025-04-26T00:23:08.156665Z 0 [Note] Shutting down plugin 'ngram'
+2025-04-26T00:23:08.157411Z 0 [Note] Shutting down plugin 'partition'
+2025-04-26T00:23:08.157931Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2025-04-26T00:23:08.158596Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2025-04-26T00:23:08.159127Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2025-04-26T00:23:08.162305Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2025-04-26T00:23:08.179248Z 0 [Note] Shutting down plugin 'MyISAM'
+2025-04-26T00:23:08.190932Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2025-04-26T00:23:08.196226Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2025-04-26T00:23:08.196930Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2025-04-26T00:23:08.197444Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2025-04-26T00:23:08.204516Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2025-04-26T00:23:08.205191Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2025-04-26T00:23:08.207150Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2025-04-26T00:23:08.208896Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2025-04-26T00:23:08.209929Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2025-04-26T00:23:08.211194Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2025-04-26T00:23:08.211847Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2025-04-26T00:23:08.212488Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2025-04-26T00:23:08.213526Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2025-04-26T00:23:08.217432Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2025-04-26T00:23:08.217995Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2025-04-26T00:23:08.218793Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2025-04-26T00:23:08.219645Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2025-04-26T00:23:08.220522Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2025-04-26T00:23:08.227597Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2025-04-26T00:23:08.229980Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2025-04-26T00:23:08.230996Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2025-04-26T00:23:08.231618Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2025-04-26T00:23:08.232264Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2025-04-26T00:23:08.232924Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2025-04-26T00:23:08.233949Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2025-04-26T00:23:08.242548Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2025-04-26T00:23:08.243497Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2025-04-26T00:23:08.244099Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2025-04-26T00:23:08.244767Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2025-04-26T00:23:08.245309Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2025-04-26T00:23:08.245810Z 0 [Note] Shutting down plugin 'InnoDB'
+2025-04-26T00:23:08.260808Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2025-04-26T00:23:08.267032Z 0 [Note] InnoDB: Starting shutdown...
+2025-04-26T00:23:08.403938Z 0 [Note] InnoDB: Dumping buffer pool(s) to /www/server/data/ib_buffer_pool
+2025-04-26T00:23:08.454289Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 250426  0:23:08
+2025-04-26T00:23:10.536020Z 0 [Note] InnoDB: Shutdown completed; log sequence number 4449839
+2025-04-26T00:23:10.541084Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:23:10.541612Z 0 [Note] Shutting down plugin 'MEMORY'
+2025-04-26T00:23:10.542074Z 0 [Note] Shutting down plugin 'CSV'
+2025-04-26T00:23:10.542513Z 0 [Note] Shutting down plugin 'sha256_password'
+2025-04-26T00:23:10.542905Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2025-04-26T00:23:10.548792Z 0 [Note] Shutting down plugin 'binlog'
+2025-04-26T00:23:10.602056Z 0 [Note] /www/server/mysql/bin/mysqld: Shutdown complete
+
+2025-04-26T00:23:29.608721Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:23:29.608970Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:23:29.608988Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:23:29.611602Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:23:29.611787Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 5665 ...
+2025-04-26T00:23:29.678824Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:23:29.687817Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:23:29.740276Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:23:29.740873Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:23:29.741331Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:23:29.741735Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:23:29.742175Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:23:29.743159Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:23:29.747271Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:23:29.748975Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:23:29.826443Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:23:30.152938Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:23:30.178838Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:23:30.740804Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:23:34.099408Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:23:34.105619Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:23:34.674578Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:23:34.837174Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:23:34.837743Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:23:34.840922Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 4663ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-04-26T00:23:34.850786Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449839
+2025-04-26T00:23:34.856239Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:23:34.865720Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:23:36.545431Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:23:36.576811Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:23:36.625479Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:23:36.685531Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:23:37.167644Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:23:37.305637Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:23:37.550410Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:23:37.551405Z 0 [Note] IPv6 is available.
+2025-04-26T00:23:37.552254Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:23:37.553012Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:23:37.676791Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:23:39.345245Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:23:39
+2025-04-26T00:23:42.653667Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:23:59.870943Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:23:59.873238Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:24:07.567439Z 2 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:24:07.657922Z 3 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:24:07.843234Z 4 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:24:07.860969Z 5 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:24:07.994612Z 6 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:24:08.025428Z 7 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:26:02.429098Z 8 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:26:02.456396Z 9 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:26:02.809057Z 10 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:26:02.812183Z 11 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:26:07.200957Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2025-04-26T00:26:07.237381Z 0 [Note] Shutting down slave threads
+2025-04-26T00:26:07.246356Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2025-04-26T00:26:07.250794Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2025-04-26T00:26:07.356225Z 0 [Note] Binlog end
+2025-04-26T00:26:08.140834Z 0 [Note] Shutting down plugin 'ngram'
+2025-04-26T00:26:08.242636Z 0 [Note] Shutting down plugin 'partition'
+2025-04-26T00:26:08.252308Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2025-04-26T00:26:08.275758Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2025-04-26T00:26:08.288040Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2025-04-26T00:26:08.367211Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2025-04-26T00:26:08.368913Z 0 [Note] Shutting down plugin 'MyISAM'
+2025-04-26T00:26:08.421098Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2025-04-26T00:26:08.513134Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2025-04-26T00:26:08.553378Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2025-04-26T00:26:08.576683Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2025-04-26T00:26:08.657065Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2025-04-26T00:26:08.686818Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2025-04-26T00:26:08.688914Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2025-04-26T00:26:08.691010Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2025-04-26T00:26:08.692027Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2025-04-26T00:26:08.695711Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2025-04-26T00:26:08.696167Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2025-04-26T00:26:08.696524Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2025-04-26T00:26:08.696843Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2025-04-26T00:26:08.697175Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2025-04-26T00:26:08.710038Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2025-04-26T00:26:08.712543Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2025-04-26T00:26:08.727780Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2025-04-26T00:26:08.735925Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2025-04-26T00:26:08.744465Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2025-04-26T00:26:08.761595Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2025-04-26T00:26:08.846009Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2025-04-26T00:26:08.852541Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2025-04-26T00:26:08.901593Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2025-04-26T00:26:08.935241Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2025-04-26T00:26:08.944173Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2025-04-26T00:26:08.950149Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2025-04-26T00:26:08.991807Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2025-04-26T00:26:08.992495Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2025-04-26T00:26:08.993231Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2025-04-26T00:26:08.993928Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2025-04-26T00:26:08.994699Z 0 [Note] Shutting down plugin 'InnoDB'
+2025-04-26T00:26:09.102505Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2025-04-26T00:26:09.193422Z 0 [Note] InnoDB: Starting shutdown...
+2025-04-26T00:26:09.546687Z 0 [Note] InnoDB: Dumping buffer pool(s) to /www/server/data/ib_buffer_pool
+2025-04-26T00:26:10.409539Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 250426  0:26:10
+2025-04-26T00:26:16.056423Z 0 [Note] InnoDB: Shutdown completed; log sequence number 4449867
+2025-04-26T00:26:16.094904Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:26:16.108204Z 0 [Note] Shutting down plugin 'MEMORY'
+2025-04-26T00:26:16.131358Z 0 [Note] Shutting down plugin 'CSV'
+2025-04-26T00:26:16.159990Z 0 [Note] Shutting down plugin 'sha256_password'
+2025-04-26T00:26:16.164023Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2025-04-26T00:26:16.178300Z 0 [Note] Shutting down plugin 'binlog'
+2025-04-26T00:26:16.264429Z 0 [Note] /www/server/mysql/bin/mysqld: Shutdown complete
+
+2025-04-26T00:26:43.718459Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:26:43.736497Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:26:43.736700Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:26:43.744426Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:26:43.746511Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 7556 ...
+2025-04-26T00:26:44.067686Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:26:44.101188Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:26:44.489218Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:26:44.490056Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:26:44.490549Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:26:44.490929Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:26:44.491397Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:26:44.491770Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:26:44.536729Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:26:44.548020Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:26:44.987986Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:26:46.268655Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:26:46.362156Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:26:47.563423Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:26:50.070517Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:26:50.074646Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:26:50.786940Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:26:50.922987Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:26:50.923848Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:26:50.932305Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 4571ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-04-26T00:26:50.934755Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449867
+2025-04-26T00:26:50.945245Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:26:50.959095Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:26:51.522864Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:26:51.523865Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:26:51.524852Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:26:51.525536Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:26:51.735575Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:26:51.739728Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:26:51.818364Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:26:51.834486Z 0 [Note] IPv6 is available.
+2025-04-26T00:26:51.855516Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:26:51.856718Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:26:51.959626Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:26:54.815347Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:26:54
+2025-04-26T00:26:55.332819Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:26:59.097565Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:26:59.099038Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:27:08.670663Z 2 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:08.679257Z 3 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:08.705943Z 4 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:08.710842Z 5 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:08.725632Z 6 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:08.730397Z 7 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:11.766454Z 8 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:11.775073Z 9 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:12.012490Z 10 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:12.046623Z 11 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:12.070277Z 12 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:12.091770Z 13 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.811083Z 14 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.824035Z 15 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.874962Z 16 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.880430Z 17 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.894314Z 18 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:18.935016Z 19 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.787705Z 20 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.798225Z 21 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.819116Z 22 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.831693Z 23 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.854037Z 24 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:31.870563Z 25 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.320322Z 26 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.344238Z 27 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.572924Z 28 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.638177Z 29 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.711131Z 30 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:36.729428Z 31 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.293631Z 32 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.305718Z 33 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.326903Z 34 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.359959Z 35 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.376681Z 36 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:53.479092Z 37 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.423601Z 38 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.466572Z 39 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.485698Z 40 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.519469Z 41 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.579137Z 42 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:27:58.709618Z 43 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.461177Z 44 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.478793Z 45 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.528506Z 46 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.583940Z 47 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.611256Z 48 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:28:09.623820Z 49 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:29:53.513444Z 50 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:29:53.623244Z 51 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:29:54.278321Z 52 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:29:54.286153Z 53 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:30:09.113128Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2025-04-26T00:30:09.115555Z 0 [Note] Shutting down slave threads
+2025-04-26T00:30:09.120488Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2025-04-26T00:30:09.126738Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2025-04-26T00:30:09.177045Z 0 [Note] Binlog end
+2025-04-26T00:30:09.402918Z 0 [Note] Shutting down plugin 'ngram'
+2025-04-26T00:30:09.438219Z 0 [Note] Shutting down plugin 'partition'
+2025-04-26T00:30:09.439600Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2025-04-26T00:30:09.440722Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2025-04-26T00:30:09.441436Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2025-04-26T00:30:09.473013Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2025-04-26T00:30:09.508646Z 0 [Note] Shutting down plugin 'MyISAM'
+2025-04-26T00:30:09.520675Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2025-04-26T00:30:09.524799Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2025-04-26T00:30:09.527526Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2025-04-26T00:30:09.535481Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2025-04-26T00:30:09.536269Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2025-04-26T00:30:09.536976Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2025-04-26T00:30:09.537629Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2025-04-26T00:30:09.538982Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2025-04-26T00:30:09.540393Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2025-04-26T00:30:09.541601Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2025-04-26T00:30:09.551543Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2025-04-26T00:30:09.552457Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2025-04-26T00:30:09.554408Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2025-04-26T00:30:09.555000Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2025-04-26T00:30:09.558058Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2025-04-26T00:30:09.559893Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2025-04-26T00:30:09.567539Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2025-04-26T00:30:09.569566Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2025-04-26T00:30:09.571332Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2025-04-26T00:30:09.575280Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2025-04-26T00:30:09.576319Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2025-04-26T00:30:09.577736Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2025-04-26T00:30:09.578471Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2025-04-26T00:30:09.583514Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2025-04-26T00:30:09.584738Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2025-04-26T00:30:09.585321Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2025-04-26T00:30:09.585854Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2025-04-26T00:30:09.586345Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2025-04-26T00:30:09.587867Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2025-04-26T00:30:09.588586Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2025-04-26T00:30:09.599299Z 0 [Note] Shutting down plugin 'InnoDB'
+2025-04-26T00:30:09.673234Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2025-04-26T00:30:09.689961Z 0 [Note] InnoDB: Starting shutdown...
+2025-04-26T00:30:09.995016Z 0 [Note] InnoDB: Dumping buffer pool(s) to /www/server/data/ib_buffer_pool
+2025-04-26T00:30:10.216257Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 250426  0:30:10
+2025-04-26T00:30:24.450786Z 0 [Note] InnoDB: Shutdown completed; log sequence number 4449895
+2025-04-26T00:30:25.054574Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:30:25.057429Z 0 [Note] Shutting down plugin 'MEMORY'
+2025-04-26T00:30:25.062377Z 0 [Note] Shutting down plugin 'CSV'
+2025-04-26T00:30:25.064201Z 0 [Note] Shutting down plugin 'sha256_password'
+2025-04-26T00:30:25.065219Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2025-04-26T00:30:25.124566Z 0 [Note] Shutting down plugin 'binlog'
+2025-04-26T00:30:25.316685Z 0 [Note] /www/server/mysql/bin/mysqld: Shutdown complete
+
+2025-04-26T00:30:52.722662Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:30:52.724819Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:30:52.725571Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:30:52.727303Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:30:52.727944Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 9269 ...
+2025-04-26T00:30:53.119688Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:30:53.161236Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:30:53.460816Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:30:53.461334Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:30:53.461687Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:30:53.462047Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:30:53.462401Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:30:53.462713Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:30:53.469375Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:30:53.473068Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:30:53.486442Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:30:54.008303Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:30:54.645552Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:30:58.624918Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:31:01.860461Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:31:01.869913Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:31:02.262469Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:31:02.349386Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:31:02.350015Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:31:02.352832Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7708ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2025-04-26T00:31:02.355060Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449895
+2025-04-26T00:31:02.363208Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:31:02.368422Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:31:02.791844Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:31:02.792934Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:31:02.793685Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:31:02.794157Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:31:02.852585Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:31:02.857140Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:31:02.905006Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:31:02.908619Z 0 [Note] IPv6 is available.
+2025-04-26T00:31:02.912720Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:31:02.913500Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:31:03.073599Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:31:03.310795Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:31:03
+2025-04-26T00:31:04.983067Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:31:08.141852Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:31:08.143470Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:31:55.908529Z 14 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:31:56.309152Z 15 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:31:56.682973Z 18 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:31:56.730222Z 19 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:31:56.790293Z 20 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:31:56.812471Z 21 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:34:43.686794Z 22 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:34:43.771866Z 23 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:06.293614Z 24 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:06.376074Z 25 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:10.002568Z 26 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:10.123737Z 27 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:11.179492Z 28 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:35:11.272933Z 29 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:36:20.223085Z 30 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:36:20.243291Z 31 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:36:20.800946Z 32 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:36:20.804900Z 33 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:36:23.840059Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2025-04-26T00:36:23.851558Z 0 [Note] Shutting down slave threads
+2025-04-26T00:36:23.857791Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2025-04-26T00:36:23.865071Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2025-04-26T00:36:23.949759Z 0 [Note] Binlog end
+2025-04-26T00:36:24.354802Z 0 [Note] Shutting down plugin 'ngram'
+2025-04-26T00:36:24.363382Z 0 [Note] Shutting down plugin 'partition'
+2025-04-26T00:36:24.380212Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2025-04-26T00:36:24.399187Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2025-04-26T00:36:24.407976Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2025-04-26T00:36:24.425243Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2025-04-26T00:36:24.428282Z 0 [Note] Shutting down plugin 'MyISAM'
+2025-04-26T00:36:24.441219Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2025-04-26T00:36:24.446455Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2025-04-26T00:36:24.449831Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2025-04-26T00:36:24.459459Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2025-04-26T00:36:24.461297Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2025-04-26T00:36:24.462605Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2025-04-26T00:36:24.463409Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2025-04-26T00:36:24.465568Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2025-04-26T00:36:24.466408Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2025-04-26T00:36:24.476789Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2025-04-26T00:36:24.488058Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2025-04-26T00:36:24.489015Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2025-04-26T00:36:24.490442Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2025-04-26T00:36:24.491235Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2025-04-26T00:36:24.498239Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2025-04-26T00:36:24.501558Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2025-04-26T00:36:24.510917Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2025-04-26T00:36:24.513837Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2025-04-26T00:36:24.545154Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2025-04-26T00:36:24.553023Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2025-04-26T00:36:24.559879Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2025-04-26T00:36:24.564916Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2025-04-26T00:36:24.567132Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2025-04-26T00:36:24.568103Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2025-04-26T00:36:24.570403Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2025-04-26T00:36:24.571669Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2025-04-26T00:36:24.573432Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2025-04-26T00:36:24.576393Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2025-04-26T00:36:24.577819Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2025-04-26T00:36:24.578863Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2025-04-26T00:36:24.580263Z 0 [Note] Shutting down plugin 'InnoDB'
+2025-04-26T00:36:24.620013Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2025-04-26T00:36:24.624828Z 0 [Note] InnoDB: Starting shutdown...
+2025-04-26T00:36:24.774775Z 0 [Note] InnoDB: Dumping buffer pool(s) to /www/server/data/ib_buffer_pool
+2025-04-26T00:36:24.862187Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 250426  0:36:24
+2025-04-26T00:36:27.334746Z 0 [Note] InnoDB: Shutdown completed; log sequence number 4449923
+2025-04-26T00:36:27.501848Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2025-04-26T00:36:27.503233Z 0 [Note] Shutting down plugin 'MEMORY'
+2025-04-26T00:36:27.505934Z 0 [Note] Shutting down plugin 'CSV'
+2025-04-26T00:36:27.506620Z 0 [Note] Shutting down plugin 'sha256_password'
+2025-04-26T00:36:27.507237Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2025-04-26T00:36:27.529967Z 0 [Note] Shutting down plugin 'binlog'
+2025-04-26T00:36:27.757120Z 0 [Note] /www/server/mysql/bin/mysqld: Shutdown complete
+
+2025-04-26T00:36:49.317185Z 0 [Warning] option 'max_allowed_packet': unsigned value 107374182400 adjusted to 1073741824
+2025-04-26T00:36:49.364827Z 0 [Warning] 'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.
+2025-04-26T00:36:49.394296Z 0 [Warning] 'NO_AUTO_CREATE_USER' sql mode was not set.
+2025-04-26T00:36:49.402535Z 0 [Note] --secure-file-priv is set to NULL. Operations related to importing and exporting data are disabled
+2025-04-26T00:36:49.406514Z 0 [Note] /www/server/mysql/bin/mysqld (mysqld 5.7.44-log) starting as process 11282 ...
+2025-04-26T00:36:51.077282Z 0 [Warning] Setting lower_case_table_names=2 because file system for /www/server/data/ is case insensitive
+2025-04-26T00:36:51.473443Z 0 [Warning] You need to use --log-bin to make --binlog-format work.
+2025-04-26T00:36:54.204279Z 0 [Note] InnoDB: PUNCH HOLE support available
+2025-04-26T00:36:54.205954Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2025-04-26T00:36:54.214166Z 0 [Note] InnoDB: Uses event mutexes
+2025-04-26T00:36:54.214679Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2025-04-26T00:36:54.215161Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.13
+2025-04-26T00:36:54.215646Z 0 [Note] InnoDB: Using Linux native AIO
+2025-04-26T00:36:54.258461Z 0 [Note] InnoDB: Number of pools: 1
+2025-04-26T00:36:54.267758Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2025-04-26T00:36:54.469471Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2025-04-26T00:36:56.103265Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2025-04-26T00:36:56.169476Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2025-04-26T00:36:56.700895Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2025-04-26T00:36:58.454693Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2025-04-26T00:36:58.462099Z 0 [Note] InnoDB: Setting file '/www/server/data/ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2025-04-26T00:36:58.925926Z 0 [Note] InnoDB: File '/www/server/data/ibtmp1' size is now 12 MB.
+2025-04-26T00:36:59.113053Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2025-04-26T00:36:59.114765Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2025-04-26T00:36:59.131477Z 0 [Note] InnoDB: 5.7.44 started; log sequence number 4449923
+2025-04-26T00:36:59.143427Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2025-04-26T00:36:59.144292Z 0 [Note] InnoDB: Loading buffer pool(s) from /www/server/data/ib_buffer_pool
+2025-04-26T00:36:59.762417Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2025-04-26T00:36:59.763494Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2025-04-26T00:36:59.764098Z 0 [Warning] A deprecated TLS version TLSv1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:36:59.764914Z 0 [Warning] A deprecated TLS version TLSv1.1 is enabled. Please use TLSv1.2 or higher.
+2025-04-26T00:36:59.875137Z 0 [Warning] CA certificate ca.pem is self signed.
+2025-04-26T00:36:59.884113Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2025-04-26T00:36:59.899825Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2025-04-26T00:36:59.903897Z 0 [Note] IPv6 is available.
+2025-04-26T00:36:59.909845Z 0 [Note]   - '::' resolves to '::';
+2025-04-26T00:36:59.910642Z 0 [Note] Server socket created on IP: '::'.
+2025-04-26T00:37:00.032163Z 0 [Warning] Insecure configuration for --pid-file: Location '/www/server/data' in the path is accessible to all OS users. Consider choosing a different directory.
+2025-04-26T00:37:02.422696Z 0 [Note] InnoDB: Buffer pool(s) load completed at 250426  0:37:02
+2025-04-26T00:37:03.201160Z 0 [Note] Failed to start slave threads for channel ''
+2025-04-26T00:37:06.412757Z 0 [Note] Event Scheduler: Loaded 0 events
+2025-04-26T00:37:06.414481Z 0 [Note] /www/server/mysql/bin/mysqld: ready for connections.
+Version: '5.7.44-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+2025-04-26T00:37:53.654642Z 2 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:37:53.707645Z 3 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:37:54.429444Z 4 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:37:54.476792Z 5 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:37:54.520879Z 6 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:37:54.566222Z 7 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.106147Z 8 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.119711Z 9 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.176846Z 10 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.188788Z 11 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.196890Z 12 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:04.202100Z 13 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:09.946525Z 14 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:09.950490Z 15 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:09.968878Z 16 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:09.982633Z 17 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:09.993023Z 18 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:10.006956Z 19 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.309088Z 20 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.324257Z 21 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.355787Z 22 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.365580Z 23 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.374268Z 24 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:38:16.377348Z 25 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.066441Z 30 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.110225Z 31 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.220316Z 32 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.279028Z 33 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.309924Z 34 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:39:16.403380Z 35 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.619142Z 36 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.659738Z 37 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.730715Z 38 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.755201Z 39 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.762193Z 40 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:52:56.764064Z 41 [Note] Access denied for user 'root'@'localhost' (using password: YES)
+2025-04-26T00:58:34.882014Z 174 [Note] Access denied for user 'root'@'localhost' (using password: NO)
+2025-04-26T01:05:38.897866Z 175 [Note] Access denied for user 'root'@'localhost' (using password: NO)
+2025-04-26T01:05:38.897810Z 176 [Note] Access denied for user 'root'@'localhost' (using password: NO)
