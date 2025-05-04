@@ -2,15 +2,26 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fc;
 }
+
+/* Sidebar */
 .sidebar {
-    width: 250px;
-    background-color: #2c2f33;
-    color: white;
-    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
+    width: 250px;
+    height: 100%;
+    background-color: #2c3e50;
+    padding: 35px 0px 0px; 
+    box-sizing: border-box;
+    transition: width 0.3s, transform 0.3s ease;
+    color: #fff;
+}
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+.sidebar.collapsed {
+    width: 0;
+    overflow: hidden;
 }
 .sidebar a {
     color: white;
@@ -22,18 +33,122 @@ body {
     background-color: #2e59d9;
     border-radius: 5px;
 }
-.main-content {
-    margin-left: 250px;       /* chừa chỗ cho sidebar */
-    padding: 20px 10px;       /* cách trái 10px, cách phải 10px */
-    box-sizing: border-box;
-    width: calc(100% - 250px); /* chiếm toàn bộ phần còn lại */
+
+/* Sidebar toggle button */
+#toggleSidebar {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #2c3e50; /* hoặc màu khác */
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s;
+}
+.sidebar.collapsed + .main-content {
+    margin-left: 0;
+}
+
+/* Notification icon & count */
+.notification-icon {
+    position: fixed;           /* Cố định vị trí trên màn hình */
+    top: 5px;         /* Khoảng cách từ trên xuống */
+    right: 20px;              /* Khoảng cách từ phải vào */
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    z-index: 1100;            /* Cao hơn sidebar (thường là 1000) */
+}
+#notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 65%;         
+    max-width: 800px;
+    margin: 10% auto;
+}
+.close-btn {
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Notifications list */
+#notifications, .notification-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+.notification-text {
+    flex: 1;
+    margin-right: 10px;
+}
+.notification-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-ok {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Card */
 .card {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 100px;          /* tăng padding */
-    min-width: 200px;       /* hoặc set width cụ thể */
-    font-size: 20px;        /* tăng cỡ chữ */
+    padding: 100px;
+    min-width: 200px;
+    font-size: 20px;
 }
 .card-hover {
     transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
@@ -42,30 +157,29 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-/* Phát sáng nhẹ */
 .card-hover:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(255, 200, 0, 0.3), 0 0 15px rgba(255, 165, 0, 0.4);
     background: linear-gradient(135deg, #ffe29f, #ffa751);
     color: #222;
 }
-
-/* Icon động */
 .card-hover i {
     font-size: 28px;
     margin-bottom: 10px;
     color: #333;
     transition: transform 0.3s ease;
 }
-
 .card-hover:hover i {
     transform: scale(1.2) rotate(10deg);
     color: #fff;
 }
+
+/* Progress bar */
 .progress-bar {
     background-color: #4e73df;
 }
+
+/* Search box */
 .search-box {
     width: 300px;
     position: relative;
@@ -83,31 +197,30 @@ body {
     transform: translateY(-50%);
     color: gray;
 }
-/* contact */
+
+/* Contact info */
 .contact-info {
     position: absolute;
-    bottom: 20px; /* Đặt cách đáy sidebar 20px */
+    bottom: 20px;
     width: 100%;
     font-size: 14px;
 }
-/* api */
+
+/* API input group */
 .input-group {
     display: flex;
-    gap: 10px; /* Khoảng cách giữa input và button */
+    gap: 10px;
 }
-
 #place {
-    flex: 1; /* Chiếm hết không gian còn lại */
+    flex: 1;
 }
-
 button {
     padding: 8px 16px;
 }
 
+/* Response box */
 .response-box {
-    margin-top: 10px;
-    margin-left: 10px;  /* Cách trái 10px */
-    margin-right: 10000px; /* Cách phải 10px */
+    margin: 10px 10000px 0 10px;
     padding: 10px;
     border: 2px solid #020202;
     background-color: #f9f9f9;
@@ -115,4 +228,3 @@ button {
     max-height: 200px;
     overflow-y: auto;
 }
-

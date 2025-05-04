@@ -44,35 +44,35 @@ def get_place_data_from_db(place_name: str):
 # Tạo router cho người dùng
 router = APIRouter(prefix="/base", tags=["base"])
 
-@router.post("/base-url/", response_model=Base)
-async def base_url(
-    api_key: str = get_api_key,  # Khóa API để xác thực
-    base_data: str = Form(""),
-):
+# @router.post("/base-url/", response_model=Base)
+# async def base_url(
+#     api_key: str = get_api_key,  # Khóa API để xác thực
+#     base_data: str = Form(""),
+# ):
 
-    return Base(id = "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa", data=base_data)
+#     return Base(id = "gnqAYAVeDMR7dzocBfH5j89O4oXUPpEa", data=base_data)
 
-@router.post("/chat-bot/", response_model=Base)
-async def chat_bot(
-        api_key: str = get_api_key,  # Khóa API để xác thực
-        Comment: str = Form(""),
-        Place: str = Form(""),
+# @router.post("/chat-bot/", response_model=Base)
+# async def chat_bot(
+#         api_key: str = get_api_key,  # Khóa API để xác thực
+#         Comment: str = Form(""),
+#         Place: str = Form(""),
 
-):
-    try:
-        vector_folder = Path("demo") / "data_vector"
-        prompt = Place + "\n\n" + Comment
-        # Khởi tạo chatbot với dữ liệu vector đã lưu
-        chat = FilesChatAgent(vector_folder).get_workflow().compile().invoke(
-            input={"question": prompt}
-        )
+# ):
+#     try:
+#         vector_folder = Path("demo") / "data_vector"
+#         prompt = Place + "\n\n" + Comment
+#         # Khởi tạo chatbot với dữ liệu vector đã lưu
+#         chat = FilesChatAgent(vector_folder).get_workflow().compile().invoke(
+#             input={"question": prompt}
+#         )
 
-        # Lấy kết quả chatbot sinh ra
-        response = chat["generation"]
-        return Base(id="chatbot-response", data=response)
+#         # Lấy kết quả chatbot sinh ra
+#         response = chat["generation"]
+#         return Base(id="chatbot-response", data=response)
     
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=f"Chatbot error: {str(e)}")
 
 
 #tạo router cho chat place
@@ -181,3 +181,53 @@ def refresh():
     """
     settings.reload()
     return {"status": "reloaded"}
+
+@router.get("/export-location-data", response_model=Base)
+def export_location_data(location_name: str,  api_key: str = get_api_key,):
+    """
+    API để xuất toàn bộ dữ liệu liên quan đến một địa điểm.
+
+    ## Request
+    - `location_name`: Tên địa điểm
+    - `api_key`: API Key để xác thực
+
+    ## Response
+    - `id`: Mã định danh phản hồi (export-location)
+    - `data`: Dữ liệu bảng `locations` và `users_review` liên quan
+    """
+    try:
+        host = "localhost"
+        if os.getenv("IN_DOCKER") == "true":
+            host = "host.docker.internal"
+
+        conn = mysql.connector.connect(
+            host=host,
+            user="root",
+            password="",
+            database="db_googlemap"
+        )
+        cursor = conn.cursor(dictionary=True)
+
+        # Tìm địa điểm theo tên
+        cursor.execute("SELECT * FROM locations WHERE name = %s", (location_name,))
+        location = cursor.fetchone()
+
+        if not location:
+            raise HTTPException(status_code=404, detail="Không tìm thấy địa điểm")
+
+        # Lấy các review tương ứng với location_id
+        cursor.execute("SELECT * FROM users_review WHERE location_id = %s", (location["id"],))
+        reviews = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        result = {
+            "location": location,
+            "reviews": reviews
+        }
+
+        return Base(id="export-location", data=json.dumps(result, ensure_ascii=False, indent=2, default=str))
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lỗi khi export location data: {str(e)}")

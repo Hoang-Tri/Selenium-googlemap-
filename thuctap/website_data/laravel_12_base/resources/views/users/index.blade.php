@@ -108,14 +108,16 @@
                             data-email="{{ $user->email }}">
                             Edit
                         </button>
-                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger"
-                                onclick="return confirm('Are you sure you want to delete this user?')">
-                                Delete
-                            </button>
-                        </form>
+                        @if ($user->level != 1)
+                            <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger"
+                                    onclick="return confirm('Are you sure you want to delete this user?')">
+                                    Delete
+                                </button>
+                            </form>
+                        @endif
                     </td>
                 </tr>
             @endforeach

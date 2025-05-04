@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Model\NguoiDung;
 
 class AuthController extends Controller
@@ -25,7 +26,16 @@ class AuthController extends Controller
             }
 
             if ($user->level == 1) {
-                return redirect()->route('admin.dashboard');
+                // Kiểm tra có ai_api_key chưa
+                $apiKey = DB::table('settings')->where('key_name', 'ai_api_key')->value('value');
+
+                if (!$apiKey || trim($apiKey) === '') {
+                    // Nếu chưa có API Key, chuyển đến trang cấu hình kèm redirect
+                    return redirect('http://lht_2110421:8080/settings?redirect=dashboard')
+                        ->with('warning', 'Vui lòng nhập API Key để tiếp tục.');
+                }
+
+                return redirect('http://lht_2110421:8080/dashboard');
             } else {
                 return redirect()->route('nguoidung.dashboard');
             }

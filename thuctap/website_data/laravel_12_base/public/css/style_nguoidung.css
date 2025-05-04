@@ -272,7 +272,7 @@
 .review-grid {
     display: grid;
     grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto); /* đúng 2 hàng */
+    grid-template-rows: repeat(3, auto); /* đúng 2 hàng */
     gap: 16px;
 }
 
@@ -412,3 +412,319 @@
     gap: 1px;
 }
 
+/* word cloud */
+.word-cloud-container {
+    gap: 40px;
+}
+
+.word-cloud-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+    border: none;
+}
+
+.good {
+    color: #2e7d32;
+}
+
+.bad {
+    color: #c62828;
+}
+/* top review */
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+.hexagon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+    perspective: 1500px; /* Thiết lập chiều sâu không gian 3D */
+}
+
+.hexagon {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    border: 2px dashed #ccc;
+    transform-style: preserve-3d;
+    animation: rotateHexagon 10s infinite linear; /* Quay toàn bộ hình lục giác */
+}
+
+/* Hiệu ứng quay 3D toàn bộ hình lục giác theo chiều kim đồng hồ */
+@keyframes rotateHexagon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); /* Xoay toàn bộ theo chiều kim đồng hồ */
+    }
+}
+
+.hex-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + var(--x)), calc(-50% + var(--y)));
+}
+
+.user-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c3ff, #ffff1c);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+/* Tạo hiệu ứng phóng to khi hover vào */
+.user-circle:hover {
+    transform: scale(1.1);
+    background: #ffd700;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.value {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 13px;
+}
+/* line chart sao */
+.chart-container {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+.x-label {
+    font-size: 12px;
+    text-anchor: middle;
+    fill: #333;
+}
+.y-label {
+    font-size: 12px;
+    fill: #666;
+}
+.circle-point {
+    fill: #007bff;
+}
+.line-path {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 2;
+}
+/* line chart phần trăm */
+.chart-container-user {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.x-label-user {
+    font-size: 11px;
+    text-anchor: start;
+    fill: #333;
+}
+
+.y-label-user {
+    font-size: 12px;
+    fill: #666;
+}
+
+.circle-good {
+    fill: #4bc0c0;
+}
+
+.circle-bad {
+    fill: #f44336;
+}
+
+.line-good {
+    fill: none;
+    stroke: #4bc0c0;
+    stroke-width: 2;
+}
+
+.line-bad {
+    fill: none;
+    stroke: #f44336;
+    stroke-width: 2;
+}
+#suggestions li a {
+    text-decoration: none;
+    color: gray;
+    display: block;
+    padding: 5px 10px;
+}
+
+#suggestions li a:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+/* từ tốt xấu theo tháng - năm */
+.chart-wrapper {
+    display: flex;
+    gap: 20px;
+}
+.chart-container-month {
+    flex: 7;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.chart-container-year {
+    flex: 3;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.line-good {
+    fill: none;
+    stroke: #28a745; /* Màu xanh */
+    stroke-width: 2;
+}
+
+.line-bad {
+    fill: none;
+    stroke: #dc3545; /* Màu đỏ */
+    stroke-width: 2;
+}
+
+.circle-good {
+    fill: #28a745; /* Màu xanh */
+}
+
+.circle-bad {
+    fill: #dc3545; /* Màu đỏ */
+}
+
+.y-label {
+    font-size: 12px;
+    fill: #333;
+}
+
+.text-label {
+    font-size: 12px;
+    fill: #333;
+}
+/*  */
+.chart-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Chia theo tỷ lệ 2:4:4 = 20%-40%-40% */
+.chart-col-20 {
+    flex: 2;
+    max-width: 20%;
+}
+
+.chart-col-40 {
+    flex: 4;
+    max-width: 40%;
+}
+
+.chart-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-wrapper-chart {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+}
+
+.chart-col-container {
+    width: 16%;
+    text-align: center;
+    position: relative;
+}
+
+.chart-bar {
+    width: 100%;
+    border-radius: 6px;
+    transition: height 0.5s ease-out;
+}
+
+.chart-bar-normal   { background-color: #4caf50; }
+.chart-bar-conflict { background-color: #f44336; }
+.chart-bar-good     { background-color: #2196f3; }
+.chart-bar-bad      { background-color: #ff9800; }
+
+.chart-label {
+    font-size: 13px;
+    margin-top: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.chart-value {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.chart-col-container:hover .chart-value {
+    opacity: 1;
+}
+
+.chart-word {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.chart-title {
+    text-align: center;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}

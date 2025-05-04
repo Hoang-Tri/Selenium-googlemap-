@@ -42,8 +42,8 @@ class NguoidungController extends Controller
         
         //Phần trăm tốt, xấu
         $llm = json_decode($location->data_llm, true);
-        $phan_tram_tot = floatval($llm['GPT']['phan_tram_tot'] ?? 0);
-        $phan_tram_xau = floatval($llm['GPT']['phan_tram_xau'] ?? 0);
+        $phan_tram_tot_raw = floatval($llm['GPT']['phan_tram_tot'] ?? 0);
+        $phan_tram_xau_raw = floatval($llm['GPT']['phan_tram_xau'] ?? 0);
         
         //trung bình sao
         $averageRating = DB::table('users_review')
@@ -51,14 +51,64 @@ class NguoidungController extends Controller
             ->avg('star');
 
         $averageRating = round($averageRating, 2);
+
+        // Điểm cảm xúc trung bình (Sentiment Score)
+        $Scorecomments = DB::table('users_review')
+            ->where('location_id', $id)
+            ->select('data_llm')
+            ->get();
+
+            $totalSentiment = 0;
+            $totalComments = 0;
+
+            foreach ($Scorecomments as $Scorecomment) {
+            $llmScore  = json_decode($Scorecomment->data_llm, true);
+            $phan_tram_tot = floatval($llmScore ['GPT']['phan_tram_tot'] ?? null);
+
+            if (!is_null($phan_tram_tot)) {
+                $sentiment = ($phan_tram_tot - 50) / 50; // Normalize [-1, 1]
+                $totalSentiment += $sentiment;
+                $totalComments++;
+            }
+        }
+
+        $sentimentScore = $totalComments > 0 ? round($totalSentiment / $totalComments, 2) : null;
         
         //lịch sử đánh giá
         $userReviewChartData = DB::table('users_review')
             ->where('location_id', $id)
-            ->select('user_review as username', DB::raw('IFNULL(star, 0) as star'), DB::raw('DATE(creat_date) as date'))
+            ->select(
+                'user_review as username',
+                DB::raw('IFNULL(star, 0) as star'),
+                DB::raw('DATE(creat_date) as date'),
+                DB::raw('YEAR(creat_date) as year') // Lấy năm từ ngày
+            )
             ->orderBy('id')
             ->orderBy('creat_date')
             ->get();
+
+        // Tính trung bình theo ngày
+        $averageByDate = $userReviewChartData->groupBy('date')->map(function ($reviews) {
+            return $reviews->avg('star'); // Tính trung bình sao cho mỗi ngày
+        });
+
+        // Tính trung bình theo năm
+        $averageByYear = $userReviewChartData->groupBy('year')->map(function ($reviews) {
+            return $reviews->avg('star'); // Tính trung bình sao cho mỗi năm
+        });
+        $totalReviews = $userReviewChartData->count();
+
+        // Phân loại đánh giá
+        $ratingCategories = [
+            'Đặc sắc' => $userReviewChartData->filter(fn($r) => $r->star == 5)->count(),
+            'Trung tính' => $userReviewChartData->filter(fn($r) => in_array($r->star, [3, 4]))->count(),
+            'Tệ' => $userReviewChartData->filter(fn($r) => in_array($r->star, [1, 2]))->count(),
+        ];
+
+        // Tính tỷ lệ phần trăm
+        $ratingPercentages = collect($ratingCategories)->map(function ($count) use ($totalReviews) {
+            return $totalReviews > 0 ? round(($count / $totalReviews) * 100, 2) : 0;
+        });
         
         //tính nps mức dộ hài lòng
         $npsStats = DB::table('users_review')
@@ -92,13 +142,14 @@ class NguoidungController extends Controller
         // Khởi tạo biến đếm bình luận tốt và xấu từ data_llm
         $goodCountFromLLM = 0;
         $badCountFromLLM = 0;
+        
 
         // Duyệt qua từng bình luận và tính toán từ data_llm
         foreach ($comments as $comment) {
             // Xử lý phần trăm từ data_llm
-            $llm = json_decode($comment->data_llm, true);
-            $phan_cmt_tram_tot = floatval($llm['GPT']['phan_tram_tot'] ?? 0);
-            $phan_cmt_tram_xau = floatval($llm['GPT']['phan_tram_xau'] ?? 0);
+            $llmcmt = json_decode($comment->data_llm, true);
+            $phan_cmt_tram_tot = floatval($llmcmt['GPT']['phan_tram_tot'] ?? 0);
+            $phan_cmt_tram_xau = floatval($llmcmt['GPT']['phan_tram_xau'] ?? 0);
 
             if ($phan_cmt_tram_tot > 50) {
                 $goodCountFromLLM++;
@@ -122,9 +173,9 @@ class NguoidungController extends Controller
         $badPercents = [];
 
         foreach ($feedbacks as $feedback) {
-            $llm = json_decode($feedback->data_llm, true);
-            $phan_tram_fb_tot = floatval($llm['GPT']['phan_tram_tot'] ?? 0);
-            $phan_tram_fb_xau = floatval($llm['GPT']['phan_tram_xau'] ?? 0);
+            $llmfb = json_decode($feedback->data_llm, true);
+            $phan_tram_fb_tot = floatval($llmfb['GPT']['phan_tram_tot'] ?? 0);
+            $phan_tram_fb_xau = floatval($llmfb['GPT']['phan_tram_xau'] ?? 0);
 
             $userLabels[] = $feedback->user_review ?? 'Ẩn danh';
             $goodPercents[] = $phan_tram_fb_tot;
@@ -137,7 +188,9 @@ class NguoidungController extends Controller
             ->get();
 
         $rawreviews = [];
-
+        $conflictCount = 0; // Biến đếm số lượng mâu thuẫn
+        $noConflictCount = 0; // Biến đếm số lượng không mâu thuẫn
+ 
         foreach ($rawReviews as $fb) {
             $data_llm = json_decode($fb->data_llm, true);
             $percent_good = floatval($data_llm["GPT"]["phan_tram_tot"]);
@@ -148,6 +201,9 @@ class NguoidungController extends Controller
             $mau_thuan = false;
             if (($fb->star >= 4 && $percent_bad > 50) || ($fb->star <= 2 && $percent_good > 50)) {
                 $mau_thuan = true;
+                $conflictCount++; // Tăng số lượng mâu thuẫn
+            } else {
+                $noConflictCount++; // Tăng số lượng không mâu thuẫn
             }
 
             $rawreviews[] = [
@@ -159,23 +215,121 @@ class NguoidungController extends Controller
                 'mau_thuan' => $mau_thuan
             ];
         }
+        // danh sach tư tot-xau
+        // $location = Location::findOrFail($id);
+        $listWords = [
+            'tot' => [],
+            'xau' => [],
+        ];
+
+        $llmraw = json_decode($location->data_llm, true);
+
+        if (!empty($llmraw['danh_sach_tu_tot'])) {
+            // Chuyển từ chuỗi dạng "['a', 'b']" thành mảng PHP
+            $tot_raw = str_replace(["'", "[", "]"], '', $llmraw['danh_sach_tu_tot']);
+            $listWords['tot'] = array_map('trim', explode(',', $tot_raw));
+        }
+
+        if (!empty($llmraw['danh_sach_tu_xau'])) {
+            $xau_raw = str_replace(["'", "[", "]"], '', $llmraw['danh_sach_tu_xau']);
+            $listWords['xau'] = array_map('trim', explode(',', $xau_raw));
+        }
+        $listWords['tot'] = array_count_values($listWords['tot']);
+        $listWords['xau'] = array_count_values($listWords['xau']);
+
+        arsort($listWords['tot']);
+        arsort($listWords['xau']);
+        $listWords_chart['tot'] = array_slice($listWords['tot'], 0, 5, true);
+        $listWords_chart['xau'] = array_slice($listWords['xau'], 0, 5, true);
+
+        // top review
+        $topreviews = DB::table('users_review')
+            ->where('location_id', $id)
+            ->select('user_review', 'data_llm')
+            ->get();
+
+        $reviewCounts = [];
+
+        foreach ($topreviews as $topreview) {
+            $user = $topreview->user_review;
+            $data = json_decode($topreview->data_llm, true);
+
+            // Chuyển chuỗi list thành mảng PHP
+            $tu_tot = json_decode(str_replace("'", '"', $data['danh_sach_tu_tot']), true) ?? [];
+            $tu_xau = json_decode(str_replace("'", '"', $data['danh_sach_tu_xau']), true) ?? [];
+            
+            $count = count($tu_tot) + count($tu_xau);
+
+            if (!isset($reviewCounts[$user])) {
+                $reviewCounts[$user] = 0;
+            }
+
+            $reviewCounts[$user] += $count;
+        }
+
+        // Sắp xếp và lấy top 5
+        arsort($reviewCounts);
+        $top5 = array_slice($reviewCounts, 0, 5, true);
+
+        $thongKeThang = DB::table('users_review')
+        ->where('location_id', $id) // chỉ lấy theo địa điểm
+        ->selectRaw('
+            YEAR(creat_date) as nam,
+            MONTH(creat_date) as thang,
+            SUM(JSON_LENGTH(JSON_EXTRACT(data_llm, "$.danh_sach_tu_tot"))) AS tong_tu_tot,
+            SUM(JSON_LENGTH(JSON_EXTRACT(data_llm, "$.danh_sach_tu_xau"))) AS tong_tu_xau
+        ')
+        ->groupBy(DB::raw('YEAR(creat_date), MONTH(creat_date)'))
+        ->orderBy('nam', 'desc')
+        ->orderBy('thang', 'desc')
+        ->get();
+
+        // Tổng số từ tốt và xấu cho mỗi năm
+        $thongKeNam = DB::table('users_review')
+            ->where('location_id', $id)
+            ->selectRaw('
+                YEAR(creat_date) as nam,
+                SUM(JSON_LENGTH(JSON_EXTRACT(data_llm, "$.danh_sach_tu_tot"))) AS tong_tu_tot,
+                SUM(JSON_LENGTH(JSON_EXTRACT(data_llm, "$.danh_sach_tu_xau"))) AS tong_tu_xau
+            ')
+            ->groupBy(DB::raw('YEAR(creat_date)'))
+            ->orderBy('nam', 'desc')
+            ->get();
+
+        $thongKeThang = $thongKeThang->sortBy(function ($item) {
+            return $item->nam * 100 + $item->thang;
+        })->values();
+        
+        $thongKeNam = $thongKeNam->sortBy('nam')->values();
         return [
             'trustScore' => $trustScore,
-            'phan_tram_tot' => $phan_tram_tot,
-            'phan_tram_xau' => $phan_tram_xau,
+            'phan_tram_tot' => $phan_tram_tot_raw,
+            'phan_tram_xau' => $phan_tram_xau_raw,
             'averageRating' => $averageRating,
             'npsScore' => $npsScore,
             'npsLabel' => $npsLabel,
             'userReviewChartData' => $userReviewChartData,
+            'ratingPercentages' => $ratingPercentages,
             'totalGoodCount' => $totalGoodCount,
             'totalBadCount' => $totalBadCount,
             'userLabels'=> $userLabels,
             'goodPercents'=> $goodPercents,
             'badPercents'=> $badPercents,
             'rawreviews'=>$rawreviews,
+            'conflictCount'=>$conflictCount,
+            'noConflictCount'=>$noConflictCount ,
+            'sentimentScore' => $sentimentScore,
+            'listWords'=> $listWords,
+            'listWords_chart'=>$listWords_chart,
+            'averageByDate' => $averageByDate,
+            'averageByYear'=> $averageByYear,
+            'labels' => array_keys($top5),
+            'counts' => array_values($top5),
+            'thongKeThang' => $thongKeThang,
+            'thongKeNam' => $thongKeNam,
         ];
     }
-
+  
     public function chart($id)
     {
         $data = $this->getChartData($id);
@@ -192,6 +346,14 @@ class NguoidungController extends Controller
             'data2' => $data2,
         ]);
     }
+
+    //sosanh
+    public function chartSoSanh($id)
+    {
+        $data = $this->getChartData($id);
+        return view('chart_sosanh_partial', $data); // View riêng cho so sánh
+    }
+    
 // cập nhật user
     public function update(Request $request, $id)
     {

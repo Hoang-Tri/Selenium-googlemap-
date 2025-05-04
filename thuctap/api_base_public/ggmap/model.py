@@ -51,7 +51,7 @@ def open_reviews_tab(driver):
     except:
         print("Không tìm thấy nút mở review – có thể đã hiện sẵn.")
 
-def scroll_reviews(driver, max_scrolls=5):
+def scroll_reviews(driver, max_scrolls=10):
     try:
         scrollable_div = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(

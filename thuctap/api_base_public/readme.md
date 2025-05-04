@@ -1,13 +1,12 @@
 
 -----------------------DOCKER------------------------ 
-docker build -t demo_api_base_public .
+docker build -t sys_55007 .
 
-docker run -d --restart always -v e:/Student/ThucTap/thuctap/DOCKER_DEMO/demo/data_in:/_app_/demo/data_in --name demo_api_base_public -p 55007:60074 demo_api_base_public
+docker run -d --restart always -v e:/Student/ThucTap/thuctap/DOCKER_DEMO/demo/data_in:/_app_/demo/data_in --name sys_55007 -p 55007:60074 sys_55007
 
-
-docker save -o demo_api_base_public.tar demo_api_base_public
-docker load -i demo_api_base_public.tar
-docker exec -it demo_api_base_public bash
+docker save -o sys_55007.tar sys_55007
+docker load -i sys_55007.tar
+docker exec -it sys_55007 bash
 
 ------------------------README----------------------------
 Hệ thống đánh giá thương hiệu dựa trên dữ liệu google maps

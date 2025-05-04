@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
@@ -169,11 +170,14 @@
                     <div class="search-box p-4 shadow rounded bg-light">
                     <h3>So sánh địa điểm</h3>
                         <div class="row g-3 align-items-center">
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" id="placeA" placeholder="Nhập địa điểm A...">
+                            <div class="col-md-5 position-relative">
+                                <input type="text" class="form-control" id="placeA" placeholder="Nhập địa điểm A..." autocomplete="off">
+                                <div class="dropdown-menu w-100" id="suggestionsA"></div>
                             </div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control" id="placeB" placeholder="Nhập địa điểm B...">
+
+                            <div class="col-md-5 position-relative">
+                                <input type="text" class="form-control" id="placeB" placeholder="Nhập địa điểm B..." autocomplete="off">
+                                <div class="dropdown-menu w-100" id="suggestionsB"></div>
                             </div>
                             <div class="col-md-2">
                                 <button class="btn btn-primary w-100" onclick="askComparePlace()">Gửi</button>
@@ -197,7 +201,7 @@
                 <div id="chart-container-2" style="width: 50vh; height: 100%x;"></div>
             </div>
         </div>
-
+ 
          <!-- lịch sử -->
          <div class="card mt-3">
             <div class="card-header d-flex justify-content-between align-items-center">
@@ -519,7 +523,7 @@
         // Gắn ngoài hàm chính
         async function loadChart(location_id, containerId) {
             try {
-                const res = await fetch(`/nguoidung/chart/${location_id}`);
+                const res = await fetch(`/nguoidung/chart-sosanh/${location_id}`);
                 if (res.ok) {
                     const htmlFromServer = await res.text();
                     document.getElementById(containerId).innerHTML = htmlFromServer;
@@ -530,6 +534,53 @@
                 console.error("Lỗi khi fetch dữ liệu từ controller", err);
             }
         }
+
+        $(document).ready(function() {
+            function bindAutocomplete(inputId, dropdownId) {
+                const input = $('#' + inputId);
+                const dropdown = $('#' + dropdownId);
+
+                input.on('input focus', function() {
+                    let query = input.val().trim();
+                    if (query.length === 0) {
+                        dropdown.removeClass('show');
+                        return;
+                    }
+
+                    $.ajax({
+                        url: '/places/search',
+                        method: 'GET',
+                        data: { query: query },  // phải khớp với tên biến trong Laravel controller
+                        success: function(data) {
+                            dropdown.empty();
+                            if (data.length > 0) {
+                                data.forEach(function(place) {
+                                    dropdown.append(`<button class="dropdown-item" type="button">${place.name}</button>`);
+                                });
+                                dropdown.addClass('show');
+                            } else {
+                                dropdown.removeClass('show');
+                            }
+                        }
+                    });
+                });
+
+                dropdown.on('click', '.dropdown-item', function() {
+                    input.val($(this).text());
+                    dropdown.removeClass('show');
+                });
+
+                // Ẩn dropdown khi click ra ngoài
+                $(document).on('click', function(e) {
+                    if (!input.is(e.target) && !dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+                        dropdown.removeClass('show');
+                    }
+                });
+            }
+
+            bindAutocomplete('placeA', 'suggestionsA');
+            bindAutocomplete('placeB', 'suggestionsB');
+        });
 
         // Load tất cả biểu đồ
         function loadAllCharts() {

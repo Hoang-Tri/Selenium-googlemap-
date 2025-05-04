@@ -30,9 +30,15 @@ class SettingController extends Controller
 
             Setting::setValue($key, $value);
         }
-
+        $redirectPath = $request->input('redirect');
         try {
             Http::post('http://localhost:60074/base/refresh-settings');
+
+            if ($redirectPath) {
+                return redirect("http://lht_2110421:8080/{$redirectPath}")
+                    ->with('success', 'Cập nhật cấu hình và đồng bộ thành công!');
+            }
+
             return redirect()->back()->with('success', 'Cập nhật cấu hình và đồng bộ thành công!');
         } catch (\Exception $e) {
             return redirect()->back()->with('success', 'Cập nhật cấu hình thành công nhưng chưa đồng bộ được!');

@@ -36,6 +36,7 @@
 
                 <form method="POST" action="{{ route('settings.update') }}" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" name="redirect" value="{{ request('redirect') }}">
                     {{-- SEO & giao diện --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">🏷️ Tiêu đề trang (title)</label>

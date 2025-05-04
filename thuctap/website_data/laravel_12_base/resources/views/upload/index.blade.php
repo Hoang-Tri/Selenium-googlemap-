@@ -9,6 +9,7 @@
 </head>
 <body class="bg-light">
     @include('layouts.header')
+    <button onclick="window.location.href='{{ url('/download-all-data') }}'">Tải Toàn Bộ Dữ Liệu</button>
 
 
     <h1>Danh sách địa điểm có đánh giá</h1>

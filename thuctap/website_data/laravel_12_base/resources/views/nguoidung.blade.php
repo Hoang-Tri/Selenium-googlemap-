@@ -20,6 +20,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <style>
+        .loading-dots {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #0d6efd;
+            display: inline-block;
+        }
+
+        .loading-dots .dot {
+            animation: blink 1.4s infinite;
+            animation-delay: 0s;
+            font-weight: bold;
+        }
+
+        .loading-dots .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dots .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes blink {
+            0%, 80%, 100% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -52,13 +83,6 @@
                         <div>
                             <button class="btn nav-link active" data-bs-toggle="modal" data-bs-target="#userProfileModal">
                                 <i class="fas fa-user"></i> Profile
-                            </button>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <button type="button" class="btn nav-link active" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
-                                Cập nhật thông tin
                             </button>
                         </div>
                     </li>
@@ -98,19 +122,22 @@
     <div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="userProfileModalLabel">Thông tin người dùng</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Tên đăng nhập:</strong> {{ Auth::user()->username }}</p>
-                <p><strong>Họ tên:</strong> {{ Auth::user()->fullname }}</p>
-                <p><strong>Email:</strong> {{ Auth::user()->email }}</p>
-                <p><strong>Vai trò:</strong> {{ Auth::user()->level == 1 ? 'admin' : 'user' }}</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-            </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userProfileModalLabel">Thông tin người dùng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Tên đăng nhập:</strong> {{ Auth::user()->username }}</p>
+                    <p><strong>Họ tên:</strong> {{ Auth::user()->fullname }}</p>
+                    <p><strong>Email:</strong> {{ Auth::user()->email }}</p>
+                    <p><strong>Vai trò:</strong> {{ Auth::user()->level == 1 ? 'admin' : 'user' }}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary active" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
+                        Cập nhật thông tin
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
             </div>
         </div>
     </div>
@@ -231,7 +258,7 @@
                             <ul class="list-unstyled mb-2">
                                 @foreach ($recentPlaces as $place)
                                     <li>
-                                        <a href="javascript:void(0)" onclick="document.getElementById('place').value = '{{ $place }}'" class="text-primary">
+                                        <a href="javascript:void(0)" onclick="document.getElementById('place').value = '{{ $place }}'" class="text-primary" style="text-decoration: none;">
                                             {{ $place }}
                                         </a>
                                     </li>
@@ -241,11 +268,19 @@
                     @endif
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="place" placeholder="Nhập tên địa điểm..." />
+                        <input type="text" class="form-control" id="place" placeholder="Nhập tên địa điểm..." oninput="getSuggestions()" />
                         <button class="btn btn-primary" onclick="askPlace()">Gửi</button>
                     </div>
+                    
+                    <!-- Gợi ý địa điểm -->
+                    <ul id="suggestions" class="list-unstyled mb-2" style="display: none; color: gray;">
+                        <!-- Các gợi ý sẽ hiển thị ở đây -->
+                    </ul>
+
                     <p><strong>Phản hồi:</strong></p>
-                    <div id="response-ask" class="response-box"></div>
+                    <div id="response-ask" class="response-box">
+                        
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -370,12 +405,49 @@
             document.getElementById("request-count").innerText = `Số lần gửi còn lại hôm nay: ${remainingRequests + extraRequests}`;
         }
 
+        function getSuggestions() {
+            let query = document.getElementById('place').value;
+
+            if (query.length >= 2) {  // Chỉ tìm khi người dùng nhập ít nhất 2 ký tự
+                // Sử dụng fetch để gọi API tìm kiếm
+                fetch(`/places/search?query=${encodeURIComponent(query)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        let suggestionsList = document.getElementById('suggestions');
+                        suggestionsList.innerHTML = ''; // Clear previous suggestions
+
+                        if (data.length > 0) {
+                            suggestionsList.style.display = 'block';  // Hiển thị gợi ý
+                            data.forEach(place => {
+                                let li = document.createElement('li');
+                                li.innerHTML = `<a href="javascript:void(0)" onclick="selectPlace('${place.name}')">${place.name}</a>`;
+                                suggestionsList.appendChild(li);
+                            });
+                        } else {
+                            suggestionsList.style.display = 'none';  // Ẩn nếu không có gợi ý
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching suggestions:', error);  // Xử lý lỗi
+                    });
+            } else {
+                document.getElementById('suggestions').style.display = 'none'; // Ẩn nếu không có từ khóa
+            }
+        }
+
+        function selectPlace(name) {
+            document.getElementById('place').value = name;  // Điền giá trị vào ô tìm kiếm
+            document.getElementById('suggestions').style.display = 'none';  // Ẩn gợi ý
+        }
+
         async function askPlace() {
             const place = document.getElementById("place").value.trim();
             if (!place) {
                 alert("Vui lòng nhập tên địa điểm.");
                 return;
             }
+            document.getElementById("chart-container").style.display = "none";
+
             const formattedPlace = place.replace(/\s+/g, '_');
             if (!canSendRequest()) {
                 alert("Bạn đã hết lượt gửi yêu cầu hôm nay!");
@@ -460,23 +532,38 @@
                     return;
                 }
                 window.loadChart = async function(location_id) {
-                    console.log("loadChart được gọi với location_id:", location_id);
-                    if (location_id) {
-                        try {
-                            const res = await fetch(`/nguoidung/chart/${location_id}`);
-                            if (res.ok) {
-                                const htmlFromServer = await res.text();
-                                document.getElementById("chart-container").innerHTML = htmlFromServer;
-                            } else {
-                                console.error("Không thể lấy dữ liệu từ controller", res.status);
-                            }
-                        } catch (err) {
-                            console.error("Lỗi khi fetch dữ liệu từ controller", err);
+                console.log("loadChart được gọi với location_id:", location_id);
+                if (location_id) {
+                    try {
+                        const res = await fetch(`/nguoidung/chart/${location_id}`);
+                        if (res.ok) {
+                            const htmlFromServer = await res.text();
+                            const chartContainer = document.getElementById("chart-container"); // Đảm bảo gọi đúng ID của container
+                            chartContainer.style.display = "none"; // Ẩn trước khi cập nhật
+                            chartContainer.innerHTML = htmlFromServer;
+                            chartContainer.style.display = "block"; 
+
+                            // Thêm script vào DOM sau khi cập nhật nội dung
+                            const scripts = chartContainer.querySelectorAll("script");
+                            scripts.forEach(oldScript => {
+                                const newScript = document.createElement("script");
+                                if (oldScript.src) {
+                                    newScript.src = oldScript.src;
+                                } else {
+                                    newScript.textContent = oldScript.textContent;
+                                }
+                                document.head.appendChild(newScript); // Thêm vào head để script được thực thi
+                            });
+                        } else {
+                            console.error("Không thể lấy dữ liệu từ controller", res.status);
                         }
-                    } else {
-                        console.error("location_id không hợp lệ");
+                    } catch (err) {
+                        console.error("Lỗi khi fetch dữ liệu từ controller", err);
                     }
-                };
+                } else {
+                    console.error("location_id không hợp lệ");
+                }
+            };
             } catch (error) {
                 responseElement.innerText = "Lỗi khi gọi API: " + error;
             }

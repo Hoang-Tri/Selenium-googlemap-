@@ -18,120 +18,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .notification-icon {
-            position: relative;
-            font-size: 24px;
-            cursor: pointer;
-            color: black;
-        }
-        #notification-count {
-            position: absolute;
-            top: -5px;
-            right: -10px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 5px;
-            font-size: 12px;
-        }
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            width: 60%;
-            margin: 15% auto;
-        }
-
-        .close-btn {
-            font-size: 24px;
-            color: #aaa;
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        /* Style cho danh sách thông báo */
-        #notifications {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        #notifications li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-        .notification-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        }
-
-        .notification-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 6px;
-        }
-
-        .notification-text {
-            flex: 1;
-            margin-right: 10px;
-        }
-
-        .notification-buttons button {
-            margin-left: 5px;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .btn-ok {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .btn-delete {
-            background-color: #f44336;
-            color: white;
-        }
-    </style>
 </head>
 <body>
     <div class="d-flex">
-        <div class="sidebar">
+    <button id="toggleSidebar">
+        <i class="fa fa-bars"></i>
+    </button>
+        <div class="sidebar" id="sidebar">
             <h2>Chào mừng admin</h2>
-            <ul>
-                <a href="{{ url('/users') }}">User</a>
-                <a href="{{ url('/locations') }}">Location</a>
-                <a href="{{ url('/google') }}">GoogleMaps</a>
-                <a href="{{ url('/users-reviews') }}">User Review</a>
-                <a href="{{ url('/upload') }}">File</a>
-                <a href="{{ url('/settings') }}">Setting</a>
-                
+            <ul id="menu">
+                <a href="{{ url('/users') }}">
+                    <i class="fas fa-users"></i> User
+                </a>
+                <a href="{{ url('/locations') }}">
+                    <i class="fas fa-map-marker-alt"></i> Location
+                </a>
+                <a href="{{ url('/google') }}">
+                    <i class="fas fa-globe"></i> GoogleMaps
+                </a>
+                <a href="{{ url('/users-reviews') }}">
+                    <i class="fas fa-comment-dots"></i> User Review
+                </a>
+                <a href="{{ url('/upload') }}">
+                    <i class="fas fa-upload"></i> File
+                </a>
+                <a href="{{ url('/settings') }}">
+                    <i class="fas fa-cogs"></i> Setting
+                </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
                 </form>
-                
             </ul>
             <div class="contact-info">
                 Contact: lehoangtri@gmail.com
             </div>
         </div>
-        <div class="main-content">
 
+        <div class="main-content">
             <nav class="navbar">
                 <div class="container-fluid d-flex justify-content-between">
-                    <!-- Icon thông báo -->
                     <div id="notification-icon" class="notification-icon" onclick="showNotifications()">
                         <i class="fa fa-bell"></i>
                         <span id="notification-count"></span>
@@ -147,17 +73,12 @@
                 </div>
             </nav>
 
-            <nav class="navbar">
-                <div class="container-fluid d-flex justify-content-between">
-                </div>
-            </nav>
-
             <div class="row">
                 <div class="col-md-3">
                     <a href="{{ url('/users') }}" style="text-decoration: none; color: inherit;">
                         <div class="card text-center p-3 card-hover" style="border: 2px solid rgb(35, 64, 230); background-color:rgb(136, 177, 238);">
                             <i class="fas fa-users"></i>
-                            <h5 style="margin: 0;">Users</h5>
+                            <h5>Users</h5>
                             <p>{{ $userCount }}</p>
                         </div>
                     </a>
@@ -187,7 +108,8 @@
                     <div class="card text-center p-3 card-hover" style="border: 2px solid rgb(20, 241, 68); background-color:rgb(155, 243, 148);">
                         <i class="fas fa-smile-beam"></i>
                         <h5>Hello</h5>
-                        <p>Welcome to admin</p>
+                        <p><a href="{{ route('nguoidung.dashboard') }}" style="text-decoration: none; color: inherit;">Trang người dùng</a></p>
+                        
                     </div>
                 </div>
             </div>
@@ -212,6 +134,10 @@
         </div>
     </div>
     <script>
+        document.getElementById('toggleSidebar').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        });
+
         window.onload = function() {
             displayNotifications();
         };
